@@ -1,0 +1,67 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3166.\endgraf %
+\hangpara {4em}{0}Telegramm1 Blatt, 1 Seite \newline {}maschinell \newline {}Schnitzler: mit Bleistift datiert: »Jann 96« \newline {}Ordnung: beschnitten \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|1|0|1|1|0|TU/lmr/m/n}{\no@expands
+\textnormal
+{\emph
+{30}}}{\textnormal
+{Das
+dürfte
+den
+Kalendertag
+bezeichnen,
+an
+dem
+das
+Telegramm
+versandt
+wurde.}}{C}{}{L}{edtxt@3}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|2|0|1|2|0|TU/lmr/m/n}{\no@expands
+\textnormal
+{\emph
+{anerbieten}}}{\textnormal
+{Unter
+der
+Voraussetzung,
+dass
+die
+Datierung
+stimmt,
+könnte
+es
+sich
+um
+eine
+Einladung
+nach
+\textcolor
+{pink}{Berlin}
+gehandelt
+haben,
+wo
+am
+4. 2. 1896
+die
+Premiere
+von
+\emph
+{\textcolor
+{green}{Liebelei}}
+am
+\emph
+{\textcolor
+{brown}{Deutschen
+Theater}}
+bevorstand.}}{C}{}{L}{edtxt@4}%
