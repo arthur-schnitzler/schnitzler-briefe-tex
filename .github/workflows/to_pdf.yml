@@ -14,5 +14,7 @@ jobs:
         sudo apt-get update && sudo apt-get install texlive-xetex texlive-humanities texlive-lang-german texlive-lang-french texlive-lang-english texlive-lang-greek  openjdk-11-jre-headless ant -y
     - name: Convert Files
       run: |
-        xelatex tex/L*.tex                          
-
+        xelatex -output-directory=pdf tex/L*.tex   
+    - name: push changes to remote
+      run: git add pdf
+           git push
