@@ -14,5 +14,5 @@ jobs:
         sudo apt-get update && sudo apt-get install texlive-xetex texlive-humanities texlive-lang-german latexmk openjdk-11-jre-headless ant -y
     - name: Convert Files
       run: |
-        xelatex -output-directory=out L*.tex                          
+        xelatex -output-directory=out tex/L*.tex                          
 
