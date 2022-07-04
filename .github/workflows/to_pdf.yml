@@ -15,17 +15,11 @@ jobs:
     - name: Convert Files
       run: |
         xelatex -output-directory=pdf tex/L*.tex   
-    - name: Copy processed data to freud-digital/frd-archiv
-      uses: dmnemec/copy_file_to_another_repo_action@main
-      env:
-        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+    - name: commit result pdf    
+      uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        source_file: './pdf/.'
-        destination_repo: 'arthur-schnitzler/schnitzler-briefe-tex'
-        destination_folder: 'pdf'
-        user_email: 'martin.anton.mueller@oeaw.ac.at'
-        user_name: 'martinantonmueller'
-        commit_message: 'copy XML/TEI files from frd-static'
-    - uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        commit_message: made pdfs
+        repository: .
+        commit_user_name: martinantonmueller
+        commit_user_email: martin.anton.mueller@oeaw.ac.at
+        commit_author: Author <actions@github.com> # defaults to author of the commit that triggered the run
+
