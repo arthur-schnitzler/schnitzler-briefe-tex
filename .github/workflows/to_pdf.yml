@@ -12,6 +12,10 @@ jobs:
     - name: Install ANT,  LaTeX Things
       run: |
         sudo apt-get update && sudo apt-get install texlive-xetex texlive-humanities texlive-lang-german latexmk openjdk-11-jre-headless ant -y
+    - name: Set Swap Space
+      uses: pierotofy/set-swap-space@master
+      with:
+        swap-size-gb: 10
     - name: Convert Files
       run: |
         xelatex -output-directory=out tex/L*.tex                          
