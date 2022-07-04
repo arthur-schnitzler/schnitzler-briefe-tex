@@ -137,7 +137,7 @@
 
 % Silbentrennung
 \selectlanguage{ngerman}
-\hyphenation{Re-kours EP-STEIN Her-vay-vor-les-ung Steu-er-sa-chen Öst-reich Burck-hard Keuch-hus-ten Oedi-pus-auf-führ-un-gen Hi-obs-post Kärnt-ner-ring Vei-tlis-sen-gas-se Franck-gas-se Rath-hau-se Sechs-schg Stu-bai-thal Tha-deusz Volks-th Halb-mo-nats-schrift JAHR-ES-ZEI-TEN Te-le-phon mit-ge-theilt Ge-schäfts-ver-bin-dung hoch-müth-ig Ueber-zeu-gung bis-chen Au-tor-rech-te Hof-manns-thal Nor-deijk Irre-seins Tschap-perl mit-zu-thei-len Aeu-ße-rung be-thö-ren Kü-ni-gel Be-ur-thei-lung Kuenst-lern ko-moe-di-sche hae-mor-rha-gi-scher Doer-mann Wash-burn flei-ssig haute Buddh-ist Preu-ssen Lin-den-café Mit-theil-un-gen An-theil Lieu-te-nant oes-terr Rieg-ner Oes-ter-reich gro-ssem Fran-zo-sen-thum Roche Lili Ent-schlie-ssun-gen äu-ssert wuen-sche Trans-ac-tio-nen Ue-ber-win-dung Eu-gene Stra-ssen-dir-ne qua-tre Deutsch-öst-er-reich Deutsch-öst-er-reichs Bjørn-stjer-ne noth-ing Edit-ed Olga Ar-naud Mer-gent-heim Léon-tine Polla-czek Brion Barre Hoch-sin-ger Ka-tha-rina Arouet Va-len-ci-ennes Ueber-win-dung Type-writer-in Tolstoi-buch Schnitzler Copier-buche Schiller Intel-lek-tuell-en-as-so-zi-a-tion Salten Devrient Grien-steidl Ge-sell-ſchaft ein-ge-ſchloſ-ſen Fort-ſetz-un-gen Bor-dell-ſtück fort-ſchrei-ten wirk-ſam-es ſchrift-ſtel-ler-i-ſchen hin-weg-ſe-hen Gerichts-saal-be-richt-er-ſtat-ter}
+\hyphenation{Re-kours EP-STEIN Her-vay-vor-les-ung Steu-er-sa-chen Öst-reich Burck-hard Keuch-hus-ten Oedi-pus-auf-führ-un-gen Hi-obs-post Kärnt-ner-ring Vei-tlis-sen-gas-se Franck-gas-se Rath-hau-se Sechs-schg Stu-bai-thal Tha-deusz Volks-th Halb-mo-nats-schrift JAHR-ES-ZEI-TEN Te-le-phon mit-ge-theilt Ge-schäfts-ver-bin-dung hoch-müth-ig Ueber-zeu-gung bis-chen Au-tor-rech-te Hof-manns-thal Nor-deijk Irre-seins Tschap-perl mit-zu-thei-len Aeu-ße-rung be-thö-ren Kü-ni-gel Be-ur-thei-lung Kuenst-lern ko-moe-di-sche hae-mor-rha-gi-scher Doer-mann Wash-burn flei-ssig haute Buddh-ist Preu-ssen Lin-den-café Mit-theil-un-gen An-theil Lieu-te-nant oes-terr Rieg-ner Oes-ter-reich gro-ssem Fran-zo-sen-thum Roche Lili Ent-schlie-ssun-gen äu-ssert wuen-sche Trans-ac-tio-nen Ue-ber-win-dung Eu-gene Stra-ssen-dir-ne qua-tre Deutsch-öst-er-reich Deutsch-öst-er-reichs Bjørn-stjer-ne noth-ing Edit-ed Olga Ar-naud Mer-gent-heim Léon-tine Polla-czek Brion Barre Hoch-sin-ger Ka-tha-rina Arouet Va-len-ci-ennes Ueber-win-dung Type-writer-in Tolstoi-buch Schnitzler Copier-buche Schiller Intel-lek-tuell-en-as-so-zi-a-tion Salten Devrient Grien-steidl Ge-sell-ſchaft ein-ge-ſchloſ-ſen Fort-ſetz-un-gen Bor-dell-ſtück fort-ſchrei-ten wirk-ſam-es ſchrift-ſtel-ler-i-ſchen hin-weg-ſe-hen Gerichts-saal-be-richt-er-ſtat-ter}
 
 
 
@@ -387,14 +387,16 @@
 %\Xendboxendlinenum{1em}
 
 
-%% Kaufmanns-Und (= &)
+%% Kaufmanns-Und (=)
+            
+            
 
-\newcommand{\kaufmannsund}{\&}
+\newcommand{\kaufmannsund}{\&} 
 
 %% Tabelle Zellensprung
 % Ein weiterer Anlass, das Kaufmannsund in der Übergabe zu vermeiden:
 
-\newcommand{\zellensprung}{ & }
+\newcommand{\zellensprung}{ \& }
 
 %% INDEX
     
@@ -475,6 +477,7 @@
 \newcounter{mystart}
 \newcounter{mystop}
 \newcounter{phantom}
+
 \newcommand*\myrangeref[2]{%
   \setcounterpageref{mystart}{#1}%
   \setcounterpageref{mystop}{#2}%
@@ -495,7 +498,7 @@
     \fi
   \fi
 }
-
+            
 \newcommand*\myrangerefkasten[2]{%
   \setcounterpageref{mystart}{#1}%
   \setcounterpageref{mystop}{#2}%
@@ -753,4 +756,42 @@
 \setlength{\ledrsnotewidth}{4cm}
 \renewcommand*{\ledlsnotefontsetup}{\scriptsize\sffamily}% left
 \renewcommand*{\ledrsnotefontsetup}{\scriptsize\sffamily}% left
-\thispagestyle{empty}
+\thispagestyle{empty} 
+
+               \section[Paul Goldmann an Arthur Schnitzler, {[}30.? 1. 1896{]}]{ Paul Goldmann an Arthur Schnitzler, {[}30.? 1. 1896{]}}\nopagebreak\mylabel{v}\rehead{ }\normalsize\beginnumbering\briefempfaengerindex{Schnitzler, Arthur@\textsc{Schnitzler, Arthur}!zzzGoldmann, Paul@\emph{von Paul Goldmann}!1896-01-301@{{[}30.? 1. 1896{]}}|(be} \toendnotes[C]{\smallbreak\pagebreak[2]} \Standort{DLA, A:Schnitzler, HS.NZ85.1.3166.}
+\physDesc{Telegramm1 Blatt, 1 Seite
+\newline{}maschinell
+\newline{}Schnitzler: mit Bleistift datiert: »Jann 96« \newline{}Ordnung: beschnitten }\toendnotes[C]{\smallbreak}\pstart
+           \centering{}{\pb}\textcolor{pink}{w}{}\ledrightnote{\textcolor{pink}{Wien}} de { }\textcolor{pink}{paris}{}\ledrightnote{\textcolor{pink}{Paris}} 18798 \label{K_L02690-1v}\edtext{30}{\lemma{\textnormal{\emph{30}}}\Cendnote{\textnormal{Das dürfte den Kalendertag bezeichnen, an dem das
+                     Telegramm versandt wurde.}}}\label{K_L02690-1h}{ }12 =\pend
+           \pstart
+           vielen dank fuer liebes \label{K_L02690-11v}\edtext{anerbieten}{\lemma{\textnormal{\emph{anerbieten}}}\Cendnote{\textnormal{Unter der Voraussetzung,
+                  dass die Datierung stimmt, könnte es sich um eine Einladung nach \textcolor{pink}{Berlin} gehandelt haben, wo am 4. 2. 1896 die Premiere von \emph{\textcolor{green}{Liebelei}} am \emph{\textcolor{brown}{Deutschen
+                     Theater}} bevorstand.}}}\label{K_L02690-11h} aber leider unmoeglich aus zahlreichen gruenden
+               hauptsaechlich geldmangel und schwierigkeit inmitten saison ohne zwingendsten grund
+               urlaub zu bekommen\pend
+           \pstart gruss ? \spacefill\mbox{goldmann}\pend{}\endnumbering\briefempfaengerindex{Schnitzler, Arthur@\textsc{Schnitzler, Arthur}!zzzGoldmann, Paul@\emph{von Paul Goldmann}!1896-01-301@{{[}30.? 1. 1896{]}}|)be}\mylabel{h}\begin{anhang}\end{anhang}
+         \normalsize
+
+\newenvironment{esempio}[3]%
+{
+    \vspace{1.5ex}
+    \rlap{\underline{#1}}
+    \par
+    \setlength{\parindent}{0cm}
+    \nopagebreak
+    \leftskip=#2cm
+    \rightskip=#3cm
+}
+{
+    \par
+}
+
+\doendnotes{C}
+\bigskip
+
+\printindex[pw]
+
+
+\end{document}
+      
