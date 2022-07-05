@@ -24,7 +24,7 @@ jobs:
     - name: Copy processed data to repo
       uses: dmnemec/copy_file_to_another_repo_action@main
       env:
-        API_TOKEN_GITHUB: ${{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}}
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
         source_file: './pdf/.'
         destination_repo: 'arthur-schnitzler/schnitzler-briefe/tex'
