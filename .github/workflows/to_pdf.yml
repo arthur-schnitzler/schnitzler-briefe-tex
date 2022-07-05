@@ -20,11 +20,11 @@ jobs:
       run: |
         xelatex tex/L*.tex
         xelatex tex/L*.tex
-        xelatex tex/L*.tex
+        xelatex -output-directory:pdf tex/L*.tex
     - name: commit result pdf    
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        repository: /pdf/
+        repository: .
         commit_user_name: martinantonmueller
         commit_user_email: martin.anton.mueller@oeaw.ac.at
         commit_author: Author <actions@github.com> # defaults to author of the commit that triggered the run
