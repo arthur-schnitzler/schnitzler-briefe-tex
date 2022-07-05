@@ -26,7 +26,7 @@ jobs:
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        source_file: '*.*'
+        source_file: .
         destination_repo: 'arthur-schnitzler/schnitzler-briefe-tex'
         destination_folder: 'pdf/'
         user_email: 'martin.anton.mueller@oeaw.ac.at'
