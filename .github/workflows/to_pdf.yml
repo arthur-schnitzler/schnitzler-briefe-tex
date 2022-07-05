@@ -26,10 +26,10 @@ jobs:
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        source_file: './pdf/.'
+        source_file: './tex/*.pdf'
         destination_repo: 'arthur-schnitzler/schnitzler-briefe-tex'
-        destination_folder: 'pdf'
-        user_email: 'artin.anton.mueller@oeaw.ac.at'
+        destination_folder: '/pdf/'
+        user_email: 'martin.anton.mueller@oeaw.ac.at'
         user_name: 'martinantonmueller'
         commit_message: 'PDFs generated'
     - uses: stefanzweifel/git-auto-commit-action@v4
