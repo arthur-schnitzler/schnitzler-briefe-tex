@@ -13,28 +13,14 @@ jobs:
       uses: JesseTG/rm@v1.0.0
       with: 
         path: /pdf/*.pdf
-    - name: Set up Python 3.7
-      uses: actions/setup-python@v1
-      with:
-          python-version: "3.7"
-    - name: Fetch action
-      id: pl
-      uses: Rishabh510/Path-lister-action@master
-      with:
-          path: ".github/"
-          type: ".tex"
-    - name: Output results
+    - name: Install ANT,  LaTeX Things
       run: |
-          echo "Found ${{ steps.pl.outputs.path_count }} file(s) with this extension:"
-          for i in ${{ steps.pl.outputs.paths }}; do
-          echo $i
-          done
-    - name: compile latex
-      uses: xu-cheng/latex-action@v2
-      with:
-        root_file: "*.tex"
-        latexmk_use_xelatex: true
-        work_in_root_file_dir: /tex/
+        sudo apt-get update && sudo apt-get install texlive-xetex texlive-humanities texlive-lang-german texlive-lang-french texlive-lang-english texlive-lang-greek  openjdk-11-jre-headless ant -y
+    - name: Convert Files
+      run: |
+        xelatex tex/L*.tex
+        xelatex tex/L*.tex
+        xelatex tex/L*.tex
     - name: commit result pdf    
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
@@ -42,4 +28,3 @@ jobs:
         commit_user_name: martinantonmueller
         commit_user_email: martin.anton.mueller@oeaw.ac.at
         commit_author: Author <actions@github.com> # defaults to author of the commit that triggered the run
-
