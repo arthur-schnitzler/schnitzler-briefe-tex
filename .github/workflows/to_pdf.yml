@@ -9,10 +9,6 @@ jobs:
     steps:
     - name: Perform Checkout
       uses: actions/checkout@v2
-    - name: Remove File
-      uses: JesseTG/rm@v1.0.0
-      with: 
-        path: /pdf/*.pdf
     - name: Install ANT,  LaTeX Things
       run: |
         sudo apt-get update && sudo apt-get install texlive-xetex texlive-humanities texlive-lang-german texlive-lang-french texlive-lang-english texlive-lang-greek  openjdk-11-jre-headless ant -y
@@ -21,17 +17,10 @@ jobs:
         xelatex tex/L*.tex
         xelatex tex/L*.tex
         xelatex tex/L*.tex
-    - name: Copy processed data to repo
-      uses: dmnemec/copy_file_to_another_repo_action@main
-      env:
-        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-      with:
-        source_file: .
-        destination_repo: 'arthur-schnitzler/schnitzler-briefe-tex'
-        destination_folder: 'pdf/'
-        user_email: 'martin.anton.mueller@oeaw.ac.at'
-        user_name: 'martinantonmueller'
-        commit_message: 'PDFs generated'
+    - name: copy pdf to pdf-folder
+      run: |
+        mv *.pdf ./pdf 
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: made pdfs
+        file_pattern: "*.pdf"
