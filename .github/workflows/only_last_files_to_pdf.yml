@@ -1,4 +1,4 @@
-name: Convert LaTeX to PDF
+name: Convert the latest files via XeLaTeX to PDF
 
 on:
   workflow_dispatch
