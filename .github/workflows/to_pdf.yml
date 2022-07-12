@@ -14,9 +14,10 @@ jobs:
         sudo apt-get update && sudo apt-get install texlive-xetex texlive-humanities texlive-lang-german texlive-lang-french texlive-lang-english texlive-lang-greek  openjdk-11-jre-headless ant -y
     - name: Convert Files
       run: |
-        for i in tex/L*.tex; do xelatex $i -interaction=nonstopmode;done
-        for i in tex/L*.tex; do xelatex $i -interaction=nonstopmode;done
-        for i in tex/L*.tex; do xelatex $i -interaction=nonstopmode;done
+        cd tex
+        for i in L*.tex; do xelatex $i -interaction=nonstopmode;done
+        for i in L*.tex; do xelatex $i -interaction=nonstopmode;done
+        for i in L*.tex; do xelatex $i -interaction=nonstopmode;done
     - name: copy pdf to pdf-folder
       run: |
         mv *.pdf ./pdf 
