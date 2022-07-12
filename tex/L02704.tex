@@ -1,0 +1,934 @@
+\documentclass[twoside=false,titlepage=false,open=any, parskip=never, fontsize=12pt, headings=small, chapterprefix=false, appendixprefix=false]{scrbook}
+\addtolength{\oddsidemargin}{\evensidemargin}
+\setlength{\oddsidemargin}{.5\oddsidemargin}
+\setlength{\evensidemargin}{\oddsidemargin}
+
+\usepackage[{textwidth=13cm,textheight=23cm,marginpar=3cm, left=2cm}]{geometry}
+%\usepackage[textwidth=80mm, layoutwidth=170mm, paperheight =297mm, paperwidth  =210mm, layoutvoffset= 20mm,layouthoffset= 20mm]{geometry}
+%\usepackage[paperheight =297mm, paperwidth  =210mm, layoutheight=230mm, layoutwidth=158mm, layoutvoffset= 20mm, layouthoffset= 20mm, textwidth=150mm, textheight=185mm, showcrop=false]{geometry}
+%sepackage[paperheight=230mm, paperwidth=138mm, textwidth=100mm, textheight=185mm]{geometry}
+ \usepackage[usenames, dvipsnames]{xcolor}
+\usepackage{scrlayer-scrpage}
+\usepackage{hyphenat}
+\usepackage{fontspec}
+\usepackage{moresize}
+\usepackage[english, french, greek, ngerman]{babel}
+%\usepackage{ipa}  für das Seitenwechselzeichens
+\usepackage[babel]{microtype}
+\usepackage[dash, dot]{dashundergaps}
+\usepackage{soul}
+\usepackage{ragged2e}
+\usepackage[makeindex, protected]{splitidx}
+\usepackage[itemlayout=abshang,hangindent=0.85em, subindent=0em, subsubindent=1em, justific=RaggedRight, columns=1, columnsep=0pt, indentunit=1em, totoc=false]{idxlayout}
+\usepackage{scrhack}
+\usepackage{xpatch}
+\usepackage{reledmac}
+\usepackage{refcount} % Für die Seitenverweise 1–3 etc. 
+\usepackage{etoolbox}
+\usepackage{framed}
+\usepackage[export]{adjustbox} % loads also graphicx, für Bildgröße autom. maximal
+\usepackage{float} %ermöglicht exakte Bildpositionierung
+\usepackage{mdframed}
+\usepackage{enumitem}
+\usepackage{relsize}
+\usepackage{longtable}
+\usepackage{chngcntr} % Sectionnummern durchgehend
+\usepackage{hanging} % Für hängende Absätze
+\usepackage[rightmargin=0em, leftmargin=1em, indentfirst=false]{quoting} % Für die geänderte quote-Umgebung in den Hrsg-Texten
+%\usepackage{fontawesome}
+\usepackage{ellipsis}
+\RequirePackage{hyphsubst}%
+\HyphSubstIfExists{ngerman-x-latest}{\HyphSubstLet{ngerman}{ngerman-x-latest}}{} 
+\listfiles
+\usepackage[noadjust]{marginnote}
+
+\KOMAoptions{toc=chapterentrydotfill, toc=flat}
+\addtokomafont{chapterentrypagenumber}{\mdseries}
+\setkomafont{chapterentry}{\normalfont\mdseries}
+\setkomafont{partentry}{\normalfont\mdseries}
+\RedeclareSectionCommand[tocbeforeskip=0pt]{chapter}
+
+\setlength{\skip\footins}{4mm plus 2mm} % Abstand Fussnote Text
+\interfootnotelinepenalty=10000 % Kein Seitenwechsel in Fuss
+
+%\DeclareTextFontCommand{\emph}{\textit}
+
+% Der Befehl erlaubt rechtsbündig bei Unterschriften, die nicht mehr in die Zeile passen
+\def\spacefill{\hspace{\fill}\mbox{}\linebreak[0]\hspace*{\fill}}
+\usepackage{atbegshi}
+\usepackage{zref-abspage}
+\usepackage{perpage}
+\usepackage{zref-user}
+\usepackage{tikz}
+\usepackage{ulem}
+\usetikzlibrary{calc,decorations.pathmorphing}
+
+\PassOptionsToPackage{gray}{xcolor}
+\definecolor{gray}{gray}{0.6}
+
+\doublehyphendemerits=1000000 % das hier verhindert zu viele aufeinanderfolgende Trennstriche am Zeilenende
+
+
+\include{tikz-include}
+
+
+
+
+
+\def\myloop#1#2#3{%
+    #3%
+    \ifdim\dimexpr#1>1.1\baselineskip
+        #2%
+        \expandafter\myloop\expandafter{\the\dimexpr#1-\baselineskip\relax}{#2}%
+    \fi
+}
+
+\makeatother
+%\newcommand{\damage}[1]{\tikzul[gray,line width=0.15\ht\strutbox,semitransparent]{#1}}
+%\newcommand{\strikeout}[1]{\tikzst[black]{#1}}
+
+\newcommand{\damage}[1]{\textcolor{orange}{#1}}
+\newcommand{\strikeout}[1]{\sout{#1}}
+
+
+\setlength{\parindent}{1em}
+
+% Mehr als drei Auslassungspunkte 
+
+\newcommand{\dotsseven}{%
+.\kern\ellipsisgap 
+.\kern\ellipsisgap
+.\kern\ellipsisgap 
+.\kern\ellipsisgap
+.\kern\ellipsisgap
+.\kern\ellipsisgap 
+.\kern\ellipsisgap 	
+\relax}
+
+\newcommand{\dotssix}{%
+.\kern\ellipsisgap 
+.\kern\ellipsisgap
+.\kern\ellipsisgap
+.\kern\ellipsisgap
+.\kern\ellipsisgap 
+.\kern\ellipsisgap 
+\relax}
+
+\newcommand{\dotsfive}{%
+.\kern\ellipsisgap 
+.\kern\ellipsisgap
+.\kern\ellipsisgap
+.\kern\ellipsisgap 
+.\kern\ellipsisgap 
+\relax}
+
+\newcommand{\dotsfour}{%
+.\kern\ellipsisgap 
+.\kern\ellipsisgap
+.\kern\ellipsisgap
+.\kern\ellipsisgap 
+\relax}
+
+\newcommand{\dotstwo}{%
+.\kern\ellipsisgap 
+.\kern\ellipsisgap
+\relax}
+
+
+% Silbentrennung
+\selectlanguage{ngerman}
+\hyphenation{Re-kours EP-STEIN Her-vay-vor-les-ung Steu-er-sa-chen Öst-reich Burck-hard Keuch-hus-ten Oedi-pus-auf-führ-un-gen Hi-obs-post Kärnt-ner-ring Vei-tlis-sen-gas-se Franck-gas-se Rath-hau-se Sechs-schg Stu-bai-thal Tha-deusz Volks-th Halb-mo-nats-schrift JAHR-ES-ZEI-TEN Te-le-phon mit-ge-theilt Ge-schäfts-ver-bin-dung hoch-müth-ig Ueber-zeu-gung bis-chen Au-tor-rech-te Hof-manns-thal Nor-deijk Irre-seins Tschap-perl mit-zu-thei-len Aeu-ße-rung be-thö-ren Kü-ni-gel Be-ur-thei-lung Kuenst-lern ko-moe-di-sche hae-mor-rha-gi-scher Doer-mann Wash-burn flei-ssig haute Buddh-ist Preu-ssen Lin-den-café Mit-theil-un-gen An-theil Lieu-te-nant oes-terr Rieg-ner Oes-ter-reich gro-ssem Fran-zo-sen-thum Roche Lili Ent-schlie-ssun-gen äu-ssert wuen-sche Trans-ac-tio-nen Ue-ber-win-dung Eu-gene Stra-ssen-dir-ne qua-tre Deutsch-öst-er-reich Deutsch-öst-er-reichs Bjørn-stjer-ne noth-ing Edit-ed Olga Ar-naud Mer-gent-heim Léon-tine Polla-czek Brion Barre Hoch-sin-ger Ka-tha-rina Arouet Va-len-ci-ennes Ueber-win-dung Type-writer-in Tolstoi-buch Schnitzler Copier-buche Schiller Intel-lek-tuell-en-as-so-zi-a-tion Salten Devrient Grien-steidl Ge-sell-ſchaft ein-ge-ſchloſ-ſen Fort-ſetz-un-gen Bor-dell-ſtück fort-ſchrei-ten wirk-ſam-es ſchrift-ſtel-ler-i-ſchen hin-weg-ſe-hen Gerichts-saal-be-richt-er-ſtat-ter}
+
+
+
+% Sonderbefehl für .–
+\def\dotdash{\nobreak\hspace{0pt}.–}  %ACHTUNG BEIM ERSETZEN: LEERZEICHEN DANACH 
+\def\commadash{\nobreak\hspace{0pt},–}
+\def\excdash{\nobreak\hspace{0pt}!–}
+\def\semicolondash{\nobreak\hspace{0pt};–}
+\def\parentdotdash{\nobreak\hspace{0pt}).–}
+\def\slashislash{\,\slash\,\allowbreak\hspace{0pt}}
+
+\newcommand{\strich}{\makebox[1em][l]{– }}
+
+
+% Seite einrichten
+
+% Farbe definieren
+%\setmainfont[RawFeature={-liga}, 
+%SmallCapsFont=WSVgara-Caps, 
+%ItalicFont=WSVgara-Italic, 
+%BoldFont=WSVgara-Bold,
+%BoldItalicFont=WSVgara-BoldItalic
+%]{WSVgara}
+%\setsansfont[RawFeature={-liga}, 
+%SmallCapsFont=WSVgara-Caps, 
+%ItalicFont=WSVgara-Italic, 
+%BoldFont=WSVgara-Bold,
+%BoldItalicFont=WSVgara-BoldItalic
+%]{WSVgara}
+
+%\setmainfont{Brill}
+%\setsansfont{Brill}
+
+%\setmainfont[ItalicFont=SinaNova-Italic, 
+%BoldFont=SinaNova-Bold,
+%BoldItalicFont=SinaNova-BoldItalic
+%]{SinaNova-Regular}
+%\setsansfont[ItalicFont=SinaNova-Italic, 
+%BoldFont=SinaNova-Bold,
+%BoldItalicFont=SinaNova-BoldItalic
+%]{SinaNova-Regular}
+
+
+
+\def\labelitemi{--}
+
+% Geminationsstrich, U-Strich
+
+ \newcommand{\overbar}[1]{$\overline{\hbox{#1}}$}
+
+
+% Ausrufezeichen in den Index kriegen
+\newcommand{\rufezeichen}{"!}
+
+% Griechisch
+	
+%\newfontfamily\greekfont{GaramondPremrPro}
+%\newcommand\griechisch[1]{\greekfont{}#1{}\normalfont}
+
+%\newfontfamily\sansseriffont[HyphenChar=None, RawFeature={-liga}, Scale=1.03]{TheSans-Regular}
+%\newfontfamily\sansseriffont{uarial}
+
+
+%\newfontfamily\sansseriffont[HyphenChar=None, LetterSpace=1.0, RawFeature={-liga}]{TheSans-SemiBold}
+%\newcommand\sansseriff[1]{\sffamily{}#1{}\normalfont}
+
+\newcommand{\mini}{\,}
+
+
+\newcommand{\key}{\textsuperscript{\textcolor{red}{KEY}}}
+
+
+%% Sperrung (Package Soul)
+%% Hier ist die Sperrung definiert. Sperrung erreicht man mit \so{gesperrtes Wort}
+\sodef\so{}{.14em}{.4em plus.1em minus .1em}{.4em plus.1em minus .1em}
+
+% SCHRIFTEN
+\setkomafont{disposition}{}
+\addtokomafont{caption}{\small}
+\addtokomafont{captionlabel}{\small}
+
+%% Schrift der Kopf und Fußzeile
+\renewcommand*{\headfont}{\normalfont}
+\setkomafont{pagehead}{\footnotesize\addfontfeature{LetterSpace=10.0}}
+\setkomafont{pagenumber}{\normalfont\normalsize}
+\ohead[]{\pagemark}% Seitenzahl (c = centered) 
+\ofoot[]{}
+
+
+ 
+% Flatterndes Seitenende
+\raggedbottom
+
+% Fussnoten neu Anfangen
+
+\makeatletter
+\pretocmd{\@schapter}{\setcounter{footnote}{0}}{}{}
+\pretocmd{\@chapter}{\setcounter{footnote}{0}}{}{}
+\pretocmd{\@section}{\setcounter{footnote}{0}}{}{}
+\makeatother
+
+
+% Section Nummern durchgehend
+
+\RedeclareSectionCommand[
+  counterwithout=chapter
+]{section}
+
+% Section Punkt
+
+\renewcommand*{\sectionformat}{}
+\renewcommand*{\partformat}{}
+
+
+% Marginpar Schrift
+
+\newkomafont{margin}{\footnotesize} 
+\makeatletter 
+\let\MarginParOriginal\marginpar 
+\renewcommand*{\marginpar}{\@dblarg\@marginpar} 
+\newcommand{\@marginpar}[2][]{% 
+  \MarginParOriginal[\usekomafont{margin}{#1\par}]{\usekomafont{margin}{#2\par}} 
+} 
+\makeatother 
+
+
+
+\let\oldbeginnumbering\beginnumbering
+
+\def\beginnumbering{\oldbeginnumbering\par\nopagebreak}
+
+
+% Fußnoten linksbündig
+\deffootnote{1.5em}{1em}{% 
+\makebox[1.5em][l]{\thefootnotemark}%
+}
+
+
+% Fussnotenlineal (wobei für reledmac wohl was anderes gilt)
+\let\normalfootnoterule\footnoterule
+\setfootnoterule{0pt}
+\let\normalfootnoterule\footnoterule
+
+
+\setlength{\skip\footins}{8mm plus 2mm} % Abstand Fussnote Text
+\interfootnotelinepenalty=10000 % Kein Seitenwechsel in Fuss
+
+%% Kapitelüberschriften
+\renewcommand*{\raggedchapter}{\centering} 
+\renewcommand*{\raggedsection}{%
+ \CenteringLeftskip=1cm plus 1em\relax 
+ \CenteringRightskip=1cm plus 1em\relax 
+ \Centering\footnotesize\thesection{}.\ }
+\setkomafont{section}{\footnotesize}
+\setkomafont{chapter}{\normalfont\Large}
+\renewcommand{\chapterpagestyle}{empty}%The first page in each chapter won't have any heading or footer, especially no page number
+
+% section ohne führende Kapitelnummer
+\renewcommand*\thesection{\arabic{section}}
+
+% Bildunterschrift ohne Nummer
+\renewcommand*{\figureformat}{}
+\renewcommand*{\captionformat}{}
+
+% Abstand Bild
+\setlength{\textfloatsep}{\baselineskip}
+
+%% Zeilennummern
+\firstlinenum{0} \linenumincrement{5}
+\lineation{section} %Jeder Abschnitt wird durchnummeriert
+\renewcommand{\numlabfont}{\ssmall} %Schriftgröße Zeilennummern
+
+%\AtBeginEnvironment{multicols}{\RaggedRight} % Linksbündig in Spalten
+
+
+% SEITENUMBRÜCHE IM TEXT MARKIEREN
+
+%% Seitenumbrüche
+
+
+\newcommand{\Theight}{\dimexpr\fontcharht\font`W}
+\newcommand{\pbposition}{\depth}
+\newcommand{\pb}{\nobreak\hspace{0pt}\raisebox{-0.1em}{\raisebox{\pbposition}{\textnormal{|}}}\nobreak\hspace{0pt}}
+
+% EINFÜGUNGEN IM TEXT MARKIEREN
+
+\renewcaptionname{ngerman}{\contentsname}{Inhalt}           %Table of contents
+
+
+\newcommand{\introOben}{\textnormal{\raisebox{\Theight}{\raisebox{-\height}{\small\downp\normalsize}}}}
+\newcommand{\introUnten}{\textnormal{\raisebox{\Theight}{\raisebox{-\height}{\small\downp\normalsize}}}}
+\newcommand{\introMitteVorne}{\textnormal{\raisebox{\Theight}{\raisebox{-\height}{\small\downp\normalsize}}}}
+\newcommand{\introMitteHinten}{\textnormal{\raisebox{\Theight}{\raisebox{-\height}{\small\downp\normalsize}}}}
+\newcommand{\substVorne}{\textnormal{\raisebox{\Theight}{\raisebox{-\height}{\small\upp\normalsize}}}}
+\newcommand{\substDazwischen}{}
+\newcommand{\substHinten}{\textnormal{\raisebox{\Theight}{\raisebox{-\height}{\small\downp\normalsize}}}}
+
+
+% MARGINALSPALTE
+\setlength\ledrsnotewidth{1.5cm}
+
+
+% FUSSNOTE
+%% Im Apparat f. und ff.
+\Xtwolines{f.}
+\Xtwolinesbutnotmore
+
+%% Sperrungen bei Lemmas im Apparat
+%\pretocmd{\so}{\null}{}{}
+% Hab ich auskommentiert: Hat einen Fehler ergeben, denn plötzlich war ein Abstand vor Absätzen, die mit einer Sperrung beginnen
+
+%% Zeilennummerierung Abstand zum Lemma
+\Xboxlinenum{5mm}
+
+%% Bei zwei Apparateinträgen in einer Zeile wird nur beim ersten Mal die Zeile gezählt
+\Xnumberonlyfirstinline
+\Xnumberonlyfirstintwolines
+\Xinplaceofnumber{1em}
+\Xhangindent{1em}
+
+% ENDNOTEN
+\Xendlemmadisablefontselection[A]
+\renewcommand*{\printnpnum}[1]{{\noindent}\tiny}
+\Xendparagraph[A] % Endnoten in einem Absatz
+%\Xendtwolines{\tiny{f.}}
+\Xendbeforepagenumber{} 
+\Xendnotenumfont[A]{\tiny}
+\Xendboxlinenum[A]{0em}
+\Xendlemmaseparator{$\rbracket$}
+\Xendnotefontsize[A]{\footnotesize}
+\Xendhangindent[A]{1em}
+\Xendlemmafont[A]{\itshape}
+\Xendlemmafont[B]{\bfseries}
+\Xendnotefontsize[B]{\footnotesize}
+\Xendnotenumfont{\footnotesize}
+\Xendlineprefixsingle[C]{\tiny}
+\Xendlineprefixmore[C]{\tiny}
+\Xendlemmadisablefontselection
+\Xendlemmafont{\itshape}
+\Xendlinerangeseparator{\tiny{--}}
+\Xendhangindent{4em}
+\Xendboxlinenum{3.6em}
+\Xendafternumber{0.4em}
+\Xendboxlinenumalign{R}
+
+%\Xendboxstartlinenum{3.5em}
+%\Xendboxendlinenum{1em}
+
+
+%% Kaufmanns-Und (=)
+            
+            
+
+\newcommand{\kaufmannsund}{\&} 
+
+%% Tabelle Zellensprung
+% Ein weiterer Anlass, das Kaufmannsund in der Übergabe zu vermeiden:
+
+\newcommand{\zellensprung}{ \& }
+
+%% INDEX
+    
+    \makeindex 
+    \newcommand*\lettergroup[1]{}
+    
+        \newcommand{\pw}[1]{#1}
+        \newcommand{\pwt}[1]{\textbf{#1}}
+        \newcommand{\pws}[1]{\upshape{\textbf{#1}}}
+            
+        \newcommand{\pwe}[1]{\textbf{\emph{#1}}}
+             
+    \newcommand{\pwk}[1]{#1\textsuperscript{\tiny{K}}}
+    \newcommand{\pwv}[1]{\emph{#1}}
+     \newcommand{\pwkv}[1]{\emph{#1}\textsuperscript{\tiny{K}}}
+               \newcommand{\pwuv}[1]{\emph{#1}?}
+               \newcommand{\pwu}[1]{#1?}
+ \newcommand{\range}[2]{{\def\pw##1{##1}#1}--#2}
+
+\newcommand{\buch}[1]{#1}
+
+
+%% MEHRERE INDIZES
+
+\newindex[Register]{pw}
+%\newindex[Institutionen Organisationen Periodika und Unternehmen]{org}
+%\newindex[Institutionen und Orte]{o}
+\newindex[Korrespondenzpartner]{briefe-out}
+\newindex[Gedruckte Quellen]{buch-abdruck}
+
+\newcommand\briefsenderindex[1]{\sindex[briefe-out]{#1}}
+\newcommand\briefempfaengerindex[1]{\sindex[briefe-out]{#1}}
+
+\newcommand\buchabdruck[1]{\sindex[buch-abdruck]{#1}}
+\renewcommand\buchabdruck[1]{}
+
+
+
+%% Symbole
+
+%\newcommand{\symaddr}{\includegraphics[height=6pt]{symbol/noun_637366.png}}
+%\newcommand{\symweiteredrucke}{\includegraphics[height=6pt]{symbol/noun_634729.png}}
+%\newcommand{\symdruckvorlage}{\includegraphics[height=6pt]{symbol/noun_637409.png}}
+%\newcommand{\symstandort}{\includegraphics[height=6pt]{symbol/noun_634216.png}}
+%\newcommand{\symhead}{\includegraphics[height=6pt]{symbol/noun_1162030_cc.png}}
+
+
+\newcommand{\symaddr}{A}
+\newcommand{\symweiteredrucke}{D}
+\newcommand{\symdruckvorlage}{V}
+\newcommand{\symstandort}{O}
+\newcommand{\symhead}{H}
+
+
+
+\newcommand\anhangTitel[2]{\toendnotes[C]{\hangpara{4em}{1}{\makebox[4em][l]{\textbf{#1}}\textbf{#2}}\endgraf}}
+\newcommand\Adresse[1]{\toendnotes[C]{\hangpara{4em}{1}{\makebox[4em][l]{\makebox[3.6em][r]{\symaddr}}}#1\endgraf}}
+
+\newcommand\buchAlsQuelle[1]{\toendnotes[C]{\footnotesize\par\hangpara{4em}{1}{\makebox[4em][l]{\makebox[3.6em][r]{\symdruckvorlage}}}#1\endgraf}}
+\newcommand\buchAbdrucke[1]{\toendnotes[C]{\footnotesize\par\hangpara{4em}{1}{\makebox[4em][l]{\makebox[3.6em][r]{\symweiteredrucke}}}#1\endgraf}}
+\newcommand\Standort[1]{\toendnotes[C]{\footnotesize\hangpara{4em}{1}{\makebox[4em][l]{\makebox[3.6em][r]{\symstandort}}}#1\endgraf}}
+\newcommand\biographical[1]{\toendnotes[C]{\footnotesize\hangpara{4em}{1}{\makebox[4em][l]{\makebox[3.6em][r]{\symhead}}}#1\endgraf}}
+\newcommand\biographicalOhne[1]{\toendnotes[C]{\footnotesize\hangpara{4em}{1}{\makebox[4em][l]{\makebox[3.6em][r]{}}}#1\endgraf}}
+
+
+
+\newcommand\datumImAnhang[1]{\toendnotes[C]{#1}}
+
+\let\newcell&
+
+\newcommand\physDesc[1]{\toendnotes[C]{\hangpara{4em}{0}#1\endgraf}}
+\newcommand\weitereDrucke[1]{#1}
+
+
+% Schnitzler Tagebuch Auszüge
+\newcommand{\prgrph}[1]{\endgraf\medskip\noindent\textbf{#1}\newline}
+
+
+%% VERWEISE
+% Dieser Befehl vom Typ
+% \verweis{FW_V_schwn_A}{FW_V_schwn_E} 
+% dient den Verweisen auf den Text von Kommentar und Herausgebereingriffen. Ihm werden die Namen der beiden Labels – Anfang und Ende – übergeben und er setzt den Anfang und entscheidet ob f. oder ff. folgt 
+
+
+\newcounter{mystart}
+\newcounter{mystop}
+\newcounter{phantom}
+
+\newcommand*\myrangeref[2]{%
+  \setcounterpageref{mystart}{#1}%
+  \setcounterpageref{mystop}{#2}%
+  \ifnum\value{mystop}<\value{mystart}%
+    \typeout{[myrangeref] Strange...stop (#2) before start (#1).}%
+    \pageref{#2}--\pageref{#1}%
+  \else
+    \pageref{#1}%
+    \ifnum\value{mystart}<\value{mystop}%
+      \addtocounter{mystop}{-1}%
+      \ifnum\value{mystart}<\value{mystop}%
+        \,ff.
+        %--\pageref{#2}%%
+      \else
+        \,f.
+         %%--\pageref{#2}%
+              \fi
+    \fi
+  \fi
+}
+            
+\newcommand*\myrangerefkasten[2]{%
+  \setcounterpageref{mystart}{#1}%
+  \setcounterpageref{mystop}{#2}%
+  \ifnum\value{mystop}<\value{mystart}%
+    \typeout{[myrangeref] Strange...stop (#2) before start (#1).}%
+    \pageref{#2}--\pageref{#1}%
+  \else
+    \makebox[12pt][r]{\pageref{#1}}%
+    \ifnum\value{mystart}<\value{mystop}%
+      \addtocounter{mystop}{-1}%
+      \ifnum\value{mystart}<\value{mystop}%
+        --\pageref{#2}%%
+      \else
+         --\pageref{#2}%
+         % alternativ hierher: f.
+      \fi
+    \fi
+  \fi
+}
+
+
+\newcommand*\mylabel[1]{%
+  \refstepcounter{phantom}%
+  \label{#1}%
+}
+
+\newenvironment{anhang}{\vspace{1cm}
+}{}
+
+\emfontdeclare{\itshape}
+
+%% RAHMEN SEITLICH
+
+\newlength{\leftbarwidth}
+\setlength{\leftbarwidth}{3pt}
+\newlength{\leftbarsep}
+\setlength{\leftbarsep}{10pt}
+
+\renewenvironment{leftbar}[1][\hsize]
+{% 
+\def\FrameCommand 
+{%
+{\hspace{-7pt} \color{black} \vrule width 0.5pt}%
+\hspace{0pt}%must no space.
+\fboxsep=\FrameSep\colorbox{white}%
+}%
+\MakeFramed{\hsize#1\advance\hsize-\width\FrameRestore}%
+}
+{\endMakeFramed}
+\setlength{\FrameSep}{5pt}
+
+\newmdenv[topline=false, leftline=true, rightline=true, bottomline=false,%
+  linewidth=0.5pt, leftmargin=30pt, rightmargin=30pt, %
+  skipabove=8pt, skipbelow=8pt]{mdbar}
+
+% Überstreichung (OVERLINE)
+
+\makeatletter
+\newcommand*{\textoverline}[1]{$\overline{\hbox{#1}}\m@th$}
+\makeatother
+
+% Rahmen für Hintergrundfarbe
+\fboxsep0mm
+
+% Befehl für gekürzte Texte
+
+\newcommand{\kuerzung}{, Auszug}
+
+% Verse 
+
+\setlength{\stanzaindentbase}{20pt} %Play with it later.
+\setstanzaindents{5,1,1}
+\setcounter{stanzaindentsrepetition}{2}
+\newcommand{\stanzaend}{\&}
+\sethangingsymbol{\protect\hfill}
+\AtEveryStopStanza{\vspace{0.25\baselineskip}} %Abstand zwischen Strophen
+
+
+% Versuch eines Grid
+
+\RedeclareSectionCommand[
+  beforeskip=3\baselineskip,
+  afterskip=\baselineskip
+]{chapter}
+\RedeclareSectionCommand[
+  beforeskip=2\baselineskip,
+  afterskip=\baselineskip
+]{section}
+
+\newcommand\adjacent[2][]{%
+  \bgroup
+  \RedeclareSectionCommand[
+    beforeskip=2\baselineskip,
+    afterskip=\baselineskip,
+  ]{chapter}%
+  \if\relax\detokenize{#1}\relax
+    \addchap{#2}%
+  \else
+    \addchap[#1]{#2}%
+  \fi
+  \egroup
+  \section
+}
+
+
+%change the part format in table of contents
+\renewcaptionname{ngerman}{\contentsname}{Inhalt} 
+
+
+% Inhaltsverzeichnis
+
+\AtBeginDocument{%
+  \addtocontents{toc}{\protect\label{toc}}%
+}
+
+\renewcaptionname{ngerman}{\contentsname}{Verzeichnis der Dokumente} 
+ 
+ 
+   \DeclareTOCStyleEntry[
+  beforeskip=15pt,
+  entryformat=\normalsize\normalfont\centering,
+  pagenumberformat=\nullfont,
+  linefill={},
+  raggedentrytext=true
+]{part}{part}
+
+  \DeclareTOCStyleEntry[
+  beforeskip=5pt,
+  entryformat=\normalsize\normalfont\centering,
+  pagenumberformat=\nullfont,
+  linefill={},
+  raggedentrytext=true
+]{chapter}{chapter}
+
+\DeclareTOCStyleEntry[
+  onstarthigherlevel=\vspace*{0.5\baselineskip}\nobreak,
+  indent=0pt,
+  entryformat=\normalsize\def\autodot{.},
+  pagenumberformat=\normalsize,
+  raggedentrytext=true
+]{section}{section}
+
+
+
+ 
+% Das folgende auskommentiert, funktionierte nicht mehr, ging aber in Bahr/Schnitzler. Sollte eigentlich dazu dienen, beim Inhaltsverzeichnis die Nummern rechtsbündig zu setzen
+
+ \iffalse
+ 
+  \DeclareTOCStyleEntry[
+  beforeskip=5pt,
+  entryformat=\normalsize\normalfont\centering,
+  pagenumberformat=\nullfont,
+  linefill={},
+  raggedentrytext=true
+]{chapter}{chapter}
+
+\DeclareTOCStyleEntry[
+  onstarthigherlevel=\vspace*{0.5\baselineskip}\nobreak,
+  indent=0pt,
+  entryformat=\normalsize\def\autodot{.},
+  pagenumberformat=\normalsize,
+  raggedentrytext=true
+]{section}{section}
+ 
+ 
+  \newcommand*\sectionnumberbox[1]{\hfill #1\hspace{.6em}}
+
+\newlength{\zweiziffern}
+\newlength{\dreiziffern}
+\newlength{\vierziffern}
+\settowidth{\zweiziffern}{9999}
+\settowidth{\dreiziffern}{99999}
+\settowidth{\vierziffern}{99999999}
+ 
+\BeforeStartingTOC[toc]{\value{tocdepth}=\sectiontocdepth}
+
+
+\DeclareTOCStyleEntry[
+  onstarthigherlevel=\vspace*{0.5\baselineskip}\nobreak,
+  indent=0pt,
+  entryformat=\normalsize\def\autodot{.},
+  entrynumberformat=\sectionnumberbox,
+  pagenumberformat=\normalsize,
+  numwidth=\zweiziffern,
+  raggedentrytext=true
+]{section}{section}
+
+\newcommand{\toccheck}{\ifnum \value{section}=76 \addtocontents{toc}{\protect\DeclareTOCStyleEntry[numwidth=\dreiziffern]{section}{section}} \else \ifnum \value{section}=990 \addtocontents{toc}{\protect\DeclareTOCStyleEntry[numwidth=\vierziffern]{section}{section}} \fi \fi}
+\fi
+
+
+
+% Längen für Tabellen
+\newlength{\longeste}
+\newlength{\longestz}
+\newlength{\longestd}
+\newlength{\longestv}
+\newlength{\longestf}
+
+\newcommand\halbtextwidth{0.9\textwidth}
+
+\newcommand\pwindex[1]{{\sindex[pw]{#1}}}
+\newcommand\oindex[1]{{\sindex[pw]{#1}}}
+\newcommand\orgindex[1]{{\sindex[pw]{#1}}}
+
+\renewcommand\oindex[1]{{{\sindex[pw]{#1}}}}
+\renewcommand\orgindex[1]{{{\sindex[pw]{#1}}}}
+
+
+
+% INDEX
+
+%\renewcommand\pwindex[1]{}
+%\renewcommand\oindex[1]{}
+%\renewcommand\orgindex[1]{}
+%\renewcommand\buchabdruck[1]{}
+
+
+\newcommand\url[1]{\mbox{#1}}
+\renewcommand\ngermanhyphenmins{33}
+
+\makeatletter
+\newcommand*{\geminationm}{$\overline{\hbox{m}}\m@th$}
+\newcommand*{\geminationn}{$\overline{\hbox{n}}\m@th$}
+\makeatother
+
+%part
+\renewcommand{\partmarkformat}{}
+\renewcommand{\partheadmidvskip}{\enskip}
+\renewcommand{\partformat}{}
+\setkomafont{partnumber}{\usekomafont{part}}
+
+
+%\geometry{headsep=8pt} % Abstand Kopfzeile - Text
+%% DOKUMENT
+
+\begin{document}
+
+% Section ohne Nummer
+\renewcommand*{\raggedsection}{%
+ \CenteringLeftskip=1cm plus 1em\relax 
+ \CenteringRightskip=1cm plus 1em\relax 
+ \Centering\normalsize}
+
+
+
+\widowpenalty=10000         % avoid widows
+\clubpenalty=10000          % avoid orphans
+
+\sloppy
+\setlength{\parindent}{0em}
+
+\setlength{\ledlsnotewidth}{4cm}
+\setlength{\ledrsnotewidth}{4cm}
+\renewcommand*{\ledlsnotefontsetup}{\scriptsize\sffamily}% left
+\renewcommand*{\ledrsnotefontsetup}{\scriptsize\sffamily}% left
+\thispagestyle{empty} 
+
+               \section[Paul Goldmann an Arthur Schnitzler, 24. 12. {[}1892{]}]{ Paul Goldmann an Arthur Schnitzler, 24. 12. {[}1892{]}}\nopagebreak\mylabel{v}\rehead{ }\normalsize\beginnumbering\briefempfaengerindex{Schnitzler, Arthur@\textsc{Schnitzler, Arthur}!zzzGoldmann, Paul@\emph{von Paul Goldmann}!1892-12-241@{24. 12. {[}1892{]}}|(be} \toendnotes[C]{\smallbreak\pagebreak[2]} \Standort{DLA, A:Schnitzler, HS.NZ85.1.3163.}
+\physDesc{Brief, 6 Blätter, 22 Seiten
+\newline{}Handschrift: schwarze Tinte, deutsche Kurrent
+\newline{}Schnitzler: mit Bleistift das Jahr »92« vermerkt }\toendnotes[C]{\smallbreak}\pstart
+           \centering{}{\pb}\textsc{\textcolor{pink}{Paris}{}\ledrightnote{\textcolor{pink}{Paris}}}, 24. December.\pend
+           \pstart
+           Alſo Weihnachtsabend. Aber nicht ſentimental,
+               beileibe. Das thun wir hier nicht, das hält auf, das iſt reacſionär. Wir wollen
+               vorwärts. Und darum müſſen wir ſtark werden. Was für einen ſchwachen Menſchen wohl
+               nur ſoviel bedeutet, daß er daran vergißt, daß er eigentlich ſchwach iſt.\pend
+           \pstart
+           Mein theurer Freund! Es iſt Weihnachtsabend, und ich
+               hätte \strikeout{\textcolor{gray}{g}} unter keinen Umſtänden Zeit, Dir zu ſchreiben, wenn ich nicht die \textsc{Chance} gehabt hätte, {\pb}vorgeſtern beim Herunterſteigen von der Tramway zu
+               ſtürzen und mir die linke Schulter auszurenken. Man nennt das hier eine \textsc{\begin{otherlanguage}{french}luxation de l’épaule\end{otherlanguage}}, renkt das gewohnheitsmäßig falſch ein, renkt das dann wieder aus – \textsc{\begin{otherlanguage}{french}remettre\end{otherlanguage} und \begin{otherlanguage}{french}démettre\end{otherlanguage}} – und conſtatirt jedesmal, daß eine neue Gelenkkapſel oder Gelenkband – ich
+               weiß nicht, wie das Zeug auf deutſch heißt – zerriſſen iſt. Der Tag geht für den
+               Patienten unter dieſen Umſtänden nicht ohne heitere Zerſtreuungen vor{\pb}über. \label{K_L02704-1v}\edtext{\textsc{\begin{otherlanguage}{french}Mais, enfin\end{otherlanguage}}}{\lemma{\textnormal{\emph{Mais, enfin}}}\Cendnote{\textnormal{französisch: aber letztendlich}}}\label{K_L02704-1h}
+               ich bin genöthigt, für einige Tage meinen Dienſt einzuſtellen – wenn nicht die
+               Kurpfuſcher, in deren Händen ich hier bin, einige Wochen daraus machen – und vor
+               Allem, ich ſitze heut{ }Abends müßig zuhauſe. Habe ich alſo geſucht, an der Sache eine gute
+               Seite zu finden, habe eine ſehr künſtliche Inſtallation auf meinem Schreibtiſch
+               gemacht, um das Papier ſeſthalten zu können, und habe mich dann niedergeſetzt, um {\pb}endlich einmal wieder mit Dir, Liebſter, zu plaudern.
+               Und ſiehe da, es geht.\pend
+           \pstart
+           Ich ſehe zu meiner großen Herzenserleichterung – habe mir wirklich viel Sorge darüber
+               gemacht – daß Du mir nicht bös biſt, weil ich Dir nicht antworte. Aber, weiß Gott, es
+               geht nicht! Das Leben, das wir in dieſer böſen Zeit zu führen gezwungen ſind, iſt
+               einfach unmenſchlich. Der Dienſt verſchlingt Alles, Eſſenszeit, Schlafenszeit, und
+               nun gar erſt die {\pb}Zeit zum freundſchaftlichen
+               Briefwechſel. An Dich gedacht? Oh, mein lieber Freund, wie oft, wie oft! Mitten im
+               Sturm der \label{T_L02704-1v}\edtext{Eindrücke}{\lemma{\textnormal{\emph{Eindrücke}}}\Cendnote{\textnormal{Goldmann schreibt
+                  »Eindrücken«}}}\label{T_L02704-1h}, mitten im feinem Kunſtgenuß, wo ich immer gar
+               ſo gern mit Dir getheilt hätte. Und beſonders auch in dieſen Stunden der
+               verzweifelten Verlaſſenheit und Lebensmüdigkeit, wo ich mich nach Dir geſehnt, als
+               nach einem \uline{Menſchen}! Denn das gibt es hier nun wohl
+               gar nicht. Ich habe immer den gleich ſtarken Wunſch, Dich {\pb}wiederzuſehen. Aber ich würde mich anderſeits doch
+               davor fürchten; denn einmal habe ich Sorge davor, du würdeſt mich in Vielem verändert
+               und nicht mehr ſo mit Dir zuſammenſtimmend finden; und dann fürchte ich, ich würde
+               die Verlaſſenheit wieder ſchwerer ertragen und würde wieder arg mit meiner \textcolor{pink}{Wien}{}\ledrightnote{\textcolor{pink}{Paris}}-Sehnſucht zu ringen haben, die eine Form
+               meiner Sentimentalität iſt, will ſagen meines Nichtvorwärtskommens, will ſagen \textsc{etc.} ſiehe oben. {\pb}Aber
+               Eines begreiſe ich doch nicht: Ganz abgeſehen von dem zwiſchen mir und Dir. Sag’ mir:
+               warum kommſt Du nicht nach \textsc{\textcolor{pink}{Paris}{}\ledrightnote{\textcolor{pink}{Paris}}}? Und zwar auf lange? Um jeden Preis? Glaub’ mir – ich ſehe es jetzt ſo
+               deutlich, wie nur irgend etwas auf der Welt – es iſt für Deine ganze Entwickelung
+               einfach unentbehrlich. Es wird Dir ekelhaft, abſcheulich, unerträglich ſein. Aber Du
+               weißt ja, daß das die {\pb}Formen ſind, in denen die
+               Entwickelungs-Kriſis aufzutreten pflegt. Und Du würdeſt hier eine ſolche Fülle neuer
+               Ideen, – würdeſt ſo gewaltige \textsc{\begin{otherlanguage}{french}Chocs\end{otherlanguage}} bekommen – daß Du \strikeout{\textcolor{gray}{von}} am Ende wie ein neuer Menſch daſtehen und mit ganz anderen Augen ſehen
+               würdeſt. Specieller: Das Leben in \textsc{\textcolor{pink}{Paris}{}\ledrightnote{\textcolor{pink}{Paris}}} entſubjectivirt, es objectivirt – und Du biſt unter allen Umſtänden
+               verpflichtet, es auch damit zu verſuchen{[}.{]}{\pb}Alſo komm’ her, mein lieber \textsc{Arthur}, – nicht meinetwegen. Ich würde Dich vielleicht alle drei Wochen
+               einmal ſehen können, um Dich zu bitten, daß Du mir ein Nachtmahl zahlſt. Aber
+               Deinetwegen! Folge mir! Du wirſt es nicht zu bereuen haben. Das heißt, Du wirſt es
+               furchtbar bereuen. Aber es wird Dir ganz enorm geſund ſein.\pend
+           \pstart
+           Woraus Du nicht etwa ſchließen darfſt, daß ich mich hier wohl fühle. {\pb}Im Gegentheil! Entſetzlich elend. Heimathlos,
+               verſtoßen, zuſchanden gearbeitet, angewidert, unbefriedigt \textsc{etc}. Aber eine große Compenſation dafür iſt da: Ich fühle, daß ich \uline{lerne}. Und ſolange das Gefühl anhält, will ich es
+               muthig hier aushalten. Vom eigentlichen Lebensziel freilich ferner als je. Keine
+               Selbſtändigkeit zu erblicken – kein Erwerb, kein Vermögen. Tagelohn und Schulden. {\pb}Keinen Weg zu den 12000 \textsc{frcs} Rente, die ich brauche. Weißt Du mir vielleicht einen? Dann komme ich
+               gleich wieder, und dann bleiben und ſchaffen wir mitſammen. Oder irgend eine ſicher
+               nicht-journaliſtiſche Stellung? Wenn Dir ſo etwas unter die Augen komm, denk’ bitte
+               an mich! {\dotsfour}\pend
+           \pstart
+           Und nun Du. Vielen Dank für die Kritiken. Werth hat nur \label{K_L02704-3v}\edtext{die von Dr. \textsc{\textcolor{blue}{Meyer}{}\ledrightnote{\textcolor{blue}{F. Meyer}}}}{\lemma{\textnormal{\emph{die von Dr. Meyer}}}\Cendnote{\textnormal{\textcolor{blue}{f. m.} [=\textcolor{blue}{F. Meyer}]: \textcolor{green}{[Mit unſerer öſterreichiſchen Literatur]}. In: \emph{\textcolor{green}{Berliner Neueste Nachrichten}}, Jg. 12,
+                     Nr. 563, 6. 11. 1892, S. [3].}}}\label{K_L02704-3h}. Es
+               erhöht meinen {\pb}Reſpekt vor dem \textcolor{blue}{Mann}{}\ledrightnote{→\textcolor{blue}{F. Meyer}} beträchtlich, daß er einem \textcolor{blue}{Freunde}{}\ledrightnote{→\textcolor{blue}{Jakob Julius David}} ſo derb ſeine \label{K_L02704-4v}\edtext{Meinung}{\lemma{\textnormal{\emph{Meinung}}}\Cendnote{\textnormal{\textcolor{blue}{Meyer} kritisierte in seinem kurzen \textcolor{green}{Absatz} zur österreichischen
+                  Literatur auch \textcolor{blue}{Jakob Julius David}
+                  beziehungsweise dessen Stil (»Seine Probleme und Charaktere ſind einfach,
+                     ſeine Sprache iſt knapp und alterthümelnd.«) vor der besprochenen \textcolor{green}{Erzählsammlung}{ }\emph{\textcolor{green}{Probleme}}.}}}\label{K_L02704-4h} ſagt. Er hat zwar in der
+               Sache meiner Anſicht nach Unrecht, aber als Offenheit iſt es werthzuſchätzen. Alle
+               übrigen verſtehen Dich nicht, außer etwa 
+               \textsc{\label{K_L02704-5v}\edtext{\textcolor{blue}{Ludassy}{}\ledrightnote{\textcolor{blue}{Julius von Gans-Ludassy}}}{\lemma{\textnormal{\emph{Ludassy}}}\Cendnote{\textnormal{\textcolor{blue}{Julius von Gans-Ludassy}: \emph{\textcolor{green}{Bücher}}. In: \emph{\textcolor{green}{Fremden-Blatt}}, Jg. 46, Nr. 351, 19. 12. 1892, S. XXXX.}}}\label{K_L02704-5h}}. \label{K_L02704-6v}\edtext{\textsc{\textcolor{blue}{Bauer}{}\ledrightnote{\textcolor{blue}{Julius Bauer}}}}{\lemma{\textnormal{\emph{Bauer}}}\Cendnote{\textnormal{[\textcolor{blue}{Julius Bauer}]: \emph{\textcolor{green}{Oeſterreichiſche Autoren}}. In: \emph{\textcolor{green}{Neues Wiener Abendblatt}}, Jg. 26, Nr. 351, 19. 12. 1892, S. 3–4, hier: S. 3.}}}\label{K_L02704-6h}:
+               eine lobende \textcolor{green}{Notiz}{}\ledrightnote{→\textcolor{green}{Oeſterreichiſche Autoren}} mit
+               Rückſicht darauf, daß man in dem Hauſe dinirt und ſich die Beziehung zu Deinem \textcolor{blue}{Papa-\label{K_L02704-7v}\edtext{Regierungsrath}{\lemma{\textnormal{\emph{Regierungsrath}}}\Cendnote{\textnormal{\textcolor{blue}{Johann Schnitzler} wurde
+                        1883 zum \textcolor{blue}{Regierungsrat} ernannt. \textcolor{blue}{Julius
+                        Bauer} nannte Arthur Schnitzler in seiner \textcolor{green}{Rezension} den »Sohn des
+                        bekannten \textcolor{blue}{Profeſſors} Dr. \textcolor{blue}{Schnitzler}«.}}}\label{K_L02704-7h}}{}\ledrightnote{→\textcolor{blue}{Johann Schnitzler}} erhalten will. \label{K_L02704-8v}\edtext{\textsc{\textcolor{blue}{Nossig}{}\ledrightnote{\textcolor{blue}{Alfred Nossig}}}}{\lemma{\textnormal{\emph{Nossig}}}\Cendnote{\textnormal{\textcolor{green}{Rezension} nicht ermittelt
+                  XXXX evtl. könnte es die Rezension vom 3. 12. 1892 im Extrablatt sein, aber das
+                  lässt sich nicht verifizieren; andere Möglichkeit wäre z. B. auch Wiener
+                  Allgemeine Zeitung XXXX}}}\label{K_L02704-8h}: {\pb}einer, der auf
+               Beides – die \strikeout{Dine} Diners und die Beziehung –
+               candidirt. Macht aber nichts; ſie ſollen nur von dir ſprechen. Der Ruf wird ja nicht
+               dadurch zunächſt gemacht, daß man verſtanden, ſondern dadurch, daß überſaupt von
+               Einem geſprochen wird. Ich ſelbſt hätte längſt über Dich ſchreiben ſollen. Aber wann?
+               Pure phyſiſche Unmöglichkeit, das ich Dich doch nicht damit {\pb}beſchimpfen will, daß ich eine Reklamnotiz für Dich
+               zuſammenſchmiere. Die Sache mußte künſtleriſch verarbeitet werden. Aber ich habe
+               nicht eine Stunde dafür gehabt. Soll alſo inzwiſchen der \label{K_L02704-12v}\edtext{Andere}{\lemma{\textnormal{\emph{Andere}}}\Cendnote{\textnormal{nicht
+                  identifiziert}}}\label{K_L02704-12h} ſchreiben – der \textcolor{pink}{Berlin}{}\ledrightnote{\textcolor{pink}{Berlin}}er
+               – ein ganz braver Menſch, \strikeout{b\textcolor{gray}{o}} bornirt, aber nach der guten Richtung bornirt, d.h. mit einem dummen
+               Vorurtheil für das Moderne be{\pb}haftet, was Dir
+               zuſtatten kommen wird. Er wird wohl bald \label{K_L02704-13v}\edtext{losſchießen}{\lemma{\textnormal{\emph{losſchießen}}}\Cendnote{\textnormal{XXXX Anatol-Rezension des Berliners erschienen? XXXX}}}\label{K_L02704-13h}. Und dann kann ich ja
+               immer noch das Wort nehmen, wie es mein ſehnlicher Wunſch und feſter Vorſatz iſt. \textsc{\textcolor{blue}{Herzl}{}\ledrightnote{\textcolor{blue}{Theodor Herzl}}} aber wird nicht ſchreiben. Ich habe mein Möglichſtes gethan – ich bin ſoweit
+               gegangen, als ich gehen konnte, – aber, ein ſo braver \textcolor{blue}{Menſch}{}\ledrightnote{→\textcolor{blue}{Theodor Herzl}} er iſt, ſo kennſt Du doch auch
+               ſeinen {\pb}Größenwahn. Und er hat mir auf meine
+               Andeutungen in einer Weiſe geantwortet, daß ich nicht mehr darauf zu rückkommen
+               konnte, ohne Dich bloßzuſtellen. (»Wenn er mir ſein \textcolor{green}{Buch}{}\ledrightnote{→\textcolor{green}{Anatol}} deshalb geſchickt hat, damit ich darüber ſchreibe \textsc{etc}« {\dotsfour})\pend
+           \pstart
+           Und nun Dein \textcolor{green}{Stück}{}\ledrightnote{→\textcolor{green}{Das Märchen. Schauspiel in drei Aufzügen}}? Auf wann
+               die \label{K_L02704-9v}\edtext{Aufführung}{\lemma{\textnormal{\emph{Aufführung}}}\Cendnote{\textnormal{Erst ein knappes Jahr später, am 1. 12. 1893, kam es zur Uraufführung des \emph{\textcolor{green}{Märchen}}s am \emph{\textcolor{brown}{Deutschen
+                     Volkstheater}} in \textcolor{pink}{Wien}. Zuvor lehnte das
+                     \emph{\textcolor{brown}{Burgtheater}} das \emph{\textcolor{green}{Märchen}} ab, wie Schnitzler am 19. 11. 1892 im \emph{\textcolor{green}{Tagebuch}} notierte. Außerdem war eine Aufführung in der zweiten Hälfte des
+                     Januars 1893 am \emph{\textcolor{brown}{Neuen Deutschen Theater}} in \textcolor{pink}{Prag}
+                  geplant, die jedoch ebenso nicht stattfand Siehe Paul Goldmann an Arthur Schnitzler, 27. 6. [1892] wie Bemühungen um eine Aufführung am \textcolor{pink}{Berlin}er \emph{\textcolor{brown}{Lessing-Theater}}
+                  gelingen wollten Siehe A. S.: \emph{Tagebuch}, 18. 3. 1893.}}}\label{K_L02704-9h}? Und das neue \textcolor{green}{Stück}{}\ledrightnote{→\textcolor{green}{Abschiedssouper}}? Und Deine \label{K_L02704-14v}\edtext{\textcolor{green}{Novellen}{}\ledrightnote{→\textcolor{green}{Sterben. Novelle}}}{\lemma{\textnormal{\emph{Novellen}}}\Cendnote{\textnormal{Goldmann bezog sich hier womöglich auf
+                  den \textcolor{green}{\emph{\textcolor{green}{Anatol}}-Einakter}{ }\emph{\textcolor{green}{Abschiedssouper}}, der am 14. 7. 1893 im \textcolor{pink}{Bad Ischl}er \textcolor{pink}{Stadttheater} uraufgeführt wurde. Eine der erwähnten
+                     »Novellen« könnte \emph{\textcolor{green}{Sterben}}
+                  sein.}}}\label{K_L02704-14h}? Und, ſag mir nur, warum {\pb}biſt Du
+               ein ſo elender Menſch und ich ſchreibſt mir nichts PerſönIiches mehr? Weißt Du, daß
+               Du mich glücklich aus Deinem Leben herausgeworfen haſt? Und daß Du mich auf
+               literariſche Diät geſetzt haſt? Literariſcher Beirath! Aber Arthur! Pfui Teufel!
+               Schämſt Du Dich denn gar nicht? {\dots}\pend
+           \pstart
+           Ich habe \textcolor{blue}{Jemanden}{}\ledrightnote{→\textcolor{blue}{Heinrich Kanner}} für Euren
+               lieben Kreis. {\pb}Das ſympathiſcheſte \textcolor{blue}{Mitglied}{}\ledrightnote{→\textcolor{blue}{Heinrich Kanner}} hat ſich aus unſerer \textcolor{brown}{Redaction}{}\ledrightnote{→\textcolor{brown}{Frankfurter Zeitung}} losgelöſt, weil es von
+                  \textsc{\textcolor{blue}{Sonnemann}{}\ledrightnote{\textcolor{blue}{Leopold Sonnemann}}} denn doch gar zu ſehr chicanirt wurde, und iſt – \textcolor{pink}{Wien}{}\ledrightnote{\textcolor{pink}{Wien}}er von \label{K_L02704-2v}\edtext{Geburt}{\lemma{\textnormal{\emph{Geburt}}}\Cendnote{\textnormal{\textcolor{blue}{Heinrich Kanner} wurde in \textcolor{pink}{Galatz} (\textcolor{pink}{Rumänien})
+                  geboren, zog aber als Kleinkind im Jahr 1866 mit seiner Familie nach
+                     \textcolor{pink}{Wien}.}}}\label{K_L02704-2h} und Erziehung
+               – unſer \textcolor{pink}{Wien}{}\ledrightnote{\textcolor{pink}{Wien}}er \textcolor{blue}{Correſpondent}{}\ledrightnote{→\textcolor{blue}{Heinrich Kanner}} geworden. \textsc{Dr. \textcolor{blue}{Heinrich Kanner}{}\ledrightnote{\textcolor{blue}{Heinrich Kanner}}} – Adreſſe wird Dir Dr. \textsc{\textcolor{blue}{Joachim}{}\ledrightnote{\textcolor{blue}{Jaques Joachim}}} ſagen, oder ich ſchreib’ ſie Dir auf – \textcolor{blue}{einer}{}\ledrightnote{→\textcolor{blue}{Heinrich Kanner}} der liebſten Leute, die mir überhaupt be{\pb}gegnet ſind. Kein Künſtler ſondern \textcolor{blue}{Volkswirth}{}\ledrightnote{→\textcolor{blue}{Heinrich Kanner}} und \textcolor{blue}{Politiker}{}\ledrightnote{→\textcolor{blue}{Heinrich Kanner}}. Aber doch vielleicht \textcolor{blue}{Künſtlernatur}{}\ledrightnote{→\textcolor{blue}{Heinrich Kanner}}, vor Allem aber
+               ein wahres \textcolor{blue}{Ideal}{}\ledrightnote{→\textcolor{blue}{Heinrich Kanner}} an
+               Geſcheitheit, Feinſinn und \textsc{Noblesse}. Geh’, ſetz Dich mit
+               ihm in \label{K_L02704-10v}\edtext{Verbindung}{\lemma{\textnormal{\emph{Verbindung}}}\Cendnote{\textnormal{Es sind keine Briefe zwischen Schnitzler
+                  und \textcolor{blue}{Heinrich Kanner}, der außerdem erst am
+                     24. 9. 1896 im \emph{\textcolor{green}{Tagebuch}} erwähnt wurde, bekannt.}}}\label{K_L02704-10h}. Wirſt
+               Deine Freude daran haben{\dotsfive}\pend
+           \pstart
+           Von ganzem Herzen ein frohes neues Jahr, mein theurer Freund! {\pb}Arbeitsluſt! Erfolg! Und vorwärts! Die allerwärmſten
+               Grüße an \textsc{\textcolor{blue}{Loris}{}\ledrightnote{\textcolor{blue}{Hugo von Hofmannsthal}{\newline}\textcolor{red}{KEY PROBLEM}{\newline}\textcolor{red}{KEY PROBLEM}{\newline}\textcolor{red}{KEY PROBLEM}{\newline}\textcolor{red}{KEY PROBLEM}{\newline}\textcolor{red}{KEY PROBLEM}{\newline}\textcolor{red}{KEY PROBLEM}{\newline}\textcolor{red}{KEY PROBLEM}{\newline}\textcolor{red}{KEY PROBLEM}{\newline}\textcolor{red}{KEY PROBLEM}{\newline}\textcolor{red}{KEY PROBLEM}{\newline}\textcolor{red}{KEY PROBLEM}{\newline}\textcolor{red}{KEY PROBLEM}{\newline}\textcolor{red}{KEY PROBLEM}{\newline}\textcolor{red}{KEY PROBLEM}{\newline}\textcolor{red}{KEY PROBLEM}{\newline}\textcolor{red}{KEY PROBLEM}{\newline}\textcolor{red}{KEY PROBLEM}{\newline}\textcolor{red}{KEY PROBLEM}{\newline}\textcolor{red}{KEY PROBLEM}{\newline}\textcolor{red}{KEY PROBLEM}{\newline}\textcolor{red}{KEY PROBLEM}}} und \textsc{\textcolor{blue}{Richard}{}\ledrightnote{\textcolor{blue}{Richard Beer-Hofmann}}} (\textsc{\textcolor{blue}{Richard}{}\ledrightnote{\textcolor{blue}{Richard Beer-Hofmann}}} ſoll mir ſchreiben!!!). Ergebene Empfehlungen und Neujahrswünſche an Deine \textcolor{blue}{Eltern}{}\ledrightnote{→\textcolor{blue}{Louise Schnitzler}{\newline}→\textcolor{blue}{Johann Schnitzler}}. Grüße an
+               Deinen \textcolor{blue}{Bruder}{}\ledrightnote{→\textcolor{blue}{Julius Schnitzler}}, \textsc{\textcolor{blue}{Kapper}{}\ledrightnote{\textcolor{blue}{Friedrich Kapper}}} und wen ich ſonſt noch in \textcolor{pink}{Wien}{}\ledrightnote{\textcolor{pink}{Wien}} lieb habe,
+               was Du ja ebenſo wohl weißt wie ich.\pend
+           \pstart
+           Und ich umarme Dich von ganzem Herzen, {\pb}in alter,
+               unwandelbarer, treuer Freundſchaft.\pend
+           \pstart
+           Dein {\\[\baselineskip]}\spacefill\mbox{Paul Goldm}\pend
+           \leftskip=0em{}\pstart
+           \noindent{}Der kleinen \textcolor{blue}{Elſe}{}\ledrightnote{\textcolor{blue}{Else Singer}}: Handkuß, und ich hab’ die
+                  Sachen leider ſelbſt nicht mehr. Liegt auch ſo weit hinter mir. Will mich auch gar
+                  nicht mehr daran erinnern, daß ich einmal Künſtler werden wollte und daß es kleine
+                     \textcolor{blue}{Elſe}{}\ledrightnote{\textcolor{blue}{Else Singer}}n in der {\pb}Welt gibt. Das thut ſo weh!\pend
+           \pstart
+           Und ſag’ einmal: Könnteſt Du nicht unter der Hand einmal und ganz zufällig
+                  erfahren, was \label{K_L02704-15v}\edtext{\textsc{\textcolor{blue}{Hilda}{}\ledrightnote{\textcolor{blue}{Hilda von Mitis}}}}{\lemma{\textnormal{\emph{Hilda}}}\Cendnote{\textnormal{Siehe Paul Goldmann an Arthur Schnitzler, 27. 4. 1891}}}\label{K_L02704-15h} macht? Ich glaube, ich habe mich da doch wie ein Schaf benommen. Dieſes
+                  aber unter uns.\pend
+           \pstart
+           Bald einen Brief, nicht wahr? Theils literariſch, theils perſönlich!\pend
+           \endnumbering\briefempfaengerindex{Schnitzler, Arthur@\textsc{Schnitzler, Arthur}!zzzGoldmann, Paul@\emph{von Paul Goldmann}!1892-12-241@{24. 12. {[}1892{]}}|)be}\mylabel{h}\begin{anhang}\end{anhang}
+         \normalsize
+
+\newenvironment{esempio}[3]%
+{
+    \vspace{1.5ex}
+    \rlap{\underline{#1}}
+    \par
+    \setlength{\parindent}{0cm}
+    \nopagebreak
+    \leftskip=#2cm
+    \rightskip=#3cm
+}
+{
+    \par
+}
+
+\doendnotes{C}
+\bigskip
+
+\printindex[pw]
+
+
+\end{document}
+      
