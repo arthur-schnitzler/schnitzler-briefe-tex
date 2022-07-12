@@ -18,9 +18,10 @@ jobs:
         for i in L*.tex; do xelatex $i -interaction=nonstopmode;done
         for i in L*.tex; do xelatex $i -interaction=nonstopmode;done
         for i in L*.tex; do xelatex $i -interaction=nonstopmode;done
+        cd ..
     - name: copy pdf to pdf-folder
       run: |
-        mv *.pdf ./pdf 
+        mv ./tex/*.pdf ./pdf 
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: made pdfs
