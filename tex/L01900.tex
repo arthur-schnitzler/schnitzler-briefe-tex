@@ -1,0 +1,1260 @@
+\documentclass[twoside=false,titlepage=false,open=any, parskip=never, fontsize=12pt, headings=small, chapterprefix=false, appendixprefix=false]{scrbook}
+\addtolength{\oddsidemargin}{\evensidemargin}
+\setlength{\oddsidemargin}{.5\oddsidemargin}
+\setlength{\evensidemargin}{\oddsidemargin}
+
+\usepackage[{textwidth=13cm,textheight=23cm,marginpar=3cm, left=2cm}]{geometry}
+%\usepackage[textwidth=80mm, layoutwidth=170mm, paperheight =297mm, paperwidth  =210mm, layoutvoffset= 20mm,layouthoffset= 20mm]{geometry}
+%\usepackage[paperheight =297mm, paperwidth  =210mm, layoutheight=230mm, layoutwidth=158mm, layoutvoffset= 20mm, layouthoffset= 20mm, textwidth=150mm, textheight=185mm, showcrop=false]{geometry}
+%sepackage[paperheight=230mm, paperwidth=138mm, textwidth=100mm, textheight=185mm]{geometry}
+ \usepackage[usenames, dvipsnames]{xcolor}
+\usepackage{scrlayer-scrpage}
+\usepackage{hyphenat}
+\usepackage{fontspec}
+\usepackage{moresize}
+\usepackage[english, french, greek, ngerman]{babel}
+%\usepackage{ipa}  für das Seitenwechselzeichens
+\usepackage[babel]{microtype}
+\usepackage[dash, dot]{dashundergaps}
+\usepackage{soul}
+\usepackage{ragged2e}
+\usepackage[makeindex, protected]{splitidx}
+\usepackage[itemlayout=abshang,hangindent=0.85em, subindent=0em, subsubindent=1em, justific=RaggedRight, columns=1, columnsep=0pt, indentunit=1em, totoc=false]{idxlayout}
+\usepackage{scrhack}
+\usepackage{xpatch}
+\usepackage{reledmac}
+\usepackage{refcount} % Für die Seitenverweise 1–3 etc. 
+\usepackage{etoolbox}
+\usepackage{framed}
+\usepackage[export]{adjustbox} % loads also graphicx, für Bildgröße autom. maximal
+\usepackage{float} %ermöglicht exakte Bildpositionierung
+\usepackage{mdframed}
+\usepackage{enumitem}
+\usepackage{relsize}
+\usepackage{longtable}
+\usepackage{chngcntr} % Sectionnummern durchgehend
+\usepackage{hanging} % Für hängende Absätze
+\usepackage[rightmargin=0em, leftmargin=1em, indentfirst=false]{quoting} % Für die geänderte quote-Umgebung in den Hrsg-Texten
+%\usepackage{fontawesome}
+\usepackage{ellipsis}
+\RequirePackage{hyphsubst}%
+\HyphSubstIfExists{ngerman-x-latest}{\HyphSubstLet{ngerman}{ngerman-x-latest}}{} 
+\listfiles
+\usepackage[noadjust]{marginnote}
+
+\KOMAoptions{toc=chapterentrydotfill, toc=flat}
+\addtokomafont{chapterentrypagenumber}{\mdseries}
+\setkomafont{chapterentry}{\normalfont\mdseries}
+\setkomafont{partentry}{\normalfont\mdseries}
+\RedeclareSectionCommand[tocbeforeskip=0pt]{chapter}
+
+\setlength{\skip\footins}{4mm plus 2mm} % Abstand Fussnote Text
+\interfootnotelinepenalty=10000 % Kein Seitenwechsel in Fuss
+
+%\DeclareTextFontCommand{\emph}{\textit}
+
+% Der Befehl erlaubt rechtsbündig bei Unterschriften, die nicht mehr in die Zeile passen
+\def\spacefill{\hspace{\fill}\mbox{}\linebreak[0]\hspace*{\fill}}
+\usepackage{atbegshi}
+\usepackage{zref-abspage}
+\usepackage{perpage}
+\usepackage{zref-user}
+\usepackage{tikz}
+\usepackage{ulem}
+\usetikzlibrary{calc,decorations.pathmorphing}
+
+\PassOptionsToPackage{gray}{xcolor}
+\definecolor{gray}{gray}{0.6}
+
+\doublehyphendemerits=1000000 % das hier verhindert zu viele aufeinanderfolgende Trennstriche am Zeilenende
+
+
+\include{tikz-include}
+
+
+
+
+
+\def\myloop#1#2#3{%
+    #3%
+    \ifdim\dimexpr#1>1.1\baselineskip
+        #2%
+        \expandafter\myloop\expandafter{\the\dimexpr#1-\baselineskip\relax}{#2}%
+    \fi
+}
+
+\makeatother
+%\newcommand{\damage}[1]{\tikzul[gray,line width=0.15\ht\strutbox,semitransparent]{#1}}
+%\newcommand{\strikeout}[1]{\tikzst[black]{#1}}
+
+\newcommand{\damage}[1]{\textcolor{orange}{#1}}
+\newcommand{\strikeout}[1]{\sout{#1}}
+
+
+\setlength{\parindent}{1em}
+
+% Mehr als drei Auslassungspunkte 
+
+\newcommand{\dotsseven}{%
+.\kern\ellipsisgap 
+.\kern\ellipsisgap
+.\kern\ellipsisgap 
+.\kern\ellipsisgap
+.\kern\ellipsisgap
+.\kern\ellipsisgap 
+.\kern\ellipsisgap 	
+\relax}
+
+\newcommand{\dotssix}{%
+.\kern\ellipsisgap 
+.\kern\ellipsisgap
+.\kern\ellipsisgap
+.\kern\ellipsisgap
+.\kern\ellipsisgap 
+.\kern\ellipsisgap 
+\relax}
+
+\newcommand{\dotsfive}{%
+.\kern\ellipsisgap 
+.\kern\ellipsisgap
+.\kern\ellipsisgap
+.\kern\ellipsisgap 
+.\kern\ellipsisgap 
+\relax}
+
+\newcommand{\dotsfour}{%
+.\kern\ellipsisgap 
+.\kern\ellipsisgap
+.\kern\ellipsisgap
+.\kern\ellipsisgap 
+\relax}
+
+\newcommand{\dotstwo}{%
+.\kern\ellipsisgap 
+.\kern\ellipsisgap
+\relax}
+
+
+% Silbentrennung
+\selectlanguage{ngerman}
+\hyphenation{Re-kours EP-STEIN Her-vay-vor-les-ung Steu-er-sa-chen Öst-reich Burck-hard Keuch-hus-ten Oedi-pus-auf-führ-un-gen Hi-obs-post Kärnt-ner-ring Vei-tlis-sen-gas-se Franck-gas-se Rath-hau-se Sechs-schg Stu-bai-thal Tha-deusz Volks-th Halb-mo-nats-schrift JAHR-ES-ZEI-TEN Te-le-phon mit-ge-theilt Ge-schäfts-ver-bin-dung hoch-müth-ig Ueber-zeu-gung bis-chen Au-tor-rech-te Hof-manns-thal Nor-deijk Irre-seins Tschap-perl mit-zu-thei-len Aeu-ße-rung be-thö-ren Kü-ni-gel Be-ur-thei-lung Kuenst-lern ko-moe-di-sche hae-mor-rha-gi-scher Doer-mann Wash-burn flei-ssig haute Buddh-ist Preu-ssen Lin-den-café Mit-theil-un-gen An-theil Lieu-te-nant oes-terr Rieg-ner Oes-ter-reich gro-ssem Fran-zo-sen-thum Roche Lili Ent-schlie-ssun-gen äu-ssert wuen-sche Trans-ac-tio-nen Ue-ber-win-dung Eu-gene Stra-ssen-dir-ne qua-tre Deutsch-öst-er-reich Deutsch-öst-er-reichs Bjørn-stjer-ne noth-ing Edit-ed Olga Ar-naud Mer-gent-heim Léon-tine Polla-czek Brion Barre Hoch-sin-ger Ka-tha-rina Arouet Va-len-ci-ennes Ueber-win-dung Type-writer-in Tolstoi-buch Schnitzler Copier-buche Schiller Intel-lek-tuell-en-as-so-zi-a-tion Salten Devrient Grien-steidl Ge-sell-ſchaft ein-ge-ſchloſ-ſen Fort-ſetz-un-gen Bor-dell-ſtück fort-ſchrei-ten wirk-ſam-es ſchrift-ſtel-ler-i-ſchen hin-weg-ſe-hen Gerichts-saal-be-richt-er-ſtat-ter}
+
+
+
+% Sonderbefehl für .–
+\def\dotdash{\nobreak\hspace{0pt}.–}  %ACHTUNG BEIM ERSETZEN: LEERZEICHEN DANACH 
+\def\commadash{\nobreak\hspace{0pt},–}
+\def\excdash{\nobreak\hspace{0pt}!–}
+\def\semicolondash{\nobreak\hspace{0pt};–}
+\def\parentdotdash{\nobreak\hspace{0pt}).–}
+\def\slashislash{\,\slash\,\allowbreak\hspace{0pt}}
+
+\newcommand{\strich}{\makebox[1em][l]{– }}
+
+
+% Seite einrichten
+
+% Farbe definieren
+%\setmainfont[RawFeature={-liga}, 
+%SmallCapsFont=WSVgara-Caps, 
+%ItalicFont=WSVgara-Italic, 
+%BoldFont=WSVgara-Bold,
+%BoldItalicFont=WSVgara-BoldItalic
+%]{WSVgara}
+%\setsansfont[RawFeature={-liga}, 
+%SmallCapsFont=WSVgara-Caps, 
+%ItalicFont=WSVgara-Italic, 
+%BoldFont=WSVgara-Bold,
+%BoldItalicFont=WSVgara-BoldItalic
+%]{WSVgara}
+
+%\setmainfont{Brill}
+%\setsansfont{Brill}
+
+%\setmainfont[ItalicFont=SinaNova-Italic, 
+%BoldFont=SinaNova-Bold,
+%BoldItalicFont=SinaNova-BoldItalic
+%]{SinaNova-Regular}
+%\setsansfont[ItalicFont=SinaNova-Italic, 
+%BoldFont=SinaNova-Bold,
+%BoldItalicFont=SinaNova-BoldItalic
+%]{SinaNova-Regular}
+
+
+
+\def\labelitemi{--}
+
+% Geminationsstrich, U-Strich
+
+ \newcommand{\overbar}[1]{$\overline{\hbox{#1}}$}
+
+
+% Ausrufezeichen in den Index kriegen
+\newcommand{\rufezeichen}{"!}
+
+% Griechisch
+	
+%\newfontfamily\greekfont{GaramondPremrPro}
+%\newcommand\griechisch[1]{\greekfont{}#1{}\normalfont}
+
+%\newfontfamily\sansseriffont[HyphenChar=None, RawFeature={-liga}, Scale=1.03]{TheSans-Regular}
+%\newfontfamily\sansseriffont{uarial}
+
+
+%\newfontfamily\sansseriffont[HyphenChar=None, LetterSpace=1.0, RawFeature={-liga}]{TheSans-SemiBold}
+%\newcommand\sansseriff[1]{\sffamily{}#1{}\normalfont}
+
+\newcommand{\mini}{\,}
+
+
+\newcommand{\key}{\textsuperscript{\textcolor{red}{KEY}}}
+
+
+%% Sperrung (Package Soul)
+%% Hier ist die Sperrung definiert. Sperrung erreicht man mit \so{gesperrtes Wort}
+\sodef\so{}{.14em}{.4em plus.1em minus .1em}{.4em plus.1em minus .1em}
+
+% SCHRIFTEN
+\setkomafont{disposition}{}
+\addtokomafont{caption}{\small}
+\addtokomafont{captionlabel}{\small}
+
+%% Schrift der Kopf und Fußzeile
+\renewcommand*{\headfont}{\normalfont}
+\setkomafont{pagehead}{\footnotesize\addfontfeature{LetterSpace=10.0}}
+\setkomafont{pagenumber}{\normalfont\normalsize}
+\ohead[]{\pagemark}% Seitenzahl (c = centered) 
+\ofoot[]{}
+
+
+ 
+% Flatterndes Seitenende
+\raggedbottom
+
+% Fussnoten neu Anfangen
+
+\makeatletter
+\pretocmd{\@schapter}{\setcounter{footnote}{0}}{}{}
+\pretocmd{\@chapter}{\setcounter{footnote}{0}}{}{}
+\pretocmd{\@section}{\setcounter{footnote}{0}}{}{}
+\makeatother
+
+
+% Section Nummern durchgehend
+
+\RedeclareSectionCommand[
+  counterwithout=chapter
+]{section}
+
+% Section Punkt
+
+\renewcommand*{\sectionformat}{}
+\renewcommand*{\partformat}{}
+
+
+% Marginpar Schrift
+
+\newkomafont{margin}{\footnotesize} 
+\makeatletter 
+\let\MarginParOriginal\marginpar 
+\renewcommand*{\marginpar}{\@dblarg\@marginpar} 
+\newcommand{\@marginpar}[2][]{% 
+  \MarginParOriginal[\usekomafont{margin}{#1\par}]{\usekomafont{margin}{#2\par}} 
+} 
+\makeatother 
+
+
+
+\let\oldbeginnumbering\beginnumbering
+
+\def\beginnumbering{\oldbeginnumbering\par\nopagebreak}
+
+
+% Fußnoten linksbündig
+\deffootnote{1.5em}{1em}{% 
+\makebox[1.5em][l]{\thefootnotemark}%
+}
+
+
+% Fussnotenlineal (wobei für reledmac wohl was anderes gilt)
+\let\normalfootnoterule\footnoterule
+\setfootnoterule{0pt}
+\let\normalfootnoterule\footnoterule
+
+
+\setlength{\skip\footins}{8mm plus 2mm} % Abstand Fussnote Text
+\interfootnotelinepenalty=10000 % Kein Seitenwechsel in Fuss
+
+%% Kapitelüberschriften
+\renewcommand*{\raggedchapter}{\centering} 
+\renewcommand*{\raggedsection}{%
+ \CenteringLeftskip=1cm plus 1em\relax 
+ \CenteringRightskip=1cm plus 1em\relax 
+ \Centering\footnotesize\thesection{}.\ }
+\setkomafont{section}{\footnotesize}
+\setkomafont{chapter}{\normalfont\Large}
+\renewcommand{\chapterpagestyle}{empty}%The first page in each chapter won't have any heading or footer, especially no page number
+
+% section ohne führende Kapitelnummer
+\renewcommand*\thesection{\arabic{section}}
+
+% Bildunterschrift ohne Nummer
+\renewcommand*{\figureformat}{}
+\renewcommand*{\captionformat}{}
+
+% Abstand Bild
+\setlength{\textfloatsep}{\baselineskip}
+
+%% Zeilennummern
+\firstlinenum{0} \linenumincrement{5}
+\lineation{section} %Jeder Abschnitt wird durchnummeriert
+\renewcommand{\numlabfont}{\ssmall} %Schriftgröße Zeilennummern
+
+%\AtBeginEnvironment{multicols}{\RaggedRight} % Linksbündig in Spalten
+
+
+% SEITENUMBRÜCHE IM TEXT MARKIEREN
+
+%% Seitenumbrüche
+
+
+\newcommand{\Theight}{\dimexpr\fontcharht\font`W}
+\newcommand{\pbposition}{\depth}
+\newcommand{\pb}{\nobreak\hspace{0pt}\raisebox{-0.1em}{\raisebox{\pbposition}{\textnormal{|}}}\nobreak\hspace{0pt}}
+
+% EINFÜGUNGEN IM TEXT MARKIEREN
+
+\renewcaptionname{ngerman}{\contentsname}{Inhalt}           %Table of contents
+
+
+\newcommand{\introOben}{\textnormal{\raisebox{\Theight}{\raisebox{-\height}{\small{v}\normalsize}}}}
+\newcommand{\introUnten}{\textnormal{\raisebox{\Theight}{\raisebox{-\height}{\small{v}\normalsize}}}}
+\newcommand{\introMitteVorne}{\textnormal{\raisebox{\Theight}{\raisebox{-\height}{\small{v}\normalsize}}}}
+\newcommand{\introMitteHinten}{\textnormal{\raisebox{\Theight}{\raisebox{-\height}{\small{v}\normalsize}}}}
+\newcommand{\substVorne}{\textnormal{\raisebox{\Theight}{\raisebox{-\height}{\rotatebox[origin=c]{180}{v}\normalsize}}}}
+\newcommand{\substDazwischen}{}
+\newcommand{\substHinten}{\textnormal{\raisebox{\Theight}{\raisebox{-\height}{\small{v}\normalsize}}}}
+
+
+% MARGINALSPALTE
+\setlength\ledrsnotewidth{1.5cm}
+
+
+% FUSSNOTE
+%% Im Apparat f. und ff.
+\Xtwolines{f.}
+\Xtwolinesbutnotmore
+
+%% Sperrungen bei Lemmas im Apparat
+%\pretocmd{\so}{\null}{}{}
+% Hab ich auskommentiert: Hat einen Fehler ergeben, denn plötzlich war ein Abstand vor Absätzen, die mit einer Sperrung beginnen
+
+%% Zeilennummerierung Abstand zum Lemma
+\Xboxlinenum{5mm}
+
+%% Bei zwei Apparateinträgen in einer Zeile wird nur beim ersten Mal die Zeile gezählt
+\Xnumberonlyfirstinline
+\Xnumberonlyfirstintwolines
+\Xinplaceofnumber{1em}
+\Xhangindent{1em}
+
+% ENDNOTEN
+\Xendlemmadisablefontselection[A]
+\renewcommand*{\printnpnum}[1]{{\noindent}\tiny}
+\Xendparagraph[A] % Endnoten in einem Absatz
+%\Xendtwolines{\tiny{f.}}
+\Xendbeforepagenumber{} 
+\Xendnotenumfont[A]{\tiny}
+\Xendboxlinenum[A]{0em}
+\Xendlemmaseparator{$\rbracket$}
+\Xendnotefontsize[A]{\footnotesize}
+\Xendhangindent[A]{1em}
+\Xendlemmafont[A]{\itshape}
+\Xendlemmafont[B]{\bfseries}
+\Xendnotefontsize[B]{\footnotesize}
+\Xendnotenumfont{\footnotesize}
+\Xendlineprefixsingle[C]{\tiny}
+\Xendlineprefixmore[C]{\tiny}
+\Xendlemmadisablefontselection
+\Xendlemmafont{\itshape}
+\Xendlinerangeseparator{\tiny{--}}
+\Xendhangindent{4em}
+\Xendboxlinenum{3.6em}
+\Xendafternumber{0.4em}
+\Xendboxlinenumalign{R}
+
+%\Xendboxstartlinenum{3.5em}
+%\Xendboxendlinenum{1em}
+
+
+%% Kaufmanns-Und (=)
+            
+            
+
+\newcommand{\kaufmannsund}{\&} 
+
+%% Tabelle Zellensprung
+% Ein weiterer Anlass, das Kaufmannsund in der Übergabe zu vermeiden:
+
+\newcommand{\zellensprung}{ \& }
+
+%% INDEX
+    
+    \makeindex 
+    \newcommand*\lettergroup[1]{}
+    
+        \newcommand{\pw}[1]{#1}
+        \newcommand{\pwt}[1]{\textbf{#1}}
+        \newcommand{\pws}[1]{\upshape{\textbf{#1}}}
+            
+        \newcommand{\pwe}[1]{\textbf{\emph{#1}}}
+             
+    \newcommand{\pwk}[1]{#1\textsuperscript{\tiny{K}}}
+    \newcommand{\pwv}[1]{\emph{#1}}
+     \newcommand{\pwkv}[1]{\emph{#1}\textsuperscript{\tiny{K}}}
+               \newcommand{\pwuv}[1]{\emph{#1}?}
+               \newcommand{\pwu}[1]{#1?}
+ \newcommand{\range}[2]{{\def\pw##1{##1}#1}--#2}
+
+\newcommand{\buch}[1]{#1}
+
+
+%% MEHRERE INDIZES
+
+\newindex[Register]{pw}
+%\newindex[Institutionen Organisationen Periodika und Unternehmen]{org}
+%\newindex[Institutionen und Orte]{o}
+\newindex[Korrespondenzpartner]{briefe-out}
+\newindex[Gedruckte Quellen]{buch-abdruck}
+
+\newcommand\briefsenderindex[1]{\sindex[briefe-out]{#1}}
+\newcommand\briefempfaengerindex[1]{\sindex[briefe-out]{#1}}
+
+\newcommand\buchabdruck[1]{\sindex[buch-abdruck]{#1}}
+\renewcommand\buchabdruck[1]{}
+
+
+
+%% Symbole
+
+%\newcommand{\symaddr}{\includegraphics[height=6pt]{symbol/noun_637366.png}}
+%\newcommand{\symweiteredrucke}{\includegraphics[height=6pt]{symbol/noun_634729.png}}
+%\newcommand{\symdruckvorlage}{\includegraphics[height=6pt]{symbol/noun_637409.png}}
+%\newcommand{\symstandort}{\includegraphics[height=6pt]{symbol/noun_634216.png}}
+%\newcommand{\symhead}{\includegraphics[height=6pt]{symbol/noun_1162030_cc.png}}
+
+
+\newcommand{\symaddr}{A}
+\newcommand{\symweiteredrucke}{D}
+\newcommand{\symdruckvorlage}{V}
+\newcommand{\symstandort}{O}
+\newcommand{\symhead}{H}
+
+
+
+\newcommand\anhangTitel[2]{\toendnotes[C]{\hangpara{4em}{1}{\makebox[4em][l]{\textbf{#1}}\textbf{#2}}\endgraf}}
+\newcommand\Adresse[1]{\toendnotes[C]{\hangpara{4em}{1}{\makebox[4em][l]{\makebox[3.6em][r]{\symaddr}}}#1\endgraf}}
+
+\newcommand\buchAlsQuelle[1]{\toendnotes[C]{\footnotesize\par\hangpara{4em}{1}{\makebox[4em][l]{\makebox[3.6em][r]{\symdruckvorlage}}}#1\endgraf}}
+\newcommand\buchAbdrucke[1]{\toendnotes[C]{\footnotesize\par\hangpara{4em}{1}{\makebox[4em][l]{\makebox[3.6em][r]{\symweiteredrucke}}}#1\endgraf}}
+\newcommand\Standort[1]{\toendnotes[C]{\footnotesize\hangpara{4em}{1}{\makebox[4em][l]{\makebox[3.6em][r]{\symstandort}}}#1\endgraf}}
+\newcommand\biographical[1]{\toendnotes[C]{\footnotesize\hangpara{4em}{1}{\makebox[4em][l]{\makebox[3.6em][r]{\symhead}}}#1\endgraf}}
+\newcommand\biographicalOhne[1]{\toendnotes[C]{\footnotesize\hangpara{4em}{1}{\makebox[4em][l]{\makebox[3.6em][r]{}}}#1\endgraf}}
+
+
+
+\newcommand\datumImAnhang[1]{\toendnotes[C]{#1}}
+
+\let\newcell&
+
+\newcommand\physDesc[1]{\toendnotes[C]{\hangpara{4em}{0}#1\endgraf}}
+\newcommand\weitereDrucke[1]{#1}
+
+
+% Schnitzler Tagebuch Auszüge
+\newcommand{\prgrph}[1]{\endgraf\medskip\noindent\textbf{#1}\newline}
+
+
+%% VERWEISE
+% Dieser Befehl vom Typ
+% \verweis{FW_V_schwn_A}{FW_V_schwn_E} 
+% dient den Verweisen auf den Text von Kommentar und Herausgebereingriffen. Ihm werden die Namen der beiden Labels – Anfang und Ende – übergeben und er setzt den Anfang und entscheidet ob f. oder ff. folgt 
+
+
+\newcounter{mystart}
+\newcounter{mystop}
+\newcounter{phantom}
+
+\newcommand*\myrangeref[2]{%
+  \setcounterpageref{mystart}{#1}%
+  \setcounterpageref{mystop}{#2}%
+  \ifnum\value{mystop}<\value{mystart}%
+    \typeout{[myrangeref] Strange...stop (#2) before start (#1).}%
+    \pageref{#2}--\pageref{#1}%
+  \else
+    \pageref{#1}%
+    \ifnum\value{mystart}<\value{mystop}%
+      \addtocounter{mystop}{-1}%
+      \ifnum\value{mystart}<\value{mystop}%
+        \,ff.
+        %--\pageref{#2}%%
+      \else
+        \,f.
+         %%--\pageref{#2}%
+              \fi
+    \fi
+  \fi
+}
+            
+\newcommand*\myrangerefkasten[2]{%
+  \setcounterpageref{mystart}{#1}%
+  \setcounterpageref{mystop}{#2}%
+  \ifnum\value{mystop}<\value{mystart}%
+    \typeout{[myrangeref] Strange...stop (#2) before start (#1).}%
+    \pageref{#2}--\pageref{#1}%
+  \else
+    \makebox[12pt][r]{\pageref{#1}}%
+    \ifnum\value{mystart}<\value{mystop}%
+      \addtocounter{mystop}{-1}%
+      \ifnum\value{mystart}<\value{mystop}%
+        --\pageref{#2}%%
+      \else
+         --\pageref{#2}%
+         % alternativ hierher: f.
+      \fi
+    \fi
+  \fi
+}
+
+
+\newcommand*\mylabel[1]{%
+  \refstepcounter{phantom}%
+  \label{#1}%
+}
+
+\newenvironment{anhang}{\vspace{1cm}
+}{}
+
+\emfontdeclare{\itshape}
+
+%% RAHMEN SEITLICH
+
+\newlength{\leftbarwidth}
+\setlength{\leftbarwidth}{3pt}
+\newlength{\leftbarsep}
+\setlength{\leftbarsep}{10pt}
+
+\renewenvironment{leftbar}[1][\hsize]
+{% 
+\def\FrameCommand 
+{%
+{\hspace{-7pt} \color{black} \vrule width 0.5pt}%
+\hspace{0pt}%must no space.
+\fboxsep=\FrameSep\colorbox{white}%
+}%
+\MakeFramed{\hsize#1\advance\hsize-\width\FrameRestore}%
+}
+{\endMakeFramed}
+\setlength{\FrameSep}{5pt}
+
+\newmdenv[topline=false, leftline=true, rightline=true, bottomline=false,%
+  linewidth=0.5pt, leftmargin=30pt, rightmargin=30pt, %
+  skipabove=8pt, skipbelow=8pt]{mdbar}
+
+% Überstreichung (OVERLINE)
+
+\makeatletter
+\newcommand*{\textoverline}[1]{$\overline{\hbox{#1}}\m@th$}
+\makeatother
+
+% Rahmen für Hintergrundfarbe
+\fboxsep0mm
+
+% Befehl für gekürzte Texte
+
+\newcommand{\kuerzung}{, Auszug}
+
+% Verse 
+
+\setlength{\stanzaindentbase}{20pt} %Play with it later.
+\setstanzaindents{5,1,1}
+\setcounter{stanzaindentsrepetition}{2}
+\newcommand{\stanzaend}{\&}
+\sethangingsymbol{\protect\hfill}
+\AtEveryStopStanza{\vspace{0.25\baselineskip}} %Abstand zwischen Strophen
+
+
+% Versuch eines Grid
+
+\RedeclareSectionCommand[
+  beforeskip=3\baselineskip,
+  afterskip=\baselineskip
+]{chapter}
+\RedeclareSectionCommand[
+  beforeskip=2\baselineskip,
+  afterskip=\baselineskip
+]{section}
+
+\newcommand\adjacent[2][]{%
+  \bgroup
+  \RedeclareSectionCommand[
+    beforeskip=2\baselineskip,
+    afterskip=\baselineskip,
+  ]{chapter}%
+  \if\relax\detokenize{#1}\relax
+    \addchap{#2}%
+  \else
+    \addchap[#1]{#2}%
+  \fi
+  \egroup
+  \section
+}
+
+
+%change the part format in table of contents
+\renewcaptionname{ngerman}{\contentsname}{Inhalt} 
+
+
+% Inhaltsverzeichnis
+
+\AtBeginDocument{%
+  \addtocontents{toc}{\protect\label{toc}}%
+}
+
+\renewcaptionname{ngerman}{\contentsname}{Verzeichnis der Dokumente} 
+ 
+ 
+   \DeclareTOCStyleEntry[
+  beforeskip=15pt,
+  entryformat=\normalsize\normalfont\centering,
+  pagenumberformat=\nullfont,
+  linefill={},
+  raggedentrytext=true
+]{part}{part}
+
+  \DeclareTOCStyleEntry[
+  beforeskip=5pt,
+  entryformat=\normalsize\normalfont\centering,
+  pagenumberformat=\nullfont,
+  linefill={},
+  raggedentrytext=true
+]{chapter}{chapter}
+
+\DeclareTOCStyleEntry[
+  onstarthigherlevel=\vspace*{0.5\baselineskip}\nobreak,
+  indent=0pt,
+  entryformat=\normalsize\def\autodot{.},
+  pagenumberformat=\normalsize,
+  raggedentrytext=true
+]{section}{section}
+
+
+
+ 
+% Das folgende auskommentiert, funktionierte nicht mehr, ging aber in Bahr/Schnitzler. Sollte eigentlich dazu dienen, beim Inhaltsverzeichnis die Nummern rechtsbündig zu setzen
+
+ \iffalse
+ 
+  \DeclareTOCStyleEntry[
+  beforeskip=5pt,
+  entryformat=\normalsize\normalfont\centering,
+  pagenumberformat=\nullfont,
+  linefill={},
+  raggedentrytext=true
+]{chapter}{chapter}
+
+\DeclareTOCStyleEntry[
+  onstarthigherlevel=\vspace*{0.5\baselineskip}\nobreak,
+  indent=0pt,
+  entryformat=\normalsize\def\autodot{.},
+  pagenumberformat=\normalsize,
+  raggedentrytext=true
+]{section}{section}
+ 
+ 
+  \newcommand*\sectionnumberbox[1]{\hfill #1\hspace{.6em}}
+
+\newlength{\zweiziffern}
+\newlength{\dreiziffern}
+\newlength{\vierziffern}
+\settowidth{\zweiziffern}{9999}
+\settowidth{\dreiziffern}{99999}
+\settowidth{\vierziffern}{99999999}
+ 
+\BeforeStartingTOC[toc]{\value{tocdepth}=\sectiontocdepth}
+
+
+\DeclareTOCStyleEntry[
+  onstarthigherlevel=\vspace*{0.5\baselineskip}\nobreak,
+  indent=0pt,
+  entryformat=\normalsize\def\autodot{.},
+  entrynumberformat=\sectionnumberbox,
+  pagenumberformat=\normalsize,
+  numwidth=\zweiziffern,
+  raggedentrytext=true
+]{section}{section}
+
+\newcommand{\toccheck}{\ifnum \value{section}=76 \addtocontents{toc}{\protect\DeclareTOCStyleEntry[numwidth=\dreiziffern]{section}{section}} \else \ifnum \value{section}=990 \addtocontents{toc}{\protect\DeclareTOCStyleEntry[numwidth=\vierziffern]{section}{section}} \fi \fi}
+\fi
+
+
+
+% Längen für Tabellen
+\newlength{\longeste}
+\newlength{\longestz}
+\newlength{\longestd}
+\newlength{\longestv}
+\newlength{\longestf}
+
+\newcommand\halbtextwidth{0.9\textwidth}
+
+\newcommand\pwindex[1]{{\sindex[pw]{#1}}}
+\newcommand\oindex[1]{{\sindex[pw]{#1}}}
+\newcommand\orgindex[1]{{\sindex[pw]{#1}}}
+
+\renewcommand\oindex[1]{{{\sindex[pw]{#1}}}}
+\renewcommand\orgindex[1]{{{\sindex[pw]{#1}}}}
+
+
+
+% INDEX
+
+%\renewcommand\pwindex[1]{}
+%\renewcommand\oindex[1]{}
+%\renewcommand\orgindex[1]{}
+%\renewcommand\buchabdruck[1]{}
+
+
+\newcommand\url[1]{\mbox{#1}}
+\renewcommand\ngermanhyphenmins{33}
+
+\makeatletter
+\newcommand*{\geminationm}{$\overline{\hbox{m}}\m@th$}
+\newcommand*{\geminationn}{$\overline{\hbox{n}}\m@th$}
+\makeatother
+
+%part
+\renewcommand{\partmarkformat}{}
+\renewcommand{\partheadmidvskip}{\enskip}
+\renewcommand{\partformat}{}
+\setkomafont{partnumber}{\usekomafont{part}}
+
+
+%\geometry{headsep=8pt} % Abstand Kopfzeile - Text
+%% DOKUMENT
+
+\begin{document}
+
+% Section ohne Nummer
+\renewcommand*{\raggedsection}{%
+ \CenteringLeftskip=1cm plus 1em\relax 
+ \CenteringRightskip=1cm plus 1em\relax 
+ \Centering\normalsize}
+
+
+
+\widowpenalty=10000         % avoid widows
+\clubpenalty=10000          % avoid orphans
+
+\sloppy
+\setlength{\parindent}{0em}
+
+\setlength{\ledlsnotewidth}{4cm}
+\setlength{\ledrsnotewidth}{4cm}
+\renewcommand*{\ledlsnotefontsetup}{\scriptsize\sffamily}% left
+\renewcommand*{\ledrsnotefontsetup}{\scriptsize\sffamily}% left
+\thispagestyle{empty} 
+
+               \section[Richard Beer-Hofmann an Arthur Schnitzler, {[}13. 12. 1909?{]}]{ Richard Beer-Hofmann an Arthur Schnitzler, {[}13. 12. 1909?{]}}\nopagebreak\mylabel{v}\rehead{ }\normalsize\beginnumbering\briefempfaengerindex{Schnitzler, Arthur@\textsc{Schnitzler, Arthur}!zzzBeer-Hofmann, Richard@\emph{von Richard Beer-Hofmann}!1909-12-131@{{[}13. 12. 1909?{]}}|(be} \toendnotes[C]{\smallbreak\pagebreak[2]} \Standort{CUL, Schnitzler, B 8.}
+\physDesc{Manuskript13 Blätter, 13 Seiten (Paginierung mit Schreibmaschine)
+\newline{}Schreibmaschine
+\newline{}Handschrift: Bleistift, deutsche Kurrent (\noindent{}Korrekturen)}\buchAbdrucke{\weitereDrucke{Arthur Schnitzler, Richard Beer-Hofmann: \emph{Briefwechsel 1891–1931}. Hg. Konstanze Fliedl. Wien, Zürich: \emph{Europaverlag} 1992, S. 198–206.} }\toendnotes[C]{\smallbreak}\pstart
+           \noindent{}\centering{}{\pb}\textcolor{green}{\uline{DAS ECHO DES
+								LEBENS.}}{}\ledrightnote{\textcolor{green}{Das Echo des Lebens}}\pend
+           \pstart
+           \noindent{}\centering{}Ein Epilog zur \label{KLL01900_AS-1v}\edtext{Generalprobe}{\lemma{\textnormal{\emph{Generalprobe}}}\Cendnote{\textnormal{Der Text ist
+						undatiert, wurde \textcolor{blue}{Schnitzler} aber am 13. 12. 1909 von \textcolor{blue}{Beer-Hofmann} vorgelesen. Damit ist
+						anzunehmen, dass er ihn zu diesem Zeitpunkt erhalten hat.}}}\label{KLL01900_AS-1h} des
+						Stückes{\\}»\textcolor{green}{Der Ruf des Lebens}{}\ledrightnote{\textcolor{green}{Der Ruf des Lebens. Schauspiel in drei Akten}}«.\pend
+           {\bigskip}\pstart
+           \noindent{}Am Tage der Aufführung. Vier Uhr Nachmittags. Da es der 11. Dezember
+					ist, dämmert es bereits merklich. Der Vorhang ist hochgezogen. Die Bühne trägt
+					die Dekoration des \textcolor{green}{2. Aktes}{}\ledrightnote{→\textcolor{green}{Der Ruf des Lebens. Schauspiel in drei Akten}}.
+					Die Figuren des Stückes, die noch vor kurzem, in der unmateriellen Wirklichkeit,
+					die ihnen die Worte ihres Schöpfers gaben, bewegt aufrecht standen – lehnen nun,
+					in der materiellen Unwirklichkeit, die ihnen gestern – bei der Generalprobe –
+					die Schauspieler gaben, etwas blass und müde an den Wänden umher. Nur »der alte
+					Moser« liegt von rechts nach links, die ganze Bühne überquerend, wie ein
+					Schlagbaum am Boden. Auf dem Fensterbrett scheint der Oberleib des Obersten zu
+					stehen. Man kann augenblicklich nicht erkennen, ob er einen Unterleib besitzt.
+					Irene, die man befragen könnte, liegt neben dem alten Moser auf dem Boden. Falls
+					Max sie fragen sollte, wird sie es verneinen.\pend
+           \pstart
+           Vorne, hart am Souffleurkasten, ist eine dünne, frisch gestrichene grüne Barriere
+					aufgestellt, wohl, um zu verhindern, dass die Person\introOben{}en\introOben{}
+					des Stückes dem Publikum zu nahe gehen. Der Souffleurkasten scheint besetzt –
+					nach der Unruhe, die in ihm herrscht; (als sässe jemand darinn, dem
+					er zu eng ist).\pend
+           \pstart
+           Eine Pause.\pend
+           \pstart
+           Dann, eine ungeduldige Stimme aus dem Souffleurkasten:\pend
+           \pstart
+           {\pb}So fangen Sie doch an!\pend
+           \pstart
+           Marie: (mit etwas starren Augen, leise, und ein wenig verlegen) Verzeihen Sie,
+					Herr – – – ich weiss gar nicht, wie ich Sie nennen soll – –\pend
+           \pstart
+           \substVorne{}\textsuperscript{Stimme}{\allowbreak}\substDazwischen{}Souffleur\substHinten{}: Souffleur! Nennen Sie mich nur so. Für Sie bin ich es augenblicklich –
+					was ich sonst bin, kommt hier nicht in Betracht. Fangen Sie doch an!\pend
+           \pstart
+           Marie: Verzeihen Sie, Herr Souffleur – aber – – ich bin vielleicht nicht
+					ganz berechtigt, Sie das zu fragen – aber wieso sind wir da?\pend
+           \pstart
+           Katharina: Ja! Wieso sind wir da?\pend
+           \pstart
+           Der Oberst: Sie fragen nach den letzten Dingen – liebe Marie! Nach unserem
+					Dasein.\pend
+           \pstart
+           Max: (zu Albrecht leise) Der Oberst ist ein gar zu witziger Kopf!\pend
+           \pstart
+           Der Oberst: Die \strikeout{ewig} Fragen nach den letzten
+					Dingen, für den letzten Akt, liebe Marie! Vorher, ist jede Tiefe, eine Grube,
+					die sich der Dichter gräbt.\pend
+           \pstart
+           \substVorne{}\textsuperscript{Stimme}{\allowbreak}\substDazwischen{}Souffleur\substHinten{}: (ärgerlich) Dann graben Sie doch nicht, Herr Oberst!\pend
+           \pstart
+           \label{T_L01900-1v}\edtext{Marie: Aber}{\lemma{\textnormal{\emph{Marie: Aber}}}\Cendnote{\textnormal{geändert aus: »Marie; Aber«}}}\label{T_L01900-1h} ich
+					habe ja nur ganz unschuldig gefragt – – –\pend
+           \pstart
+           Die Oberstin (hebt den Kopf, sehr hart) \introOben{}»\introOben{}Unschuldig\introOben{}«\introOben{}? Sie? (Sie lacht auf, und lässt den Kopf wieder
+					sinken.)\pend
+           \pstart
+           Katharina: Auch ich habe nur leichthin – – –\pend
+           \pstart
+           Die Oberstin: (wie vorhin) »Leichthin«? \uline{Das} passt
+					für Sie. »Leichthin«.\pend
+           \pstart
+           \substVorne{}\textsuperscript{Stimme}{\allowbreak}\substDazwischen{}Souffleur\substHinten{}: (ärgerlich zur Oberstin) Fangen Sie nicht wieder an – –!\pend
+           \pstart
+           Unteroffizier Sebastian (sehr militärisch, aber mit eingefetteter Stimme): Melde
+					gehorsamst, wir sollen doch anfangen!\pend
+           \pstart
+           \substVorne{}\textsuperscript{Stimme}{\allowbreak}\substDazwischen{}Souffleur\substHinten{}: Reden Sie nichts drein – Sie – wie heissen \substVorne{}\textsuperscript{s}\substDazwischen{}S\substHinten{}ie, Unteroffizier, ich habe Ihren Namen vergessen.\pend
+           \pstart
+           {\pb}Sebastian: Melde gehorsamst,
+					Herr Soffleur, Sebastian!\pend
+           \pstart
+           \substVorne{}\textsuperscript{Stimme}{\allowbreak}\substDazwischen{}Souffleur\substHinten{}: Anfangen!\pend
+           \pstart
+           Der Arzt: Herr Souffleur, ich kann Fräulein Marie nicht Unrecht geben
+					– – –\pend
+           \pstart
+           Oberst: \uline{Das} haben wir gemerkt!\pend
+           \pstart
+           Der Arzt: – – es ist doch für uns alle – sozusagen – eine Lebensfrage, zu
+					wissen, wieso wir da sind?\pend
+           \pstart
+           Der Adjunkt / Max (gleichzeitig) Fräulein Marie hat Recht.\pend
+           \pstart
+           \substVorne{}\textsuperscript{Stimme}{\allowbreak}\substDazwischen{}Souffleur\substHinten{}: Gut, ich will versuchen – – –\pend
+           \pstart
+           Der Oberst: Der Dichter ist unser Schöpfer! Sie, mein Herr, sind der
+					Versucher!\pend
+           \pstart
+           \substVorne{}\textsuperscript{Stimme}{\allowbreak}\substDazwischen{}Souffleur\substHinten{}: Graben Sie nicht, Herr Oberst! Ich will versuchen es Ihnen zu sagen.
+					Geben Sie Acht!\pend
+           \pstart
+           Der alte Moser (hebt den Kopf): Acht? Nein, neunundsiebzig Jahre bin ich
+					alt – –\pend
+           \pstart
+           Der Arzt: Sie irren sich, Herr Moser, Sie sind jetzt gar nicht mehr alt; Sie sind
+					ganz jung tot.\pend
+           \pstart
+           Der alte Moser: Ich will nicht tot sein.\pend
+           \pstart
+           Der Arzt: Herr Moser! Ich bin Ihr Arzt – Sie müssen tot sein! Sie sind dazu
+					verpflichtet. Nicht nur sich selbst gegenüber – – –\pend
+           \pstart
+           \introOben{}\strikeout{Stimme}: \introOben{}Souffleur: Passen Sie auf, Sie
+					werden mich nicht verstehen! Wissen Sie, wie lange die kleinen Teilchen im
+					Resonnanzboden einer Violine nicht zur Ruhe kommen und noch
+					fortschwingen, wenn für unser Ohr der Bogenstrich, der sie erschütterte, längst
+					verklungen ist?\pend
+           \pstart
+           Albrecht: Wir reiten morgen in den Tod, Herr Souffleur – und Sie – prüfen uns
+					Physik?\pend
+           \pstart
+           {\pb}Souffleur: Es war nur eine
+					rhetorische Frage – – –\pend
+           \pstart
+           (Der Hintergrund wird durchsichtig; im hellen Sonnenlicht erblickt man ein Dorf,
+					lieblich an Hängen gelagert. Eine tiefsinnige Stimme sagt:\pend
+           \pstart
+           Rhetorisch! Ja!\pend
+           \pstart
+           Eine Frauenstimme (wiederholt in kurzen Atemstössen, ekstatisch): Rhetorisch! Ja,
+					das ist er!\pend
+           \pstart
+           (Die Landschaft entschwindet.)\pend
+           \pstart
+           Arzt: War das Grünau, Herr Adjunkt?\pend
+           \pstart
+           Adjunkt: Nein, lieber Doktor: Grinzing!\pend
+           \pstart
+           Souffleur: Nun sehen Sie: Von allen Worten, die Sie gestern auf der Generalprobe
+					sprachen, schwingt noch die Luft; sie hallen noch von den Mauern und den
+					gemalten Leinenwänden wieder, und wer feine Ohren hat, kann sie hören.\pend
+           \pstart
+           Arzt: Aber Herr Souffleur, das würde ja nur erklären, wieso unsere Stimmen da
+					sind; aber woher nehmen Sie denn unsere Leiber?\pend
+           \pstart
+           Souffleur: Ich könnte sagen: »Von die zwei Gulden!« Aber Sie würden mich nicht
+					verstehen, und es würde, überdies, vielleicht mein Inkognito lüften.\pend
+           \pstart
+           Der alte Moser: (hebt den Kopf) Nicht lüften! Sind Sie toll, ich kann den Tod
+					davon haben. (er legt sich wieder hin).\pend
+           \pstart
+           Arzt: (energisch) Herr Moser, ich ordiniere Ihnen tot zu sein. Wenn Sie meine
+					Verordnungen nicht befolgen, stehe ich für nichts!\pend
+           \pstart
+           Souffleur: Ihre Leiber also, Herr Arzt? Nun denn: Wenn Sie einen Gegenstand, zum
+					Beispiel das Fensterkreuz dort – – –\pend
+           \pstart
+           Max: Hier ist keines, Herr Souffleur! Sonst bleibt der Herr Oberst beim
+					Hereinspringen hängen!\pend
+           \pstart
+           {\pb}Souffleur: Lassen Sie mich
+					ausreden!\pend
+           \pstart
+           Oberstin: (höhnisch) \uline{Wir} – \uline{Sie}? Haha!\pend
+           \pstart
+           Souffleur: Wenn Sie ein Fensterkreuz fest ins Auge fassen, und dann den Blick von
+					ihm abwenden, so werden Sie – wenn Sie genau beobachten – noch einen Augenblick
+					lang, vor sich in der Luft, das Bild des Fensterkreuzes sehen. Ich sage: »Das
+					Bild«! Aber wissen wir, ob es mehr oder weniger Bild ist, als das Fensterkreuz,
+					das wir vorhin sahen – nicht? – – Sagen Sie doch: »Jo«! – Von der
+					Leiblichkeit, die gestern auf der Probe Schauspieler den Worten des Dichters
+					liehen, schweben die Formen noch durcheinander in diesem Raum, und haben – eine
+					Weile – eine Art von Leiblichkeit.\pend
+           \pstart
+           Sebastian: Herr Souffleur, melde gehorsamst, dass doch seither die gestrige
+					Abendvorstellung – ganz ausverkauft – hier war!\pend
+           \pstart
+           Souffleur: (nach einer Pause) Sie haben recht – aber ich fange an zu zweifeln, ob
+					Sie wirklich »Sebastian« heissen!\pend
+           \pstart
+           Sebastian: Melde gehorsamst: So soll ich le – – (abbrechend zu Max) Fürchten
+					Sie nichts, Herr Leutnant – auch wir haben einander zugeschworen, auch wir sind
+					totgeweiht!\pend
+           \pstart
+           Oberst: Wie kommt es, Unteroffizier, dass ich gar niemanden vom Regiment
+					erblicke?\pend
+           \pstart
+           Oberstin: (höhnisch) Weil Du mit dem Rücken gegen den Kasernhof stehst!\pend
+           \pstart
+           Oberst: Aber es sollten doch Kürrassiere unseres Regimentes vorbeigehen und
+					grüssen, und ich sollte »Gute Nacht« wünschen – – – wo sind denn Alle
+					– – Unteroffizier!\pend
+           \pstart
+           Sebastian: Melde gehorsamst: Das ganze Regiment ist nach Hause gefahren um
+					Abschied zu nehmen, und wir haben einander {\pb}zugeschworen, dass keiner
+					zurückkommt. Wir sind Alle blaue Kürrassiere.\pend
+           \pstart
+           Katharina: (gerührt zu Sebastian) Geben Sie mir Ihre Hand, Sebastian\pend
+           \pstart
+           Sebastian: (gibt die Hand nicht)\pend
+           \pstart
+           Katharina: Abschied nehmen ist süss!\pend
+           \pstart
+           Sebastian: Melde gehorsamst, es kann auch eine Woche dauern!\pend
+           \pstart
+           Katharina: Ich dachte, Du seist ein lustiger Bursche?\pend
+           \pstart
+           Sebastian: Zu Befehl! Auch lustig bin ich, aber dann sag ich nicht »Abschied
+					nehmen«.\pend
+           \pstart
+           Marie: (kommt nach vorne, bückt sich zum Souffleurkasten) Ich danke Ihnen, Herr
+					Souffleur – jetzt versteh ich mein Dasein! (sie wendet sich und tritt der
+					Oberstin auf ihr Kleid)\pend
+           \pstart
+           Oberstin: (wütend) Jetzt treten Sie mir noch die Schleppe ab! \uline{Das} ist zu viel! Sie – Sie – Hyäne des
+					Schlachtfeldes!\pend
+           \pstart
+           Maria: (sanft) Was habe ich Ihnen getan, Frau Oberst?\pend
+           \pstart
+           Oberstin: Sie fragen noch? Mein Mann erschiesst mich, und an meiner Leiche hängen
+					Sie sich an den Hals meines Geliebten?\pend
+           \pstart
+           Albrecht: (zu Max) Das sind \so{Deine} Zusammenhänge,
+					Max!\pend
+           \pstart
+           Marie: Und \so{mein} Schicksal vergessen Sie? Ich habe mich
+					ihm hingegeben, und aus meinen Armen ist er gegangen, sich umbringen für eine
+					Andere? \label{K_L01900-1v}\edtext{Was bin \strikeout{ich} denn dann ich ihm gewesen?}{\lemma{\textnormal{\emph{Was … gewesen?}}}\Cendnote{\textnormal{Anspielung auf die Rede von Christine
+						am Ende von \emph{\textcolor{green}{Liebelei}}: »Und ich {\dots} was bin denn ich? was bin denn ich ihm
+								gewesen{\dots}«.}}}\label{K_L01900-1h}\pend
+           \pstart
+           Oberst: (hebt den Kopf wie ein altes Schlachtross, das bekannte Signale hört) Was
+					sind \uline{das} für Töne?! Herr Leutnant!\pend
+           \pstart
+           Max: Zu Befehl, Herr Oberst!\pend
+           \pstart
+           Oberst: Ich komme um eine Kleinigkeit zu holen.\pend
+           \pstart
+           Max: Herr Oberst?\pend
+           \pstart
+           {\pb}Oberst: Meine Frau hat sich
+					gestern bei Ihnen vergessen!\pend
+           \pstart
+           Max: Herr Oberst scherzen.\pend
+           \pstart
+           Oberst: (stark) Sie \uline{hat} sich vergessen.\pend
+           \pstart
+           Sebastian: Melde gehorsamst, Herr Oberst, da liegt sie \uline{noch}. (er will sie aufheben.)\pend
+           \pstart
+           Oberst: Lassen Sie! (zu Max) Ich will \strikeout{nicht}, dass
+					man sie später bei Ihnen finde!\pend
+           \pstart
+           Marie: (will auf Max zueilen) Max!\pend
+           \pstart
+           Der alte Moser: (hält sie am Fuss fest) Geh nicht weg von mir, Marie! Ich hab
+					dich gequält; ich bin ein alter kranker Mann von neunundsiebzig Jahren! Vergib
+					mir!\pend
+           \pstart
+           Marie: (sanft) Ich vergebe Dir!\pend
+           \pstart
+           Oberstin: (wild) Sie vergibt \so{Ihnen}, Sie vergibt \so{Sie}, sie vergibt in allen Fällen! Ein sanftes
+					Mädchen, Ihre Tochter! Und Sie, Herr Rittmeister, sollten sich auch schämen!
+					Hören Sie auf mich zu zwicken! Sonst steh ich auf!\pend
+           \pstart
+           Oberst: Irene!? Welcher Rittmeister zwickt dich?\pend
+           \pstart
+           Max: Herr Oberst, wir sind beide vom Regiment der Geweihten.\pend
+           \pstart
+           Oberstin: Der Herr Moser!\pend
+           \pstart
+           Oberst: Woher \label{T_L01900_1v}\edtext{weisst}{\lemma{\textnormal{\emph{weisst}}}\Cendnote{\textnormal{korrigiert aus:
+						»wiesst« der Vorlage.}}}\label{T_L01900_1h} Du Irene, dass er Rittmeister
+					ist?\pend
+           \pstart
+           Sebastian: Melde gehorsamst: Am Zwick, Herr Oberst!\pend
+           \pstart
+           Katharina: Stecken Sie mir die Locken auf, Sebastian.!\pend
+           \pstart
+           Sebastian: (fängt an, sie zu frisieren.)\pend
+           \pstart
+           Oberst: Herr Rittmeister, Sie werden diesen Mord (auf Irene weisend) auf sich
+					nehmen und sich morgen Früh standrechtlich erschiessen lassen. (bitter höhnend)
+					Es wird Ihnen nicht schwer fallen, Sie sind ja das Sterben gewöhnt!\pend
+           \pstart
+           Der alte Moser: Ich bin ein alter Mann von neunundsiebzig Jahren – –\pend
+           \pstart
+           {\pb}Oberst: Und erst
+					Rittmeister?\pend
+           \pstart
+           Katharina: Noch diese Locke, Sebastian!\pend
+           \pstart
+           Oberst: Wo haben Sie gedient, Herr Rittmeister?\pend
+           \pstart
+           Der alte Moser: Wir sind alle blaue Kürrassiere!\pend
+           \pstart
+           Oberst: Oh, über die verschlungenen Schicksalswege! So sind Sie der Rittmeister
+					Moser, den ich erfunden habe?\pend
+           \pstart
+           Katharina: Noch eine Locke hier, Sebastian!\pend
+           \pstart
+           Sebastian: (eine Locke aufsteckend) \so{Noch} ein Dreh!\pend
+           \pstart
+           Oberst: Da wären Sie ja an allem Schuld, was uns heute trifft!\pend
+           \pstart
+           \introOben{}\strikeout{Rittmeister}\introOben{}Der alte Moser: Wenn Sie mich aber erfunden haben!\pend
+           \pstart
+           Oberst: (bitter) Das hat Sie nicht gehindert wirklich zu sein.\pend
+           \pstart
+           Arzt: Jetzt erkennen wir es, Herr Moser! Sie sind an allem schuld! Und an Ihrem
+					eigenen Tod trifft Ihre arme Tochter kein Verschulden. Sie selbst haben sich
+					umgebracht. Wären Sie damals, anstatt feige davonzulaufen, den Heldentod
+					gestorben – Sie hätten nie geheiratet, hätten nie eine Tochter (die Sie
+					notgedrungen vergiften musste) gehabt – und wären heute, – mit Ausnahme kleiner
+					Altersbeschwerden frisch und gesund!\pend
+           \pstart
+           Sebastian: (eine neue Locke aufsteckend, sehr begeistert) \uline{Noch} ein Dreh!\pend
+           \pstart
+           Oberstin: Um Ihretwillen, Sie alter Feigling, muss mein Ma\substVorne{}\textsuperscript{nn}\substDazwischen{}x\substHinten{} sterben!\pend
+           \pstart
+           Oberst: Um Ihretwillen, Herr Rittmeister, ist ein ganzes Regiment totgeweiht!\pend
+           \pstart
+           Der Arzt: Sie sind an allem schuld, Herr Moser!\pend
+           \pstart
+           Der alte Moser: Jetzt ist’s zu viel und vor allem, Herr Doktor, sagen Sie nicht
+					Herr Moser, sondern Rittmeister zu mir. \so{Mein}
+					Davonlaufen ist an allem schuld? Ja, {\pb}dann ist mein Vater daran
+					schuld, weil er meine Mutter geheiratet hat, und so fort, bis auf Adam und Eva!
+					Muss ich alter Mann von neunundsiebzig Jahren Ihnen sagen, dass man sich nicht
+					auf Kausalitäten einlassen soll, weil sonst eine Konfusion herauskommt!\pend
+           \pstart
+           Souffleur: Es \so{giebt} keine Kausalitäten!\pend
+           \pstart
+           Der alte Moser: Lassen Sie mich ausreden!\pend
+           \pstart
+           Souffleur: Sie \substVorne{}\textsuperscript{werden}{\allowbreak}\substDazwischen{}wären\substHinten{} der Erste, dem \uline{ich} das gestattet hätte!
+					Es gibt keine Ursachen, und keine Wirkungen! Eine Wirkung ist eine Ursache, die
+					noch lebt, sonst könnte sie nicht mehr wirken!\pend
+           \pstart
+           Sebastian: (selig fri\strikeout{e}sierend): \so{Noch} ein Dreh!\pend
+           \pstart
+           Der alte Moser: Das versteh’ ich nicht! Aber, zum Teufel, merken Sie denn nicht,
+					dass Sie Alle meinem Davonlaufen Ihr Leben verdanken? Glauben Sie, mein
+					Heldentod hatte den Dichter interessiert?\pend
+           \pstart
+           Sebastian: (jubilierend) \so{Noch} ein Dreh!\pend
+           \pstart
+           Oberst: Ihr Davonlaufen, ist doch überhaupt eine witzige Erfindung von \so{mir}! \so{Ich} kann darauf stolz
+					sein, dass Sie davongelaufen sind, aber doch nicht \so{Sie}.\pend
+           \pstart
+           Sebastian: (dem Wahnsinn nah) \so{Noch} ein Dreh!\pend
+           \pstart
+           Arzt: Nun, Herr Oberst, wenn Sie sich aber gar so viel einbilden auf das Elend,
+					das Sie mit Ihrer witzigen Erfindung angerichtet haben, so muss ich Ihnen schon
+					sagen: \so{wir} haben keinen Grund Ihnen dankbar zu sein.
+					Ertrinkende sind keine Menschen für ein Drama. Und in dem Stück sind fast alle
+					am Ersaufen. Katharina und der Herr Moser und die beiden Herrn Leutnants und Sie
+					auch, Herr Oberst. Für das, was einer tut, der weiss, dass er morgen {\pb}sterben soll, kann man ihn
+					nicht mehr zur Rechenschaft ziehen; das ist kein Lebender mehr. Der hat nicht
+					mehr freien Willen, den kommandiert nur seine Todesangst, und wo es nicht freien
+					Willen gibt – gibt es kein Drama!\pend
+           \pstart
+           Oberst: Schade, dass Ihre Weisheit so kurzen Atem hat, wie der Herr Moser. Es \label{T_L01900-3v}\edtext{\so{gab}}{\lemma{\textnormal{\emph{gab}}}\Cendnote{\textnormal{zusätzlich noch handschriftlich
+							unterstrichen}}}\label{T_L01900-3h} keines – aber es \label{T_L01900-2v}\edtext{\so{gibt}}{\lemma{\textnormal{\emph{gibt}}}\Cendnote{\textnormal{zusätzlich noch handschriftlich
+							unterstrichen}}}\label{T_L01900-2h} eines: Sie selbst spielen ja darin!\pend
+           \pstart
+           Sebastian: (entrüstet) \so{Den} Dreh mach’ ich nicht
+					mit!\pend
+           \pstart
+           Arzt: So werde ich Ihnen nach der Vorstellung sagen – – –\pend
+           \pstart
+           Oberst: Das können Sie nicht! Sie sind nur \so{in} der
+					Vorstellung!\pend
+           \pstart
+           Sebastian: (schreit) Aufhören!\pend
+           \pstart
+           Arzt: So werde ich Ihnen sagen, dass Tod und Leben Voraussetzungen sind – nicht
+					Stoffe. Tod und Leben sind unverantwortlich und stehen niemandem Rede; und dass
+					einer Dichter ist, heisst nur, dass er manchmal – nicht zu oft – nach ihnen
+					fragen darf. Fragen! Ohne Antwort zu bekommen! Und schön muss er fragen – sehr
+					schön!\pend
+           \pstart
+           Oberst: Sie wollen mich wohl belehren, Herr Doktor? Schweigen Sie endlich!\pend
+           \pstart
+           Arzt: Herr Oberst haben Ihrem Regiment zu befehlen – nicht mir!\pend
+           \pstart
+           Oberst: Sie irren, mein Lieber! Auch Ihnen! Sie sind – wie ich selbst – von \uline{meinen} Gnaden! (er springt ins Zimmer, die Maske
+					fällt ab – der Dichter steht da).\pend
+           \pstart
+           Sebastian: (wimmernd in die Knie sinkend) \so{Kein} Dreh
+					mehr! Keiner mehr! Wenn \so{ich} schon nicht mehr mit
+					kann!\pend
+           \pstart
+           Dichter: (nach vorne kommend, zündet sich eine Virginia an, und sagt zum
+					Souffleur, in den Kasten hinunter, scharf): {\pb}Die letzte Rede des Arztes
+					haben doch \so{Sie} souffliert!\pend
+           \pstart
+           Souffleur: Ja mein Lieber – ebenso wie Ihre Reden!\pend
+           \pstart
+           Sebastian: (wimmert auf, der Arzt unterstützt ihn und fühlt ihm den Puls).\pend
+           \pstart
+           Dichter: Wieso? Ja so! Natürlich! Aber hören Sie auf, Sie sehen doch, der Mann
+					stirbt bereits an Ihren Drehs!\pend
+           \pstart
+           Souffleur: An meinen? Doch auch an Ihren!\pend
+           \pstart
+           Dichter: Ja, ja! Aber nach dem Nachtmahl ist mir das zu anstrengend. (Er will
+					sich auf die Barriere setzen).\pend
+           \pstart
+           Souffleur: (aufschreiend) Nicht auf die Barriere! Das ist keine, das ist der
+					letzte Akt: grün und stark gestrichen! Auf den wird sich die Kritik setzen!\pend
+           \pstart
+           Dichter: Keine Witze jetzt! Sagen Sie übrigens: Es ist ja sehr ehrenvoll für
+					mich, aber – haben Sie wirklich nichts anderes zu tun als sich meine Figuren
+					herzunehmen, und mit ihnen Schindluder zu treiben? \textcolor{blue}{Fischer}{}\ledrightnote{\textcolor{blue}{Samuel Fischer}} würde sagen: »Ein ausgeruhter Kopp!« Bei Ihnen
+					kann man sich ja nicht einmal revanchieren. Bis zu Ihrer Generalprobe bin ich
+					bestenfalls so alt wie der alte Moser! Warum verschwenden Sie so viel
+					Geist – –\pend
+           \pstart
+           Arzt: (um Sebastian bemüht) Ein Glas Wasser, bitte.\pend
+           \pstart
+           Dichter: (fortfahrend) – – da sehen Sie – so viel Geist an fertige Figuren,
+					die ihn wirklich nicht brauchen? Geben Sie Ihren davon – ich meine den noch
+					unfertigen! Bei einer Pentalogie kann man nie davon genug haben! Uebrigens, mir
+					fällt ein: Sie könnten eine Familienfideikomisstiftung aus der Pent\strikeout{h}alogie machen. Immer der älteste Sohn hat daran
+					zu schreiben, und wenn einer Ihrer Nachkommen sie wirklich fertig macht, so
+						wird{ }{\pb}er enterbt – weil er aus der
+					Art geschlagen ist! Wissen Sie: \so{wenn} Sie schon das
+					Stück kritisieren wollen, gestalten Sie nicht an meinen Gestalten herum –
+					sondern schreiben Sie einen Essay für die »\textcolor{brown}{Rundschau}{}\ledrightnote{\textcolor{brown}{Neue Rundschau, Neue Deutsche Rundschau, Freie Bühne}}« – das wird wenigstens klarer und deutlicher sein.\pend
+           \pstart
+           Souffleur: Deutlicher vielleicht – aber das war nicht meine Absicht!\pend
+           \pstart
+           Dichter: Hetzen Sie doch nicht den Satz zu Tode – er ist sehr gut!\pend
+           \pstart
+           Souffleur: Eigentlich, lieber Arthur, ist es recht unfreundlich von Ihnen, mir
+					das von der Pentalogie – wenn auch im Scherze – so vor allen den Leuten zu
+					sagen! Sie hätten mir das auch unter vier Augen sagen können – das wäre
+					liebenswürdiger gewesen.\pend
+           \pstart
+           Dichter: Liebenswürdiger vielleicht! Aber das war nicht meine Absicht!\pend
+           \pstart
+           Souffleur: Hetzen Sie doch den Satz nicht zu Tode! Er ist sehr gut!\pend
+           \pstart
+           Dichter: Uebrigens, das, was Sie den Arzt da sagen lassen, von der Kausalität –
+					ist recht couragiert von Ihnen. Sie spielen den Krieg in Feindesland! \so{Sie} – als Verteidiger der Kausalität! Wissen Sie, was
+					Sie sind??\pend
+           \pstart
+           Souffleur: Meiner Bescheiden\introOben{}heit\introOben{}, lieber Arthur, ist es
+					wohl zuzutrauen, dass ich weiss, was ich bin!\pend
+           \pstart
+           Dichter: Sie sind: »\label{K_L01900_1v}\edtext{Grachi de
+					seditione quaerentes}{\lemma{\textnormal{\emph{Grachi … quaerentes}}}\Cendnote{\textnormal{Umwandlung
+						einer lateinischen Redewendung in den Singular: »Quis tulerit Gracchos de
+						seditione quaerentes« (»Wer ertrüge es, wenn die Gracchen sich über Aufruhr
+						beklagen«).}}}\label{K_L01900_1h}«! Bombenwerfer, die über Knallbonbons sich beklagen! \so{Sie} verlangen Kausalität in einem Drama! Ich krieg
+					ordentlich eine Wut, wenn ich mir das vorstelle! (er bricht erbittert ein Stück
+					von seiner Virginia, die nicht brennt, ab) Ausgerechnet \so{Sie} machen mir Vorwürfe! {\pb}\so{Sie}, der Sie – – Sie – (wütend auflachend) \so{Sie}, \so{Sie}: »Es geschah«
+					Sie!\pend
+           \pstart
+           Sebastian: (interessiert aufhorchend) Eschkenasi?? Von welchem Eschkenasi sind
+					Sie – –\pend
+           \pstart
+           Souffleur: (milde) Bestehen Sie noch immer darauf, dass Sie \strikeout{»Sesbas} »Sebastian« heissen?\pend
+           \pstart
+           Sebastian: (hat sich aufgerichtet; respektlos, in herzlicher Gemütlichkeit,
+					fraternisierend) Sind Sie nicht bös, Herr Dichter – und Herr Eschkenasi – wir
+					sind Alle blaue Kürrassiere!\pend
+           \pstart
+           \centering{}\uline{Der Vorhang fällt.}\pend
+           \endnumbering\briefempfaengerindex{Schnitzler, Arthur@\textsc{Schnitzler, Arthur}!zzzBeer-Hofmann, Richard@\emph{von Richard Beer-Hofmann}!1909-12-131@{{[}13. 12. 1909?{]}}|)be}\mylabel{h}  
+         \normalsize
+
+\newenvironment{esempio}[3]%
+{
+    \vspace{1.5ex}
+    \rlap{\underline{#1}}
+    \par
+    \setlength{\parindent}{0cm}
+    \nopagebreak
+    \leftskip=#2cm
+    \rightskip=#3cm
+}
+{
+    \par
+}
+
+\doendnotes{C}
+\bigskip
+
+\printindex[pw]
+
+
+\end{document}
+      
