@@ -15,9 +15,9 @@ jobs:
     - name: Convert Files
       run: |
         cd tex
-        for i in L013*.tex; do xelatex $i -interaction=nonstopmode;done
-        for i in L013*.tex; do xelatex $i -interaction=nonstopmode;done
-        for i in L013*.tex; do xelatex $i -interaction=nonstopmode;done
+        for i in L0138*.tex; do xelatex $i -interaction=nonstopmode;done
+        for i in L0138*.tex; do xelatex $i -interaction=nonstopmode;done
+        for i in L0138*.tex; do xelatex $i -interaction=nonstopmode;done
         cd ..
     - name: copy pdf to pdf-folder
       run: |
