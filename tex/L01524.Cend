@@ -1,0 +1,27 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, G:Schnitzler, Arthur (Sammlung Heinrich Schnitzler).\endgraf %
+\hangpara {4em}{0}Widmung am Vortitel \newline {}Handschrift: schwarze Tinte, deutsche Kurrent\endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{000|000|000|000|000|000|TU/EBGaramond.ttf(0)/b/n}{\no@expands
+\textnormal
+{\emph
+{1905}}}{\textnormal
+{am
+10. 6. 1905
+vom
+\emph
+{\textcolor
+{green}{Börsenblatt
+für
+den
+deutschen
+Buchhandel}}
+als
+Neuerscheinung
+gemeldet}}{C}{}{L}{edtxt@6}%
