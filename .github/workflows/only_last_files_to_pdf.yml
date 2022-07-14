@@ -4,7 +4,7 @@ on:
   workflow_dispatch
 jobs:
   makepdf:
-    name: Convert LaTeX to PDF
+    name: Convert XeLaTeX to PDF
     runs-on: ubuntu-latest
     steps:
     - name: Perform Checkout
@@ -24,5 +24,5 @@ jobs:
         mv ./tex/*.pdf ./pdf 
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        commit_message: made pdfs from L026xx on
+        commit_message: made a few pdfs
         file_pattern: "*.pdf"
