@@ -17,7 +17,7 @@ jobs:
         with:
           owner: 'arthur-schnitzler'
           repository: 'schnitzler-briefe-tex-private-files'
-          access-token: ${{ secrets.ACCESS_TOKEN }}
+          access-token: ${{ secrets.SCHNITZLER_TEX_PRIVATE }}
       
       - name: Access cloned repository content
         run: |
@@ -34,7 +34,7 @@ jobs:
         with:
           owner: 'arthur-schnitzler'
           repository: 'schnitzler-briefe-tex-private-files'
-          access-token: ${{ secrets.ACCESS_TOKEN }}
+          access-token: ${{ secrets.SCHNITZLER_TEX_PRIVATE }}
       
       - name: Access cloned repository content
         run: |
@@ -51,7 +51,7 @@ jobs:
         with:
           owner: 'arthur-schnitzler'
           repository: 'schnitzler-briefe-tex-private-files'
-          access-token: ${{ secrets.ACCESS_TOKEN }}
+          access-token: ${{ secrets.SCHNITZLER_TEX_PRIVATE }}
       
       - name: Access cloned repository content
         run: |
