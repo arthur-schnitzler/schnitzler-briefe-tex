@@ -12,7 +12,7 @@ jobs:
     - name: Install ANT,  LaTeX Things
       run: |
         sudo apt-get update && sudo apt-get install texlive-xetex texlive-humanities texlive-lang-german texlive-lang-french texlive-lang-english texlive-lang-greek  openjdk-11-jre-headless ant -y
-    - name: Clone GuillaumeFalourd/formulas-training PRIVATE repository
+    - name: Clone private repository with fonts and symbols
       uses: GuillaumeFalourd/clone-github-repo-action@v2
       with:
           owner: 'arthur-schnitzler'
@@ -21,14 +21,14 @@ jobs:
     - name: Convert Files
       run: |
         cd tex
-        for i in L02600.tex; do xelatex $i -interaction=nonstopmode;done
-        for i in L02600.tex; do xelatex $i -interaction=nonstopmode;done
-        for i in L02600.tex; do xelatex $i -interaction=nonstopmode;done
+        for i in L02*.tex; do xelatex $i -interaction=nonstopmode;done
+        for i in L02*.tex; do xelatex $i -interaction=nonstopmode;done
+        for i in L02*.tex; do xelatex $i -interaction=nonstopmode;done
         cd ..
     - name: copy pdf to pdf-folder
       run: |
         mv ./tex/*.pdf ./pdf 
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        commit_message: made a few pdfs
+        commit_message: made a recent pdfs
         file_pattern: "*.pdf"
