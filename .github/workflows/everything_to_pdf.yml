@@ -12,6 +12,12 @@ jobs:
     - name: Install ANT,  LaTeX Things
       run: |
         sudo apt-get update && sudo apt-get install texlive-xetex texlive-humanities texlive-lang-german texlive-lang-french texlive-lang-english texlive-lang-greek  openjdk-11-jre-headless ant -y
+    - name: Clone private repository with fonts and symbols
+      uses: GuillaumeFalourd/clone-github-repo-action@v2
+      with:
+          owner: 'arthur-schnitzler'
+          repository: 'schnitzler-briefe-tex-private-files'
+          access-token: ${{ secrets.SCHNITZLER_TEX_PRIVATE }}
     - name: Convert Files
       run: |
         cd tex
