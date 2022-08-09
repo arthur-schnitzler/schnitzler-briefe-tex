@@ -26,40 +26,4 @@ jobs:
           ls -la
           echo "CLONED REPO"
           ls -la
-  job-public-repo-macos:
-    runs-on: macos-latest
-    steps:
-      
-      - name: Clone GuillaumeFalourd/formulas-training PRIVATE repository
-        uses: GuillaumeFalourd/clone-github-repo-action@v2
-        with:
-          owner: 'arthur-schnitzler'
-          repository: 'schnitzler-briefe-tex-private-files'
-          access-token: ${{ secrets.SCHNITZLER_TEX_PRIVATE }}
-      
-      - name: Access cloned repository content
-        run: |
-          echo "ROOT"
-          cd 'schnitzler-briefe-tex-private-files'
-          ls -la
-          echo "CLONED REPO"
-          ls -la
-  job-public-repo-window:
-    runs-on: windows-latest
-    steps:
-      
-      - name: Clone GuillaumeFalourd/formulas-training PRIVATE repository
-        uses: GuillaumeFalourd/clone-github-repo-action@v2
-        with:
-          owner: 'arthur-schnitzler'
-          repository: 'schnitzler-briefe-tex-private-files'
-          access-token: ${{ secrets.SCHNITZLER_TEX_PRIVATE }}
-      
-      - name: Access cloned repository content
-        run: |
-          echo "ROOT"
-          cd 'schnitzler-briefe-tex-private-files'
-          ls -la
-          echo "CLONED REPO"
-          ls -la
-        shell: bash
+
