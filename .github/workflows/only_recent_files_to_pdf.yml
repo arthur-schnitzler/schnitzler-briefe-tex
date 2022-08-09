@@ -13,8 +13,8 @@ jobs:
       run: |
         sudo apt-get update && sudo apt-get install texlive-xetex texlive-humanities texlive-lang-german texlive-lang-french texlive-lang-english texlive-lang-greek  openjdk-11-jre-headless ant -y
     - name: Clone GuillaumeFalourd/formulas-training PRIVATE repository
-        uses: GuillaumeFalourd/clone-github-repo-action@v2
-        with:
+      uses: GuillaumeFalourd/clone-github-repo-action@v2
+      with:
           owner: 'arthur-schnitzler'
           repository: 'schnitzler-briefe-tex-private-files'
           access-token: ${{ secrets.SCHNITZLER_TEX_PRIVATE }}
