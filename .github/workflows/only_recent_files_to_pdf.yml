@@ -30,5 +30,5 @@ jobs:
         mv ./tex/*.pdf ./pdf 
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        commit_message: made a recent pdfs
+        commit_message: new pdfs of the recent tex-files
         file_pattern: "*.pdf"
