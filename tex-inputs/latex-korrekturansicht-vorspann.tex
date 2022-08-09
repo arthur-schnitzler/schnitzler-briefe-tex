@@ -120,12 +120,21 @@
 \usepackage{tikz}
 \usepackage{ulem}
 \usetikzlibrary{calc,decorations.pathmorphing}
-\setmainfont[Path=../fonts/,
-  Extension=.ttf,
-  UprightFont=*-Regular,
-  BoldFont=*-Bold,
-  BoldItalicFont=*-BoldItalic,
-  ItalicFont=*-Italic]{EBGaramond.ttf}
+\setmainfont[Path=../schnitzler-briefe-tex-private-files/,
+ItalicFont=SinaNova-Italic, 
+BoldFont=SinaNova-Bold,
+BoldItalicFont=SinaNova-BoldItalic
+]{SinaNova-Regular}
+\setsansfont[Path=../schnitzler-briefe-tex-private-files/,
+ItalicFont=SinaNova-Italic, 
+BoldFont=SinaNova-Bold,
+BoldItalicFont=SinaNova-BoldItalic
+]{SinaNova-Regular}
+% Griechisch
+	
+\newfontfamily\greekfont[Path=../schnitzler-briefe-tex-private-files/]{GaramondPremrPro}
+\newcommand\griechisch[1]{\greekfont{}#1{}\normalfont}
+
 
 
 \PassOptionsToPackage{gray}{xcolor}
@@ -217,34 +226,6 @@
 \newcommand{\strich}{\makebox[1em][l]{– }}
 
 
-% Seite einrichten
-
-% Farbe definieren
-%\setmainfont[RawFeature={-liga}, 
-%SmallCapsFont=WSVgara-Caps, 
-%ItalicFont=WSVgara-Italic, 
-%BoldFont=WSVgara-Bold,
-%BoldItalicFont=WSVgara-BoldItalic
-%]{WSVgara}
-%\setsansfont[RawFeature={-liga}, 
-%SmallCapsFont=WSVgara-Caps, 
-%ItalicFont=WSVgara-Italic, 
-%BoldFont=WSVgara-Bold,
-%BoldItalicFont=WSVgara-BoldItalic
-%]{WSVgara}
-
-%\setmainfont{Brill}
-%\setsansfont{Brill}
-
-%\setmainfont[ItalicFont=SinaNova-Italic, 
-%BoldFont=SinaNova-Bold,
-%BoldItalicFont=SinaNova-BoldItalic
-%]{SinaNova-Regular}
-%\setsansfont[ItalicFont=SinaNova-Italic, 
-%BoldFont=SinaNova-Bold,
-%BoldItalicFont=SinaNova-BoldItalic
-%]{SinaNova-Regular}
-
 
 
 \def\labelitemi{--}
@@ -256,20 +237,6 @@
 
 % Ausrufezeichen in den Index kriegen
 \newcommand{\rufezeichen}{"!}
-
-% Griechisch
-	
-%\newfontfamily\greekfont{GaramondPremrPro}
-%\newcommand\griechisch[1]{\greekfont{}#1{}\normalfont}
-\newcommand\griechisch[1]{#1}
-
-
-%\newfontfamily\sansseriffont[HyphenChar=None, RawFeature={-liga}, Scale=1.03]{TheSans-Regular}
-%\newfontfamily\sansseriffont{uarial}
-
-
-%\newfontfamily\sansseriffont[HyphenChar=None, LetterSpace=1.0, RawFeature={-liga}]{TheSans-SemiBold}
-%\newcommand\sansseriff[1]{\sffamily{}#1{}\normalfont}
 
 \newcommand{\mini}{\,}
 
