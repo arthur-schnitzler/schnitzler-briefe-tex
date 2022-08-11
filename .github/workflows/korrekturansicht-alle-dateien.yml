@@ -1,4 +1,4 @@
-name: Convert .tex via xeLateX to PDF
+name: Convert all .tex to PDFs (proof)
 
 on:
   workflow_dispatch
