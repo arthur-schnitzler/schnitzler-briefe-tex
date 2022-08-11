@@ -21,14 +21,14 @@ jobs:
     - name: Convert Files
       run: |
         cd tex-leseansicht
-        for i in L0269*.tex; do xelatex $i -interaction=nonstopmode;done
-        for i in L0269*.tex; do xelatex $i -interaction=nonstopmode;done
+        for i in L02699.tex; do xelatex $i -interaction=nonstopmode;done
+        for i in L02699.tex; do xelatex $i -interaction=nonstopmode;done
         cd ..
         cd tex-leseansicht
-        for i in L0269*.tex; do splitindex -m "texindy -M ../tex-inputs/xindy-pdf" $i
+        for i in L02699.tex; do splitindex -m "texindy -M ../tex-inputs/xindy-pdf" $i
         cd ..
         cd tex-leseansicht
-        for i in L0269*.tex; do xelatex $i -interaction=nonstopmode;done
+        for i in L02699.tex; do xelatex $i -interaction=nonstopmode;done
         cd ..
     - name: copy pdf to pdf-folder
       run: |
