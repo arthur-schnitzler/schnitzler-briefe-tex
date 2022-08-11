@@ -1,0 +1,13 @@
+\begin{theindex}
+  \providecommand*\lettergroupDefault[1]{}
+  \providecommand*\lettergroup[1]{%
+      \par\textbf{#1}\par
+      \nopagebreak
+  }
+
+  \lettergroup{S}
+  \item \textsc {Schnitzler, Arthur}
+    \subitem \emph {von Paul Goldmann}
+      \subsubitem {27. 6. {[}1892{]}}, \range{{1}}{{2}}
+
+\end{theindex}
