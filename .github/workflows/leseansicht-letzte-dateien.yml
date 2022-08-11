@@ -27,7 +27,7 @@ jobs:
     - name: Create Index
       run: |
         cd tex-leseansicht
-        for i in L02699.tex; do splitindex -m "texindy -M ../tex-inputs/xindy-pdf" $i
+        for i in L02699.tex; do splitindex -m "texindy -M ../tex-inputs/xindy-pdf" $i;done
         cd ..
     - name: Final conversion
       run: |
