@@ -1,4 +1,4 @@
-name: Convert recent .tex to PDFs (readable ("Leseansicht")
+name: Leseansicht - recent files
 
 on:
   workflow_dispatch
@@ -24,9 +24,11 @@ jobs:
         for i in L02699.tex; do xelatex $i -interaction=nonstopmode;done
         for i in L02699.tex; do xelatex $i -interaction=nonstopmode;done
         cd ..
+    - name: Create Index
         cd tex-leseansicht
         for i in L02699.tex; do splitindex -m "texindy -M ../tex-inputs/xindy-pdf" $i
         cd ..
+    - name: Final conversion
         cd tex-leseansicht
         for i in L02699.tex; do xelatex $i -interaction=nonstopmode;done
         cd ..
