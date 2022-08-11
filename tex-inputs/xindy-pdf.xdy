@@ -1,0 +1,31 @@
+(define-location-class "arabic-page-numbers"
+("arabic-numbers") :min-range-length 1)
+(markup-range :open "\range{" :sep "}{" :close "}")
+; list of allowed attributes
+
+(define-attributes (( "pwt" ) ("pws" "pwe") ( "pw" "pwv" "pwu" "pwuv"  "pwk" "pwkv" )  ( "bs" "be" ) ( "buch" )))
+
+; define format to use for locations
+
+(markup-locref :open "\pw{" :close "}" :attr "pw")
+(markup-locref :open "\pwv{" :close "}" :attr "pwv")
+(markup-locref :open "\pwu{" :close "}" :attr "pwu")
+(markup-locref :open "\pwuv{" :close "}" :attr "pwuv")
+(markup-locref :open "\pwk{" :close "}" :attr "pwk")
+(markup-locref :open "\pwkv{" :close "}" :attr "pwkv")
+(markup-locref :open "\pwt{" :close "}" :attr "pwt")
+(markup-locref :open "\pws{" :close "}" :attr "pws")
+(markup-locref :open "\pwe{" :close "}" :attr "pwe")
+
+(markup-locref :open "\buch{" :close "}" :attr "buch")
+
+(markup-locref :open "{" :close "}" :attr "bs")
+(markup-locref :open "{" :close "}" :attr "be")
+
+; location list separators
+
+(markup-attribute-group-list :sep "; ")
+
+(merge-to "pwv" "pw" :drop)
+(merge-to "pwkv" "pwk" :drop)
+
