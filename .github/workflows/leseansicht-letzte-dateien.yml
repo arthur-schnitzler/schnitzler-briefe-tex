@@ -36,7 +36,7 @@ jobs:
         cd ..
     - name: copy pdf to pdf-folder
       run: |
-        mv ./tex-leseansicht/*.pdf ./pdf-leseansicht 
+        mv ./tex-leseansicht/*.pdf ./pdf-leseansicht/ 
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: made pdfs
