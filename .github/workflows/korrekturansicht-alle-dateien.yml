@@ -20,7 +20,7 @@ jobs:
           access-token: ${{ secrets.SCHNITZLER_TEX_PRIVATE }}
     - name: Convert Files
       run: |
-        cd tex
+        cd tex-korrekturansicht
         for i in L*.tex; do xelatex $i -interaction=nonstopmode;done
         for i in L*.tex; do xelatex $i -interaction=nonstopmode;done
         for i in L*.tex; do xelatex $i -interaction=nonstopmode;done
