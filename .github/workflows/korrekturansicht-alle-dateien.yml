@@ -1,4 +1,4 @@
-name: Convert all .tex to PDFs (proof)
+name: Korrekturansicht – all files
 
 on:
   workflow_dispatch
@@ -27,7 +27,7 @@ jobs:
         cd ..
     - name: copy pdf to pdf-folder
       run: |
-        mv ./tex-korrekturansicht/*.pdf ./pdf-korrekturansicht 
+        mv ./tex-korrekturansicht/*.pdf ./pdf-korrekturansicht/ 
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: made pdfs
