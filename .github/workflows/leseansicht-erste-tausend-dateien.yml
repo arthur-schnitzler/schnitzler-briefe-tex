@@ -1,4 +1,4 @@
-name: Leseansicht - files 1-1000
+name: Leseansicht - files 1-999
 
 on:
   workflow_dispatch
