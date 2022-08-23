@@ -20,10 +20,7 @@ jobs:
           access-token: ${{ secrets.SCHNITZLER_TEX_PRIVATE }}
     - name: import xindy
       run: |
-        sudo apt-get update
-        sudo apt-get -y install python3-pip make make
-        sudo apt-get -y install texlive-full xindy
-        sudo pip install -r requirements.txt
+        sudo apt install xindy
     - name: Convert Files
       run: |
         cd tex-leseansicht
