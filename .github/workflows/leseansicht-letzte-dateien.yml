@@ -30,7 +30,7 @@ jobs:
     - name: Create Index
       run: |
         cd tex-leseansicht
-        for i in L027*.tex; do splitindex -m "texindy -M ../tex-inputs/xindy-pdf -I latex" $i;done
+        for i in L027*.tex; do splitindex -m "texindy -M ../tex-inputs/xindy-pdf -I xindy" $i;done
         cd ..
     - name: Final conversion
       run: |
