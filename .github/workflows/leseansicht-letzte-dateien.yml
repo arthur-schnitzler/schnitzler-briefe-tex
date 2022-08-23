@@ -30,7 +30,7 @@ jobs:
     - name: Create Index
       run: |
         cd tex-leseansicht
-        for i in L027*.tex; do splitindex -m "texindy -M ../tex-inputs/xindy-pdf -I xindy" $i;done
+        for i in L027*.tex; do splitindex -m "texindy -M ../tex-inputs/xindy-pdf -I omega" $i;done
         cd ..
     - name: Final conversion
       run: |
@@ -40,7 +40,8 @@ jobs:
     - name: copy pdf to pdf-folder
       run: |
         mv ./tex-leseansicht/*.pdf ./pdf-leseansicht/ 
+        mv ./tex-leseansicht/*.ind ./pdf-leseansicht/ 
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: made pdfs
-        file_pattern: "*.pdf"
+        file_pattern: "*.ind *.pdf"
