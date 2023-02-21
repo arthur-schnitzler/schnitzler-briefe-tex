@@ -2,7 +2,6 @@
 \addtolength{\oddsidemargin}{\evensidemargin}
 \setlength{\oddsidemargin}{.5\oddsidemargin}
 \setlength{\evensidemargin}{\oddsidemargin}
-
 \usepackage[{textwidth=13cm,textheight=23cm,marginpar=3cm, left=2cm}]{geometry}
 %\usepackage[textwidth=80mm, layoutwidth=170mm, paperheight =297mm, paperwidth  =210mm, layoutvoffset= 20mm,layouthoffset= 20mm]{geometry}
 %\usepackage[paperheight =297mm, paperwidth  =210mm, layoutheight=230mm, layoutwidth=158mm, layoutvoffset= 20mm, layouthoffset= 20mm, textwidth=150mm, textheight=185mm, showcrop=false]{geometry}
@@ -134,9 +133,10 @@ BoldItalicFont=Hoftype_-_SinaNova-BoldItalic.otf
 \newfontfamily\greekfont[Path=../schnitzler-briefe-tex-private-files/]{AGaramondPro-Regular.otf}
 \newcommand\griechisch[1]{\greekfont{}#1{}\normalfont}
 
-% Japanisch: 
-\usepackage{xeCJK}
-\setCJKmainfont{MS Mincho} % for \rmfamily
+% Japanisch
+\newfontfamily\japanesefont[Path=../schnitzler-briefe-tex-private-files/]{NotoSansCJKjp-Regular.otf}
+\newcommand\japanese[1]{\japanesefont{}#1{}\normalfont}
+
 
 
 \PassOptionsToPackage{gray}{xcolor}
