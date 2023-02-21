@@ -136,6 +136,11 @@ BoldItalicFont=Hoftype_-_SinaNova-BoldItalic.otf
 \newfontfamily\greekfont[Path=../schnitzler-briefe-tex-private-files/]{AGaramondPro-Regular.otf}
 \newcommand\griechisch[1]{\greekfont{}#1{}\normalfont}
 
+% Japanisch: 
+\usepackage{xeCJK}
+\setCJKmainfont{MS Mincho} % for \rmfamily
+
+
 %% Symbole
 
 \newcommand{\symaddr}{\includegraphics[height=6pt]{../schnitzler-briefe-tex-private-files/noun_637366.png}}
@@ -218,9 +223,8 @@ BoldItalicFont=Hoftype_-_SinaNova-BoldItalic.otf
 
 % Silbentrennung
 \selectlanguage{ngerman}
-\hyphenation{Re-kours EP-STEIN Her-vay-vor-les-ung Steu-er-sa-chen Öst-reich Burck-hard Keuch-hus-ten Oedi-pus-auf-führ-un-gen Hi-obs-post Kärnt-ner-ring Vei-tlis-sen-gas-se Franck-gas-se Rath-hau-se Sechs-schg Stu-bai-thal Tha-deusz Volks-th Halb-mo-nats-schrift JAHR-ES-ZEI-TEN Te-le-phon mit-ge-theilt Ge-schäfts-ver-bin-dung hoch-müth-ig Ueber-zeu-gung bis-chen Au-tor-rech-te Hof-manns-thal Nor-deijk Irre-seins Tschap-perl mit-zu-thei-len Aeu-ße-rung be-thö-ren Kü-ni-gel Be-ur-thei-lung Kuenst-lern ko-moe-di-sche hae-mor-rha-gi-scher Doer-mann Wash-burn flei-ssig haute Buddh-ist Preu-ssen Lin-den-café Mit-theil-un-gen An-theil Lieu-te-nant oes-terr Rieg-ner Oes-ter-reich gro-ssem Fran-zo-sen-thum Roche Lili Ent-schlie-ssun-gen äu-ssert wuen-sche Trans-ac-tio-nen Ue-ber-win-dung Eu-gene Stra-ssen-dir-ne qua-tre Deutsch-öst-er-reich Deutsch-öst-er-reichs Bjørn-stjer-ne noth-ing Edit-ed Olga Ar-naud Mer-gent-heim Léon-tine Polla-czek Brion Barre Hoch-sin-ger Ka-tha-rina Arouet Va-len-ci-ennes Ueber-win-dung Type-writer-in Tolstoi-buch Schnitzler Copier-buche Schiller Intel-lek-tuell-en-as-so-zi-a-tion Salten Devrient Grien-steidl Ge-sell-ſchaft ein-ge-ſchloſ-ſen Fort-ſetz-un-gen Bor-dell-ſtück fort-ſchrei-ten wirk-ſam-es ſchrift-ſtel-ler-i-ſchen hin-weg-ſe-hen Gerichts-saal-be-richt-er-ſtat-ter}
 
-
+\include{hyphenation}
 
 % Sonderbefehl für .–
 \def\dotdash{\nobreak\hspace{0pt}.–}  %ACHTUNG BEIM ERSETZEN: LEERZEICHEN DANACH 

@@ -1,10 +1,31 @@
 \bigskip
-\printindex
+
+\normalsize
+
+\newenvironment{esempio}[3]%
+{
+    \vspace{1.5ex}
+    \rlap{\underline{#1}}
+    \par
+    \setlength{\parindent}{0cm}
+    \nopagebreak
+    \leftskip=#2cm
+    \rightskip=#3cm
+}
+{
+    \par
+}
+
+\doendnotes{C}
+\bigskip
+
 \vspace{3cm}
 
 \vfill
 
 \footnotesize
-\textsc{Quelle}: \titel. Herausgegeben von {\editorInnen}. In: \emph{Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren}. Digitale Edition, https://schnitzler-briefe.acdh.oeaw.ac.at/{\dateiname}.html (Stand \today)
+\textsc{Quelle}: \titel. Herausgegeben von {\editorInnen}. In: \emph{Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren}.
+ Digitale Edition, https://schnitzler-briefe.acdh.oeaw.ac.at/{\dateiname}.html (Stand \today)
+ 
 
 \end{document}
