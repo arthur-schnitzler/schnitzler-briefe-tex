@@ -1,0 +1,37 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3164.\endgraf %
+\hangpara {4em}{0}Telegramm \newline {}Handschrift: blaue Tinte, lateinische Kurrent \newline {}Schnitzler: mit Bleistift Vermerk »\textsc {August 94}« \newline {}Ordnung: beschnitten \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|1|0|1|1|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{morgen
+nachmittag}}}{\textnormal
+{Am
+Nachmittag
+des
+23. 8. 1894
+holte
+\textcolor
+{blue}{Schnitzler}{
+}\textcolor
+{blue}{Goldmann}
+in
+\textcolor
+{pink}{Ischl}
+vom
+Zug
+ab,
+womit
+die
+Datierung
+des
+Telegramms
+möglich
+wird.}}{C}{}{L}{edtxt@1}%

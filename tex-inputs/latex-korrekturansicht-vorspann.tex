@@ -13,7 +13,7 @@
 \usepackage{fontspec}
 \usepackage{moresize}
 \usepackage[english, french, greek, japanese, ngerman]{babel}
-%\usepackage{ipa}  für das Seitenwechselzeichens
+\usepackage{ipa}  %für das Seitenwechselzeichens
 \usepackage[babel]{microtype}
 \usepackage[dash, dot]{dashundergaps}
 \usepackage{soul}
@@ -147,10 +147,6 @@ BoldItalicFont=Hoftype_-_SinaNova-BoldItalic.otf
 
 \include{tikz-include}
 
-
-
-
-
 \def\myloop#1#2#3{%
     #3%
     \ifdim\dimexpr#1>1.1\baselineskip
@@ -263,7 +259,6 @@ BoldItalicFont=Hoftype_-_SinaNova-BoldItalic.otf
 \ofoot[]{}
 
 
- 
 % Flatterndes Seitenende
 \raggedbottom
 
@@ -274,11 +269,6 @@ BoldItalicFont=Hoftype_-_SinaNova-BoldItalic.otf
 \pretocmd{\@chapter}{\setcounter{footnote}{0}}{}{}
 \pretocmd{\@section}{\setcounter{footnote}{0}}{}{}
 \makeatother
-
-
-
-
-
 
 % Marginpar Schrift
 
@@ -333,10 +323,9 @@ BoldItalicFont=Hoftype_-_SinaNova-BoldItalic.otf
 
 %% Seitenumbrüche
 
-
 \newcommand{\Theight}{\dimexpr\fontcharht\font`W}
 \newcommand{\pbposition}{\depth}
-\newcommand{\pb}{\nobreak\hspace{0pt}\raisebox{-0.1em}{\raisebox{\pbposition}{\textnormal{|}}}\nobreak\hspace{0pt}}
+\newcommand{\pb}{\nobreak\hspace{0pt}\raisebox{-0.1em}{\raisebox{\pbposition}{\textnormal{\secstress}}}\nobreak\hspace{0pt}}
 
 % EINFÜGUNGEN IM TEXT MARKIEREN
 

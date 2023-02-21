@@ -1,0 +1,86 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3163.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 2 Seiten \newline {}Handschrift: schwarze Tinte, deutsche Kurrent \newline {}Schnitzler: mit Bleistift das Jahr »93« vermerkt \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|13|0|1|13|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{par
+terre}}}{\textnormal
+{französisch:
+am
+Boden}}{C}{}{L}{edtxt@9}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|14|0|1|14|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{zur
+…
+hier}}}{\textnormal
+{\textcolor
+{blue}{Fedor
+Mamroth}
+war
+noch
+in
+\textcolor
+{pink}{Salzburg}.
+Am
+17. 9. 1893
+besuchte
+er
+gemeinsam
+mit
+\textcolor
+{blue}{Goldmann}
+und
+\textcolor
+{blue}{Schnitzler}{
+}\textcolor
+{pink}{Hellbrunn}.}}{C}{}{L}{edtxt@11}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|19|0|1|19|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Volkstheater}}}{\textnormal
+{\emph
+{\textcolor
+{green}{Das
+Märchen}}
+wurde
+am
+1. 9. 1893
+von
+\textcolor
+{blue}{Emerich
+von
+Bukovics},
+dem
+\textcolor
+{blue}{Leiter}
+des
+\emph
+{\textcolor
+{brown}{Volkstheater}}s,
+angenommen.
+Am
+1. 12. 1893
+kam
+es
+dort
+zur
+Uraufführung.}}{C}{}{L}{edtxt@13}%

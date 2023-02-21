@@ -1,0 +1,66 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3166.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 3 Seiten \newline {}Handschrift: blaue Tinte, deutsche Kurrent \newline {}Schnitzler: mit Bleistift das Jahr »96« vermerkt \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Hamburg}}}{\textnormal
+{\textcolor
+{blue}{Schnitzler}
+hielt
+sich
+von
+4. 7. 1896
+bis
+7. 7. 1896
+im
+\textcolor
+{pink}{Hamburg}
+auf,
+bevor
+er
+nach
+\textcolor
+{pink}{Norwegen}
+weiterreiste.}}{C}{}{L}{edtxt@8}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Palais
+Bourbon}}}{\textnormal
+{Sitz
+der
+\emph
+{\textcolor
+{brown}{französischen
+Nationalversammlung}}}}{C}{}{L}{edtxt@10}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Guſtav
+Adolph}}}{\textnormal
+{\textcolor
+{pink}{schwed}ischer
+\textcolor
+{blue}{König}
+zwischen
+1611
+und
+1632}}{C}{}{L}{edtxt@16}%
