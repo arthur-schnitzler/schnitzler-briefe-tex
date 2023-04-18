@@ -332,13 +332,13 @@ BoldItalicFont=Hoftype_-_SinaNova-BoldItalic.otf
 \renewcaptionname{ngerman}{\contentsname}{Inhalt}           %Table of contents
 
 
-\newcommand{\introOben}{\textnormal{\raisebox{\Theight}{\raisebox{-\height}{\small{v}\normalsize}}}}
-\newcommand{\introUnten}{\textnormal{\raisebox{\Theight}{\raisebox{-\height}{\small{v}\normalsize}}}}
-\newcommand{\introMitteVorne}{\textnormal{\raisebox{\Theight}{\raisebox{-\height}{\small{v}\normalsize}}}}
-\newcommand{\introMitteHinten}{\textnormal{\raisebox{\Theight}{\raisebox{-\height}{\small{v}\normalsize}}}}
-\newcommand{\substVorne}{\textnormal{\raisebox{\Theight}{\raisebox{-\height}{\rotatebox[origin=c]{180}{v}\normalsize}}}}
+\newcommand{\introOben}{\textnormal{\raisebox{\Theight}{\raisebox{-\height}{\small\downp\normalsize}}}}
+\newcommand{\introUnten}{\textnormal{\raisebox{\Theight}{\raisebox{-\height}{\small\downp\normalsize}}}}
+\newcommand{\introMitteVorne}{\textnormal{\raisebox{\Theight}{\raisebox{-\height}{\small\downp\normalsize}}}}
+\newcommand{\introMitteHinten}{\textnormal{\raisebox{\Theight}{\raisebox{-\height}{\small\downp\normalsize}}}}
+\newcommand{\substVorne}{\textnormal{\raisebox{\Theight}{\raisebox{-\height}{\small\upp\normalsize}}}}
 \newcommand{\substDazwischen}{}
-\newcommand{\substHinten}{\textnormal{\raisebox{\Theight}{\raisebox{-\height}{\small{v}\normalsize}}}}
+\newcommand{\substHinten}{\textnormal{\raisebox{\Theight}{\raisebox{-\height}{\small\downp\normalsize}}}}
 
 
 % MARGINALSPALTE
@@ -713,6 +713,13 @@ BoldItalicFont=Hoftype_-_SinaNova-BoldItalic.otf
 \renewcommand{\partformat}{}
 \setkomafont{partnumber}{\usekomafont{part}}
 
+
+\newcommand{\erwaehntePersonen}{}
+         \newcommand{\erwaehnteInstitutionen}{}
+         \renewcommand{\erwaehnteOrte}{}
+         \newcommand{\erwaehnteWerke}{}
+
+
 %\geometry{headsep=8pt} % Abstand Kopfzeile - Text
 %% DOKUMENT
 
@@ -737,3 +744,5 @@ BoldItalicFont=Hoftype_-_SinaNova-BoldItalic.otf
 \renewcommand*{\ledlsnotefontsetup}{\scriptsize\sffamily}% left
 \renewcommand*{\ledrsnotefontsetup}{\scriptsize\sffamily}% left
 \thispagestyle{empty} 
+
+  
