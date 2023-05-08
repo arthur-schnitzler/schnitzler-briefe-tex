@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Perform Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - name: Install ANT,  LaTeX Things
       run: |
         sudo apt-get update && sudo apt-get install texlive-xetex texlive-humanities texlive-lang-german texlive-lang-french texlive-lang-english texlive-lang-greek  openjdk-11-jre-headless ant -y
