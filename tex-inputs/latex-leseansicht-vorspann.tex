@@ -11,7 +11,6 @@
 \usepackage{fontspec}
 \usepackage{moresize}
 \usepackage[english, french, greek, ngerman]{babel}
-\usepackage{ipa}  % für das Seitenwechselzeichen
 \usepackage[babel]{microtype}
 \usepackage[dash, dot]{dashundergaps}
 \usepackage{soul}
@@ -28,7 +27,6 @@
 \usepackage{float} %ermöglicht exakte Bildpositionierung
 \usepackage{mdframed}
 \usepackage{enumitem}
-\usepackage{tipa}
 \usepackage{relsize}
 \usepackage{longtable}
 \usepackage{chngcntr} % Sectionnummern durchgehend
@@ -343,7 +341,7 @@ BoldItalicFont=Hoftype_-_SinaNova-BoldItalic.otf
 
 \newcommand{\Theight}{\dimexpr\fontcharht\font`W}
 \newcommand{\pbposition}{\depth}
-\newcommand{\pb}{\nobreak\hspace{0pt}\raisebox{-0.1em}{\raisebox{\pbposition}{\textnormal{\secstress}}}\nobreak\hspace{0pt}}
+\newcommand{\pb}{\nobreak\hspace{0pt}\raisebox{-0.1em}{\raisebox{\pbposition}{\tiny{|{}}}}\nobreak\hspace{0pt}}
 
 % EINFÜGUNGEN IM TEXT MARKIEREN
 
