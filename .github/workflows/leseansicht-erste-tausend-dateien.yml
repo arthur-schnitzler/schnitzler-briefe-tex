@@ -7,6 +7,8 @@ jobs:
   makepdf:
     name: Convert LaTeX to PDF
     runs-on: ubuntu-latest
+    env:
+      BATCH_NUM: 0
     steps:
     - name: Perform Checkout
       uses: actions/checkout@v3
@@ -60,15 +62,13 @@ jobs:
         mkdir -p ./pdf-leseansicht
         mv ./tex-leseansicht/L00*.pdf ./pdf-leseansicht/
     - name: Trigger next batch
-      if: ${{ needs.makepdf.outputs.batch_num < 9 }}
+      if: ${{ env.BATCH_NUM < 9 }}
       run: |
-        payload="{\"batch_num\": ${{ needs.makepdf.outputs.batch_num + 1 }}}"
+        echo "BATCH_NUM=$((env.BATCH_NUM + 1))" >> $GITHUB_ENV
+        payload="{\"batch_num\": ${{ env.BATCH_NUM + 1 }}}"
         curl -X POST \
           -H "Accept: application/vnd.github.everest-preview+json" \
           -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
           https://api.github.com/repos/${{ github.repository }}/dispatches \
           -d "$payload"
-    - uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        commit_message: made pdfs
-        file_pattern: "*.pdf"
+ 
