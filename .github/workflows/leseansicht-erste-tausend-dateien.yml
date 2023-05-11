@@ -1,74 +1,40 @@
 name: Leseansicht - files 1-999
-
+  
 on:
   workflow_dispatch
-
 jobs:
   makepdf:
     name: Convert LaTeX to PDF
     runs-on: ubuntu-latest
-    env:
-      BATCH_NUM: 0
     steps:
-      - name: Perform Checkout
-        uses: actions/checkout@v3
-      - name: Install ANT, LaTeX Things
-        run: |
-          sudo apt-get update && sudo apt-get install texlive-xetex texlive-humanities texlive-lang-german texlive-lang-french texlive-lang-english texlive-lang-greek openjdk-11-jre-headless ant -y
-      - name: Clone private repository with fonts and symbols
-        uses: GuillaumeFalourd/clone-github-repo-action@v2
-        with:
+    - name: Perform Checkout
+      uses: actions/checkout@v3
+    - name: Install ANT,  LaTeX Things
+      run: |
+        sudo apt-get update && sudo apt-get install texlive-xetex texlive-humanities texlive-lang-german texlive-lang-french texlive-lang-english texlive-lang-greek  openjdk-11-jre-headless ant -y
+    - name: Clone private repository with fonts and symbols
+      uses: GuillaumeFalourd/clone-github-repo-action@v2
+      with:
           owner: 'arthur-schnitzler'
           repository: 'schnitzler-briefe-tex-private-files'
           access-token: ${{ secrets.SCHNITZLER_TEX_PRIVATE }}
-      - name: Convert Files
-        run: |
-          cd tex-leseansicht
-          for ((i=0; i<10; i++))
-          do
-            start=$((i*100))
-            end=$((start+99))
-            for file in L{$(printf '%02d' $start)..$(printf '%02d' $end)}.tex; do
-              xelatex $file -interaction=nonstopmode
-            done
-          done
-          cd ..
-      - name: Create Index
-        run: |
-          cd tex-leseansicht
-          for ((i=0; i<10; i++))
-          do
-            start=$((i*100))
-            end=$((start+99))
-            for file in L{$(printf '%02d' $start)..$(printf '%02d' $end)}.tex; do
-              splitindex -m "texindy -M ../tex-inputs/xindy-pdf" $file
-            done
-          done
-          cd ..
-      - name: Final conversion
-        run: |
-          cd tex-leseansicht
-          for ((i=0; i<10; i++))
-          do
-            start=$((i*100))
-            end=$((start+99))
-            for file in L{$(printf '%02d' $start)..$(printf '%02d' $end)}.tex; do
-              xelatex $file -interaction=nonstopmode
-            done
-          done
-          cd ..
-      - name: Copy PDFs to pdf-folder
-        run: |
-          mkdir -p ./pdf-leseansicht
-          mv ./tex-leseansicht/L00*.pdf ./pdf-leseansicht/
-      - name: Trigger next batch
-        if: ${{ env.BATCH_NUM < 9 }}
-        run: |
-          echo "::set-env name=BATCH_NUM::$((BATCH_NUM + 1))"
-          payload="{\"batch_num\": ${{ env.BATCH_NUM }} }"
-          echo $payload > payload.json
-          curl -X POST \
-            -H "Accept: application/vnd.github.everest-preview+json" \
-            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-            -d @$GITHUB_WORKSPACE/payload.json \
-            https://api.github.com/repos/${{ github.repository }}/dispatches
+    - name: Convert Files
+      run: |
+        cd tex-leseansicht
+        for i in L001*.tex; do xelatex $i -interaction=nonstopmode;done
+        for i in L001*.tex; do xelatex $i -interaction=nonstopmode;done
+        for i in L001*.tex; do xelatex $i -interaction=nonstopmode;done
+        cd ..
+    - name: copy pdf to pdf-folder
+      run: |
+        mv ./tex-leseansicht/*.pdf ./pdf-leseansicht/ 
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: made pdfs
+        file_pattern: "*.pdf"
+    # Trigger Workflow B
+    - name: Trigger WorkflowB
+      uses: peter-evans/workflow-dispatch@v1
+      with:
+        workflow: WorkflowB
+        token: ${{ secrets.GITHUB_TOKEN }}
