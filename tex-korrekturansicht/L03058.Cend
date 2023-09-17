@@ -1,0 +1,33 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3171.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 1 Seite \newline {}Handschrift: blaue Tinte, deutsche Kurrent \newline {}Beilage: handschriftlicher Brief von Dr. Meyer, 1 Blatt, 2 Seiten, schwarze Tinte, lateinische Kurrent \newline {}Schnitzler: mit Bleistift das Jahr »{[}1{]}901« vermerkt \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|4|0|1|4|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Dr.
+Meyer}}}{\textnormal
+{nicht
+ermittelt}}{C}{}{L}{edtxt@3}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|11|0|1|11|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Fräulein
+Glümer}}}{\textnormal
+{siehe
+Paul
+Goldmann
+an
+Arthur
+Schnitzler, 22. 1. [1901]}}{C}{}{L}{edtxt@11}%
