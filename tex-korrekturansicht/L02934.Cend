@@ -1,14 +1,14 @@
 \l@d@section{1}%
 \smallbreak \pagebreak [2]%
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3170.\endgraf %
-\hangpara {4em}{0}Brief, 1 Blatt, 4 Seiten \newline {}Handschrift: blaue Tinte, deutsche Kurrent\newline {}Beilage: drei aufgeklebte, beschnittene Zeitungsausschnitte \newline {}Schnitzler: 1) mit Bleistift das Jahr »{[}1{]}900« vermerkt 2) mit rotem Buntstift drei Unterstreichungen\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 4 Seiten \newline {}Handschrift: blaue Tinte, deutsche Kurrent \newline {}Beilage: drei aufgeklebte, beschnittene Zeitungsausschnitte \newline {}Schnitzler: 1) mit Bleistift das Jahr »{[}1{]}900« vermerkt 2) mit rotem Buntstift drei Unterstreichungen\endgraf %
 \smallbreak %
 \def
 \sw@list@inedtext
 {}%
 \parse@annot
 ||%
-\Cend{1|6|0|1|6|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
 {in
@@ -33,12 +33,10 @@ am
 {}%
 \parse@annot
 ||%
-\Cend{1|6|0|1|7|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
-{Idiot
-von
-Verleger}}}{\textnormal
+{Verleger}}}{\textnormal
 {vermutlich
 \textcolor
 {blue}{Wilhelm
@@ -59,7 +57,7 @@ Loening}}}}{C}{}{L}{edtxt@5}%
 {}%
 \parse@annot
 ||%
-\Cend{1|9|0|1|9|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
 {»Roſenmontag«
@@ -68,13 +66,13 @@ Hartleben}}}{\textnormal
 {im
 \textcolor
 {pink}{Deutschen
-Theater}}}{C}{}{L}{edtxt@9}%
+Theater}}}{C}{}{L}{edtxt@8}%
 \def
 \sw@list@inedtext
 {}%
 \parse@annot
 ||%
-\Cend{1|9|0|1|9|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
 {»Unſer
@@ -93,7 +91,8 @@ Rezension
 von
 \textcolor
 {blue}{Bahr}
-zurückgeht,
+zurückgeht
+(vgl.
 \textcolor
 {blue}{Hermann
 Bahr}:
@@ -144,13 +143,13 @@ Zeit}},
 Jg. 12,
 Nr. 155,
 18. 9. 1897,
-S. 188–189.}}{C}{}{L}{edtxt@12}%
+S. 188–189)}}{C}{}{L}{edtxt@11}%
 \def
 \sw@list@inedtext
 {}%
 \parse@annot
 ||%
-\Cend{1|17|0|1|18|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
 {Im
@@ -173,13 +172,13 @@ Zeitung}},
 Nr. 464,
 4. 10. 1900,
 Morgen-Ausgabe,
-S. [16]}}{C}{}{L}{edtxt@21}%
+S. [16]}}{C}{}{L}{edtxt@22}%
 \def
 \sw@list@inedtext
 {}%
 \parse@annot
 ||%
-\Cend{1|20|0|1|21|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
 {Aus
@@ -201,40 +200,53 @@ Jg. 29,
 Nr. 504,
 4. 10. 1900,
 Morgen-Ausgabe,
-S. [3]}}{C}{}{L}{edtxt@26}%
+S. {[}3{]}.
+}}{C}{}{L}{edtxt@28}%
 \def
 \sw@list@inedtext
 {}%
 \parse@annot
 ||%
-\Cend{1|22|0|1|22|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
-{Kritiker}}}{\textnormal
+{zwei
+Kritiker}}}{\textnormal
 {nicht
-ermittelt}}{C}{}{L}{edtxt@30}%
+ermittelt}}{C}{}{L}{edtxt@33}%
 \def
 \sw@list@inedtext
 {}%
 \parse@annot
 ||%
-\Cend{1|25|0|1|34|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
 {Das
 …
 gezeichnet.}}}{\textnormal
-{Auszug
-aus
+{\textcolor
+{blue}{Siegfried
+Löwy}:
 \emph
 {\textcolor
-{green}{XXXX}}}}{C}{}{L}{edtxt@34}%
+{green}{XXXX}}.
+In:
+\emph
+{\textcolor
+{green}{Berliner
+Börſencourier}},
+Jg. YY,
+Nr. YY,
+4.YYY 10. 1900,
+S. YY.
+}}{C}{}{L}{edtxt@37}%
 \def
 \sw@list@inedtext
 {}%
 \parse@annot
 ||%
-\Cend{1|27|0|1|27|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/b/n}{\no@expands
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/b/n}{\no@expands
 \textnormal
 {\emph
 {in
@@ -250,13 +262,13 @@ Paul
 Goldmann
 an
 Arthur
-Schnitzler, 4. 10. [1900]}}{C}{}{L}{edtxt@36}%
+Schnitzler, 4. 10. [1900]}}{C}{}{L}{edtxt@39}%
 \def
 \sw@list@inedtext
 {}%
 \parse@annot
 ||%
-\Cend{1|28|0|1|28|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/b/n}{\no@expands
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/b/n}{\no@expands
 \textnormal
 {\emph
 {Griſette}}}{\textnormal
@@ -284,13 +296,13 @@ der
 {pink}{fran}zösischen
 Literatur
 des 19.
-Jahrhunderts)}}{C}{}{L}{edtxt@38}%
+Jahrhunderts)}}{C}{}{L}{edtxt@41}%
 \def
 \sw@list@inedtext
 {}%
 \parse@annot
 ||%
-\Cend{1|37|0|1|37|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
 {Nietzsche-Briefen
@@ -325,22 +337,36 @@ der
 Freien
 Presse}}
 erschienen
-war}}{C}{}{L}{edtxt@46}%
+war}}{C}{}{L}{edtxt@50}%
 \def
 \sw@list@inedtext
 {}%
 \parse@annot
 ||%
-\Cend{2|41|0|2|41|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
-{weiblichen
+{
+weiblichen
 Rendezvous}}}{\textnormal
-{möglicherweise
+{jedenfalls
+nicht
 \textcolor
 {blue}{Maria
 Stona},
-vgl.
+die
+enttäuscht
+war,
+dass
+\textcolor
+{blue}{Georg
+Brandes}
+nicht
+auch
+zu
+ihr
+reiste
+(vgl.
 Martin
 Pelc:
 \emph
@@ -368,4 +394,4 @@ Strukturfonds}/\emph
 {Schlesische
 Universität}{
 }2014,
-S. 126}}{C}{}{L}{edtxt@52}%
+S. 126)}}{C}{}{L}{edtxt@56}%
