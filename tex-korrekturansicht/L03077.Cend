@@ -8,6 +8,39 @@
 {}%
 \parse@annot
 ||%
+\Cend{1|3|0|1|3|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Richards
+Telegramm}}}{\textnormal
+{Daraus
+ergibt
+sich,
+dass
+\textcolor
+{blue}{Beer-Hofmann}
+das
+Telegramm
+vom
+1. 8. 1901
+am
+2. 8. 1901,
+als
+er
+mit
+\textcolor
+{blue}{Goldmann}
+persönlich
+zusammentraf,
+noch
+nicht
+erhalten
+hatte.}}{C}{}{L}{edtxt@2}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
 \Cend{1|7|0|1|7|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
@@ -19,7 +52,7 @@ Paul
 Goldmann
 an
 Arthur
-Schnitzler, 26. 4. [1901]}}{C}{}{L}{edtxt@6}%
+Schnitzler, 26. 4. [1901]}}{C}{}{L}{edtxt@7}%
 \def
 \sw@list@inedtext
 {}%
@@ -28,8 +61,7 @@ Schnitzler, 26. 4. [1901]}}{C}{}{L}{edtxt@6}%
 \Cend{1|8|0|1|8|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
-{verſtändigen}}}{\textnormal
-{\textcolor
-{blue}{Goldmann}
-schrieb
-»beſtändigen«}}{C}{}{L}{edtxt@7}%
+{beſtändigen}}}{\textnormal
+{Schreibirrtum
+für
+»verständigen«}}{C}{}{L}{edtxt@8}%
