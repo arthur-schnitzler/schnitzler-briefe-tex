@@ -1,0 +1,29 @@
+\input{../tex-inputs/latex-leseansicht-vorspann}
+\begin{center}
+            \textcolor{red}{ENTWURF, NICHT FERTIG KORRIGIERT}
+                      \end{center}
+            
+         
+         \renewcommand{\erwaehntePersonen}{Personen:  ?? [Hausmeister von Felix Salten in der Kochgasse 1901],  Lanz, Felix Salten}
+         \renewcommand{\erwaehnteInstitutionen}{Institutionen: Wiener Schachclub}
+         \renewcommand{\erwaehnteOrte}{Orte: Wien}
+         \renewcommand{\erwaehnteWerke}{Werke: Der Puppenspieler, Die Frau mit dem Dolche, Die letzten Masken, Lebendige Stunden, Literatur}
+               \section[Arthur Schnitzler an Felix Salten, 16. 9. 1901]{ Arthur Schnitzler an Felix Salten, 16. 9. 1901}\nopagebreak\mylabel{v}\rehead{ }\begin{ledgroupsized}[t]{13cm}\normalsize\beginnumbering \toendnotes[C]{\smallbreak\pagebreak[2]} \Standort{Wienbibliothek im Rathaus, ZPH 1681, 2.1.516.}
+\physDesc{Brief, 1 Blatt, 2 Seiten
+\newline{}Handschrift: Bleistift, deutsche Kurrent\newline{}Ordnung: mit Bleistift von unbekannter Hand Nummerierung der ungeraden Seiten:
+                                 »23« }\toendnotes[C]{\smallbreak}\pstart
+           \raggedleft{}{\pb}16. 9. 901\pend
+           \pstart
+           lieber Freund, der kleine Herr Lanz\pwindex{Lanz @\textsc{Lanz}|pw}, der Ihnen ſ. Z. einige Manuſcripte überreicht läßt Sie durch mich
+               bitten, diese Manuscripte bei Ihrem Hausmeiſter\pwindex{?? [Hausmeister von Felix Salten in der Kochgasse 1901] @\textsc{?? [Hausmeister von Felix Salten in der Kochgasse 1901]}|pwv} zu \substVorne{}\textsuperscript{über}\substDazwischen{}hinter\substHinten{}legen, wo er ſie ſich abholen möchte.– \pend
+           \pstart
+           Warum hab ich Sie auch Samſtag nicht geſehen? Sollten ſie ſchon im Club\orgindex{Wiener Schachclub@Wiener Schachclub|pwv}{ }{\pb}geweſen ſein?– \pend
+           \pstart
+           Ich ſchreibe 2
+                  Einakter\pwindex{Schnitzler, Arthur 15.05.1862 – 21.10.1931@\textsc{Schnitzler, Arthur} (15.05.1862 – 21.10.1931), \emph{Schriftsteller, Mediziner}!Puppenspieler31. 05. 1903@\strich\emph{Der Puppenspieler} {[}31. 05. 1903{]}|pwv}\pwindex{Schnitzler, Arthur 15.05.1862 – 21.10.1931@\textsc{Schnitzler, Arthur} (15.05.1862 – 21.10.1931), \emph{Schriftsteller, Mediziner}!letzten Masken1901@\strich\emph{Die letzten Masken} {[}1901{]}|pwv}, die zu den 3 andren\pwindex{Schnitzler, Arthur 15.05.1862 – 21.10.1931@\textsc{Schnitzler, Arthur} (15.05.1862 – 21.10.1931), \emph{Schriftsteller, Mediziner}!Literatur1901@\strich\emph{Literatur} {[}1901{]}|pwv}\pwindex{Schnitzler, Arthur 15.05.1862 – 21.10.1931@\textsc{Schnitzler, Arthur} (15.05.1862 – 21.10.1931), \emph{Schriftsteller, Mediziner}!Frau mit dem Dolche1901@\strich\emph{Die Frau mit dem Dolche} {[}1901{]}|pwv}\pwindex{Schnitzler, Arthur 15.05.1862 – 21.10.1931@\textsc{Schnitzler, Arthur} (15.05.1862 – 21.10.1931), \emph{Schriftsteller, Mediziner}!Lebendige Stunden01. 12. 1901@\strich\emph{Lebendige Stunden} {[}01. 12. 1901{]}|pwv} gehören. \pend
+           \pstart
+           Herzlichſt Ihr {\\[\baselineskip]}\spacefill\mbox{ArthSch}\pend
+           \leftskip=0em{}
+         
+         \endnumbering\mylabel{h}\end{ledgroupsized}\begin{anhang}\end{anhang}\newcommand{\dateiname}{L02970}\newcommand{\titel}{Arthur Schnitzler an Felix Salten, 16. 9. 1901}\newcommand{\editorInnen}{Martin Anton Müller und Laura Untner}\input{../tex-inputs/latex-leseansicht-abspann}
+      

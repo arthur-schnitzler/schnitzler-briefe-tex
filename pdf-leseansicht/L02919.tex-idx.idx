@@ -1,0 +1,28 @@
+\input{../tex-inputs/latex-leseansicht-vorspann}
+
+         
+         \renewcommand{\erwaehntePersonen}{Personen: Marie Glümer, Paul Lindau}
+         \renewcommand{\erwaehnteInstitutionen}{Institutionen: Berliner Theater}
+         \renewcommand{\erwaehnteOrte}{Orte: Berlin, Dessauer Straße, Wien}
+         \renewcommand{\erwaehnteWerke}{}
+               \section[ Paul Goldmann an Arthur Schnitzler, 8. 6. {[}1900{]}]{ Paul Goldmann an Arthur Schnitzler, 8. 6. {[}1900{]}}\nopagebreak\mylabel{v}\rehead{ }\begin{ledgroupsized}[t]{13cm}\normalsize\beginnumbering \toendnotes[C]{\smallbreak\pagebreak[2]} \Standort{DLA, A:Schnitzler, HS.NZ85.1.3170.}
+\physDesc{Brief, 1 Blatt, 1 Seite
+\newline{}Handschrift: blaue Tinte, deutsche Kurrent
+\newline{}Schnitzler: mit Bleistift das Jahr »{[}1{]}900« vermerkt }\toendnotes[C]{\smallbreak}\pstart
+           \noindent{}{\pb}\textcolor{gray}{\textbf{DESSAUERSTRASSE 19}}\oindex{Dessauer Strasse@\textbf{Dessauer Straße}|pw}\hfill Berlin\oindex{Berlin@\textbf{Berlin}|pw}, 8. Juni.\pend
+           \pstart
+           \centering{}Mein lieber Freund,\pend
+           \pstart
+           \noindent{}Bitte, gib’ dem Fräulein \textsc{Glümer\pwindex{Gluemer, Marie 03.07.1867 – 16.11.1925@\textsc{Glümer, Marie} (03.07.1867 – 16.11.1925), \emph{Schauspielerin}|pw}} beifolgende \label{K_L02919-1v}\edtext{Zeitungsausſchnitte}{\lemma{\textnormal{\emph{Zeitungsausſchnitte}}}\Cendnote{\textnormal{nicht
+                  erhalten}}}\label{K_L02919-1h} und ſage ihr, daß ich infolgedeſſen meine Schritte bei \label{K_L02919-2v}\edtext{\textsc{Lindau\pwindex{Lindau, Paul 03.06.1839 – 31.01.1919@\textsc{Lindau, Paul} (03.06.1839 – 31.01.1919), \emph{Schriftsteller, Kritiker, Theaterleiter}|pw}}}{\lemma{\textnormal{\emph{Lindau}}}\Cendnote{\textnormal{Paul Lindau\pwindex{Lindau, Paul 03.06.1839 – 31.01.1919@\textsc{Lindau, Paul} (03.06.1839 – 31.01.1919), \emph{Schriftsteller, Kritiker, Theaterleiter}|pwk} leitete das \emph{Berliner Theater}\orgindex{Berliner Theater@Berliner Theater|pwk}, es dürfte sich dementsprechend um den
+                  Versuch gehandelt haben, Marie Glümer\pwindex{Gluemer, Marie 03.07.1867 – 16.11.1925@\textsc{Glümer, Marie} (03.07.1867 – 16.11.1925), \emph{Schauspielerin}|pwk} hier
+                  ein Engagement zu verschaffen (siehe Paul Goldmann an Arthur Schnitzler, 31. 5. [1900]).}}}\label{K_L02919-2h}, die ich bereits begonnen hatte, wieder eingeſtellt
+               habe.\pend
+           \pstart
+           Und ſchreib’ mir bald wieder einmal.\pend
+           \pstart
+           Von Herzen {\\[\baselineskip]}Dein \spacefill\mbox{Paul Goldmann.}\pend
+           \leftskip=0em{}
+         
+         \endnumbering\mylabel{h}\end{ledgroupsized}  \newcommand{\dateiname}{L02919}\newcommand{\titel}{Paul Goldmann an Arthur Schnitzler, 8. 6. [1900]}\newcommand{\editorInnen}{Martin Anton Müller und Laura Untner}\input{../tex-inputs/latex-leseansicht-abspann}
+      
