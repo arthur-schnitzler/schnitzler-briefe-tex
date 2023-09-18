@@ -1,0 +1,31 @@
+\input{../tex-inputs/latex-leseansicht-vorspann}
+\begin{center}
+            \textcolor{red}{ENTWURF, NICHT FERTIG KORRIGIERT}
+                      \end{center}
+            
+         
+         \renewcommand{\erwaehntePersonen}{Personen: Henrik Ibsen, Friedrich Mitterwurzer, Felix Salten}
+         \renewcommand{\erwaehnteOrte}{Orte: Berlin, Edmund-Weiß-Gasse, Wien}
+         \renewcommand{\erwaehnteWerke}{Werke: ?? [Totenrede an Ibsen]}
+               \section[Arthur Schnitzler an Felix Salten, 26. 5. 1906]{ Arthur Schnitzler an Felix Salten, 26. 5. 1906}\nopagebreak\mylabel{v}\rehead{ }\begin{ledgroupsized}[t]{13cm}\normalsize\beginnumbering \toendnotes[C]{\smallbreak\pagebreak[2]} \Standort{Wienbibliothek im Rathaus, ZPH 1681, 2.1.516.}
+\physDesc{Karte
+\newline{}Handschrift: schwarze Tinte, deutsche Kurrent\newline{}Ordnung: mit Bleistift von unbekannter Hand Nummerierung der ungeraden
+                                 Seiten: »11« }\toendnotes[C]{\smallbreak}\pstart
+           \noindent{}{\pb}\textcolor{gray}{\textbf{Dr. Arthur Schnitzler}}\hfill 26. Mai 906\pend
+           \pstart
+           \textcolor{gray}{\textbf{Wien, XVIII. Spoettelgasse 7\oindex{Edmund-Weiss-Gasse@\textbf{Edmund-Weiß-Gasse}|pw}.}}\pend
+           \pstart
+           lieber, wundervoll, ergreifend iſt Ihre \label{K_L03006-1v}\edtext{Todtenrede
+                  auf Ibſen\pwindex{Ibsen, Henrik 20.03.1828 – 23.05.1906@\textsc{Ibsen, Henrik} (20.03.1828 – 23.05.1906), \emph{Schriftsteller}|pw}\pwindex{Salten, Felix 06.09.1869 – 08.10.1945@\textsc{Salten, Felix} (06.09.1869 – 08.10.1945), \emph{Schriftsteller, Journalist}!?? [Totenrede an Ibsen]24.?.5.1906@\strich\emph{?? [Totenrede an Ibsen]} {[}24.?.5.1906{]}|pwv}}{\lemma{\textnormal{\emph{Todtenrede
+                  auf Ibſen}}}\Cendnote{\textnormal{XXXX}}}\label{K_L03006-1h}. Man
+               möchte ſie von Mitterwurzer\pwindex{Mitterwurzer, Friedrich 16.10.1844 – 13.02.1897@\textsc{Mitterwurzer, Friedrich} (16.10.1844 – 13.02.1897), \emph{Schauspieler}|pw} geleſen hören. \pend
+           \pstart
+           {\pb}Iſt es wahr, dſs Sie zu
+                  Pfingſten nach Wien\oindex{Wien@\textbf{Wien}|pw} kommen? Und am
+                  23. wieder–? \pend
+           \pstart
+           Von Herzen Ihr {\\[\baselineskip]}\spacefill\mbox{A.}\pend
+           \leftskip=0em{}
+         
+         \endnumbering\mylabel{h}\end{ledgroupsized}\begin{anhang}\end{anhang}\newcommand{\dateiname}{L03006}\newcommand{\titel}{Arthur Schnitzler an Felix Salten, 26. 5. 1906}\newcommand{\editorInnen}{Martin Anton Müller und Laura Untner}\input{../tex-inputs/latex-leseansicht-abspann}
+      

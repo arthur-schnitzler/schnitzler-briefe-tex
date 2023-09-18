@@ -1,0 +1,32 @@
+\input{../tex-inputs/latex-leseansicht-vorspann}
+\begin{center}
+            \textcolor{red}{ENTWURF, NICHT FERTIG KORRIGIERT}
+                      \end{center}
+            
+         \renewcommand{\erwaehnteInstitutionen}{Institutionen: Paul Zsolnay Verlag}
+         \renewcommand{\erwaehnteOrte}{Orte: Berlin, Leipzig, Wien}
+         \renewcommand{\erwaehnteWerke}{Werke: Fünf Minuten Amerika}
+               \section[Felix Salten: Widmungsexemplar Fünf Minuten Amerika für Arthur Schnitzler, {[}zwischen 1. und 28.?{]} 5. 1931]{ Felix Salten: Widmungsexemplar Fünf Minuten Amerika für Arthur Schnitzler,
+               {[}zwischen 1. und 28.?{]} 5. 1931}\nopagebreak\mylabel{v}\rehead{ }\begin{ledgroupsized}[t]{13cm}\normalsize\beginnumbering \toendnotes[C]{\smallbreak\pagebreak[2]} \Standort{DLA, G:Schnitzler, Arthur (Sammlung Heinrich Schnitzler).}
+\physDesc{Widmung am Titelblatt
+\newline{}Handschrift: schwarze Tinte, lateinische Kurrent}\pstart
+           \noindent{}\centering{}{\pb}\textcolor{gray}{\textbf{FELIX SALTEN}}\pend
+           \pstart
+           \noindent{}\centering{}\textcolor{gray}{\textbf{FÜNF{\\}MINUTEN{\\}AMERIKA\pwindex{Salten, Felix 06.09.1869 – 08.10.1945@\textsc{Salten, Felix} (06.09.1869 – 08.10.1945), \emph{Schriftsteller, Journalist}!Fuenf Minuten Amerika1931-05-01@\strich\emph{Fünf Minuten Amerika} {[}1931-05-01{]}|pw}}}\pend
+           {\bigskip}\pstart
+           \noindent{}Arthur Schnitzler\pend
+           \pstart
+           herzlich{\\[\baselineskip]}\spacefill\mbox{Felix Salten}\pend
+           \leftskip=0em{}\pstart
+           Wien\oindex{Wien@\textbf{Wien}|pw}, 
+                  Mai 31\pend
+           {\bigskip}\pstart
+           \noindent{}\centering{}\textcolor{gray}{\textbf{1931}}\pend
+           \pstart
+           \noindent{}\centering{}\textcolor{gray}{\textbf{PAUL ZSOLNAY VERLAG\orgindex{Paul Zsolnay Verlag@Paul Zsolnay Verlag|pw}}}\pend
+           \pstart
+           \noindent{}\centering{}\textcolor{gray}{\textbf{BERLIN\oindex{Berlin@\textbf{Berlin}|pw} ⋅ WIEN\oindex{Wien@\textbf{Wien}|pw} ⋅ LEIPZIG\oindex{Leipzig@\textbf{Leipzig}|pw}}}\pend
+           
+         
+         \endnumbering\mylabel{h}\end{ledgroupsized}\begin{anhang}\end{anhang}\newcommand{\dateiname}{L03049}\newcommand{\titel}{Felix Salten: Widmungsexemplar Fünf Minuten Amerika für Arthur Schnitzler, [zwischen 1. und 28.?] 5. 1931}\newcommand{\editorInnen}{Martin Anton Müller und Laura Untner}\input{../tex-inputs/latex-leseansicht-abspann}
+      

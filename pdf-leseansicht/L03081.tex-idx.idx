@@ -1,0 +1,29 @@
+\input{../tex-inputs/latex-leseansicht-vorspann}
+\begin{center}
+            \textcolor{red}{ENTWURF, NICHT FERTIG KORRIGIERT}
+                      \end{center}
+            
+         
+         \renewcommand{\erwaehntePersonen}{Personen: Olga Schnitzler, Louise Schnitzler, Elisabeth Steinrück}
+         \renewcommand{\erwaehnteOrte}{Orte: Berlin, Dessauer Straße, Wien}
+         \renewcommand{\erwaehnteWerke}{}
+               \section[ Paul Goldmann an Arthur Schnitzler, 6. 9. {[}1901{]}]{ Paul Goldmann an Arthur Schnitzler, 6. 9. {[}1901{]}}\nopagebreak\mylabel{v}\rehead{ }\begin{ledgroupsized}[t]{13cm}\normalsize\beginnumbering \toendnotes[C]{\smallbreak\pagebreak[2]} \Standort{DLA, A:Schnitzler, HS.NZ85.1.3171.}
+\physDesc{Brief, 1 Blatt, 1 Seite
+\newline{}Handschrift: blaue Tinte, deutsche Kurrent
+\newline{}Schnitzler: mit Bleistift das Jahr »{[}1{]}901« vermerkt }\toendnotes[C]{\smallbreak}\pstart
+           \noindent{}\raggedleft{}{\pb}\textcolor{gray}{\textbf{DESSAUERSTRASSE 19}}\oindex{Dessauer Strasse@\textbf{Dessauer Straße}|pw}\pend
+           \pstart
+           Berlin\oindex{Berlin@\textbf{Berlin}|pw}{ }6. September.\pend
+           \pstart\center{}Mein lieber Freund,\pend\pstart
+           Ich bin \label{K_L03081-2v}\edtext{wieder in Berlin\oindex{Berlin@\textbf{Berlin}|pw}}{\lemma{\textnormal{\emph{wieder in Berlin}}}\Cendnote{\textnormal{Goldmann\pwindex{Goldmann, Paul 31.01.1865 – 25.09.1935@\textsc{Goldmann, Paul} (31.01.1865 – 25.09.1935), \emph{Schriftsteller, Journalist}|pwk} war am 4. 9. 1901 aus Wien\oindex{Wien@\textbf{Wien}|pwk} abgereist.}}}\label{K_L03081-2h}. Denke mit Wehmuth an die
+               entſchwundenen guten Tage und gehe noch halb im Traum durch all’ die
+               Widerwärtigkeiten, die mich hier erwartet haben. Tauſend Dank für all’ Deine Güte!
+               Viele Grüße an die lieben Mädchen\pwindex{Schnitzler, Olga 17.01.1882 – 13.01.1970@\textsc{Schnitzler, Olga} (17.01.1882 – 13.01.1970), \emph{Schauspielerin, Sängerin}|pwv}\pwindex{Steinrueck, Elisabeth 19.11.1885 – 07.04.1920@\textsc{Steinrück, Elisabeth} (19.11.1885 – 07.04.1920)|pwv}!\pend
+           \pstart
+           Viele Grüße an Dich! {\\[\baselineskip]}Dein \spacefill\mbox{Paul Goldmann}\pend
+           \leftskip=0em{}\pstart
+           \noindent{}Bitte, empfiehl’ mich Deiner Mutter\pwindex{Schnitzler, Louise 1840-07-08 – 1911-09-09@\textsc{Schnitzler, Louise} (1840-07-08 – 1911-09-09)|pwv} und richte auch ihr noch den wärmſten Dank aus!\pend
+           
+         
+         \endnumbering\mylabel{h}\end{ledgroupsized}  \newcommand{\dateiname}{L03081}\newcommand{\titel}{Paul Goldmann an Arthur Schnitzler, 6. 9. [1901]}\newcommand{\editorInnen}{Martin Anton Müller und Laura Untner}\input{../tex-inputs/latex-leseansicht-abspann}
+      

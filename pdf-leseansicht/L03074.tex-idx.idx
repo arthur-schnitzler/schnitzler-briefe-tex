@@ -1,0 +1,24 @@
+\input{../tex-inputs/latex-leseansicht-vorspann}
+\begin{center}
+            \textcolor{red}{ENTWURF, NICHT FERTIG KORRIGIERT}
+                      \end{center}
+            
+         
+         \renewcommand{\erwaehntePersonen}{Personen: Robert Hirschfeld}
+         \renewcommand{\erwaehnteOrte}{Orte: Berlin, Frankgasse, Sekirn, Vahrn, Wien}
+         \renewcommand{\erwaehnteWerke}{}
+               \section[ Paul Goldmann an Arthur Schnitzler, 21. 7. {[}1901{]}]{ Paul Goldmann an Arthur Schnitzler, 21. 7. {[}1901{]}}\nopagebreak\mylabel{v}\rehead{ }\begin{ledgroupsized}[t]{13cm}\normalsize\beginnumbering \toendnotes[C]{\smallbreak\pagebreak[2]} \Standort{DLA, A:Schnitzler, HS.NZ85.1.3171.}
+\physDesc{Postkarte
+\newline{}Handschrift: 1) blaue Tinte, deutsche Kurrent\hspace{1em}2) blaue Tinte, lateinische Kurrent (\noindent{}Adresse)\hspace{1em}\newline{}Versand: 1) Stempel: »\nobreak{}\oindex{Berlin@\textbf{Berlin}|pwk}Berlin, W 9, 21. 7. 01, 2–3 N\nobreak{}«.   2) Stempel: »\nobreak{}Wien 9/3 72, 22. 7. 01, 9. {[}V{]}, Bes{[}tell{]}t\nobreak{}«. 
+\newline{}Schnitzler: mit Bleistift das Datum »21/7 {[}1{]}901« vermerkt }\toendnotes[C]{\smallbreak}\pstart{}{\pb}Herrn\pend{}\pstart{}Dr. Arthur Schnitzler\pend{}\pstart{}Wien\oindex{Wien@\textbf{Wien}|pw}\pend{}\pstart{}IX. Frankgaße 1\oindex{Frankgasse@\textbf{Frankgasse}|pw}.\pend{}{\bigskip}\pstart
+           \noindent{}{\pb}Berlin\oindex{Berlin@\textbf{Berlin}|pw}, 21. Juli.\hfill Mein lieber Freund,\pend
+           \pstart
+           Haſt Du meinen nach \label{K_L03074-22v}\edtext{\textsc{Vahrn\oindex{Vahrn@\textbf{Vahrn}|pw}} geſandten Brief}{\lemma{\textnormal{\emph{Vahrn geſandten Brief}}}\Cendnote{\textnormal{siehe Paul Goldmann an Arthur Schnitzler, 19. 7. [1901]}}}\label{K_L03074-22h} erhalten? Du
+               hatteſt keine nähere Adreſſe angegeben. Ich ſchreibe alſo der Sicherheit halber noch
+               einmal an Deine Wien\oindex{Wien@\textbf{Wien}|pw}er Adreſſe, daß ich Montag reiſe u. Ende der Woche in \textsc{Seekirn\oindex{Sekirn@\textbf{Sekirn}|pw}} bei \textsc{Hirschfeld\pwindex{Hirschfeld, Robert 17.09.1857 – 02.04.1914@\textsc{Hirschfeld, Robert} (17.09.1857 – 02.04.1914), \emph{Journalist, Musikkritiker}|pw}} ſein dürfte, wo ich Deine lieben Nachrichten zu finden hoffe. 
+            \pend
+           \pstart Herzlichſt Dein
+               \spacefill\mbox{P. G.}\pend{}
+         
+         \endnumbering\mylabel{h}\end{ledgroupsized}  \newcommand{\dateiname}{L03074}\newcommand{\titel}{Paul Goldmann an Arthur Schnitzler, 21. 7. [1901]}\newcommand{\editorInnen}{Martin Anton Müller und Laura Untner}\input{../tex-inputs/latex-leseansicht-abspann}
+      

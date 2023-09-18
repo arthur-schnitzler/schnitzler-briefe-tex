@@ -1,0 +1,44 @@
+\input{../tex-inputs/latex-leseansicht-vorspann}
+\begin{center}
+            \textcolor{red}{ENTWURF, NICHT FERTIG KORRIGIERT}
+                      \end{center}
+            
+         
+         \renewcommand{\erwaehntePersonen}{Personen: Marie Glümer, Auguste Glümer,  Meyer, Rudolf Renvers}
+         \renewcommand{\erwaehnteOrte}{Orte: Berlin, Dessauer Straße, Wien}
+         \renewcommand{\erwaehnteWerke}{}
+               \section[ Paul Goldmann an Arthur Schnitzler, 14. 2. {[}1901{]}]{ Paul Goldmann an Arthur Schnitzler, 14. 2. {[}1901{]}}\nopagebreak\mylabel{v}\rehead{ }\begin{ledgroupsized}[t]{13cm}\normalsize\beginnumbering \toendnotes[C]{\smallbreak\pagebreak[2]} \Standort{DLA, A:Schnitzler, HS.NZ85.1.3171.}
+\physDesc{Brief, 1 Blatt, 1 Seite
+\newline{}Handschrift: blaue Tinte, deutsche Kurrent\newline{}Beilage: handschriftlicher Brief von Meyer, 1 Blatt, 2 Seiten, schwarze Tinte,
+                                 lateinische Kurrent 
+\newline{}Schnitzler: mit Bleistift das Jahr »{[}1{]}901« vermerkt }\toendnotes[C]{\smallbreak}\pstart
+           \noindent{}\raggedleft{}{\pb}\textcolor{gray}{\textbf{DESSAUERSTRASSE 19}}\oindex{Dessauer Strasse@\textbf{Dessauer Straße}|pw}\pend
+           \pstart
+           Berlin\oindex{Berlin@\textbf{Berlin}|pw}, 14. Februar.\pend
+           \pstart\center{}Mein lieber Freund,\pend\pstart
+           Ein \label{K_L03058-1v}\edtext{\textsc{Dr. Meyer\pwindex{Meyer @\textsc{Meyer}, \emph{Arzt}|pw}}}{\lemma{\textnormal{\emph{Dr. Meyer}}}\Cendnote{\textnormal{nicht ermittelt}}}\label{K_L03058-1h}, der mit den Glümers\pwindex{Gluemer, Marie 03.07.1867 – 16.11.1925@\textsc{Glümer, Marie} (03.07.1867 – 16.11.1925), \emph{Schauspielerin}|pwv}\pwindex{Gluemer, Auguste 16.03.1862 – 1956@\textsc{Glümer, Auguste} (16.03.1862 – 1956)|pwv} bekannt
+               iſt, hat \textsc{Mizzi\pwindex{Gluemer, Marie 03.07.1867 – 16.11.1925@\textsc{Glümer, Marie} (03.07.1867 – 16.11.1925), \emph{Schauspielerin}|pw}} zu 
+               \textsc{Prof. Renvers\pwindex{Renvers, Rudolf 1854-02-18 – 1909-03-22@\textsc{Renvers, Rudolf} (1854-02-18 – 1909-03-22), \emph{Mediziner, Universitätslehrer}|pw}}
+                begleitet. Ich
+               bat \textsc{Gusti\pwindex{Gluemer, Auguste 16.03.1862 – 1956@\textsc{Glümer, Auguste} (16.03.1862 – 1956)|pw}}, mich mit dieſem \textsc{Dr. Meyer\pwindex{Meyer @\textsc{Meyer}, \emph{Arzt}|pw}} in Verbindung zu ſetzen. Die Folge\strikeout{n} war
+               beiliegender Brief, aus dem ich auch nicht ſehr klug werde. Vielleicht ſagt er Dir
+               mehr als mir.\pend
+           \pstart
+           Viele Grüße! {\\[\baselineskip]}Dein {\\[\baselineskip]}\spacefill\mbox{Paul Goldmn}\pend
+           \leftskip=0em{}{\bigskip}\pstart
+           \raggedleft{}{\pb}{[}hs. Meyer:{]} B.\oindex{Berlin@\textbf{Berlin}|pw}{ }Montag.\pend
+           \pstart\center{}Sehr geehrter Herr Doctor!\pend\pstart
+           Auf Wunſch von \label{K_L03058-3v}\edtext{Fräulein Glümer\pwindex{Gluemer, Marie 03.07.1867 – 16.11.1925@\textsc{Glümer, Marie} (03.07.1867 – 16.11.1925), \emph{Schauspielerin}|pw}}{\lemma{\textnormal{\emph{Fräulein Glümer}}}\Cendnote{\textnormal{siehe Paul Goldmann an Arthur Schnitzler, 22. 1. [1901]}}}\label{K_L03058-3h} erlaube ich mir die ergebene Mitteilung, daß ihre Erkrankung auf einer
+               ſchlechten Zuſammenſetzung des Blutes + der übrigen Körperſäfte beruht, deren Schwere
+               durch die lange Vernachläſſigung bedingt iſt. –\pend
+           \pstart
+           Das Weſentliche für {\pb}ihre Freunde iſt
+               ja die Thatſache, daß ſie in 4 Wochen ca mit Sicherheit völlig geſund ſein wird.\pend
+           \pstart
+           Mit vorzüglichſter Hochſchätzung empfiehlt ſich Ihnen {\\[\baselineskip]}ganz
+                  ergebſt
+               { }{\\[\baselineskip]}\spacefill\mbox{Meyer}\pend
+           \leftskip=0em{}
+         
+         \endnumbering\mylabel{h}\end{ledgroupsized}  \newcommand{\dateiname}{L03058}\newcommand{\titel}{Paul Goldmann an Arthur Schnitzler, 14. 2. [1901]}\newcommand{\editorInnen}{Martin Anton Müller und Laura Untner}\input{../tex-inputs/latex-leseansicht-abspann}
+      

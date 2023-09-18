@@ -1,0 +1,41 @@
+\input{../tex-inputs/latex-leseansicht-vorspann}
+\begin{center}
+            \textcolor{red}{ENTWURF, NICHT FERTIG KORRIGIERT}
+                      \end{center}
+            
+         \renewcommand{\erwaehnteInstitutionen}{Institutionen: Paul Zsolnay Verlag}
+         \renewcommand{\erwaehnteOrte}{Orte: Berlin, Leipzig, Wien}
+         \renewcommand{\erwaehnteWerke}{}
+               \section[Felix Salten: Widmungsexemplar Neue Menschen auf alter Erde für Arthur Schnitzler, 30. 4. 1925]{ Felix Salten: Widmungsexemplar Neue Menschen auf alter Erde für Arthur Schnitzler,
+               30. 4. 1925}\nopagebreak\mylabel{v}\rehead{ }\begin{ledgroupsized}[t]{13cm}\normalsize\beginnumbering \toendnotes[C]{\smallbreak\pagebreak[2]} \Standort{DLA, G:Schnitzler, Arthur (Sammlung Heinrich Schnitzler).}
+\physDesc{Widmung am Schmutztitel
+\newline{}Handschrift: schwarze Tinte, lateinische Kurrent}\pstart
+           \noindent{}\centering{}{\pb}\textcolor{gray}{\textbf{FELIX SALTEN}}\pend
+           \pstart
+           \noindent{}\centering{}\textcolor{gray}{\textbf{NEUE MENSCHEN}}\pend
+           \pstart
+           \noindent{}\centering{}\textcolor{gray}{\textbf{AUF ALTER ERDE}}\pend
+           {\bigskip}\pstart
+           \noindent{}Arthur Schnitzler\pend
+           \pstart
+           herzlich{\\[\baselineskip]}\spacefill\mbox{Felix Salten}\pend
+           \leftskip=0em{}\pstart
+           30⋅4⋅25\pend
+           {\bigskip}\pstart
+           \noindent{}\centering{}{\pb}\textcolor{gray}{\textbf{FELIX SALTEN}}\pend
+           \pstart
+           \noindent{}\centering{}\textcolor{gray}{\textbf{NEUE MENSCHEN}}\pend
+           \pstart
+           \noindent{}\centering{}\textcolor{gray}{\textbf{AUF ALTER ERDE}}\pend
+           {\bigskip}\pstart
+           \noindent{}\centering{}\textcolor{gray}{\textbf{EINE PALÄSTINAFAHRT}}\pend
+           {\bigskip}\pstart
+           \noindent{}\centering{}\textcolor{gray}{\textbf{1925}}\pend
+           \pstart
+           \noindent{}\centering{}\textcolor{gray}{\textbf{PAUL ZSOLNAY VERLAG\orgindex{Paul Zsolnay Verlag@Paul Zsolnay Verlag|pw}}}\pend
+           \pstart
+           \noindent{}\centering{}\textcolor{gray}{\textbf{BERLIN\oindex{Berlin@\textbf{Berlin}|pw} – WIEN\oindex{Wien@\textbf{Wien}|pw} – LEIPZIG\oindex{Leipzig@\textbf{Leipzig}|pw}}}\pend
+           
+         
+         \endnumbering\mylabel{h}\end{ledgroupsized}\begin{anhang}\end{anhang}\newcommand{\dateiname}{L03045}\newcommand{\titel}{Felix Salten: Widmungsexemplar Neue Menschen auf alter Erde für Arthur Schnitzler, 30. 4. 1925}\newcommand{\editorInnen}{Martin Anton Müller und Laura Untner}\input{../tex-inputs/latex-leseansicht-abspann}
+      
