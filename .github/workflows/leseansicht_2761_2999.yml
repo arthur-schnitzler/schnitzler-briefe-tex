@@ -22,17 +22,35 @@ jobs:
     - name: Convert Files
       run: |
         cd tex-leseansicht
-        for i in L0{2761..2999}.tex; do xelatex $i -interaction=nonstopmode; done
+        for i in L0{2761..2999}.tex; do
+          if [ -f "$i" ]; then
+            xelatex $i -interaction=nonstopmode
+          else
+            echo "File $i not found. Skipping."
+          fi
+        done
         cd ..
     - name: Create Index
       run: |
         cd tex-leseansicht
-        for i in L0{2761..2999}.tex; do xelatex $i -interaction=nonstopmode; done
+        for i in L0{2761..2999}.tex; do
+          if [ -f "$i" ]; then
+            xelatex $i -interaction=nonstopmode
+          else
+            echo "File $i not found. Skipping."
+          fi
+        done
         cd ..
     - name: Final conversion
       run: |
         cd tex-leseansicht
-        for i in L0{2761..2999}.tex; do xelatex $i -interaction=nonstopmode; done
+        for i in L0{2761..2999}.tex; do
+          if [ -f "$i" ]; then
+            xelatex $i -interaction=nonstopmode
+          else
+            echo "File $i not found. Skipping."
+          fi
+        done
         cd ..
     - name: copy pdf to pdf-folder
       run: |
