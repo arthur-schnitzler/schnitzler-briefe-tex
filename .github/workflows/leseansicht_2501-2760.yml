@@ -1,4 +1,4 @@
-name: Leseansicht - files 2501–3100
+name: Leseansicht - files 2501–2760
 
 on:
   workflow_dispatch
@@ -22,17 +22,17 @@ jobs:
     - name: Convert Files
       run: |
         cd tex-leseansicht
-        for i in L0{2501..3100}.tex; do xelatex $i -interaction=nonstopmode; done
+        for i in L0{2501..2760}.tex; do xelatex $i -interaction=nonstopmode; done
         cd ..
     - name: Create Index
       run: |
         cd tex-leseansicht
-        for i in  L0{2501..3100}.tex; do splitindex -m "texindy -M ../tex-inputs/xindy-pdf" $i; done
+        for i in  L0{2501..2760}.tex; do splitindex -m "texindy -M ../tex-inputs/xindy-pdf" $i; done
         cd ..
     - name: Final conversion
       run: |
         cd tex-leseansicht
-        for i in  L0{2501..3100}.tex; do xelatex $i -interaction=nonstopmode; done
+        for i in  L0{2501..2760}.tex; do xelatex $i -interaction=nonstopmode; done
         cd ..
     - name: copy pdf to pdf-folder
       run: |
