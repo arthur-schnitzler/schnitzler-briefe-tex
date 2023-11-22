@@ -1,0 +1,87 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3172.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 1 Seite \newline {}Handschrift: blaue Tinte, deutsche Kurrent \newline {}Schnitzler: mit Bleistift das Jahr »1902« vermerkt \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|4|0|1|4|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Pfingſten
+in
+Wien}}}{\textnormal
+{siehe
+Paul
+Goldmann
+an
+Arthur
+Schnitzler, 5. 5. [1902]}}{C}{}{L}{edtxt@3}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|6|0|1|6|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Samſtag
+Abend}}}{\textnormal
+{\textcolor
+{blue}{Goldmann}
+kam
+am
+18. 5. 1902
+in
+\textcolor
+{pink}{Wien}
+an.}}{C}{}{L}{edtxt@6}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|8|0|1|8|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Wiener
+Erfolge}}}{\textnormal
+{Am
+6. 5. 1902
+hatte
+die
+erfolgreiche
+Premiere
+des
+Gastspiels
+von
+\emph
+{\textcolor
+{green}{Lebendige
+Stunden}}
+des
+\emph
+{\textcolor
+{brown}{Deutschen
+Theaters
+Berlin}}
+am
+\textcolor
+{pink}{Wien}er
+\textcolor
+{pink}{Carl-Theater}
+stattgefunden.
+Auch
+die
+Kritiken
+fielen
+gut
+aus
+(vgl.
+A. S.:
+\emph
+{Tagebuch},
+7. 5. 1902).}}{C}{}{L}{edtxt@9}%

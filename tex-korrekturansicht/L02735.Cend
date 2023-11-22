@@ -71,7 +71,7 @@ Nr. 121,
 2. 5. 1895,
 Zweites
 Morgenblatt,
-S. 1.}}{C}{}{L}{edtxt@10}%
+S. 1.}}{C}{}{L}{edtxt@9}%
 \def
 \sw@list@inedtext
 {}%
@@ -100,7 +100,7 @@ Nr. 135,
 16. 5. 1895,
 Drittes
 Morgenblatt,
-S. 1.}}{C}{}{L}{edtxt@12}%
+S. 1.}}{C}{}{L}{edtxt@11}%
 \def
 \sw@list@inedtext
 {}%
@@ -130,7 +130,7 @@ Nr. 131,
 12. 5. 1895,
 Erstes
 Morgenblatt,
-S. 1–2.}}{C}{}{L}{edtxt@14}%
+S. 1–2.}}{C}{}{L}{edtxt@13}%
 \def
 \sw@list@inedtext
 {}%
@@ -144,26 +144,103 @@ S. 1–2.}}{C}{}{L}{edtxt@14}%
 sich
 \textcolor
 {blue}{Goldmann}
-bezieht,
+hier
+bezog,
 ist
 unklar.
-Einerseit
-\par
+Mögliche
+Erklärungen:
+Es
+handelt
+sich
+um
+ein
+Feuilleton,
+das
+länger
+zurück
+lag,
+beispielsweise:
 \textcolor
-{blue}{Paul
-Goldmann}:
+{blue}{A. B.}:
 \emph
 {\textcolor
-{green}{[Japan-Feuilleton]}}.
+{green}{Eine
+japanische
+Kaiserstadt}}.
 In:
 \emph
 {\textcolor
 {green}{Frankfurter
 Zeitung}},
 Jg. 39,
-Nr. XXXX,
-YYYY,
-S. YYYY.}}{C}{}{L}{edtxt@16}%
+Nr. 111,
+22. 4. 1895,
+Morgenblatt,
+S. 1–2.
+(Dagegen
+spricht
+das
+Namenskürzel,
+für
+das
+es
+bei
+\textcolor
+{blue}{Goldmann}
+keinen
+Beleg
+gibt.)
+Oder
+es
+könnte
+sich
+um
+die
+kleine,
+nicht
+namentlich
+gekennzeichnete
+\textcolor
+{green}{Meldung}
+aus
+\textcolor
+{pink}{Japan}
+handeln,
+die
+am
+18. 5. 1895
+erschien
+und
+die
+möglicherweise
+ohne
+Quellenangabe
+aus
+einer
+französischen
+Zeitung
+entnommen
+wurde
+(Nr. 137,
+Erstes
+Morgenblatt,
+S. 1).
+Weiters
+wäre
+denkbar,
+dass
+ein
+Text
+nur
+in
+einem
+Teil
+der
+\textcolor
+{green}{Ausgabe}
+enthalten
+war.}}{C}{}{L}{edtxt@15}%
 \def
 \sw@list@inedtext
 {}%
@@ -196,7 +273,7 @@ an
 \textcolor
 {blue}{Goldmann}
 geschickt
-haben.}}{C}{}{L}{edtxt@19}%
+haben.}}{C}{}{L}{edtxt@18}%
 \def
 \sw@list@inedtext
 {}%
@@ -247,7 +324,7 @@ statt.
 {blue}{Goldmann}
 kam
 ebenfalls
-mit.}}{C}{}{L}{edtxt@31}%
+mit.}}{C}{}{L}{edtxt@35}%
 \def
 \sw@list@inedtext
 {}%
@@ -274,7 +351,7 @@ Jg. 8,
 Nr. 47,
 15. 5. 1895,
 15. 5. 1895,
-S. 458–462.}}{C}{}{L}{edtxt@37}%
+S. 458–462.}}{C}{}{L}{edtxt@40}%
 \def
 \sw@list@inedtext
 {}%
@@ -306,4 +383,4 @@ des
 {green}{Heft}es
 vom
 12. 5. 1895
-erschienen.}}{C}{}{L}{edtxt@46}%
+erschienen.}}{C}{}{L}{edtxt@49}%

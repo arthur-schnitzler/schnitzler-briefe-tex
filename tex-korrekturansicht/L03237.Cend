@@ -1,0 +1,33 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3175.\endgraf %
+\hangpara {4em}{0}Postkarte \newline {}Handschrift: 1) blaue Tinte, deutsche Kurrent\hspace {1em}2) blaue Tinte, lateinische Kurrent (\noindent {}Adresse)\hspace {1em} \newline {}Versand: 1) Stempel: »\nobreak {}\oindex {Berlin@\textbf {Berlin}, \emph {https://www.geonames.org/ontologyP.PPLC}|pwk}Berlin S. W. 11, 20. 11. 05, 11\textsuperscript {20} V.\nobreak {}«. 2) Stempel: »\nobreak {}\oindex {Berlin@\textbf {Berlin}, \emph {https://www.geonames.org/ontologyP.PPLC}|pwk}Berlin N. W. 7, 20. 11. 05, 11\textsuperscript {40} V.\nobreak {}«. \newline {}Schnitzler: mit Bleistift das Datum » 1{[}9{]}05 20/11« vermerkt \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|9|0|1|9|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Oper}}}{\textnormal
+{\textcolor
+{blue}{Schnitzler}
+verbrachte
+den
+Abend
+nicht
+mit
+\textcolor
+{blue}{Goldmann},
+sondern
+mit
+\textcolor
+{blue}{Siegfried
+Jacobsohn}.
+Siehe
+A. S.:
+\emph
+{Tagebuch},
+20. 11. 1905.}}{C}{}{L}{edtxt@4}%

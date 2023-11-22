@@ -1,0 +1,45 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3175.\endgraf %
+\hangpara {4em}{0}Postkarte \newline {}Handschrift: blaue Tinte, lateinische Kurrent \newline {}Versand: 1) Stempel: »\nobreak {}\oindex {Berlin@\textbf {Berlin}, \emph {https://www.geonames.org/ontologyP.PPLC}|pwk}Berlin, W 9, 16. 8. 07, 11-12 V.\nobreak {}«. 2) Stempel: »\nobreak {}\oindex {Welsberg-Taisten@\textbf {Welsberg-Taisten}, \emph {Besiedelter Ort (A.BSO)}|pwk}Wels{[}berg{]}, 1\textcolor {gray}{×}. 8. \textcolor {gray}{×}\textcolor {gray}{7}\nobreak {}«. \newline {}Schnitzler: mit Bleistift das Datum »16. 8. {[}19{]}07« vermerkt \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|6|0|1|6|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Welsberg}}}{\textnormal
+{siehe
+Paul
+Goldmann
+an
+Arthur
+Schnitzler, 18. 8. 1907}}{C}{}{L}{edtxt@5}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|9|0|1|10|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{im
+…
+drücken}}}{\textnormal
+{nicht
+geschehen}}{C}{}{L}{edtxt@8}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|11|0|1|11|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Dein}}}{\textnormal
+{in
+deutscher
+Kurrentschrift}}{C}{}{L}{edtxt@10}%

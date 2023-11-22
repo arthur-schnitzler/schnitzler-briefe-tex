@@ -1,0 +1,69 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3172.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 4 Seiten \newline {}Handschrift: schwarze Tinte, deutsche Kurrent \newline {}Schnitzler: mit Bleistift das Jahr »{[}1{]}902« vermerkt \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|5|0|1|5|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Sohn}}}{\textnormal
+{\textcolor
+{blue}{Heinrich
+Schnitzler},
+geboren
+am
+9. 8. 1902
+in
+der
+\textcolor
+{pink}{Hinterbrühl}}}{C}{}{L}{edtxt@4}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|10|0|1|10|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Alt-Wiener
+Stück}}}{\textnormal
+{siehe
+dazu
+auch
+Paul
+Goldmann
+an
+Arthur
+Schnitzler, 24. 8. [1898]}}{C}{}{L}{edtxt@9}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|12|0|1|12|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{»Beatrice«}}}{\textnormal
+{siehe
+Paul
+Goldmann
+an
+Arthur
+Schnitzler, 14. 7. [1902]}}{C}{}{L}{edtxt@12}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|13|0|1|13|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Deutſchen}}}{\textnormal
+{\textcolor
+{pink}{Deutschen
+Theater}}}{C}{}{L}{edtxt@15}%

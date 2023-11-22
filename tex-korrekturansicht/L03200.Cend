@@ -1,0 +1,61 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3172.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 2 Seiten \newline {}Handschrift: blaue Tinte, deutsche Kurrent \newline {}Schnitzler: mit Bleistift das Jahr »{[}1{]}902« vermerkt \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|12|0|1|12|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Prag}}}{\textnormal
+{\textcolor
+{blue}{Goldmann}
+fuhr
+von
+Ende
+März
+bis
+Anfang
+April 1902
+nach
+\textcolor
+{pink}{Prag},
+es
+kam
+dabei
+jedoch
+zu
+keinem
+Zusammentreffen
+mit
+\textcolor
+{blue}{Schnitzler}.}}{C}{}{L}{edtxt@9}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|19|0|1|19|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Richard}}}{\textnormal
+{\textcolor
+{blue}{Goldmann}
+schrieb
+\textcolor
+{blue}{Beer-Hofmann}
+noch
+am
+selben
+Tag,
+vgl.
+\emph
+{\textcolor
+{brown}{Houghton
+Library}},
+Harvard
+(Signatur 825.978)}}{C}{}{L}{edtxt@12}%

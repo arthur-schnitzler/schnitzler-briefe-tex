@@ -1,0 +1,49 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3175.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 4 Seiten \newline {}Handschrift: 1) schwarze Tinte, deutsche Kurrent (\noindent {}erster Absatz)\hspace {1em}2) blaue Tinte, deutsche Kurrent\hspace {1em} \newline {}Schnitzler: 1) mit Bleistift »Mitte April {[}1{]}906« vermerkt 2) mit rotem Buntstift drei Unterstreichungen\endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|4|0|1|4|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Abreiſe
+aus
+Berlin}}}{\textnormal
+{vermutlich
+zwischen
+10. und 15. 4. 1906}}{C}{}{L}{edtxt@3}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|5|0|1|5|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Operation}}}{\textnormal
+{siehe
+Paul
+Goldmann
+an
+Arthur
+Schnitzler, 9. 4. [1906]}}{C}{}{L}{edtxt@6}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|25|0|1|25|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Rat}}}{\textnormal
+{siehe
+Paul
+Goldmann
+an
+Arthur
+Schnitzler, 20. 4. [1906]}}{C}{}{L}{edtxt@16}%
