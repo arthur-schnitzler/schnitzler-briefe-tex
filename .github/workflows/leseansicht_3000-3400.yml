@@ -1,7 +1,8 @@
-name: Leseansicht - recent files
+name: Leseansicht - files 3000–3400
 
 on:
   workflow_dispatch
+
 jobs:
   makepdf:
     name: Convert LaTeX to PDF
@@ -9,39 +10,34 @@ jobs:
     steps:
     - name: Perform Checkout
       uses: actions/checkout@v3
-    - name: Install ANT,  LaTeX Things
+    - name: Install ANT, LaTeX Things
       run: |
-        sudo apt-get update && sudo apt-get install texlive-xetex texlive-humanities texlive-lang-german texlive-lang-french texlive-lang-english texlive-lang-greek  openjdk-11-jre-headless ant -y
+        sudo apt-get update && sudo apt-get install texlive-xetex texlive-humanities texlive-lang-german texlive-lang-french texlive-lang-english texlive-lang-greek openjdk-11-jre-headless ant -y
     - name: Clone private repository with fonts and symbols
       uses: GuillaumeFalourd/clone-github-repo-action@v2
       with:
           owner: 'arthur-schnitzler'
           repository: 'schnitzler-briefe-tex-private-files'
           access-token: ${{ secrets.SCHNITZLER_TEX_PRIVATE }}
-    - name: import xindy
-      run: |
-        sudo apt install xindy
     - name: Convert Files
       run: |
         cd tex-leseansicht
-        for i in L03*.tex; do xelatex $i -interaction=nonstopmode;done
-        for i in L03*.tex; do xelatex $i -interaction=nonstopmode;done
+        for i in L0{3000..3400}.tex; do xelatex $i -interaction=nonstopmode; done
         cd ..
     - name: Create Index
       run: |
         cd tex-leseansicht
-        for i in L03*.tex; do splitindex -m "texindy -M ../tex-inputs/xindy-pdf -I latex" $i;done
+        for i in  L0{3000..3400}.tex; do splitindex -m "texindy -M ../tex-inputs/xindy-pdf" $i; done
         cd ..
     - name: Final conversion
       run: |
         cd tex-leseansicht
-        for i in L03*.tex; do xelatex $i -interaction=nonstopmode;done
+        for i in  L0{3000..3400}.tex; do xelatex $i -interaction=nonstopmode; done
         cd ..
     - name: copy pdf to pdf-folder
       run: |
-        mv ./tex-leseansicht/*.pdf ./pdf-leseansicht/ 
-        mv ./tex-leseansicht/*.i* ./pdf-leseansicht/ 
+        mv ./tex-leseansicht/*.pdf ./pdf-leseansicht/
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: made pdfs
-        file_pattern: "*.i* *.pdf"
+        file_pattern: "*.pdf"
