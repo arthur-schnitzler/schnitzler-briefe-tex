@@ -4,13 +4,13 @@ on:
  workflow_dispatch:
     inputs:
       first_filename:
-        description: 'Enter the first filename'
+        description: 'Erste Dateinummer'
         required: true
-        default: 'L00001'
+        default: '00001'
       last_filename:
         description: 'Enter the last filename'
         required: true
-        default: 'L03500'
+        default: '03500'
 
 jobs:
  makepdf:
