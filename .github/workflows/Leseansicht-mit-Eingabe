@@ -1,4 +1,4 @@
-name: Leseansicht - recent files
+name: Leseansicht mit Eingabe
 
 on:
  workflow_dispatch:
