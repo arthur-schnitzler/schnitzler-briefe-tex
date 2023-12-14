@@ -1,0 +1,43 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3173.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 2 Seiten \newline {}Handschrift: blaue Tinte, deutsche Kurrent \newline {}Schnitzler: mit Bleistift das Jahr »{[}1{]}903.« vermerkt \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|5|0|1|5|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Berlin}}}{\textnormal
+{\textcolor
+{blue}{Schnitzler}
+war
+von
+22. 2. 1903
+bis
+9. 3. 1903
+in
+\textcolor
+{pink}{Berlin}.
+In
+dieser
+Zeit
+wohnte
+er
+im
+\textcolor
+{pink}{Palasthotel}.}}{C}{}{L}{edtxt@3}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|9|0|1|9|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Direktor}}}{\textnormal
+{nicht
+ermittelt}}{C}{}{L}{edtxt@5}%
