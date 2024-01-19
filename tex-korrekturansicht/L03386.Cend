@@ -1,8 +1,87 @@
 \l@d@section{1}%
 \smallbreak \pagebreak [2]%
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3173.\endgraf %
-\hangpara {4em}{0}Brief, 1 Blatt, 2 Seiten \newline {}Handschrift: schwarze Tinte, deutsche Kurrent\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 2 Seiten, 1196 Zeichen \newline {}Handschrift: schwarze Tinte, deutsche Kurrent\endgraf %
 \smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|5|0|1|5|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{15. September
+Wien
+verlaſſen}}}{\textnormal
+{\textcolor
+{blue}{Schnitzler}
+blieb
+den
+September
+über
+in
+\textcolor
+{pink}{Wien},
+dürfte
+aber
+bis
+zum
+17. [9. 1903?]
+geplant
+haben,
+abzureisen.
+Vermutlich
+hatte
+er
+überlegt,
+wenn
+schon
+nicht
+zur
+Uraufführung
+seines
+Einakters
+\emph
+{\textcolor
+{green}{Der
+Puppenspieler}}
+am
+\emph
+{\textcolor
+{brown}{Deutschen
+Theater}}
+in
+\textcolor
+{pink}{Berlin},
+dann
+zumindest
+zu
+einer
+der
+folgenden
+Aufführungen
+zu
+reisen.
+Die
+Uraufführung
+fand
+am
+12. 9. 1903
+gemeinsam
+mit
+der
+Premiere
+von
+\emph
+{\textcolor
+{green}{Das
+Trugbild}}
+von
+\textcolor
+{blue}{Georges
+Rodenbach}
+statt.}}{C}{}{L}{edtxt@5}%
 \def
 \sw@list@inedtext
 {}%
@@ -14,22 +93,11 @@
 {Mann}}}{\textnormal
 {\textcolor
 {blue}{Theodore
-Rottenberg},
-mit
-der
-\textcolor
-{blue}{Goldmann}
-seit
-1899
-ein
-Verhältnis
-hatte,
-war
-mit
+Rottenberg}s
+Ehemann
 \textcolor
 {blue}{Ludwig
-Rottenberg}
-verheiratet.}}{C}{}{L}{edtxt@7}%
+Rottenberg}}}{C}{}{L}{edtxt@8}%
 \def
 \sw@list@inedtext
 {}%
@@ -41,43 +109,57 @@ verheiratet.}}{C}{}{L}{edtxt@7}%
 {Ereigniſſen
 …
 Winters}}}{\textnormal
-{Bezug
-auf
+{Ende
+1902
+bis
+Anfang
+1903
+waren
 \textcolor
-{blue}{Rottenberg}s
+{blue}{Goldmann}
+und
+\textcolor
+{blue}{Rottenberg}
+getrennt
+und
+sie
+mit
+einem
 anderen
 \textcolor
-{blue}{Liebhaber}
-Ende
-1902–Anfang
-1903
-(vgl.
+{blue}{Mann}
+in
+einer
+Beziehung.
+Vgl.
 Paul
 Goldmann
 an
 Arthur
 Schnitzler, 14. 11. [1903],
-siehe
-auch
-etwa
-Paul
-Goldmann
-an
-Arthur
-Schnitzler, 28. 12. [1902]
+28. 12. [1902]
 und
-17. 2. [1903])}}{C}{}{L}{edtxt@12}%
+17. 2. [1903].}}{C}{}{L}{edtxt@13}%
 \def
 \sw@list@inedtext
 {}%
 \parse@annot
 ||%
-\Cend{1|17|0|1|17|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
 {Wien}}}{\textnormal
 {\textcolor
 {blue}{Goldmann}
+war
+spätestens
+am
+17. [9. 1903?]
+in
+\textcolor
+{pink}{Wien}
+und
+er
 und
 \textcolor
 {blue}{Schnitzler}
@@ -87,36 +169,4 @@ am
 18. 9. 1903,
 20. 9. 1903
 und
-21. 9. 1903
-–
-er
-war
-also
-jedenfalls
-zwischen
-18. 9. 1903
-und
-21. 9. 1903
-in
-\textcolor
-{pink}{Wien}.
-Am
-2. 10. [1903]
-schrieb
-\textcolor
-{blue}{Goldmann}
-noch
-einmal
-aus
-\textcolor
-{pink}{Wien},
-er
-blieb
-also
-vermutlich
-die
-ganze
-Zeit
-bis
-Anfang
-Oktober 1903.}}{C}{}{L}{edtxt@16}%
+21. 9. 1903.}}{C}{}{L}{edtxt@17}%
