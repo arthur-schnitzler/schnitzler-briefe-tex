@@ -1,0 +1,21 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}Wienbibliothek im Rathaus, ZPH 1681, 2.1.516.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 1 Seite, 257 Zeichen \newline {}Handschrift: Bleistift, deutsche Kurrent \newline {}Ordnung: mit Bleistift von unbekannter Hand Nummerierung der Blätter des Konvoluts: »54« \endgraf %
+\footnotesize \par \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symweiteredrucke }}}\weitereDrucke {Arthur Schnitzler: \emph {Briefe 1875–1912}. Hg. Therese Nickl und Heinrich Schnitzler. Frankfurt am Main: \emph {S. Fischer} 1981, S. 475–476.} \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|4|0|1|5|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{heute
+Nachmittag}}}{\textnormal
+{siehe
+A. S.:
+\emph
+{Tagebuch},
+12. 11. 1903}}{C}{}{L}{edtxt@2}%

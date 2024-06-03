@@ -1,0 +1,42 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}CUL, Schnitzler, B 89, A 2.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 2 Seiten, 1657 Zeichen \newline {}Handschrift: Bleistift, lateinische Kurrent \newline {}Schnitzler: mit Bleistift auf den »12/10 903« datiert und »\textsc {Salten}« vermerkt \newline {}Ordnung: mit Bleistift von unbekannter Hand nummeriert: »172« \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|3|0|1|3|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{auf
+Freitag
+laßen}}}{\textnormal
+{auch
+dieser
+Termin
+wurde
+verschoben,
+vgl.
+Felix
+Salten
+an
+Arthur
+Schnitzler, 14. [10. 1903]}}{C}{}{L}{edtxt@1}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|7|0|1|7|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{alten
+Kreises}}}{\textnormal
+{siehe
+A. S.:
+\emph
+{Tagebuch},
+9. 10. 1891}}{C}{}{L}{edtxt@3}%

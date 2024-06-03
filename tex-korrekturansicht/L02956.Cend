@@ -1,0 +1,72 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}Wienbibliothek im Rathaus, ZPH 1681, 2.1.516.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 2 Seiten, 297 Zeichen \newline {}Handschrift: Bleistift, deutsche Kurrent \newline {}Ordnung: mit Bleistift von unbekannter Hand Nummerierung der Blätter des Konvoluts: »24« \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|1|0|1|1|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Samſtag}}}{\textnormal
+{Das
+Erscheinen
+des
+\textcolor
+{green}{Artikel}s
+von
+\textcolor
+{blue}{Bahr}
+gibt
+eine
+zeitliche
+Einordnung.}}{C}{}{L}{edtxt@1}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|3|0|1|3|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Sitz
+ins
+Theater}}}{\textnormal
+{siehe
+A. S.:
+\emph
+{Tagebuch},
+21. 5. 1892}}{C}{}{L}{edtxt@2}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|4|0|1|4|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Artikel}}}{\textnormal
+{\textcolor
+{blue}{Hermann
+Bahr}:
+\emph
+{\textcolor
+{green}{Theater-Briefe.
+Wien}}.
+In:
+\emph
+{\textcolor
+{green}{Allgemeine
+Theater-Revue
+für
+Bühne
+und
+Welt}},
+Jg. 1,
+Nr. 4,
+Mitte
+Mai 1892,
+S. 40–41.}}{C}{}{L}{edtxt@4}%

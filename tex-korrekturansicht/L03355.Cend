@@ -1,0 +1,100 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}CUL, Schnitzler, B 89, A 2.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 4 Seiten, 4696 Zeichen \newline {}Handschrift: Bleistift, lateinische Kurrent \newline {}Schnitzler: mit Bleistift datiert: »11. 12. {[}1{]}903« \newline {}Ordnung: mit Bleistift von unbekannter Hand nummeriert: »181« \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|1|0|1|1|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Mittwoch}}}{\textnormal
+{\textcolor
+{blue}{Schnitzler}s
+Datierung
+»11. 12. 903«
+ist
+offensichtlich
+falsch,
+da
+dieser
+Tag
+ein
+Freitag
+war.
+Die
+Datierung
+des
+Schreibens
+gelingt
+hingegen
+durch
+die
+Fortführung
+der
+Kommunikation,
+in
+die
+sich
+das
+vorliegende
+Schreiben
+einbettet,
+und
+den
+auf
+den
+vorangehenden
+Brief
+vom
+10. 11. 1903
+folgenden
+Mittwoch.}}{C}{}{L}{edtxt@1}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|2|0|1|2|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Brief
+vom
+Semmering}}}{\textnormal
+{Arthur
+Schnitzler
+an
+Felix
+Salten, 7. 11. 1903}}{C}{}{L}{edtxt@2}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|6|0|1|7|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Vorlesung}}}{\textnormal
+{siehe
+A. S.:
+\emph
+{Tagebuch},
+12. 11. 1903}}{C}{}{L}{edtxt@4}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{zweiten
+Briefes}}}{\textnormal
+{Arthur
+Schnitzler
+an
+Felix
+Salten, 10. 11. 1903}}{C}{}{L}{edtxt@6}%

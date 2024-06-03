@@ -1,7 +1,7 @@
 \l@d@section{1}%
 \smallbreak \pagebreak [2]%
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3174.\endgraf %
-\hangpara {4em}{0}Brief, 1 Blatt, 4 Seiten \newline {}Handschrift: schwarze Tinte, deutsche Kurrent \newline {}Schnitzler: 1) mit Bleistift das Jahr »{[}1{]}904« vermerkt 2) mit rotem Buntstift eine Unterstreichung\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 4 Seiten, 2235 Zeichen \newline {}Handschrift: schwarze Tinte, deutsche Kurrent \newline {}Schnitzler: 1) mit Bleistift das Jahr »{[}1{]}904« vermerkt 2) mit rotem Buntstift eine Unterstreichung\endgraf %
 \smallbreak %
 \def
 \sw@list@inedtext
@@ -14,8 +14,17 @@
 {Frau
 …
 Mariengaſse 45}}}{\textnormal
-{Bezug
-unklar}}{C}{}{L}{edtxt@2}%
+{\textcolor
+{blue}{Schnitzler}
+dürfte
+in
+der
+Karte
+nach
+ihrer
+Adresse
+gefragt
+haben.}}{C}{}{L}{edtxt@2}%
 \def
 \sw@list@inedtext
 {}%
@@ -26,8 +35,10 @@ unklar}}{C}{}{L}{edtxt@2}%
 {\emph
 {vor
 Jahren}}}{\textnormal
-{nicht
-rekonstruierbar}}{C}{}{L}{edtxt@22}%
+{zwischen
+28. 8. 1895
+und
+6. 9. 1895}}{C}{}{L}{edtxt@22}%
 \def
 \sw@list@inedtext
 {}%

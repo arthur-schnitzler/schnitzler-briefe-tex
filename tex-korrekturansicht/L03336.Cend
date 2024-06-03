@@ -1,0 +1,49 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}CUL, Schnitzler, B 89, A 2.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 1 Seite, 157 Zeichen \newline {}Handschrift: blaue Tinte, lateinische Kurrent \newline {}Schnitzler: mit Bleistift datiert: »24/X 902« \newline {}Ordnung: mit Bleistift von unbekannter Hand nummeriert: »161« \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|1|0|1|1|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{kl.
+Veronika}}}{\textnormal
+{\textcolor
+{blue}{Felix
+Salten}:
+\emph
+{\textcolor
+{green}{Die
+kleine
+Veronika}}.
+In:
+\emph
+{\textcolor
+{green}{Neue
+Deutsche
+Rundschau}},
+Jg. 13,
+Nr. 12,
+Dezember 1902,
+S. 1285–1333.}}{C}{}{L}{edtxt@1}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|2|0|1|2|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{danke
+Ihnen}}}{\textnormal
+{siehe
+Arthur
+Schnitzler
+an
+Felix
+Salten, 16. 10. 1902}}{C}{}{L}{edtxt@5}%

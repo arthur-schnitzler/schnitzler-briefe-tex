@@ -1,7 +1,7 @@
 \l@d@section{1}%
 \smallbreak \pagebreak [2]%
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}Wienbibliothek im Rathaus, ZPH 1681, 2.1.516.\endgraf %
-\hangpara {4em}{0}Brief, 1 Blatt, 2 Seiten (Briefpapier mit Trauerrand) \newline {}Handschrift: Bleistift, deutsche Kurrent \newline {}Ordnung: mit Bleistift von unbekannter Hand Blattzählung: »19« \endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 2 Seiten, 508 Zeichen (Briefpapier mit Trauerrand) \newline {}Handschrift: Bleistift, deutsche Kurrent \newline {}Ordnung: mit Bleistift von unbekannter Hand nummeriert: »19« \endgraf %
 \smallbreak %
 \def
 \sw@list@inedtext
@@ -15,7 +15,17 @@
 {Das
 Korrespondenzstück
 ist
-undatiert.
+undatiert
+und
+nur
+unzuverlässig
+datierbar.
+Die
+folgende
+Annäherung
+erlaubt
+die
+Einordnung:
 Durch
 die
 Verwendung
@@ -40,20 +50,30 @@ am
 verorten.
 Am
 25. 10. 1893
-trug
+hatte
 \textcolor
 {blue}{Schnitzler}
 das
-Gedicht
+in
+Folge
+zitierte
+–
+bereits
+1891
+erschienene
+–
+\textcolor
+{green}{Gedicht}
 in
 Gegenwart
 \textcolor
 {blue}{Salten}s
-vor,
-was
-zumindest
+vorgetragen.
+Das
+kann
 als
 Indiz
+dafür
 genommen
 werden
 kann,
@@ -62,11 +82,70 @@ das
 Schreiben
 danach
 abgefasst
-ist.
+wurde.
 Aus
 dem
+so
+ermittelten
 Zeitraum
-}}{C}{}{L}{edtxt@1}%
+gibt
+es
+im
+\emph
+{\textcolor
+{green}{Tagebuch}}
+keine
+Aussage,
+die
+sich
+unmittelbar
+mit
+der
+hier
+geäußerten
+Verärgerung
+in
+Beziehung
+setzen
+lässt.
+Unter
+den
+überlieferten
+Briefen
+\textcolor
+{blue}{Salten}s
+hingegen
+könnte
+jener
+vom
+[24. 1. 1894]
+diesem
+gefolgt
+sein.
+Zumindest
+fügen
+sich
+die
+Angaben
+zu
+einem
+möglichen
+Treffen
+am
+Folgetag
+gut
+zusammen
+und
+\textcolor
+{blue}{Schnitzler}
+könnte
+auf
+die
+Schulden
+bei
+ihm
+angespielt
+haben.}}{C}{}{L}{edtxt@1}%
 \def
 \sw@list@inedtext
 {}%
@@ -88,16 +167,14 @@ Gedicht
 heißt
 es
 in
-der
-8.
-Strophe: »Das
+der 8. Strophe: »Das
 war
 von
 einem
 holden
-Wahn
+Wahn{
 /
-Der
+}Der
 trügevolle
 Schimmer«.
 (\emph
@@ -107,6 +184,5 @@ Gesellschaft}},
 Jg. 7,
 Bd. 1,
 H. 2,
-Februar
-1891,
-S. 190.)}}{C}{}{L}{edtxt@2}%
+Februar 1891,
+S. 190)}}{C}{}{L}{edtxt@2}%

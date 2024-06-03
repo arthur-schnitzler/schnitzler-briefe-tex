@@ -1,0 +1,45 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}CUL, Schnitzler, B 89, A 1.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 1 Seite, 301 Zeichen \newline {}Handschrift: schwarze Tinte, deutsche Kurrent \newline {}Schnitzler: mit Bleistift datiert »24/5 90\textcolor {gray}{×}« \newline {}Ordnung: mit Bleistift von unbekannter Hand nummeriert: »1« \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|1|0|1|2|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Liebenswürdigkeit}}}{\textnormal
+{Bezug
+unklar}}{C}{}{L}{edtxt@1}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|4|0|1|4|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Florenz}}}{\textnormal
+{Dadurch
+ist
+der
+Brief,
+trotz
+\textcolor
+{blue}{Schnitzler}s
+unleserlicher
+Jahresangabe,
+auf
+das
+Jahr
+1902
+datierbar,
+vgl.
+Felix
+Salten
+an
+Arthur
+Schnitzler, 25. 5. 1902.}}{C}{}{L}{edtxt@2}%

@@ -1,0 +1,72 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}CUL, Schnitzler, B 89, A 2.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 1 Seite, 1175 Zeichen \newline {}Handschrift: schwarze Tinte, lateinische Kurrent \newline {}Ordnung: mit Bleistift von unbekannter Hand nummeriert: »158« \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|10|0|1|10|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{s. Z.}}}{\textnormal
+{seiner
+Zeit}}{C}{}{L}{edtxt@7}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|17|0|1|17|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Novelle}}}{\textnormal
+{\textcolor
+{blue}{Arthur
+Schnitzler}:
+\emph
+{\textcolor
+{green}{Die
+griechische
+Tänzerin}}.
+In:
+\emph
+{\textcolor
+{green}{Die
+Zeit}},
+Jg. 1,
+Nr. 2,
+28. 9. 1902,
+Morgenblatt,
+Beilage:
+Sonntags-Zeit,
+S. 4–7.}}{C}{}{L}{edtxt@9}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|18|0|1|18|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Reise}}}{\textnormal
+{\textcolor
+{blue}{Schnitzler}
+war
+von
+2. 9. 1902
+bis
+7. 9. 1902
+mit
+dem
+Fahrrad
+in
+\textcolor
+{pink}{Niederösterreich}
+und
+der
+\textcolor
+{pink}{Steiermark}
+unterwegs.}}{C}{}{L}{edtxt@12}%

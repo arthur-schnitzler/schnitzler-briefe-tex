@@ -1,0 +1,37 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}CUL, Schnitzler, B 89, A 1.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 4 Seiten, 803 Zeichen \newline {}Handschrift: Bleistift, lateinische Kurrent \newline {}Schnitzler: mit Bleistift datiert: »4/6 92« \newline {}Ordnung: mit Bleistift von unbekannter Hand nummeriert: »12« \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|6|0|1|6|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Spielverlustes}}}{\textnormal
+{vermutlich
+beim
+Pokern,
+vgl.
+A. S.:
+\emph
+{Tagebuch},
+5. 6. 1892}}{C}{}{L}{edtxt@6}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|12|0|1|12|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{heute
+noch}}}{\textnormal
+{siehe
+A. S.:
+\emph
+{Tagebuch},
+4. 6. 1892}}{C}{}{L}{edtxt@13}%

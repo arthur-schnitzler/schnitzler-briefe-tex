@@ -1,0 +1,51 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}Wienbibliothek im Rathaus, ZPH 1681, 2.1.516.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 4 Seiten, 688 Zeichen (Briefpapier mit Trauerrand) \newline {}Handschrift: Bleistift, deutsche Kurrent \newline {}Ordnung: mit Bleistift von unbekannter Hand Nummerierung der Blätter des Konvoluts: »78«–»79« \endgraf %
+\footnotesize \par \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symweiteredrucke }}}\weitereDrucke {Arthur Schnitzler: \emph {Briefe 1875–1912}. Hg. Therese Nickl und Heinrich Schnitzler. Frankfurt am Main: \emph {S. Fischer} 1981, S. 213.} \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|3|0|1|3|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Montag
+…
+ſein}}}{\textnormal
+{siehe
+Felix
+Salten
+an
+Arthur
+Schnitzler,
+14. 8. 1893}}{C}{}{L}{edtxt@1}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|8|0|1|8|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Nacht
+der
+»Liebe«}}}{\textnormal
+{siehe
+A. S.:
+\emph
+{Tagebuch},
+16. 8. 1893}}{C}{}{L}{edtxt@4}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|9|0|1|9|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Gaſthof}}}{\textnormal
+{nicht
+ermittelt}}{C}{}{L}{edtxt@6}%

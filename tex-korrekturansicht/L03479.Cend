@@ -1,0 +1,58 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3176.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 2 Seiten, 831 Zeichen \newline {}Handschrift: lila Tinte, deutsche Kurrent \newline {}Schnitzler: mit rotem Buntstift zwei Unterstreichungen \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|3|0|1|3|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Heimkehr}}}{\textnormal
+{\textcolor
+{blue}{Schnitzler}
+kam
+am
+21. 10. 1925,
+aus
+\textcolor
+{pink}{Berlin}
+kommen,
+in
+\textcolor
+{pink}{Wien}
+an.}}{C}{}{L}{edtxt@2}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|9|0|1|9|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Beſuch}}}{\textnormal
+{Am
+17. 10. 1925
+trafen
+\textcolor
+{blue}{Goldmann}
+und
+seine
+Tochter
+\textcolor
+{blue}{Franziska}
+mit
+\textcolor
+{blue}{Schnitzler}
+zusammen,
+am
+20. 10. 1925
+besuchte
+\textcolor
+{blue}{Schnitzler}
+die
+beiden
+zuhause.}}{C}{}{L}{edtxt@11}%

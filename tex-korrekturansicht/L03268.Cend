@@ -1,0 +1,31 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}CUL, Schnitzler, B 89, A 2.\endgraf %
+\hangpara {4em}{0}Karte, 218 Zeichen \newline {}Handschrift: Bleistift, lateinische Kurrent \newline {}Ordnung: mit Bleistift von unbekannter Hand nummeriert: »91« \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|3|0|1|3|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{hier}}}{\textnormal
+{\textcolor
+{blue}{Schnitzler}
+kehrte
+am
+25. 7. 1897
+nach
+\textcolor
+{pink}{Wien}
+zurück.
+\textcolor
+{blue}{Salten}
+traf
+er
+nachweislich
+am
+30. 7. 1897
+wieder.}}{C}{}{L}{edtxt@2}%

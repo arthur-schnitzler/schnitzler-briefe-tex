@@ -1,0 +1,74 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}CUL, Schnitzler, B 89, A 2.\endgraf %
+\hangpara {4em}{0}Karte, 252 Zeichen \newline {}Handschrift: Bleistift, lateinische Kurrent \newline {}Schnitzler: mit Bleistift datiert: »24/3 902.« \newline {}Ordnung: mit Bleistift von unbekannter Hand nummeriert: »151« \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|1|0|1|1|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Sitz
+zum
+»IV.
+Gebot«}}}{\textnormal
+{im
+\textcolor
+{pink}{Volkstheater}}}{C}{}{L}{edtxt@1}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|3|0|1|3|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Vorlesen}}}{\textnormal
+{siehe
+A. S.:
+\emph
+{Tagebuch},
+24. 3. 1902}}{C}{}{L}{edtxt@5}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|4|0|1|4|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Rosa-Brieferl}}}{\textnormal
+{Bezug
+auf
+die
+Papierfarbe
+der
+Karte}}{C}{}{L}{edtxt@6}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|4|0|1|4|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Cousine}}}{\textnormal
+{\textcolor
+{blue}{Salten}
+hatte
+nur
+Cousinen
+väterlicherseits.
+Welche
+genau
+gemeint
+war,
+kann
+nicht
+mit
+Bestimmtheit
+gesagt
+werden.}}{C}{}{L}{edtxt@7}%

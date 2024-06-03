@@ -1,0 +1,46 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}CUL, Schnitzler, B 89, A 1.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 1 Seite, 90 Zeichen (als Briefpapier wurde das Fragment eines Probenplans verwendet, der vorgedruckte Text mit Bleistift markiert) \newline {}Handschrift: Bleistift, lateinische Kurrent \newline {}Schnitzler: mit Bleistift datiert: »7/9 95« \newline {}Ordnung: mit Bleistift von unbekannter Hand nummeriert: »65« \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|5|0|1|5|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/b/n}{\no@expands
+\textnormal
+{\emph
+{Liebelei}}}{\textnormal
+{mit
+einem
+Pfeil
+markiert}}{C}{}{L}{edtxt@1}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|7|0|1|7|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{hier}}}{\textnormal
+{\textcolor
+{blue}{Schnitzler}
+kehrte
+an
+diesem
+Tag
+nach
+\textcolor
+{pink}{Wien}
+zurück.
+Nachweislich
+sah
+er
+\textcolor
+{blue}{Salten}
+erst
+am
+12. 9. 1895
+wieder.}}{C}{}{L}{edtxt@3}%

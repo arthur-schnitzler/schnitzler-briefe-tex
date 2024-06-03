@@ -1,0 +1,23 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3176.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 2 Seiten, 422 Zeichen \newline {}Handschrift: schwarze Tinte, deutsche Kurrent \newline {}Schnitzler: mit Bleistift Vermerk »\textsc {\textcolor {blue}{Goldma\textcolor {gray}{nn}}}« \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|10|0|1|10|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Tod
+Deiner
+Mutter}}}{\textnormal
+{\textcolor
+{blue}{Louise
+Schnitzler}
+war
+am
+9. 9. 9011
+verstorben.}}{C}{}{L}{edtxt@9}%

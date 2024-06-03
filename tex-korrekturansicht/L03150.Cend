@@ -1,0 +1,59 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}CUL, Schnitzler, B 89, A 1.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 1 Seite, 440 Zeichen \newline {}Handschrift: Bleistift, lateinische Kurrent \newline {}Schnitzler: mit Bleistift datiert: »7/2 95« \newline {}Ordnung: mit Bleistift von unbekannter Hand nummeriert: »51« \endgraf %
+\footnotesize \par \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symweiteredrucke }}}\weitereDrucke {Hermann Bahr, Arthur Schnitzler: \emph {Briefwechsel, Aufzeichnungen, Dokumente (1891–1931)}. Hg. Kurt Ifkovits und Martin Anton Müller. Göttingen: \emph {Wallstein} 2018, S. 96.} \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|1|0|1|1|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{L.
+F.}}}{\textnormal
+{Lieber
+Freund}}{C}{}{L}{edtxt@1}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|2|0|1|3|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{auseinanderzusetzen}}}{\textnormal
+{Ein
+senkrechter
+Strich
+nach
+»ausein«
+könnte
+darauf
+hindeuten,
+dass
+\textcolor
+{blue}{Salten}
+hier
+nachträglich
+eine
+Trennung
+des
+Wortes
+andeuten
+wollte.}}{C}{}{L}{edtxt@3}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|4|0|1|5|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{ins
+Arcadencafé
+kommen}}}{\textnormal
+{nicht
+nachweisbar}}{C}{}{L}{edtxt@4}%

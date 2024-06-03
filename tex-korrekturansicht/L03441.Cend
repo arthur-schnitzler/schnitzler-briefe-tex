@@ -1,7 +1,7 @@
 \l@d@section{1}%
 \smallbreak \pagebreak [2]%
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3174.\endgraf %
-\hangpara {4em}{0}Brief, 1 Blatt, 3 Seiten \newline {}Handschrift: blaue Tinte, deutsche Kurrent \newline {}Schnitzler: mit Bleistift das Jahr »{[}1{]}904« vermerkt \endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 3 Seiten, 916 Zeichen \newline {}Handschrift: blaue Tinte, deutsche Kurrent \newline {}Schnitzler: mit Bleistift das Jahr »{[}1{]}904« vermerkt \endgraf %
 \smallbreak %
 \def
 \sw@list@inedtext
@@ -16,7 +16,7 @@ des
 »Reigen«}}}{\textnormal
 {Am
 16. 3. 1904
-wurde
+war
 die
 1903
 im
@@ -25,31 +25,24 @@ im
 {brown}{Wiener
 Verlag}}
 erschienene
+Buchausgabe
+des
 \emph
 {\textcolor
-{green}{Buchausgabe
-des
-Reigen}}
-in
-\textcolor
-{pink}{Deutschland}
+{green}{Reigen}}
 durch
 die
 \emph
 {\textcolor
 {brown}{Berliner
 Staatsanwaltschaft}}
-konfisziert.
-Kurz
-darauf
-folgte
-die
-Ausweitung
-des
-Verbots
-auf
+im
+ganzen
 \textcolor
-{pink}{Polen}.}}{C}{}{L}{edtxt@3}%
+{pink}{Deutschen
+Reich}
+konfisziert
+worden.}}{C}{}{L}{edtxt@3}%
 \def
 \sw@list@inedtext
 {}%
@@ -59,11 +52,41 @@ auf
 \textnormal
 {\emph
 {Heine}}}{\textnormal
-{Siehe
-zu
-\textcolor
+{\textcolor
 {blue}{Heine}
-auch
+war
+ein
+Freund
+und
+Studienkollege
+\textcolor
+{blue}{Hermann
+Bahr}s.
+Neben
+seiner
+politischen
+Tätigkeit
+für
+die
+\emph
+{\textcolor
+{brown}{SPD}}
+war
+er
+als
+Anwalt
+tätig.
+Für
+den
+\emph
+{\textcolor
+{green}{Reigen}}
+wurde
+er
+erst
+1921
+tätig,
+vgl.
 \emph
 {\textcolor
 {green}{Der
@@ -96,8 +119,7 @@ von
 Heine},
 Rechtsanwalt,
 Staatsminister
-a.
-D.
+a. D.
 \textcolor
 {pink}{Berlin}:
 \emph

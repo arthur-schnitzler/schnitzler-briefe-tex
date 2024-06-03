@@ -1,0 +1,60 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3160.\endgraf %
+\hangpara {4em}{0}Briefkarte, 433 Zeichen \newline {}Handschrift: schwarze Tinte, lateinische Kurrent \newline {}Schnitzler: mit rotem Buntstift Vermerk »\textcolor {blue}{Goldma{[}nn{]}}« \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|6|0|1|6|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Besuch}}}{\textnormal
+{am
+31. 12. 1926}}{C}{}{L}{edtxt@3}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|7|0|1|7|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{wiederholen}}}{\textnormal
+{\textcolor
+{blue}{Schnitzler}
+besuchte
+die
+\textcolor
+{blue}{Goldmann}s
+das
+nächste
+Mal
+am
+5. 12. 1927.}}{C}{}{L}{edtxt@4}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|7|0|1|7|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{G. s. D.}}}{\textnormal
+{Gott
+sei
+Dank}}{C}{}{L}{edtxt@5}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|7|0|1|7|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Stadt}}}{\textnormal
+{korrigiert
+aus
+»Statt«}}{C}{}{L}{edtxt@7}%

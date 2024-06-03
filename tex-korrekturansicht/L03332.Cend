@@ -1,0 +1,35 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}CUL, Schnitzler, B 89, A 2.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 2 Seiten, 335 Zeichen \newline {}Handschrift: Bleistift, lateinische Kurrent \newline {}Schnitzler: mit Bleistift datiert: »\substVorne {}\textsuperscript {15}\substDazwischen {}9\substHinten {}/6 902« \newline {}Ordnung: mit Bleistift von unbekannter Hand nummeriert: »157« \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|1|0|1|1|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Freitag}}}{\textnormal
+{siehe
+A. S.:
+\emph
+{Tagebuch},
+13. 6. 1902}}{C}{}{L}{edtxt@1}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|2|0|1|2|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Kritik
+Buch}}}{\textnormal
+{siehe
+Arthur
+Schnitzler
+an
+Felix
+Salten, 25. 3. [1902]}}{C}{}{L}{edtxt@2}%

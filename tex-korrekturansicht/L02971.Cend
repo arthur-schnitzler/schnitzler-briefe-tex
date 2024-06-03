@@ -1,7 +1,7 @@
 \l@d@section{1}%
 \smallbreak \pagebreak [2]%
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}Wienbibliothek im Rathaus, ZPH 1681, 2.1.516.\endgraf %
-\hangpara {4em}{0}Brief, 1 Blatt, 2 Seiten \newline {}Handschrift: Bleistift, deutsche Kurrent\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 2 Seiten, 411 Zeichen \newline {}Handschrift: Bleistift, deutsche Kurrent \newline {}Ordnung: mit Bleistift von unbekannter Hand nummeriert: »22« \endgraf %
 \smallbreak %
 \def
 \sw@list@inedtext
@@ -11,28 +11,69 @@
 \Cend{1|2|0|1|2|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
-{Schlange}}}{\textnormal
-{nicht
-identifiziert}}{C}{}{L}{edtxt@2}%
+{Inſel}}}{\textnormal
+{vgl.
+Felix
+Salten
+an
+Arthur
+Schnitzler, 28. 7. 1901}}{C}{}{L}{edtxt@1}%
 \def
 \sw@list@inedtext
 {}%
 \parse@annot
 ||%
-\Cend{1|3|0|1|3|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{1|2|0|1|2|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
-{2
-Einakter}}}{\textnormal
+{Schlange}}}{\textnormal
+{Nicht
+identifiziert.
+Da
+im
+Folgenden
+vor
+allem
+mögliche
+Titel
+für
+das
+\emph
+{\textcolor
+{brown}{Jung-Wiener
+Theater
+zum
+Lieben
+Augustin}}
+diskutiert
+wurden,
+könnte
+es
+sich
+um
+ein
+Gedicht
+oder
+ein
+Lied
+gehandelt
+haben.}}{C}{}{L}{edtxt@3}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|4|0|1|4|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{2 Einakter}}}{\textnormal
 {Auch
 Mitte
-Oktober
-1901
+Oktober 1901
 stand
 das
 Programm
 des
-für
 Eröffnungsabends
 des
 von
@@ -72,7 +113,8 @@ das
 Wiener
 Extrablatt}},
 das
-Theater
+\textcolor
+{brown}{Theater}
 habe
 die
 zwei
@@ -90,10 +132,11 @@ von
 \textcolor
 {blue}{Pierre
 Veber}
-erworben.
-(Jg. 30,
+erworben
+(vgl.
+Jg. 30,
 Nr. 295,
-S. 5.)
+S. 5).
 Mit
 dem
 in
@@ -106,7 +149,7 @@ dann
 \textcolor
 {blue}{Otto
 Eisenschütz}
-gemeint.}}{C}{}{L}{edtxt@4}%
+gemeint.}}{C}{}{L}{edtxt@5}%
 \def
 \sw@list@inedtext
 {}%
@@ -129,4 +172,22 @@ beginnt
 mit
 »Estherl,
 mein
-Schwesterl«.}}{C}{}{L}{edtxt@9}%
+Schwesterl«.}}{C}{}{L}{edtxt@10}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Reiſe!}}}{\textnormal
+{nach
+\textcolor
+{pink}{Berlin},
+vgl.
+Felix
+Salten
+an
+Arthur
+Schnitzler, 9. 10. 1901}}{C}{}{L}{edtxt@14}%

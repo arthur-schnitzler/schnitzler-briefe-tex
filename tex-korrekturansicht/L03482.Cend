@@ -1,0 +1,41 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3176.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 3 Seiten, 1187 Zeichen \newline {}Handschrift: schwarze Tinte, deutsche Kurrent \newline {}Schnitzler: mit Bleistift die Datumszeile unterstrichen und drei weitere Unterstreichung \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|4|0|1|4|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Le
+Prese}}}{\textnormal
+{siehe
+A. S.:
+\emph
+{Tagebuch},
+6. 8. 1930}}{C}{}{L}{edtxt@3}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|7|0|1|7|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{ſiebzig}}}{\textnormal
+{\textcolor
+{blue}{Goldmann}
+wurde
+am
+31. 1. 1935
+siebzig
+Jahre
+alt.
+Am
+25. 9. 1935
+starb
+er.}}{C}{}{L}{edtxt@5}%
