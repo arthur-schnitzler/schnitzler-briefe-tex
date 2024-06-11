@@ -1,0 +1,43 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}Wienbibliothek im Rathaus, ZPH 1681, 2.1.516.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 3 Seiten, 683 Zeichen \newline {}Handschrift: Bleistift, deutsche Kurrent \newline {}Ordnung: mit Bleistift von unbekannter Hand Nummerierung der Blätter des Konvoluts: »11«–»12« \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|2|0|1|2|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{geſchriebn}}}{\textnormal
+{siehe
+Felix
+Salten
+an
+Arthur
+Schnitzler, [20. 12. 1904]}}{C}{}{L}{edtxt@1}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|10|0|1|10|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Triſtan,}}}{\textnormal
+{\textcolor
+{blue}{Richard
+Wagner}s
+\emph
+{\textcolor
+{green}{Tristan
+und
+Isolde}}
+wurde
+in
+der
+\textcolor
+{pink}{Oper}
+gegeben.}}{C}{}{L}{edtxt@5}%

@@ -1,0 +1,64 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}CUL, Schnitzler, B 89, A 2.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 1 Seite, 284 Zeichen \newline {}Handschrift: schwarze Tinte, lateinische Kurrent \newline {}Schnitzler: mit Bleistift datiert: »18/11 903« \newline {}Ordnung: mit Bleistift von unbekannter Hand nummeriert: »177« \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|1|0|1|1|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Donnerstag}}}{\textnormal
+{Diese
+Wochentagsangabe
+und
+die
+Datierung
+\textcolor
+{blue}{Schnitzler}s
+auf
+einen
+Mittwoch
+widersprechen
+sich.
+Durch
+die
+Angabe
+der
+Uhrzeit
+nach
+Mitternacht
+dürfte
+das
+Schreiben
+am
+Donnerstag,
+dem
+19.,
+um
+1 Uhr früh
+verfasst
+worden
+sein.}}{C}{}{L}{edtxt@1}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|6|0|1|6|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Zusage}}}{\textnormal
+{\textcolor
+{blue}{Schnitzler}
+war
+anderweitig
+verpflichtet,
+vgl.
+A. S.:
+\emph
+{Tagebuch},
+19. 11. 1903.}}{C}{}{L}{edtxt@6}%

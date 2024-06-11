@@ -1,0 +1,43 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}CUL, Schnitzler, B 89, B 1.\endgraf %
+\hangpara {4em}{0}Briefkarte, 276 Zeichen \newline {}Handschrift: schwarze Tinte, lateinische Kurrent \newline {}Schnitzler: mit Bleistift falsch datiert: »21/12 904« \newline {}Ordnung: mit Bleistift von unbekannter Hand nummeriert: »{\pb }19\substVorne {}\textsuperscript {8}\substDazwischen {}7\substHinten {}« \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|8|0|1|8|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{¾ 6}}}{\textnormal
+{17 Uhr 45}}{C}{}{L}{edtxt@7}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|8|0|1|8|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Brief}}}{\textnormal
+{Arthur
+Schnitzler
+an
+Felix
+Salten, [23. 12. 1904?]}}{C}{}{L}{edtxt@8}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|9|0|1|10|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Riedhof}}}{\textnormal
+{siehe
+A. S.:
+\emph
+{Tagebuch},
+23. 12. 1904}}{C}{}{L}{edtxt@10}%
