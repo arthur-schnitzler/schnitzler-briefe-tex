@@ -1,7 +1,7 @@
 \l@d@section{1}%
 \smallbreak \pagebreak [2]%
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}CUL, Schnitzler, B 89, B 1.\endgraf %
-\hangpara {4em}{0}Brief, 1 Blatt, 3 Seiten, 5522 Zeichen \newline {}Handschrift: schwarze Tinte, lateinische Kurrent \newline {}Ordnung: mit Bleistift von unbekannter Hand nummeriert: »206« \endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 3 Seiten, 5502 Zeichen \newline {}Handschrift: schwarze Tinte, lateinische Kurrent \newline {}Ordnung: mit Bleistift von unbekannter Hand nummeriert: »206« \endgraf %
 \smallbreak %
 \def
 \sw@list@inedtext
@@ -29,7 +29,7 @@ am
 Mittag}},
 Jg. 30,
 Nr. 55,
-6. 3. 1900,
+6. 3. 1906,
 S. 2.}}{C}{}{L}{edtxt@4}%
 \def
 \sw@list@inedtext
@@ -40,9 +40,9 @@ S. 2.}}{C}{}{L}{edtxt@4}%
 \textnormal
 {\emph
 {über
-die
-Russen}}}{\textnormal
-{Vermutlich
+…
+schreiben}}}{\textnormal
+{Vermutlich:
 \textcolor
 {blue}{Felix
 Salten}:
@@ -82,7 +82,8 @@ Uraufführung
 von
 \emph
 {\textcolor
-{green}{Ruf
+{green}{Der
+Ruf
 des
 Lebens}}
 in
@@ -113,10 +114,8 @@ erschienen.}}{C}{}{L}{edtxt@10}%
 {Harden
 so
 geschrieben}}}{\textnormal
-{Es
-handelt
-sich
-um
+{Bezug
+auf
 eine
 gemeinsame
 Besprechung
@@ -163,34 +162,39 @@ S. 346–356.}}{C}{}{L}{edtxt@14}%
 {}%
 \parse@annot
 ||%
+\Cend{1|24|0|1|24|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Wohnung}}}{\textnormal
+{siehe
+Felix
+Salten
+an
+Arthur
+Schnitzler, 29. 1. 1906}}{C}{}{L}{edtxt@20}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
 \Cend{1|29|0|1|30|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
 {Schurkerei
 …
 Ludassy}}}{\textnormal
-{vgl.
-A. S.:
-\emph
-{Tagebuch},
-30. 12. 1905,
-14. 1. 1906
-und
-vgl.
-A. S.:
-\emph
-{Tagebuch},
-12. 5. 1907.
-In
+{In
 seinen
 \emph
 {\textcolor
 {green}{Erinnerungen}}
-schildert
+schilderte
 \textcolor
 {blue}{Salten}
 die
-Sache:
+Sache
+wie
+folgt:
 »Jetzt
 muss
 ich
@@ -333,7 +337,7 @@ Ich
 musste
 diese
 Worte,
-wo
+so
 harmlos
 sie
 auch
@@ -360,7 +364,7 @@ letzte
 Knopf}
 im
 \textcolor
-{brown}{Deutschen
+{pink}{Deutschen
 Volkstheater}
 zur
 Aufführung
@@ -390,10 +394,143 @@ gestanden.«
 im
 Rathaus},
 Nachlass
-Salten,
-ZPH 1681/1
-1.1.1.9.1,
+\textcolor
+{blue}{Salten},
+ZPH 1681/1 1.1.1.9.1,
 [S. 61].)
+Die
+Stelle,
+die
+\textcolor
+{blue}{Salten}
+meint,
+wird
+von
+einer
+\textcolor
+{pink}{Wien}er
+Zeitung
+so
+zitiert:
+»Herr
+Dr.
+\textcolor
+{blue}{von
+Ludaſſy}
+ließ
+ſich
+über
+einen
+\textcolor
+{pink}{Wien}er
+Kritiker
+in
+einer
+\textcolor
+{pink}{Berliner}
+Wochenſchrift
+wie
+folgt
+aus:{
+/
+}›Je
+weniger
+die
+handfeſten
+Burſchen
+verſtehen,
+deſto
+hochmütiger,
+abſprechender
+und
+unflätiger
+ſchreiben
+ſie.
+Es
+gibt
+deren
+auch,
+die
+vor
+der
+Aufführung
+den
+Autor
+um
+höhere
+Beträge
+anzuzumpen
+verſuchen
+(Ich
+habe
+ſelbſt
+eine
+ſolche
+Kreatur
+als
+Zeitungsherausgeber
+zum
+Kritiker
+gemacht;
+als
+ich
+auf
+der
+Bühne
+als
+Autor
+mein
+Heil
+verſuchte,
+ſtand
+dann
+dasſelbe
+Individuum
+mit
+dem
+Revolver
+vor
+mir.)
+Antikritik
+hilft
+gegen
+ſolche
+Schelme
+nicht.
+Denn
+niemand,
+dem
+ein
+unehrlicher
+oder
+übermütiger
+Kritiker
+Leides
+zugefügt
+hat,
+will
+die
+Beſtie
+reizen.‹«
+(y.:
+\emph
+{\textcolor
+{green}{Kritik
+der
+Kritik.
+(Erbauliches
+aus
+der
+»Concordia«.)}}.
+In:
+\emph
+{\textcolor
+{green}{Wiener
+Montags-Journal}},
+Jg. 24,
+Nr. 1.245,
+18. 12. 1905,
+S. 3–4.)
 \textcolor
 {blue}{Salten}s
 Narration
@@ -405,7 +542,7 @@ unzuverlässig.
 Die
 zeitliche
 Einordnung
-dieser
+der
 Ereignisse
 lässt
 sich
@@ -425,12 +562,13 @@ scheinbar
 vornehmen.
 \textcolor
 {blue}{Salten}s
-Feuilleton
+\textcolor
+{green}{Feuilleton}
 erschien
 zwei
 Tage
-später
-(\textcolor
+später:
+\textcolor
 {blue}{f. s.}:
 \emph
 {\textcolor
@@ -452,16 +590,14 @@ In:
 {\textcolor
 {green}{Wiener
 Allgemeinen
-Zeitung.
-6
-Uhr-Blatt}},
+Zeitung. 6 Uhr-Blatt}},
 Nr. 6.628,
 10. 4. 1900,
-S. 2–3.)
-Aber
-damals
+S. 2–3.
+Damals
 gab
 es
+aber
 die
 Tageszeitung
 \emph
@@ -470,8 +606,7 @@ Tageszeitung
 Zeit}}
 noch
 nicht,
-so
-dass
+sodass
 er
 das
 Stück
@@ -484,6 +619,8 @@ ist
 die
 Uraufführung
 von
+\textcolor
+{blue}{Ludassy}s
 \emph
 {\textcolor
 {green}{Der
@@ -496,16 +633,15 @@ Aufzügen}},
 die
 am
 26. 3. 1904
+(in
+Anwesenheit
+\textcolor
+{blue}{Schnitzler}s)
 am
-\emph
-{\textcolor
-{brown}{Deutschen
-Volkstheater}}
+\textcolor
+{pink}{Deutschen
+Volkstheater}
 stattfand.
-(\textcolor
-{blue}{Schnitzler}
-nahm
-teil.)
 Eine
 Besprechung
 \textcolor
@@ -529,6 +665,7 @@ von
 \textcolor
 {blue}{Salten}
 abgedruckt
+worden
 war
 und
 der
@@ -538,7 +675,8 @@ werden
 sollte,
 dass
 das
-Blatt
+\textcolor
+{brown}{Blatt}
 zu
 wenige
 Beiträgerinnen
@@ -572,9 +710,7 @@ Aufzügen
 von
 Julius
 v.
-Gans-Ludassy.
-26.
-März)}}.
+Gans-Ludassy. 26. März)}}.
 In:
 \emph
 {\textcolor
@@ -583,9 +719,9 @@ Zeit}},
 Jg. 3,
 Nr. 538,
 27. 3. 1904,
-S. 3.)
+S. 3.
 Den
-figurativen
+zitierten
 »Revolver«
 in
 \textcolor
@@ -593,7 +729,7 @@ in
 \emph
 {\textcolor
 {green}{Erinnerungen}}
-klärt
+klärte
 er
 an
 einer
@@ -612,9 +748,7 @@ vor
 seiner
 Premiere
 von
-ihm
-3000
-Kronen
+ihm 3000 Kronen
 erpressen
 wollen.
 Es
@@ -643,8 +777,8 @@ fragte
 {blue}{Ludassy}
 um
 Rat.«
-(ebd.,
-[S. 4].)
+(ZPH 1681/1 1.1.1.9.1,
+[S. 4])
 Die
 \textcolor
 {green}{Behauptung}{
@@ -668,18 +802,9 @@ Darstellung
 \textcolor
 {blue}{Salten}s
 auf
-die
 folgende
 Weise
-weiter,
-ohne
-dass
-die
-betreffenden
-Stellen
-nachgewiesen
-werden
-konnten:
+weiter:
 »Verabredetermaßen
 fragte
 \textcolor
@@ -688,7 +813,7 @@ Grossmann}
 in
 der
 \textcolor
-{green}{Arbeiterzeitung}
+{brown}{Arbeiterzeitung}
 nach
 dem
 Namen
@@ -739,7 +864,7 @@ ich
 folgende
 Beweise
 vor:
-1. Ich
+ 1. Ich
 hatte
 \textcolor
 {blue}{Ludassy}
@@ -749,15 +874,13 @@ Namen
 des
 Erzherzog
 \textcolor
-{blue}{Leopolds}
+{blue}{Leopold}s
 gefragt,
 wo
 man
 einen
 Kredit
-von
-8000
-Kronen
+von 8000 Kronen
 für
 den
 Erzherzog
@@ -772,23 +895,21 @@ später
 vom
 \textcolor
 {brown}{Beamtenverein}
-erteilt{[}.{]})
-2. Ich
+erteilt{[}.{]}) 2. Ich
 legte
 mein
 \textcolor
 {green}{Feuilleton}
 über
 \textcolor
-{blue}{Ludassy}{
-}\textcolor
+{blue}{Ludassy}s
+\textcolor
 {green}{Stück}
 vor,
 das
 eine
 Lobeshymne
-darstellte.
-3. Ich
+darstellte. 3. Ich
 legte
 eine
 Reihe
@@ -805,7 +926,8 @@ er
 teils
 für
 meine
-Kritik
+\textcolor
+{green}{Kritik}
 heissen
 Dank
 aussprach,
@@ -818,7 +940,8 @@ Premiere
 und
 nach
 meiner
-Kritik
+\textcolor
+{green}{Kritik}
 mir
 Briefe
 und
@@ -850,7 +973,7 @@ des
 \textcolor
 {brown}{Neuen
 Wiener
-Tagblattes}{
+Tagblatt}es{[},{]}{
 }\textcolor
 {blue}{Wilhelm
 Singer},
@@ -905,14 +1028,15 @@ bekleiden.«
 Das
 Ehrengericht
 des
-Journalistenverbands
+\textcolor
+{brown}{Journalistenverband}s
 entschied
 am
 12. 5. 1907
 zugunsten
 \textcolor
-{blue}{Salten}s,
-die
+{blue}{Salten}s.
+Die
 Rüge
 für
 \textcolor
@@ -934,14 +1058,19 @@ der
 \emph
 {\textcolor
 {brown}{Concordia}}
-ausgeschlossen.
-(Wienbibliothek,
+ausgeschlossen
+(vgl.
+\emph
+{Wienbibliothek
+im
+Rathaus},
 Nachlass
-Salten,
-ZPH 1681,
-3.7.4)
+\textcolor
+{blue}{Salten},
+ZPH 1681, 3.7.4).
 \textcolor
 {blue}{Salten}
+schrieb
 in
 seinen
 \emph
@@ -969,9 +1098,10 @@ Redlich},
 aus
 dem
 früheren
-Dirketor
+Direktor
 des
-Burgtheaters
+\textcolor
+{brown}{Burgtheater}s
 Dr.
 \textcolor
 {blue}{Max
@@ -1017,33 +1147,26 @@ Zeugnis
 glatt
 abgewiesen
 wurde.«
-(ebd.,
+(ZPH 1681/1 1.1.1.9.1,
 [S. 62].)
-Offenbar
-hatte
-es
+Siehe
 auch
-einen
-{
-}\textcolor
-{blue}{Ludassy}s
-gegeben,
-an
-dem
-sich
-die
-Klage
-\textcolor
-{blue}{Salten}s
-festmachte.
-(vgl.
 Felix
 Salten
 an
 Arthur
-Schnitzler,
-17. 5. 1906)
-}}{C}{}{L}{edtxt@21}%
+Schnitzler, [18.? 10. 1906]
+sowie
+A. S.:
+\emph
+{Tagebuch},
+30. 12. 1905,
+A. S.:
+\emph
+{Tagebuch},
+14. 1. 1906
+und
+12. 5. 1907.}}{C}{}{L}{edtxt@25}%
 \def
 \sw@list@inedtext
 {}%
@@ -1079,8 +1202,6 @@ S. 1–2.
 {blue}{Mozart}
 hätte
 am
-27. 1. 1756
-seinen
-150.
-Geburtstag
-gefeiert.}}{C}{}{L}{edtxt@25}%
+27. 1. 1906
+seinen 150. Geburtstag
+gefeiert.}}{C}{}{L}{edtxt@32}%
