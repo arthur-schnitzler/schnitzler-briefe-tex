@@ -1,5 +1,56 @@
 \l@d@section{1}%
 \smallbreak \pagebreak [2]%
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}CUL, Schnitzler, B 89, B 1.\endgraf %
-\hangpara {4em}{0}Postkarte \newline {}Handschrift Felix Salten: schwarze Tinte, lateinische Kurrent \newline {}Handschrift Ottilie Salten: schwarze Tinte \newline {}Handschrift Otto Brahm: schwarze Tinte, lateinische Kurrent \newline {}Handschrift Clara Jonas: schwarze Tinte, lateinische Kurrent \newline {}Handschrift Emil Heilbut: schwarze Tinte, lateinische Kurrent \newline {}Handschrift Samuel Fischer: schwarze Tinte, lateinische Kurrent \newline {}Handschrift Hedwig Fischer: schwarze Tinte, deutsche Kurrent \newline {}Handschrift Elisabeth Maas: Bleistift, lateinische Kurrent \newline {}Versand: Stempel: »\nobreak {}\oindex {Berlin@\textbf {Berlin}, \emph {https://www.geonames.org/ontologyP.PPLC}|pwk}Berlin \textcolor {gray}{N.W.}, 20. 4. 06, 5–6V\nobreak {}«. \newline {}Ordnung: Xmit Bleistift von unbekannter Hand nummeriert: »210« \endgraf %
+\hangpara {4em}{0}Postkarte, 766 Zeichen \newline {}Handschrift Felix Salten: schwarze Tinte, lateinische Kurrent \newline {}Handschrift Ottilie Salten: schwarze Tinte \newline {}Handschrift Otto Brahm: schwarze Tinte, lateinische Kurrent \newline {}Handschrift Clara Jonas: schwarze Tinte, lateinische Kurrent \newline {}Handschrift Emil Heilbut: schwarze Tinte, lateinische Kurrent \newline {}Handschrift Samuel Fischer: schwarze Tinte, lateinische Kurrent \newline {}Handschrift Hedwig Fischer: schwarze Tinte, deutsche Kurrent \newline {}Handschrift Elisabeth Maas: Bleistift, lateinische Kurrent \newline {}Versand: Stempel: »\nobreak {}\oindex {Berlin@\textbf {Berlin}, \emph {P.PPLC}|pwk}Berlin\textcolor {gray}{,} N\textcolor {gray}{.} W\textcolor {gray}{.} 7, 20. 4. 06, 5–6 V.\nobreak {}«. \newline {}Ordnung: mit Bleistift von unbekannter Hand nummeriert: »210« \endgraf %
 \smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|11|0|1|11|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Aufführung}}}{\textnormal
+{im
+\textcolor
+{pink}{Lessing-Theater}}}{C}{}{L}{edtxt@7}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|13|0|1|14|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{den
+Sommer
+in
+Nordwijk}}}{\textnormal
+{Dieses
+Treffen
+ist
+nicht
+nachweisbar.}}{C}{}{L}{edtxt@9}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|17|0|1|17|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Auferſtehung}}}{\textnormal
+{Das
+\textcolor
+{green}{Stück}
+war
+bereits
+1904
+am
+\textcolor
+{pink}{Deutschen
+Theater
+Berlin}
+uraufgeführt
+worden.}}{C}{}{L}{edtxt@14}%
