@@ -1,7 +1,7 @@
 \l@d@section{1}%
 \smallbreak \pagebreak [2]%
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}CUL, Schnitzler, B 8.\endgraf %
-\hangpara {4em}{0}Manuskript, 13 Blätter, 13 Seiten, 16991 Zeichen (Paginierung mit Schreibmaschine) \newline {}Schreibmaschine \newline {}Handschrift: Bleistift, deutsche Kurrent (\noindent {}Korrekturen)\endgraf %
+\hangpara {4em}{0}Manuskript, 13 Blätter, 13 Seiten, 16989 Zeichen (Paginierung mit Schreibmaschine) \newline {}Schreibmaschine \newline {}Handschrift: Bleistift, deutsche Kurrent (\noindent {}Korrekturen)\endgraf %
 \footnotesize \par \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symweiteredrucke }}}\weitereDrucke {Arthur Schnitzler, Richard Beer-Hofmann: \emph {Briefwechsel 1891–1931}. Hg. Konstanze Fliedl. Wien, Zürich: \emph {Europaverlag} 1992, S. 198–206.} \endgraf %
 \smallbreak %
 \def
@@ -9,7 +9,7 @@
 {}%
 \parse@annot
 ||%
-\Cend{1|2|0|1|2|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
 {Generalprobe}}}{\textnormal
@@ -43,7 +43,7 @@ hat.}}{C}{}{L}{edtxt@2}%
 {}%
 \parse@annot
 ||%
-\Cend{1|36|0|1|36|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
 {Marie:
@@ -57,7 +57,7 @@ Aber«}}{C}{}{L}{edtxt@5}%
 {}%
 \parse@annot
 ||%
-\Cend{4|136|0|4|137|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
 {Was
@@ -90,10 +90,7 @@ ich
 ihm
 gewesen{\dots
 }«.}}{C}{}{L}{edtxt@6}%
-\def
-\sw@list@inedtext
-{}%
-\parse@annot
+rse@annot
 ||%
 \Cend{4|159|0|4|159|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
