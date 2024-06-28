@@ -1,12 +1,10 @@
 \l@d@section{1}%
 \smallbreak \pagebreak [2]%
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}Wienbibliothek im Rathaus, ZPH 1681/19, 4.1.2.14.\endgraf %
-\hangpara {4em}{0}Brief, 3 Blätter, 3 Seiten, 2362 Zeichen \newline {}Schreibmaschine \newline {}Handschrift: 1) schwarze Tinte (\noindent {}Schlussformel und Unterschrift)\hspace {1em}2) Bleistift, lateinische Kurrent (\noindent {}Korrekturen mit Bleistift)\hspace {1em} \newline {}Ordnung: 1) mit Bleistift von unbekannter Hand in Blockbuchstaben über dem Text Vermerk: »Arthur Schnitzler« 2) mit Bleistift von unbekannter Hand in lateinischer Kurrentschrift seitlich neben der Unterschrift Vermerk: »\noindent {}NB: bleibt!{ / }in normaler Schrift, nicht gesperrt« 3) mit Bleistift von unbekannter Hand in deutscher Kurrentschrift unterhalb der Unterschrift Vermerk: »\noindent {}Arthur Schnitzler«\endgraf %
-\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, XXXX.\endgraf %
-\hangpara {4em}{0}Brief, 3 Blätter, 3 Seiten, 2362 Zeichen \newline {}maschinell \newline {}Handschrift: Bleistift (\noindent {}zwei marginale Korrekturen)\endgraf %
+\hangpara {4em}{0}Brief, 3 Blätter, 3 Seiten, 2368 Zeichen \newline {}Schreibmaschine \newline {}Handschrift: 1) schwarze Tinte (\noindent {}Schlussformel und Unterschrift)\hspace {1em}2) Bleistift, lateinische Kurrent (\noindent {}Korrekturen mit Bleistift)\hspace {1em} \newline {}Ordnung: 1) mit Bleistift von unbekannter Hand über dem Text Vermerk: »\textcolor {blue}{ARTHUR SCHNITZLER}« 2) mit Bleistift von unbekannter Hand in lateinischer Kurrentschrift seitlich neben der Unterschrift Vermerk: »\noindent {}NB: bleibt!{ / }in normaler Schrift, nicht gesperrt.« 3) mit Bleistift von unbekannter Hand in deutscher Kurrentschrift unterhalb der Unterschrift Vermerk: »\noindent {}\textcolor {blue}{Arthur Schnitzler}«\endgraf %
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.1751.\endgraf %
-\hangpara {4em}{0}Brief, Maschinenschriftliche Abschrift, 2 Blätter, 2 Seiten, 2362 Zeichen \newline {}maschinell \newline {}Ordnung: 1) mit schwarzer Tinte Vermerk »Salten« 2) mit Bleistift Vermerk »6. 9. 1929«\endgraf %
-\footnotesize \par \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symweiteredrucke }}}\weitereDrucke {1) \emph {Arthur Schnitzler.} In: \emph {Felix Salten, dem Freund und verehrten Autor zu seinem 60. Geburtstag mit herzlichen Glückwünschen überreicht vom Paul Zsolnay Verlag}. Berlin, Wien, Leipzig: \emph {Zsolnay} 6. September 1929, S. 12–13.} \weitereDrucke {2) \pwindex {Jahrbuch Paul Zsolnay Verlag@\emph {Jahrbuch Paul Zsolnay Verlag}|pwk}\emph {Jahrbuch Paul Zsolnay Verlag – 1930}. Berlin, Wien, Leipzig: \emph {Zsolnay} [November] 1929, S. 12–14.} \weitereDrucke {3) Arthur Schnitzler: \emph {Briefe 1913–1931}. Hg. Peter Michael Braunwarth, Richard Miklin, Susanne Pertlik und Heinrich Schnitzler. Frankfurt am Main: \emph {S. Fischer} 1984, S. 619–620.} \endgraf %
+\hangpara {4em}{0}Brief, maschinenschriftliche Abschrift, 2 Blätter, 2 Seiten, 2368 Zeichen \newline {}maschinell\endgraf %
+\footnotesize \par \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symweiteredrucke }}}\weitereDrucke {1) \emph {Arthur Schnitzler.} In: \emph {Felix Salten, dem Freund und verehrten Autor zu seinem 60. Geburtstag mit herzlichen Glückwünschen überreicht vom Paul Zsolnay Verlag}. Berlin, Wien, Leipzig: \emph {Zsolnay} 6. September 1929, S. 12–13.} \weitereDrucke {2) \pwindex {Jahrbuch Paul Zsolnay Verlag@\emph {Jahrbuch Paul Zsolnay Verlag}|pwk}\emph {Jahrbuch Paul Zsolnay Verlag – 1930}. Berlin, Wien, Leipzig: \emph {Zsolnay} [November] 1929, S. 12–14.} \weitereDrucke {3) Arthur Schnitzler: \emph {Briefe 1913–1931}. Hg. Peter Michael Braunwarth, Richard Miklin, Susanne Pertlik und Heinrich Schnitzler. Frankfurt am Main: \emph {S. Fischer} 1984, S. 619–620.} \weitereDrucke {4) Arthur Schnitzler: \emph {»Das Zeitlose ist von kürzester Dauer«. Interviews, Meinungen, Proteste}. Müller, Martin Anton. Göttingen: \emph {Wallstein} 2023, S. 537–538.} \endgraf %
 \smallbreak %
 \def
 \sw@list@inedtext
@@ -23,18 +21,24 @@ Geburtstag}}}{\textnormal
 feierte
 am
 6. 9. 1929
-seinen
-60.
-Geburtstag.
+seinen 60. Geburtstag,
 \textcolor
 {blue}{Schnitzler}
 finalisierte
 den
 Text
+jedoch
+bereits
 am
-29. 7. 1929.
+29. 7. 1929,
+da
+er
+gedruckt
+werden
+sollte.
 Der
-»Brief«
+›\textcolor
+{green}{Brief}‹
 erschien
 zuerst
 in
@@ -42,16 +46,19 @@ einem
 Sonderdruck
 für
 den
-Jubilar
+\textcolor
+{blue}{Jubilar}
 in
 Großformat
 und
 auf
 Büttenpapier,
-dann
+und
 wenige
 Wochen
 später
+noch
+einmal
 im
 \emph
 {\textcolor
@@ -67,38 +74,79 @@ das
 ab
 8. 11. 1929
 lieferbar
-war.
-Die
-Druckfassung
-weicht
-an
-mehreren
-Stellen
+war
+(siehe
+A. S.:
+\emph
+{»Das
+Zeitlose
+ist
 von
-der
-hier
-präsentierten
-Fassung
-ab,
-die
-eindeutig
-die
-frühere
-Form
-darstellt.
-Ob
+kürzester
+Dauer«},
+[Mein
+lieber
+Felix
+Salten],
+[November
+1929]).
+Eine
+Entwurfsfassung
+mit
+teilweise
+unterschiedlichen
+Formulierungen,
+jedoch
+ohne
+inhaltlich
+bedeutsam
+abzuweichen,
+ist
+im
+DLA
+überliefert.
+Da
 \textcolor
 {blue}{Salten}
-bereits
-diese
-oder
-erst
+sich
+am
+21. 9. 1929
+für
+das
+»sozusagen
+öffentlich
+geäußerte
+Wort«
+bedankt,
+ist
+der
+Büttendruck
+als
 die
-gedruckte
+von
+\textcolor
+{blue}{Salten}
+erhaltene
 Fassung
-zu
-sehen
-bekam,
-muss
-offen
-bleiben.}}{C}{}{L}{edtxt@1}%
+anzunehmen,
+aber
+auch
+die
+handschriftlich
+von
+\textcolor
+{blue}{Schnitzler}
+signierte
+Fassung
+ist
+in
+\textcolor
+{blue}{Salten}s
+Nachlass
+überliefert
+und
+wird
+hier
+als
+Textgrundlage
+verwendet.}}{C}{}{L}{edtxt@1}%
