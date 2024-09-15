@@ -1,20 +1,18 @@
 \l@d@section{1}%
 \smallbreak \pagebreak [2]%
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}Wienbibliothek im Rathaus, ZPH 1681, 2.1.516.\endgraf %
-\hangpara {4em}{0}Kartenbrief, 199 Zeichen \newline {}Handschrift: schwarze Tinte, deutsche Kurrent \newline {}Ordnung: mit Bleistift von unbekannter Hand Nummerierung der Blätter des Konvoluts: »86« \endgraf %
+\hangpara {4em}{0}Kartenbrief, 200 Zeichen \newline {}Handschrift: schwarze Tinte, deutsche Kurrent \newline {}Versand: 1) Stempel: »\nobreak {}\oindex {I., Innere Stadt@\textbf {I., Innere Stadt}, \emph {A.ADM3}|pwk}Wien 1/1 1, 8. 10. \textcolor {gray}{9}2, 2–3N\nobreak {}«. 2) Stempel: »\nobreak {}\oindex {IX., Alsergrund@\textbf {IX., Alsergrund}, \emph {A.ADM3}|pwk}Wien 9/1 66, 8. 10. 92, 5N, Bestellt\nobreak {}«. \newline {}Ordnung: mit Bleistift von unbekannter Hand nummeriert: »86« \endgraf %
 \smallbreak %
 \def
 \sw@list@inedtext
 {}%
 \parse@annot
 ||%
-\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{1|6|0|1|6|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
 {Ausſtellung}}}{\textnormal
-{Gemeint
-war
-die
+{die
 \emph
 {\textcolor
 {brown}{Internationale
@@ -28,34 +26,3 @@ im
 {pink}{Wien}er
 \textcolor
 {pink}{Prater}.}}{C}{}{L}{edtxt@5}%
-\def
-\sw@list@inedtext
-{}%
-\parse@annot
-||%
-\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
-\textnormal
-{\emph
-{Kommen
-Sie
-doch
-auch!}}}{\textnormal
-{Nicht
-geschehen,
-\textcolor
-{blue}{Salten}
-war
-krank
-(vgl.
-Felix
-Salten
-an
-Arthur
-Schnitzler,
-[8. 10. 1892]).
-Siehe
-auch
-A. S.:
-\emph
-{Tagebuch},
-9. 10. 1892.}}{C}{}{L}{edtxt@8}%

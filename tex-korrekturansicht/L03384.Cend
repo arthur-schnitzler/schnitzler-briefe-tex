@@ -1,7 +1,7 @@
 \l@d@section{1}%
 \smallbreak \pagebreak [2]%
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3173.\endgraf %
-\hangpara {4em}{0}Brief, 1 Blatt, 2 Seiten \newline {}Handschrift Paul Goldmann: schwarze Tinte, deutsche Kurrent \newline {}Handschrift Theodore Rottenberg: schwarze Tinte, deutsche Kurrent\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 2 Seiten, 576 Zeichen \newline {}Handschrift Paul Goldmann: schwarze Tinte, deutsche Kurrent \newline {}Handschrift Theodore Rottenberg: schwarze Tinte, deutsche Kurrent\endgraf %
 \smallbreak %
 \def
 \sw@list@inedtext
@@ -94,7 +94,15 @@ erst
 am
 Abend
 stattgefunden
-haben.
+haben
+–
+oder
+gemeinsam
+mit
+\textcolor
+{blue}{Schnitzler}
+am
+Folgetag.
 Vermutlich
 war
 dieses
@@ -110,23 +118,7 @@ Unterkunft
 hinterlegt,
 als
 sie
-aufeinander
-trafen.}}{C}{}{L}{edtxt@7}%
-\def
-\sw@list@inedtext
-{}%
-\parse@annot
-||%
-\Cend{1|8|0|1|8|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
-\textnormal
-{\emph
-{Wir}}}{\textnormal
-{siehe
-Paul
-Goldmann
-an
-Arthur
-Schnitzler, 27. 6. [1903]}}{C}{}{L}{edtxt@8}%
+aufeinandertrafen.}}{C}{}{L}{edtxt@7}%
 \def
 \sw@list@inedtext
 {}%
@@ -139,24 +131,33 @@ Schnitzler, 27. 6. [1903]}}{C}{}{L}{edtxt@8}%
 {\textcolor
 {blue}{Rottenberg}
 war
-verheiratet;
-es
+verheiratet.
+Es
 dürfte
 eine
 ihnen
 bekannte
 Person,
 die
-das
 hätte
-weiterplauden
+ausplaudern
 können,
 ebenfalls
 in
 der
-Stadt
+\textcolor
+{pink}{Stadt}
 gewesen
-sein.}}{C}{}{L}{edtxt@10}%
+sein,
+vgl.
+Paul
+Goldmann
+und
+Theodore
+Rottenberg
+an
+Arthur
+Schnitzler, 29. 8. 1903.}}{C}{}{L}{edtxt@9}%
 \def
 \sw@list@inedtext
 {}%
@@ -165,10 +166,38 @@ sein.}}{C}{}{L}{edtxt@10}%
 \Cend{1|11|0|1|11|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
-{nachzuholen}}}{\textnormal
-{siehe
-Paul
-Goldmann
-an
-Arthur
-Schnitzler, 27. 6. [1903]}}{C}{}{L}{edtxt@13}%
+{Trient
+…
+Mittag}}}{\textnormal
+{Das
+verschob
+sich
+um
+einen
+Tag:
+\textcolor
+{blue}{Schnitzler}
+fuhr
+entweder
+mit
+den
+beiden
+am
+19. 8. 1903
+gemeinsam
+nach
+\textcolor
+{pink}{Trient}
+oder
+holte
+sie
+dort
+ein.
+Die
+gemeinsame
+Weiterreise
+fand
+dann
+am
+20. 8. 1903
+statt.}}{C}{}{L}{edtxt@12}%

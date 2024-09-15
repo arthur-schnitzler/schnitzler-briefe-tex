@@ -1,7 +1,7 @@
 \l@d@section{1}%
 \smallbreak \pagebreak [2]%
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3174.\endgraf %
-\hangpara {4em}{0}Brief, 1 Blatt, 2 Seiten, 670 Zeichen \newline {}Handschrift: blaue Tinte, deutsche Kurrent \newline {}Schnitzler: 1) mit Bleistift das Jahr »{[}1{]}904« vermerkt 2) mit rotem Buntstift eine Unterstreichung\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 2 Seiten, 670 Zeichen \newline {}Handschrift: blaue Tinte, deutsche Kurrent \newline {}Schnitzler: 1) mit Bleistift das Jahr »904« vermerkt 2) mit rotem Buntstift eine Unterstreichung\endgraf %
 \smallbreak %
 \def
 \sw@list@inedtext
@@ -16,12 +16,13 @@ zu
 ſehen}}}{\textnormal
 {\textcolor
 {blue}{Schnitzler}
-kam
+war
 am
 13. 11. 1904
 nach
 \textcolor
-{pink}{Berlin}.
+{pink}{Berlin}
+gekommen.
 Am
 \emph
 {\textcolor
@@ -88,15 +89,14 @@ Montag,
 dem
 21. 11. 1904,
 doch
+–
 anders
 als
-im
-vorliegenden
-Brief
-von
+hier
 \textcolor
 {blue}{Goldmann}
-vorgeschlagen,
+vorgeschlagen
+–
 vermutlich
 ohne
 den
@@ -136,10 +136,15 @@ eine
 die
 Absetzung
 von
-Das
+\emph
+{\textcolor
+{green}{Das
 Haus
-Delorme}
-([O. V.]:
+Delorme}}}
+verfasst
+haben,
+vgl.
+[O. V.]:
 \emph
 {\textcolor
 {green}{Schnitzlers
@@ -156,22 +161,19 @@ Jg. 33,
 Nr. 595,
 22. 11. 1904,
 Abend-Ausgabe,
-S. 2.)
-verfasst
-haben.
+S. 2.
+Im
+\emph
+{\textcolor
+{green}{Tagebuch}}
+erwähnte
 \textcolor
 {blue}{Schnitzler}
-erwähnt
 die
 Meldung
 als
 »infame
 Notiz«
-in
-seinem
-\emph
-{\textcolor
-{green}{Tagebuch}}
 (22. 11. 1904).
 Der
 mit
@@ -184,14 +186,13 @@ der
 Perspektive
 \textcolor
 {blue}{Schnitzler}s
-geschrieben,
+verfasst,
 wurde
 aber
 von
-der
-Hand
 \textcolor
 {blue}{Goldmann}s
+Hand
 niedergeschrieben.
 Zumindest
 eine
@@ -356,14 +357,14 @@ wiedergegeben.{
 }Mit
 vorzgl
 Hoch«
-Dieses
-Protestschreiben
+Abgeschickt
 dürfte
+dieses
+Protestschreiben
 aller
 Wahrscheinlichkeit
 nach
 nicht
-abgeschickt
 worden
 sein.
 Am
@@ -435,7 +436,6 @@ auf
 der
 eigenen
 Darstellung
-zu
 beharrt.}}{C}{}{L}{edtxt@3}%
 \def
 \sw@list@inedtext

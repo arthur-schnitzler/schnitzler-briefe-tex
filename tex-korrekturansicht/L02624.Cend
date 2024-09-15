@@ -1,0 +1,49 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3164.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 1 Seite, 318 Zeichen \newline {}Handschrift: schwarze Tinte, deutsche Kurrent \newline {}Schnitzler: mit Bleistift die Jahreszahl »94« vermerkt \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Buch
+beſprochen}}}{\textnormal
+{\textcolor
+{blue}{J.
+Schwarz}:
+\emph
+{\textcolor
+{green}{Belletristische
+Rundschau}}.
+In:
+\emph
+{\textcolor
+{green}{Frankfurter
+Zeitung}},
+Nr. 336,
+4. 12. 1894,
+S. 1–3.}}{C}{}{L}{edtxt@2}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Zeile
+an
+meinen
+Onkel}}}{\textnormal
+{siehe
+Arthur
+Schnitzler
+an
+Fedor
+Mamroth,
+7. 12. 1894}}{C}{}{L}{edtxt@5}%

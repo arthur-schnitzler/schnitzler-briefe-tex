@@ -1,7 +1,8 @@
 \l@d@section{1}%
 \smallbreak \pagebreak [2]%
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}Wienbibliothek im Rathaus, ZPH 1681, 2.1.516.\endgraf %
-\hangpara {4em}{0}Brief, 2 Blätter, 8 Seiten, 2090 Zeichen (Briefpapier mit Trauerrand) \newline {}Handschrift: Bleistift, deutsche Kurrent \newline {}Ordnung: mit Bleistift von unbekannter Hand Nummerierung der Blätter des Konvoluts: »7«–»10« \endgraf %
+\hangpara {4em}{0}Brief, 2 Blätter, 8 Seiten, 2099 Zeichen (Briefpapier mit Trauerrand) \newline {}Handschrift: Bleistift, deutsche Kurrent \newline {}Ordnung: mit Bleistift von unbekannter Hand Nummerierung der Doppelseiten des Konvoluts: »7«–»10« \endgraf %
+\footnotesize \par \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symweiteredrucke }}}\weitereDrucke {Arthur Schnitzler: \emph {Briefe 1875–1912}. Hg. Therese Nickl und Heinrich Schnitzler. Frankfurt am Main: \emph {S. Fischer} 1981, S. 211–212.} \endgraf %
 \smallbreak %
 \def
 \sw@list@inedtext
@@ -101,6 +102,63 @@ Dandy)}}{C}{}{L}{edtxt@10}%
 {}%
 \parse@annot
 ||%
+\Cend{1|12|0|1|12|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Tochter,
+…
+»Klabriaspartie}}}{\textnormal
+{Sie
+dürfte
+Einvernehmen
+herstellen,
+dass
+es
+sich
+hier
+um
+eine
+Anspielung
+auf
+die
+(jüdische)
+Erfolgsposse
+\emph
+{\textcolor
+{green}{Eine
+Partie
+Klabrias}}
+handelte.
+\textcolor
+{blue}{Heinrich
+Schnitzler}
+kommentierte
+im
+Erstdruck
+diese
+Stelle
+mit
+einem
+beliebten
+Ausspruch
+seines
+Vaters
+»Zitate
+sind
+entweder
+aus
+\textcolor
+{green}{Faust}
+oder
+aus
+der
+\textcolor
+{green}{Klabriaspartie}.«}}{C}{}{L}{edtxt@11}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
 \Cend{1|15|0|1|15|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
@@ -135,13 +193,13 @@ gar
 nichts
 zu
 thun
-haben –«}}{C}{}{L}{edtxt@12}%
+haben –«}}{C}{}{L}{edtxt@13}%
 \def
 \sw@list@inedtext
 {}%
 \parse@annot
 ||%
-\Cend{1|17|0|1|17|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{1|18|0|1|18|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
 {Brief}}}{\textnormal
@@ -150,7 +208,7 @@ Blumenthal
 an
 Arthur
 Schnitzler,
-12. 8. 1893}}{C}{}{L}{edtxt@16}%
+12. 8. 1893}}{C}{}{L}{edtxt@17}%
 \def
 \sw@list@inedtext
 {}%
@@ -168,7 +226,7 @@ Goldmann
 an
 Arthur
 Schnitzler,
-18. 8. [1893]}}{C}{}{L}{edtxt@19}%
+18. 8. [1893]}}{C}{}{L}{edtxt@20}%
 \def
 \sw@list@inedtext
 {}%
@@ -186,7 +244,7 @@ A. S.:
 {Tagebuch},
 15. 8. 1893
 und
-16. 8. 1893}}{C}{}{L}{edtxt@21}%
+16. 8. 1893}}{C}{}{L}{edtxt@22}%
 \def
 \sw@list@inedtext
 {}%
@@ -196,7 +254,7 @@ und
 \textnormal
 {\emph
 {Reichſtraße}}}{\textnormal
-{Fernstraße}}{C}{}{L}{edtxt@24}%
+{Fernstraße}}{C}{}{L}{edtxt@25}%
 \def
 \sw@list@inedtext
 {}%
@@ -210,7 +268,7 @@ und
 A. S.:
 \emph
 {Tagebuch},
-13. 8. 1893}}{C}{}{L}{edtxt@26}%
+13. 8. 1893}}{C}{}{L}{edtxt@27}%
 \def
 \sw@list@inedtext
 {}%
@@ -224,13 +282,13 @@ A. S.:
 A. S.:
 \emph
 {Tagebuch},
-12. 8. 1886}}{C}{}{L}{edtxt@28}%
+12. 8. 1886}}{C}{}{L}{edtxt@29}%
 \def
 \sw@list@inedtext
 {}%
 \parse@annot
 ||%
-\Cend{1|28|0|1|28|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{1|30|0|1|30|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
 {Sonntag}}}{\textnormal
@@ -243,7 +301,7 @@ Dienstag,
 aus
 \textcolor
 {pink}{Wien}
-ab.}}{C}{}{L}{edtxt@30}%
+ab.}}{C}{}{L}{edtxt@31}%
 \def
 \sw@list@inedtext
 {}%
@@ -268,7 +326,7 @@ Felix
 Salten
 an
 Arthur
-Schnitzler, 12. 8. 1893.}}{C}{}{L}{edtxt@31}%
+Schnitzler, 12. 8. 1893.}}{C}{}{L}{edtxt@32}%
 \def
 \sw@list@inedtext
 {}%
@@ -286,7 +344,7 @@ gezeichneten
 Kasten
 quer
 zum
-Text}}{C}{}{L}{edtxt@33}%
+Text}}{C}{}{L}{edtxt@34}%
 \def
 \sw@list@inedtext
 {}%
@@ -299,16 +357,16 @@ Text}}{C}{}{L}{edtxt@33}%
 de}}}{\textnormal
 {französisch:
 Liebhaber
-von}}{C}{}{L}{edtxt@35}%
+von}}{C}{}{L}{edtxt@36}%
 \def
 \sw@list@inedtext
 {}%
 \parse@annot
 ||%
-\Cend{1|32|0|1|32|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
 {Cretin}}}{\textnormal
 {französisch:
 Dummkopf,
-Idiot}}{C}{}{L}{edtxt@37}%
+Idiot}}{C}{}{L}{edtxt@38}%

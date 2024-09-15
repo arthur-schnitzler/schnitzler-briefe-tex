@@ -1,7 +1,7 @@
 \l@d@section{1}%
 \smallbreak \pagebreak [2]%
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3164.\endgraf %
-\hangpara {4em}{0}Brief, 3 Blätter, 12 Seiten \newline {}Handschrift: schwarze Tinte, deutsche Kurrent \newline {}Schnitzler: 1) mit Bleistift auf dem ersten Blatt die Jahreszahl »94« vermerkt 2) mit rotem Buntstift acht Unterstreichungen\endgraf %
+\hangpara {4em}{0}Brief, 3 Blätter, 12 Seiten, 5564 Zeichen \newline {}Handschrift: schwarze Tinte, deutsche Kurrent \newline {}Schnitzler: 1) mit Bleistift auf dem ersten Blatt die Jahreszahl »94« vermerkt 2) mit rotem Buntstift acht Unterstreichungen\endgraf %
 \smallbreak %
 \def
 \sw@list@inedtext
@@ -21,8 +21,9 @@ den
 Satz
 in
 späteren
-Auflagen
-nicht.}}{C}{}{L}{edtxt@8}%
+\textcolor
+{green}{Auflagen}
+nicht.}}{C}{}{L}{edtxt@9}%
 \def
 \sw@list@inedtext
 {}%
@@ -56,7 +57,7 @@ des
 débats}},
 Jg. 107,
 21. 3. 1895,
-S. 1.}}{C}{}{L}{edtxt@14}%
+S. 1.}}{C}{}{L}{edtxt@17}%
 \def
 \sw@list@inedtext
 {}%
@@ -71,7 +72,7 @@ l’auteur}}}{\textnormal
 {französisch:
 Widmung
 des
-Verfassers}}{C}{}{L}{edtxt@17}%
+Verfassers}}{C}{}{L}{edtxt@20}%
 \def
 \sw@list@inedtext
 {}%
@@ -102,34 +103,19 @@ genung
 mir
 ists
 einmal
-zuwieder«.}}{C}{}{L}{edtxt@24}%
+zuwieder«.}}{C}{}{L}{edtxt@27}%
 \def
 \sw@list@inedtext
 {}%
 \parse@annot
 ||%
-\Cend{2|44|0|2|44|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{2|43|0|2|44|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
-{Briefe
+{Erwähnung
 …
 Lubliner}}}{\textnormal
-{\textcolor
-{blue}{Friedrich
-Uhl}:
-\emph
-{\textcolor
-{green}{XXXX}}.
-In:
-\emph
-{\textcolor
-{green}{Frankfurter
-Zeitung}},
-Jg. XXXX,
-Nr. YYYY,
-YY. 11. 1894,
-S. YY.
-Am
+{Am
 17. 11. 1894
 hatte
 die
@@ -151,10 +137,85 @@ am
 Volkstheater}}
 stattgefunden.
 \textcolor
-{blue}{Schnitzler}
-saß
+{blue}{Uhl}
+schrieb:
+»Am
+lautesten
+lachten
+die
+dienstfreien
+Schauspieler
+des
+\textcolor
+{brown}{Volkstheaters}
 im
-Publikum.}}{C}{}{L}{edtxt@28}%
+Zuschauerraum,
+besonders
+die
+stets
+Aufschauen
+erregende
+Schwärmerin
+Frl.
+\textcolor
+{blue}{\so
+{Sandrock}}
+in
+einer
+Loge
+des
+ersten
+Ranges
+und
+der
+geistreiche
+Lustspieldichter
+Dr.
+\textcolor
+{blue}{\so
+{Schnitzler}},
+der
+über
+das
+Kapitel
+›Dichter
+im
+\textcolor
+{brown}{Wiener
+Volkstheater}‹
+eine
+Leidensgeschichte
+erzählen
+könnte.
+Aber
+Frl.
+\textcolor
+{blue}{Sandrock}
+konnte
+auch
+dieses
+\textcolor
+{green}{Stück}
+nicht
+retten.«
+[\textcolor
+{blue}{Friedrich
+Uhl}]:
+\emph
+{\textcolor
+{green}{Wiener
+Brief}}.
+In:
+\emph
+{\textcolor
+{green}{Frankfurter
+Zeitung}},
+Jg. 39,
+Nr. 322,
+20. 11. 1894,
+Abendblatt,
+S. 1.
+}}{C}{}{L}{edtxt@30}%
 \def
 \sw@list@inedtext
 {}%
@@ -167,6 +228,7 @@ Publikum.}}{C}{}{L}{edtxt@28}%
 {\textcolor
 {blue}{Speidel}
 war
+ein
 enger
 Berater
 des
@@ -174,7 +236,27 @@ des
 {\textcolor
 {brown}{Burgtheater}}-Direktors
 \textcolor
-{blue}{Burckhard}}}{C}{}{L}{edtxt@35}%
+{blue}{Burckhard}.
+Vgl.
+A. S.:
+\emph
+{Tagebuch},
+20. 11. 1894,
+14. 12. 1894.
+}}{C}{}{L}{edtxt@38}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{2|61|0|2|61|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Wenn
+…
+Beſen}}}{\textnormal
+{jüdisches
+Sprichwort}}{C}{}{L}{edtxt@40}%
 \def
 \sw@list@inedtext
 {}%
@@ -185,7 +267,8 @@ des
 {\emph
 {gut
 aufgenommen}}}{\textnormal
-{XXXX}}{C}{}{L}{edtxt@39}%
+{Bezug
+unklar}}{C}{}{L}{edtxt@43}%
 \def
 \sw@list@inedtext
 {}%
@@ -202,7 +285,7 @@ Goldmann
 an
 Arthur
 Schnitzler,
-1. 5. [1894]}}{C}{}{L}{edtxt@42}%
+1. 5. [1894]}}{C}{}{L}{edtxt@46}%
 \def
 \sw@list@inedtext
 {}%
@@ -215,4 +298,4 @@ Schnitzler,
 Artikel}}}{\textnormal
 {Beilage
 nicht
-erhalten}}{C}{}{L}{edtxt@47}%
+erhalten}}{C}{}{L}{edtxt@51}%

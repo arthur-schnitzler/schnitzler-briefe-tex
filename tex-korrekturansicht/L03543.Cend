@@ -1,7 +1,7 @@
 \l@d@section{1}%
 \smallbreak \pagebreak [2]%
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}CUL, Schnitzler, B 775.\endgraf %
-\hangpara {4em}{0}Telegramm, (Vordruck \textcolor {gray}{\textbf {\textbf {\textcolor {pink}{Berlin}, }\textcolor {pink}{Haupt-Telegraphenamt}}}) \newline {}maschinell \newline {}Versand: 1) mit Bleistift rückseitiger Vermerk: »\noindent {}{\pb }\textcolor {gray}{Adrſ.} wohnt \textcolor {pink}{Savoy-Hôtel}{ }\textcolor {pink}{Friedrichſtr}{ / }Bote \textcolor {blue}{\textcolor {gray}{T}immel}« 2) mit rotem Buntstift vier Unterstreichungen und eine nicht entzifferte Paraphe\endgraf %
+\hangpara {4em}{0}Telegramm, 373 Zeichen (Vordruck: »\textcolor {gray}{\textbf {\textbf {\textsc {\textcolor {pink}{Berlin},}}\textcolor {pink}{Haupt-Telegraphenamt}}}.«) \newline {}maschinell \newline {}Versand: 1) mit Bleistift rückseitiger Vermerk: »\noindent {}{\pb }\textcolor {gray}{Adrſ.} wohnt \textcolor {pink}{Savoy-Hôtel}{ }\textcolor {pink}{Friedrichſtr}{ / }Bote \textcolor {blue}{Fimmel}« 2) mit rotem Buntstift vier Unterstreichungen und eine nicht entzifferte Paraphe\endgraf %
 \smallbreak %
 \def
 \sw@list@inedtext
@@ -14,7 +14,7 @@
 {auffuehrung}}}{\textnormal
 {Am
 29. 4. 1899
-fanden
+hatten
 am
 \textcolor
 {pink}{Residenztheater}
@@ -50,4 +50,4 @@ und
 {green}{Der
 grüne
 Kakadu}}
-statt.}}{C}{}{L}{edtxt@3}%
+stattgefunden.}}{C}{}{L}{edtxt@3}%

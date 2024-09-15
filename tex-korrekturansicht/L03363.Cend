@@ -1,7 +1,7 @@
 \l@d@section{1}%
 \smallbreak \pagebreak [2]%
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3173.\endgraf %
-\hangpara {4em}{0}Brief, 1 Blatt, 4 Seiten \newline {}Handschrift: blaue Tinte, deutsche Kurrent \newline {}Schnitzler: 1) mit Bleistift das Jahr »{[}1{]}903« vermerkt 2) mit rotem Buntstift eine Unterstreichung\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 4 Seiten, 1597 Zeichen \newline {}Handschrift: blaue Tinte, deutsche Kurrent \newline {}Schnitzler: 1) mit Bleistift das Jahr »903« vermerkt 2) mit rotem Buntstift eine Unterstreichung\endgraf %
 \smallbreak %
 \def
 \sw@list@inedtext
@@ -29,6 +29,8 @@ in
 {blue}{Goldmann}
 traf
 er
+mehrfach,
+zumindest
 am
 22. 2. 1903,
 24. 2. 1903,
@@ -37,6 +39,7 @@ am
 4. 3. 1903,
 7. 3. 1903
 und
+am
 9. 3. 1903.}}{C}{}{L}{edtxt@3}%
 \def
 \sw@list@inedtext
@@ -46,19 +49,16 @@ und
 \Cend{1|5|0|1|5|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
-{Palaſhotel}}}{\textnormal
+{Palaſthotel}}}{\textnormal
 {\textcolor
-{blue}{Schnitzler}
-wohnte
-im
-\textcolor
-{pink}{Palasthotel}.}}{C}{}{L}{edtxt@4}%
+{blue}{Schnitzler}s
+Unterkunft}}{C}{}{L}{edtxt@5}%
 \def
 \sw@list@inedtext
 {}%
 \parse@annot
 ||%
-\Cend{1|7|0|1|7|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{1|10|0|1|10|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
 {was
@@ -83,13 +83,13 @@ sprachen
 A. S.:
 \emph
 {Tagebuch},
-22. 2. 1903).}}{C}{}{L}{edtxt@6}%
+22. 2. 1903).}}{C}{}{L}{edtxt@7}%
 \def
 \sw@list@inedtext
 {}%
 \parse@annot
 ||%
-\Cend{1|23|0|1|23|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
 {Ankunft}}}{\textnormal
@@ -114,4 +114,4 @@ mit
 zurück
 nach
 \textcolor
-{pink}{Wien}.}}{C}{}{L}{edtxt@13}%
+{pink}{Wien}.}}{C}{}{L}{edtxt@14}%

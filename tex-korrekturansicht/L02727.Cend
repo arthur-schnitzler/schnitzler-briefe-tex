@@ -1,7 +1,7 @@
 \l@d@section{1}%
 \smallbreak \pagebreak [2]%
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3165.\endgraf %
-\hangpara {4em}{0}Brief, 1 Blatt, 3 Seiten \newline {}Handschrift: schwarze Tinte, deutsche Kurrent \newline {}Schnitzler: 1) mit Bleistift das Jahr »95« vermerkt 2) mit rotem Buntstift eine Unterstreichung\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 3 Seiten, 1272 Zeichen \newline {}Handschrift: schwarze Tinte, deutsche Kurrent \newline {}Schnitzler: 1) mit Bleistift das Jahr »95« vermerkt 2) mit rotem Buntstift eine Unterstreichung\endgraf %
 \smallbreak %
 \def
 \sw@list@inedtext
@@ -23,9 +23,8 @@ jedoch
 {blue}{Schnitzler}
 und
 seine
-\textcolor
-{green}{Novelle}{
-}\emph
+Novelle
+\emph
 {\textcolor
 {green}{Sterben}}
 schrieb
@@ -34,7 +33,8 @@ schrieb
 Lalo}
 am
 21. 3. 1895:
-[\textcolor
+P. L.
+[ = \textcolor
 {blue}{Pierre
 Lalo}]:
 \emph
@@ -52,13 +52,10 @@ In:
 {\textcolor
 {green}{Journal
 des
-débats.
-Politiques
-et
-littéraires}},
+débats}},
 Jg. 107,
 21. 3. 1895,
-S. 1.}}{C}{}{L}{edtxt@13}%
+S. 1.}}{C}{}{L}{edtxt@12}%
 \def
 \sw@list@inedtext
 {}%
@@ -100,7 +97,7 @@ dem
 Publikum
 bekannt
 zu
-machen.}}{C}{}{L}{edtxt@39}%
+machen.}}{C}{}{L}{edtxt@38}%
 \def
 \sw@list@inedtext
 {}%
@@ -127,8 +124,8 @@ Allgemeinen
 Zeitung}}
 engagiert,
 was
-ein
-möglicher
+einen
+möglichen
 Hintergrund
 für
 die
@@ -138,13 +135,13 @@ Ob
 \textcolor
 {blue}{Schnitzler}
 überlegte,
+sich
 selbst
 durch
 Übersetzungen
-sich
 einen
 Verdienst
 zu
 verschaffen,
 ist
-ungewiss.}}{C}{}{L}{edtxt@43}%
+ungewiss.}}{C}{}{L}{edtxt@42}%

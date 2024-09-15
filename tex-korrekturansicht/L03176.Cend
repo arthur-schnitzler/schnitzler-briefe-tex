@@ -1,0 +1,42 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}Berlin, Akademie der Künste, Alfred Kerr-Archiv, 2487.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 4 Seiten, 927 Zeichen \newline {}Handschrift: Bleistift, deutsche Kurrent \newline {}Ordnung: mit Bleistift nummeriert: »69« \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{wenn
+…
+einträfſt}}}{\textnormal
+{siehe
+Paul
+Goldmann
+an
+Arthur
+Schnitzler, 16. 6. [1900]}}{C}{}{L}{edtxt@29}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{bis
+auf
+weiteres}}}{\textnormal
+{\textcolor
+{blue}{Schnitzler}
+reiste
+am
+10. 8. 1900
+nach
+\textcolor
+{pink}{Salzburg}
+ab.}}{C}{}{L}{edtxt@34}%

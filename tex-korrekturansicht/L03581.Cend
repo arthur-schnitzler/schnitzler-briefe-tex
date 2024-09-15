@@ -1,0 +1,54 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}CUL, Schnitzler, B 89, B 2.\endgraf %
+\hangpara {4em}{0}Briefkarte, 213 Zeichen \newline {}Handschrift Ottilie Salten: schwarze Tinte, lateinische Kurrent \newline {}Handschrift Felix Salten: schwarze Tinte, lateinische Kurrent\endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|7|0|1|7|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/b/n}{\no@expands
+\textnormal
+{\emph
+{u. A. w. g.}}}{\textnormal
+{um
+Antwort
+wird
+gebeten}}{C}{}{L}{edtxt@2}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|8|0|1|9|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{diesem
+Tag}}}{\textnormal
+{Es
+handelte
+sich
+um
+die
+Feier
+des
+25.
+Hochzeitstags
+von
+\textcolor
+{blue}{Ottilie}
+und
+\textcolor
+{blue}{Felix
+Salten}.
+\textcolor
+{blue}{Schnitzler}
+nahm
+teil,
+vgl.
+A. S.:
+\emph
+{Tagebuch},
+13. 4. 1927.
+}}{C}{}{L}{edtxt@3}%

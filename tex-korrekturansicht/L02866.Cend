@@ -1,7 +1,7 @@
 \l@d@section{1}%
 \smallbreak \pagebreak [2]%
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}CUL, Schnitzler, B 16.\endgraf %
-\hangpara {4em}{0}Bildpostkarte \newline {}Handschrift Otto Brahm: Bleistift, lateinische Kurrent\newline {}Handschrift Gerhart Hauptmann: Bleistift, lateinische Kurrent\newline {}Handschrift Margarete Hauptmann: Bleistift, lateinische Kurrent\newline {}Versand: 1) Stempel: »\nobreak {}\oindex {Snĕžne jámy@\textbf {Snĕžne jámy}, \emph {https://www.geonames.org/ontologyT.MT}|pwk}Schneegrubenbaude Richard Gerlich, 21. 6. 1903\nobreak {}«. 2) Stempel: »\nobreak {}\oindex {Szklarska Poręba@\textbf {Szklarska Poręba}, \emph {http://www.geonames.org/ontologyP.PPL}|pwk}Schreiberhau, 21. 6. 1903\nobreak {}«. 3) Stempel: »\nobreak {}\oindex {IX., Alsergrund@\textbf {IX., Alsergrund}, \emph {Bezirk (A.BZK)}|pwk}9/3 Wien 72, 22. 6. 1903, 7.N, Bestellt\nobreak {}«. \newline {}Schnitzler: mit Bleistift datiert: »22/6 90\textcolor {gray}{3}« \endgraf %
+\hangpara {4em}{0}Bildpostkarte, 282 Zeichen \newline {}Handschrift Otto Brahm: Bleistift, lateinische Kurrent \newline {}Handschrift Gerhart Hauptmann: Bleistift, lateinische Kurrent \newline {}Handschrift Margarete Hauptmann: Bleistift, lateinische Kurrent \newline {}Versand: 1) Stempel: »\nobreak {}\oindex {Snĕžne jámy@\textbf {Snĕžne jámy}, \emph {T.MT}|pwk}Schneegrubenbaude Richard Gerlich, 21. 6. 1903\nobreak {}«. 2) Stempel: »\nobreak {}\oindex {Szklarska Poręba@\textbf {Szklarska Poręba}, \emph {P.PPL}|pwk}Schreiberhau, 21. 6. 03, 6–7 N.\nobreak {}«. 3) Stempel: »\nobreak {}\oindex {IX., Alsergrund@\textbf {IX., Alsergrund}, \emph {A.ADM3}|pwk}9/3 Wien 72, 22. 6. 03, 7. N, Bestellt\nobreak {}«. \newline {}Schnitzler: mit Bleistift datiert: »22/6 90\textcolor {gray}{3}« \newline {}Ordnung: mit Bleistift nummeriert: »132« \endgraf %
 \footnotesize \par \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symweiteredrucke }}}\weitereDrucke {\emph {Der Briefwechsel Arthur Schnitzler — Otto Brahm. Vollständige Ausgabe}. Herausgegeben, eingeleitet und erläutert von Oskar Seidlin. Tübingen: \emph {Niemeyer} 1975, S. 141–142.} \endgraf %
 \smallbreak %
 \def
@@ -9,12 +9,12 @@
 {}%
 \parse@annot
 ||%
-\Cend{1|10|0|1|10|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{1|5|0|1|5|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
 {Comödie}}}{\textnormal
-{unklar.
-Möglicherweise
+{unklar;
+möglicherweise
 die
 Komödie,
 über
@@ -25,4 +25,4 @@ die
 {blue}{Hofmannsthal}
 am
 26. 6. 1903
-schreibt.}}{C}{}{L}{edtxt@4}%
+schrieb?}}{C}{}{L}{edtxt@4}%

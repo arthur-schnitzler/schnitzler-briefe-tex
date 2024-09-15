@@ -1,0 +1,36 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}CUL, Schnitzler, B 89, B 1.\endgraf %
+\hangpara {4em}{0}Postkarte, 699 Zeichen \newline {}Handschrift: schwarze Tinte, lateinische Kurrent \newline {}Versand: 1) Stempel: »\nobreak {}\oindex {I., Innere Stadt@\textbf {I., Innere Stadt}, \emph {A.ADM3}|pwk}1/\textsubscript {1} Wien 1, 8. II. 08, 12\nobreak {}«. 2) mit Bleistift von unbekannter Hand der Vorname \textcolor {blue}{Schnitzler}s in der Adressangabe gestrichen \newline {}Schnitzler: mit Bleistift datiert: »8/2 908« \newline {}Ordnung: mit Bleistift von unbekannter Hand nummeriert: »{\pb }242« \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|4|0|1|4|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{¾ 3}}}{\textnormal
+{14 Uhr 45}}{C}{}{L}{edtxt@4}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|7|0|1|7|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Biberstraße}}}{\textnormal
+{In
+der
+\textcolor
+{pink}{Biberstraße 8}
+befand
+sich
+\textcolor
+{blue}{Julius
+Schnitzler}s
+chirurgische
+\textcolor
+{pink}{Ordination}.}}{C}{}{L}{edtxt@8}%

@@ -1,0 +1,43 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}CUL, Schnitzler, B 89, B 2.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 1 Seite, 607 Zeichen \newline {}Schreibmaschine \newline {}Handschrift: schwarze Tinte, lateinische Kurrent (\noindent {}Unterschrift) \newline {}Ordnung: 1) mit Bleistift von unbekannter Hand beschriftet: »{\pb }Salten« 2) mit Bleistift von unbekannter Hand nummeriert: »297«\endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|5|0|1|6|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{nächsten
+…
+Hochzeit}}}{\textnormal
+{Die
+Hochzeit
+hatte
+am
+19. 3. 1876
+in
+\textcolor
+{pink}{Wien}
+stattgefunden.}}{C}{}{L}{edtxt@5}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|6|0|1|6|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Tod
+…
+Breuer}}}{\textnormal
+{\textcolor
+{blue}{Hans
+Breuer}
+war
+am
+27. 1. 1926
+verstorben.}}{C}{}{L}{edtxt@6}%

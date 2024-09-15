@@ -1,0 +1,25 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}CUL, Schnitzler, B 89, B 2.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 1 Seite, 502 Zeichen \newline {}Handschrift: schwarze Tinte, lateinische Kurrent \newline {}Schnitzler: 1) mit Bleistift Vermerk: »\textsc {Salten}« 2) mit rotem Buntstift eine Unterstreichung \newline {}Ordnung: 1) mit Bleistift von \textcolor {blue}{Frieda Pollak} (?) mit dem Buchstaben »A« (Abgeschrieben/Abschrift) gekennzeichnet 2) mit Bleistift von unbekannter Hand nummeriert: »279«\endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|8|0|1|8|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{kommen
+Sie}}}{\textnormal
+{\textcolor
+{blue}{Schnitzler}
+kam
+nicht,
+vgl.
+Arthur
+Schnitzler
+an
+Felix
+Salten, 17. 5. 1917.}}{C}{}{L}{edtxt@8}%

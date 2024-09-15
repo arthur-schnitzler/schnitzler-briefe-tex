@@ -1,7 +1,7 @@
 \l@d@section{1}%
 \smallbreak \pagebreak [2]%
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3172.\endgraf %
-\hangpara {4em}{0}Brief, 1 Blatt, 2 Seiten \newline {}Handschrift: schwarze Tinte, deutsche Kurrent \newline {}Schnitzler: mit rotem Buntstift eine Unterstreichung \endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 2 Seiten, 802 Zeichen \newline {}Handschrift: schwarze Tinte, deutsche Kurrent \newline {}Schnitzler: mit rotem Buntstift eine Unterstreichung \endgraf %
 \smallbreak %
 \def
 \sw@list@inedtext
@@ -23,6 +23,19 @@ Hôtels\end
 {}%
 \parse@annot
 ||%
+\Cend{1|5|0|1|5|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/b/n}{\no@expands
+\textnormal
+{\emph
+{Propriet\textsuperscript
+{RE}}}}{\textnormal
+{propriétaire,
+französisch:
+Eigentümer/Eigentümerin}}{C}{}{L}{edtxt@5}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
 \Cend{1|6|0|1|6|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/b/n}{\no@expands
 \textnormal
 {\emph
@@ -30,25 +43,13 @@ Hôtels\end
 hydraulique}}}{\textnormal
 {französisch:
 hydraulischer
-Aufzug}}{C}{}{L}{edtxt@6}%
+Aufzug}}{C}{}{L}{edtxt@8}%
 \def
 \sw@list@inedtext
 {}%
 \parse@annot
 ||%
-\Cend{1|8|0|1|8|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/b/n}{\no@expands
-\textnormal
-{\emph
-{Propriet\textsuperscript
-{RE}}}}{\textnormal
-{französisch:
-Besitzer/Besitzerin}}{C}{}{L}{edtxt@8}%
-\def
-\sw@list@inedtext
-{}%
-\parse@annot
-||%
-\Cend{1|18|0|1|19|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{1|16|0|1|17|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
 {Nächſtes

@@ -1,7 +1,7 @@
 \l@d@section{1}%
 \smallbreak \pagebreak [2]%
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3159.\endgraf %
-\hangpara {4em}{0}Karte \newline {}Handschrift Clementine Goldmann: blaue Tinte, deutsche Kurrent\newline {}Handschrift Vally Rosengart: blaue Tinte, deutsche Kurrent \newline {}Schnitzler: mit Bleistift das Datum »11/1 96« vermerkt \endgraf %
+\hangpara {4em}{0}Briefkarte, 566 Zeichen \newline {}Handschrift Clementine Goldmann: blaue Tinte, deutsche Kurrent \newline {}Handschrift Vally Rosengart: blaue Tinte, deutsche Kurrent \newline {}Schnitzler: mit Bleistift das Datum »11/1 96« vermerkt \endgraf %
 \smallbreak %
 \def
 \sw@list@inedtext
@@ -14,7 +14,7 @@
 {Erfolge}}}{\textnormal
 {Diese
 Karte
-ist
+wurde
 nach
 der
 Premiere
@@ -27,13 +27,13 @@ am
 {\textcolor
 {brown}{Frankfurter
 Schauspielhaus}}
-verfasst,
-zu
-der
+verfasst.
 \textcolor
 {blue}{Schnitzler}
-angereist
-war.}}{C}{}{L}{edtxt@1}%
+war
+zu
+dieser
+angereist.}}{C}{}{L}{edtxt@1}%
 \def
 \sw@list@inedtext
 {}%

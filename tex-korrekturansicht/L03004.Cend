@@ -1,0 +1,54 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}Wienbibliothek im Rathaus, ZPH 1681, 2.1.516.\endgraf %
+\hangpara {4em}{0}Brief, 2 Blätter, 7 Seiten, 3653 Zeichen \newline {}Handschrift: schwarze Tinte, deutsche Kurrent \newline {}Ordnung: mit Bleistift von unbekannter Hand Nummerierung der Doppelseiten des Konvoluts: »16«–»19« \endgraf %
+\footnotesize \par \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symweiteredrucke }}}\weitereDrucke {Arthur Schnitzler: \emph {Briefe 1875–1912}. Hg. Therese Nickl und Heinrich Schnitzler. Frankfurt am Main: \emph {S. Fischer} 1981, S. 529–531.} \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|37|0|1|37|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Neulich
+war
+Fred
+bei
+uns}}}{\textnormal
+{siehe
+A. S.:
+\emph
+{Tagebuch},
+23. 4. 1906}}{C}{}{L}{edtxt@33}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|42|0|1|43|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Proceſsangelegenheit}}}{\textnormal
+{siehe
+Felix
+Salten
+an
+Arthur
+Schnitzler, 9. 3. 1906}}{C}{}{L}{edtxt@38}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{2|46|0|2|47|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Daenemark}}}{\textnormal
+{siehe
+Felix
+Salten
+an
+Arthur
+Schnitzler, 28. 3. 1906}}{C}{}{L}{edtxt@41}%

@@ -1,7 +1,7 @@
 \l@d@section{1}%
 \smallbreak \pagebreak [2]%
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3172.\endgraf %
-\hangpara {4em}{0}Brief, 1 Blatt, 2 Seiten \newline {}Handschrift: blaue Tinte, deutsche Kurrent \newline {}Schnitzler: mit Bleistift das Jahr »{[}1{]}902« vermerkt \endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 2 Seiten, 509 Zeichen \newline {}Handschrift: blaue Tinte, deutsche Kurrent \newline {}Schnitzler: mit Bleistift das Jahr »902« vermerkt \endgraf %
 \smallbreak %
 \def
 \sw@list@inedtext
@@ -35,7 +35,7 @@ und
 \Cend{1|6|0|1|6|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
-{Dr.
+{Dr-
 Löwenfeld}}}{\textnormal
 {\textcolor
 {blue}{Schnitzler}

@@ -1,7 +1,7 @@
 \l@d@section{1}%
 \smallbreak \pagebreak [2]%
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3172.\endgraf %
-\hangpara {4em}{0}Brief, 3 Blätter, 10 Seiten \newline {}Handschrift: blaue Tinte, deutsche Kurrent \newline {}Schnitzler: 1) mit Bleistift das Jahr »{[}1{]}902« vermerkt 2) mit rotem Buntstift elf Unterstreichungen\endgraf %
+\hangpara {4em}{0}Brief, 3 Blätter, 10 Seiten, 4352 Zeichen \newline {}Handschrift: blaue Tinte, deutsche Kurrent \newline {}Schnitzler: 1) mit Bleistift das Jahr »902« vermerkt 2) mit rotem Buntstift elf Unterstreichungen\endgraf %
 \smallbreak %
 \def
 \sw@list@inedtext
@@ -42,7 +42,7 @@ dem
 einen
 Bernhardiner
 namens
-»Bern«.
+Bern.
 Im
 Oktober
 wurde
@@ -59,21 +59,23 @@ des
 \emph
 {\textcolor
 {brown}{Wiener
-Tierschutz-Vereins}}
-behandelt;
+Tierschutz-Verein}}s
+behandelt,
 Mitte
 Dezember
 erneut.
 Ab
-Januar
-1903
-versucht
-er
+Januar 1903
+versuchte
+\textcolor
+{blue}{Schnitzler}
 ihn
 zu
-vermitteln,
-da
-wohnt
+vermitteln.
+Zu
+diesem
+Zeitpunkt
+wohnte
 er
 aber
 bereits
@@ -81,14 +83,14 @@ nicht
 mehr
 bei
 ihnen
-(siehe
+(vgl.
 Arthur
 Schnitzler
 an
 Richard
 Beer-Hofmann,
-14. 1. 1903,
-siehe
+14. 1. 1903
+und
 Hermann
 Bahr
 an
@@ -106,16 +108,16 @@ Erwähnungen
 im
 \emph
 {\textcolor
-{green}{Tagebuch}}
-(23. 5. 1903,
+{green}{Tagebuch}}:
+23. 5. 1903,
 18. 6. 1903
 und
-6. 8. 1903).
-Vgl.
+6. 8. 1903.
+Siehe
+auch
 \emph
 {Briefe}
-II,118.
-}}{C}{}{L}{edtxt@5}%
+II, 118.}}{C}{}{L}{edtxt@5}%
 \def
 \sw@list@inedtext
 {}%
@@ -138,7 +140,7 @@ In:
 {green}{Neue
 Freie
 Presse}},
-Nr. 13521,
+Nr. 13.521,
 16. 4. 1902,
 Morgenblatt,
 S. 1–3.
@@ -212,13 +214,41 @@ Theater-Aufführungen}}.
 {pink}{Wien}:
 \emph
 {\textcolor
-{brown}{Buchhandlung
+{brown}{C. W.
+Stern
+(Buchhandlung
 L.
-Rosner}}{
-}1902,
+Rosner)}},
+erschienen
+im
+Oktober
+1902,
 vordatiert
 auf
-1903.}}{C}{}{L}{edtxt@21}%
+1903.
+Der
+Umfang
+ist
+mit
+19
+Texten
+größer
+als
+hier
+noch
+angedacht,
+wobei
+vier
+Feuilletons
+zu
+Stücken
+\textcolor
+{blue}{Hauptmann}s
+das
+Buch
+eröffnen
+und
+dominieren.}}{C}{}{L}{edtxt@21}%
 \def
 \sw@list@inedtext
 {}%
@@ -241,12 +271,12 @@ am
 30. 3. 1902
 an
 Tuberkulose
-verstorben.
-Siehe
+verstorben,
+siehe
 A. S.:
 \emph
 {Tagebuch},
-31. 3. 1902.}}{C}{}{L}{edtxt@24}%
+31. 3. 1902.}}{C}{}{L}{edtxt@25}%
 \def
 \sw@list@inedtext
 {}%
@@ -276,12 +306,16 @@ erkrankt
 A. S.:
 \emph
 {Tagebuch},
-13. 3. 1902).
+13. 3. 1902),
+einer
+Nervenentzündung
+mit
+Lähmungserscheinungen.
 Gestorben
 ist
 sie
 daran
-nicht.}}{C}{}{L}{edtxt@27}%
+nicht.}}{C}{}{L}{edtxt@28}%
 \def
 \sw@list@inedtext
 {}%
@@ -294,13 +328,13 @@ nicht.}}{C}{}{L}{edtxt@27}%
 {vermutlich
 im
 Sommer
-1901}}{C}{}{L}{edtxt@29}%
+1901}}{C}{}{L}{edtxt@30}%
 \def
 \sw@list@inedtext
 {}%
 \parse@annot
 ||%
-\Cend{1|42|0|1|42|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{2|48|0|2|48|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
 {arbeiten}}}{\textnormal
@@ -352,13 +386,13 @@ Paul
 Goldmann
 an
 Arthur
-Schnitzler, 2. 5. [1900].}}{C}{}{L}{edtxt@31}%
+Schnitzler, 2. 5. [1900].}}{C}{}{L}{edtxt@32}%
 \def
 \sw@list@inedtext
 {}%
 \parse@annot
 ||%
-\Cend{2|50|0|2|51|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{2|51|0|2|51|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
 {Goethe
@@ -391,7 +425,7 @@ Goethe}}.
 {brown}{Gebrüder
 Borntraeger}}{
 }1887,
-S. 49–185.}}{C}{}{L}{edtxt@35}%
+S. 49–185.}}{C}{}{L}{edtxt@36}%
 \def
 \sw@list@inedtext
 {}%
@@ -417,7 +451,7 @@ Paul
 Goldmann
 an
 Arthur
-Schnitzler, 25. 1. [1902].}}{C}{}{L}{edtxt@39}%
+Schnitzler, 25. 1. [1902].}}{C}{}{L}{edtxt@40}%
 \def
 \sw@list@inedtext
 {}%
@@ -458,13 +492,13 @@ das
 \textcolor
 {green}{Buch}
 am
-22. 3. 1902.}}{C}{}{L}{edtxt@46}%
+22. 3. 1902.}}{C}{}{L}{edtxt@47}%
 \def
 \sw@list@inedtext
 {}%
 \parse@annot
 ||%
-\Cend{2|61|0|2|62|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{2|61|0|2|61|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
 {»Geſchichte
@@ -472,7 +506,7 @@ am
 Bänden)}}}{\textnormal
 {\textcolor
 {blue}{H.
-[=Heinrich]
+[ = Heinrich]
 Graetz}:
 \emph
 {\textcolor
@@ -497,7 +531,7 @@ durch
 {blue}{Schnitzler}
 ist
 nicht
-nachweisbar.}}{C}{}{L}{edtxt@50}%
+nachweisbar.}}{C}{}{L}{edtxt@51}%
 \def
 \sw@list@inedtext
 {}%
@@ -513,4 +547,4 @@ Rimini«}}}{\textnormal
 A. S.:
 \emph
 {Tagebuch},
-2. 4. 1902}}{C}{}{L}{edtxt@53}%
+2. 4. 1902}}{C}{}{L}{edtxt@54}%

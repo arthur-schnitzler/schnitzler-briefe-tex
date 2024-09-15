@@ -1,7 +1,8 @@
 \l@d@section{1}%
 \smallbreak \pagebreak [2]%
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}Wienbibliothek im Rathaus, ZPH 1681, 2.1.516.\endgraf %
-\hangpara {4em}{0}Brief, 2 Blätter, 6 Seiten, 1497 Zeichen (Briefpapier mit Trauerrand) \newline {}Handschrift: schwarze Tinte, deutsche Kurrent \newline {}Ordnung: mit Bleistift von unbekannter Hand Nummerierung der Doppelseiten des Konvoluts: »81«–»83« \endgraf %
+\hangpara {4em}{0}Brief, 2 Blätter, 6 Seiten, 1501 Zeichen (Briefpapier mit Trauerrand) \newline {}Handschrift: schwarze Tinte, deutsche Kurrent \newline {}Ordnung: mit Bleistift von unbekannter Hand Nummerierung der Doppelseiten des Konvoluts: »81«–»83« \endgraf %
+\footnotesize \par \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symweiteredrucke }}}\weitereDrucke {Arthur Schnitzler: \emph {Briefe 1875–1912}. Hg. Therese Nickl und Heinrich Schnitzler. Frankfurt am Main: \emph {S. Fischer} 1981, S. 209–210.} \endgraf %
 \smallbreak %
 \def
 \sw@list@inedtext
@@ -93,7 +94,9 @@ auf}}}{\textnormal
 in
 \textcolor
 {pink}{Bad
-Ischl}}}{C}{}{L}{edtxt@19}%
+Ischl}
+am
+14. 7. 1893}}{C}{}{L}{edtxt@19}%
 \def
 \sw@list@inedtext
 {}%
@@ -130,8 +133,9 @@ Juni 1893
 in
 Betrieb
 genommene
-\textcolor
-{pink}{Salzkammergut}-Lokalbahn
+\emph
+{\textcolor
+{brown}{Salzkammergut-Lokalbahn}}
 zwischen
 \textcolor
 {pink}{Salzburg}

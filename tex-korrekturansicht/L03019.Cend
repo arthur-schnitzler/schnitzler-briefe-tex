@@ -1,0 +1,54 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}Wienbibliothek im Rathaus, ZPH 1681, 2.1.516.\endgraf %
+\hangpara {4em}{0}Kartenbrief, 503 Zeichen \newline {}Handschrift: schwarze Tinte, lateinische Kurrent \newline {}Ordnung: mit Bleistift von unbekannter Hand nummeriert: »8« \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|6|0|1|6|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Reise
+(Salzburg)}}}{\textnormal
+{\textcolor
+{blue}{Arthur}
+und
+\textcolor
+{blue}{Olga
+Schnitzler}
+waren
+am
+14. 5. 1917
+nach
+\textcolor
+{pink}{Salzburg}
+abgereist.
+Am
+16. 5. 1917
+fuhren
+sie
+zurück
+nach
+\textcolor
+{pink}{Wien}.}}{C}{}{L}{edtxt@3}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|6|0|1|7|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Tode
+…
+Bachrach}}}{\textnormal
+{\textcolor
+{blue}{Stefanie
+Bachrach}
+war
+am
+16. 5. 1917
+verstorben.}}{C}{}{L}{edtxt@5}%

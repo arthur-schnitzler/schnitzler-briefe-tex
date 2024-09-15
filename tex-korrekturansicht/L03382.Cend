@@ -1,7 +1,7 @@
 \l@d@section{1}%
 \smallbreak \pagebreak [2]%
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3173.\endgraf %
-\hangpara {4em}{0}Brief, 1 Blatt, 2 Seiten \newline {}Handschrift: blaue Tinte, deutsche Kurrent \newline {}Schnitzler: mit Bleistift das Jahr »{[}1{]}903« vermerkt \endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 2 Seiten, 593 Zeichen \newline {}Handschrift: blaue Tinte, deutsche Kurrent \newline {}Schnitzler: mit Bleistift das Jahr »903« vermerkt \endgraf %
 \smallbreak %
 \def
 \sw@list@inedtext
@@ -27,22 +27,24 @@ Aussage
 {blue}{Schnitzler}s
 vom
 Typ
-»aus
+›aus
 Eigeninteresse
 freue
 ich
 mich
 über
 Dein
-Kommen«
+Kommen‹
 im
 nicht
 erhaltenen
 Brief
-handeln
+gehandelt
+haben
 dürfte,
-geschieht
-dies
+wurde
+diese
+Anmerkung
 doch
 in
 zeitlicher
@@ -61,23 +63,24 @@ egoistischen
 Zugang
 bei
 Werkkonzeptionen
+verfasst
 (vgl.
 A. S.:
 \emph
 {Tagebuch},
-8. 8. 1903),
-so
+8. 8. 1903).
+Es
+ist
+zumindest
+vorstellbar,
 dass
 er
-auch
 diese
 Selbstkritik
 \textcolor
 {blue}{Goldmann}
 mitgeteilt
-haben
-könnte.
-}}{C}{}{L}{edtxt@3}%
+hatte.}}{C}{}{L}{edtxt@3}%
 \def
 \sw@list@inedtext
 {}%
@@ -98,7 +101,23 @@ Schnitzler, 27. 6. [1903]}}{C}{}{L}{edtxt@4}%
 {}%
 \parse@annot
 ||%
-\Cend{1|8|0|1|8|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{1|6|0|1|6|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{über
+Bodenbach}}}{\textnormal
+{über
+die
+Zugstrecke
+\textcolor
+{pink}{Dresden}–\textcolor
+{pink}{Prag}}}{C}{}{L}{edtxt@7}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
 {finden}}}{\textnormal
@@ -122,4 +141,4 @@ traf
 \textcolor
 {blue}{Schnitzler}
 am
-9. 8. 1903.}}{C}{}{L}{edtxt@9}%
+9. 8. 1903.}}{C}{}{L}{edtxt@10}%

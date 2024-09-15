@@ -1,14 +1,14 @@
 \l@d@section{1}%
 \smallbreak \pagebreak [2]%
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.5247.\endgraf %
-\hangpara {4em}{0}Brief, 1 Blatt, 4 Seiten, 2559 Zeichen \newline {}Handschrift: blaue Tinte, deutsche Kurrent \newline {}Ordnung: mit Bleistift von \textcolor {blue}{Arthur Schnitzler} das Jahr »1901« vermerkt \endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 4 Seiten, 2561 Zeichen \newline {}Handschrift: blaue Tinte, deutsche Kurrent \newline {}Ordnung: mit Bleistift von \textcolor {blue}{Arthur Schnitzler} das Jahr »1901« vermerkt \endgraf %
 \smallbreak %
 \def
 \sw@list@inedtext
 {}%
 \parse@annot
 ||%
-\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{1|11|0|1|11|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
 {Regie}}}{\textnormal
@@ -48,7 +48,7 @@ verbracht.}}{C}{}{L}{edtxt@5}%
 {}%
 \parse@annot
 ||%
-\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{1|11|0|1|11|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
 {Wien}}}{\textnormal
@@ -62,19 +62,31 @@ aus
 {}%
 \parse@annot
 ||%
-\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{1|19|0|1|19|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
-{en
-canaille}}}{\textnormal
-{französisch:
-verachtend}}{C}{}{L}{edtxt@9}%
+{das}}}{\textnormal
+{korrigiert
+aus
+»Das«}}{C}{}{L}{edtxt@9}%
 \def
 \sw@list@inedtext
 {}%
 \parse@annot
 ||%
-\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{1|22|0|1|22|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{en
+canaille}}}{\textnormal
+{französisch:
+verachtend}}{C}{}{L}{edtxt@10}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|37|0|1|37|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
 {Brautlieder
@@ -93,13 +105,13 @@ die
 Gussmann}
 vermutlich
 gesanglich
-einübte}}{C}{}{L}{edtxt@11}%
+einübte}}{C}{}{L}{edtxt@12}%
 \def
 \sw@list@inedtext
 {}%
 \parse@annot
 ||%
-\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{1|39|0|1|39|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
 {Herzliche
@@ -112,4 +124,4 @@ ersten
 Seite,
 verkehrt
 zum
-Text}}{C}{}{L}{edtxt@14}%
+Text}}{C}{}{L}{edtxt@15}%

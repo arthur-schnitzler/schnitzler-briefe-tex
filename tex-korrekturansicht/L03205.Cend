@@ -1,7 +1,7 @@
 \l@d@section{1}%
 \smallbreak \pagebreak [2]%
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3172.\endgraf %
-\hangpara {4em}{0}Brief, 1 Blatt, 4 Seiten \newline {}Handschrift: blaue Tinte, deutsche Kurrent \newline {}Schnitzler: 1) mit Bleistift das Jahr »{[}1{]}902« vermerkt 2) mit rotem Buntstift eine Unterstreichung\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 4 Seiten, 2108 Zeichen \newline {}Handschrift: blaue Tinte, deutsche Kurrent \newline {}Schnitzler: 1) mit Bleistift das Jahr »902« vermerkt 2) mit rotem Buntstift eine Unterstreichung\endgraf %
 \smallbreak %
 \def
 \sw@list@inedtext
@@ -75,7 +75,7 @@ angebliche
 Telegramm
 Arthur
 Schnitzlers,
-26. 4. 1902}}{C}{}{L}{edtxt@6}%
+26. 4. 1902.}}{C}{}{L}{edtxt@6}%
 \def
 \sw@list@inedtext
 {}%
@@ -142,8 +142,24 @@ war}}{C}{}{L}{edtxt@23}%
 {Carl
 Weiss
 Theater}}}{\textnormal
-{nicht
-nachweisbar}}{C}{}{L}{edtxt@25}%
+{An
+diesem
+\textcolor
+{pink}{Berlin}er
+Theater
+fand
+am
+25. 4. 1902
+die
+Uraufführung
+von
+\emph
+{\textcolor
+{green}{Die
+Kinder
+der
+Armen}}
+statt.}}{C}{}{L}{edtxt@25}%
 \def
 \sw@list@inedtext
 {}%

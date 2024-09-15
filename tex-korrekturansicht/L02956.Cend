@@ -1,7 +1,7 @@
 \l@d@section{1}%
 \smallbreak \pagebreak [2]%
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}Wienbibliothek im Rathaus, ZPH 1681, 2.1.516.\endgraf %
-\hangpara {4em}{0}Brief, 1 Blatt, 2 Seiten, 297 Zeichen \newline {}Handschrift: Bleistift, deutsche Kurrent \newline {}Ordnung: mit Bleistift von unbekannter Hand Nummerierung der Blätter des Konvoluts: »24« \endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 2 Seiten, 297 Zeichen \newline {}Handschrift: Bleistift, deutsche Kurrent \newline {}Ordnung: mit Bleistift von unbekannter Hand nummeriert: »24« \endgraf %
 \smallbreak %
 \def
 \sw@list@inedtext
@@ -29,7 +29,7 @@ Einordnung.}}{C}{}{L}{edtxt@1}%
 {}%
 \parse@annot
 ||%
-\Cend{1|3|0|1|3|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{1|4|0|1|4|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
 {Sitz
@@ -39,13 +39,13 @@ Theater}}}{\textnormal
 A. S.:
 \emph
 {Tagebuch},
-21. 5. 1892}}{C}{}{L}{edtxt@2}%
+21. 5. 1892}}{C}{}{L}{edtxt@3}%
 \def
 \sw@list@inedtext
 {}%
 \parse@annot
 ||%
-\Cend{1|4|0|1|4|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\Cend{1|6|0|1|6|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
 \textnormal
 {\emph
 {Artikel}}}{\textnormal
@@ -69,4 +69,4 @@ Jg. 1,
 Nr. 4,
 Mitte
 Mai 1892,
-S. 40–41.}}{C}{}{L}{edtxt@4}%
+S. 40–41.}}{C}{}{L}{edtxt@5}%

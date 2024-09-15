@@ -1,7 +1,7 @@
 \l@d@section{1}%
 \smallbreak \pagebreak [2]%
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.NZ85.1.3173.\endgraf %
-\hangpara {4em}{0}Postkarte \newline {}Handschrift: 1) schwarze Tinte, deutsche Kurrent\hspace {1em}2) schwarze Tinte, lateinische Kurrent (\noindent {}Adresse)\hspace {1em} \newline {}Versand: Stempel: »\nobreak {}Wien 15, 17. {[}9. 1903{]}, 2\textsuperscript {10}N\nobreak {}«. Stempel: »\nobreak {}\oindex {XVIII., Waehring@\textbf {XVIII., Währing}, \emph {Bezirk (A.BZK)}|pwk}Wien 18 111, 17. {[}9. 1903{]}, 3\textsuperscript {10}N\nobreak {}«. \newline {}Schnitzler: mit Bleistift durch fehlerhafte Entzifferung des Stempels falsch datiert: »3/10 {[}1{]}903.« \endgraf %
+\hangpara {4em}{0}Postkarte, 348 Zeichen \newline {}Handschrift: 1) schwarze Tinte, deutsche Kurrent\hspace {1em}2) schwarze Tinte, lateinische Kurrent (\noindent {}Adresse)\hspace {1em} \newline {}Versand: Stempel: »\nobreak {}Wien 15, 17. \textcolor {gray}{I}{ }{[}X. 03{]}, 2 10 N\nobreak {}«. Stempel: »\nobreak {}\oindex {XVIII., Waehring@\textbf {XVIII., Währing}, \emph {A.ADM3}|pwk}Wien 18 111, 17. \textcolor {gray}{IX}{ }{[}03{]}, 3 10 N\nobreak {}«. \newline {}Schnitzler: mit Bleistift durch fehlerhafte Entzifferung des Stempels falsch datiert: »3/10 903.« \endgraf %
 \smallbreak %
 \def
 \sw@list@inedtext
@@ -31,11 +31,11 @@ Operette
 {green}{Venedig
 in
 Paris}}
-(Musik
+(Musik:
 \textcolor
 {blue}{Jacques
 Offenbach},
-Libretto
+Libretto:
 \textcolor
 {blue}{Paul
 Siraudin}
@@ -67,8 +67,7 @@ erwähnt
 die
 Aufführung
 nicht,
-so
-dass
+sodass
 es
 eher
 unwahrscheinlich
