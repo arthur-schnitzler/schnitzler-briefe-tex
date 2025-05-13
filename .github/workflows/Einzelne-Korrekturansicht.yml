@@ -1,0 +1,52 @@
+name: Einzelne Korrekturansicht
+
+on:
+  workflow_dispatch:
+    inputs:
+      letter_id:
+        description: 'Brief-ID im Format L00001'
+        required: true
+        default: 'L03601'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Validate input format
+        run: |
+          if [[ ! "${{ github.event.inputs.letter_id }}" =~ ^L[0-9]{5}$ ]]; then
+            echo "Ungültiges Format: muss L gefolgt von 5 Ziffern sein (z. B. L00001)"
+            exit 1
+          fi
+
+      - name: Download XML
+        run: |
+          curl -f -o letter.xml "https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-briefe-arbeit/main/editions/${{ github.event.inputs.letter_id }}.xml"
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-xetex xsltproc
+
+      - name: Transform XML to TeX using XSLT
+        run: |
+          xsltproc xslt/to_tex.xsl letter.xml > letter.tex
+
+      - name: Compile LaTeX (1st run)
+        run: xelatex -interaction=nonstopmode letter.tex
+
+      - name: Compile LaTeX (2nd run)
+        run: xelatex -interaction=nonstopmode letter.tex
+
+      - name: Compile LaTeX (3rd run)
+        run: xelatex -interaction=nonstopmode letter.tex
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v3
+        with:
+          name: letter-pdf
+          path: letter.pdf
