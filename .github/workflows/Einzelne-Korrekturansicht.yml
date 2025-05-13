@@ -1,4 +1,4 @@
-name: Einzelne Korrekturansicht
+name: Build Letter PDF
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
       letter_id:
         description: 'Brief-ID im Format L00001'
         required: true
-        default: 'L03601'
+        default: 'L00001'
 
 jobs:
   build:
@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/upload-artifact@v4
+        uses: actions/checkout@v4
 
       - name: Validate input format
         run: |
@@ -34,7 +34,7 @@ jobs:
 
       - name: Transform XML to TeX using XSLT
         run: |
-          xsltproc xslt/to_tex.xsl letter.xml > letter.tex
+          xsltproc transform.xsl letter.xml > letter.tex
 
       - name: Compile LaTeX (1st run)
         run: xelatex -interaction=nonstopmode letter.tex
@@ -45,8 +45,10 @@ jobs:
       - name: Compile LaTeX (3rd run)
         run: xelatex -interaction=nonstopmode letter.tex
 
-      - name: Upload PDF
-        uses: actions/upload-artifact@v3
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
         with:
-          name: letter-pdf
+          name: ${{ github.event.inputs.letter_id }}-pdf
           path: letter.pdf
+          compression-level: 6
+          overwrite: true
