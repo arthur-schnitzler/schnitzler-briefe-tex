@@ -1,4 +1,4 @@
-name: Build Letter PDF
+name: Einzelne Korrekturansicht
 
 on:
   workflow_dispatch:
@@ -33,11 +33,11 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y texlive-xetex xsltproc
 
-      - name: Run XSLT: Remove Namespaces
+      - name: XSLT Remove Namespaces
         run: |
           xsltproc xslt/einzel-1-remove-namespaces.xsl "${{ github.event.inputs.letter_id }}.xml" > tmp-nons.xml
 
-      - name: Run XSLT: Transform to TeX
+      - name: XSLT Transform to TeX
         run: |
           xsltproc xslt/einzel-2-Korrekturansicht.xsl tmp-nons.xml > "${{ github.event.inputs.letter_id }}.tex"
 
