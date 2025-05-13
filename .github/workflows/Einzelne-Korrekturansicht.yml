@@ -14,18 +14,19 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: Validate input format
         run: |
           if [[ ! "${{ github.event.inputs.letter_id }}" =~ ^L[0-9]{5}$ ]]; then
-            echo "Ungültiges Format: muss L gefolgt von 5 Ziffern sein (z. B. L00001)"
+            echo "❌ Ungültiges Format: muss L gefolgt von 5 Ziffern sein (z. B. L00001)"
             exit 1
           fi
 
       - name: Download XML
         run: |
-          curl -f -o letter.xml "https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-briefe-arbeit/main/editions/${{ github.event.inputs.letter_id }}.xml"
+          curl -f -o "${{ github.event.inputs.letter_id }}.xml" \
+            "https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-briefe-arbeit/main/editions/${{ github.event.inputs.letter_id }}.xml"
 
       - name: Install dependencies
         run: |
@@ -34,21 +35,21 @@ jobs:
 
       - name: Transform XML to TeX using XSLT
         run: |
-          xsltproc transform.xsl letter.xml > letter.tex
+          xsltproc xslt/to_tex.xsl "${{ github.event.inputs.letter_id }}.xml" > "${{ github.event.inputs.letter_id }}.tex"
 
       - name: Compile LaTeX (1st run)
-        run: xelatex -interaction=nonstopmode letter.tex
+        run: xelatex -interaction=nonstopmode "${{ github.event.inputs.letter_id }}.tex"
 
       - name: Compile LaTeX (2nd run)
-        run: xelatex -interaction=nonstopmode letter.tex
+        run: xelatex -interaction=nonstopmode "${{ github.event.inputs.letter_id }}.tex"
 
       - name: Compile LaTeX (3rd run)
-        run: xelatex -interaction=nonstopmode letter.tex
+        run: xelatex -interaction=nonstopmode "${{ github.event.inputs.letter_id }}.tex"
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
           name: ${{ github.event.inputs.letter_id }}-pdf
-          path: letter.pdf
+          path: ${{ github.event.inputs.letter_id }}.pdf
           compression-level: 6
           overwrite: true
