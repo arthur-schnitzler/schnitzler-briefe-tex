@@ -13,10 +13,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check Internet
-        run: curl -I https://github.com
       - name: Check out repository
-        uses: actions/upload-artifact@v3.1.3
+        uses: actions/upload-artifact@v4
 
       - name: Validate input format
         run: |
