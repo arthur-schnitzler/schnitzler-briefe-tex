@@ -33,11 +33,10 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y texlive-xetex 
     
-      - name: Install Saxon (XSLT 2.0 Processor)
+      - name: Install Saxon 12 + XMLResolver
         run: |
-          sudo apt-get update
-          sudo apt-get install -y default-jre
           curl -L -o saxon-he.jar https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/12.4/Saxon-HE-12.4.jar
+          curl -L -o xmlresolver.jar https://repo1.maven.org/maven2/org/xmlresolver/xmlresolver/4.5.0/xmlresolver-4.5.0.jar
 
       - name: Run XSLT Remove Namespaces (XSLT 2.0)
         run: |
