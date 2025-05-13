@@ -39,13 +39,19 @@ jobs:
           sudo apt-get install -y default-jre
           curl -L -o saxon-he.jar https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/12.4/Saxon-HE-12.4.jar
 
-      - name: XSLT Remove Namespaces
+      - name: Run XSLT Remove Namespaces (XSLT 2.0)
         run: |
-          xsltproc xslt/einzel-1-remove-namespaces.xsl "${{ github.event.inputs.letter_id }}.xml" > tmp-nons.xml
+          java -jar saxon-he.jar \
+            -s:${{ github.event.inputs.letter_id }}.xml \
+            -xsl:xslt/einzel-1-remove-namespaces.xsl \
+            -o:tmp-nons.xml
 
-      - name: XSLT Transform to TeX
+      - name: Run XSLT Transform to TeX (XSLT 2.0)
         run: |
-          xsltproc xslt/einzel-2-Korrekturansicht.xsl tmp-nons.xml > "${{ github.event.inputs.letter_id }}.tex"
+          java -jar saxon-he.jar \
+            -s:tmp-nons.xml \
+            -xsl:xslt/einzel-2-Korrekturansicht.xsl \
+            -o:${{ github.event.inputs.letter_id }}.tex
 
       - name: Compile LaTeX (1st run)
         run: xelatex -interaction=nonstopmode "${{ github.event.inputs.letter_id }}.tex"
