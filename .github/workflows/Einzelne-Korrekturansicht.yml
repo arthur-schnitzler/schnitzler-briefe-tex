@@ -38,19 +38,19 @@ jobs:
           curl -L -o saxon-he.jar https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/12.4/Saxon-HE-12.4.jar
           curl -L -o xmlresolver.jar https://repo1.maven.org/maven2/org/xmlresolver/xmlresolver/4.5.0/xmlresolver-4.5.0.jar
 
-      - name: Run XSLT Remove Namespaces (XSLT 2.0)
+      - name: Run XSLT: Remove Namespaces
         run: |
-          java -jar saxon-he.jar \
-            -s:${{ github.event.inputs.letter_id }}.xml \
-            -xsl:xslt/einzel-1-remove-namespaces.xsl \
-            -o:tmp-nons.xml
+          java -cp "saxon-he.jar:xmlresolver.jar" net.sf.saxon.Transform \
+          -s:${{ github.event.inputs.letter_id }}.xml \
+          -xsl:xslt/einzel-1-remove-namespaces.xsl \
+          -o:tmp-nons.xml
 
-      - name: Run XSLT Transform to TeX (XSLT 2.0)
+      - name: Run XSLT: Transform to TeX
         run: |
-          java -jar saxon-he.jar \
-            -s:tmp-nons.xml \
-            -xsl:xslt/einzel-2-Korrekturansicht.xsl \
-            -o:${{ github.event.inputs.letter_id }}.tex
+          java -cp "saxon-he.jar:xmlresolver.jar" net.sf.saxon.Transform \
+          -s:tmp-nons.xml \
+          -xsl:xslt/einzel-2-Korrekturansicht.xsl \
+          -o:${{ github.event.inputs.letter_id }}.tex
 
       - name: Compile LaTeX (1st run)
         run: xelatex -interaction=nonstopmode "${{ github.event.inputs.letter_id }}.tex"
