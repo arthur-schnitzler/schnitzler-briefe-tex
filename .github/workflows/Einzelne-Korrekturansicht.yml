@@ -27,9 +27,7 @@ jobs:
 
     - name: Saxon HE herunterladen
       run: |
-        curl -L -o saxon.zip https://github.com/Saxonica/SaxonHE12/releases/download/SaxonHE-12.4/SaxonHE12-4J.zip
-        unzip saxon.zip
-        mv saxon-he-12.4.jar saxon-he.jar
+        curl -L -o saxon-he.jar https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/12.4/Saxon-HE-12.4.jar
 
     - name: Lade XML-Datei
       run: |
