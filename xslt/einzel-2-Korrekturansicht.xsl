@@ -1115,7 +1115,7 @@
                <xsl:text>}</xsl:text>
             </xsl:when>
             <xsl:otherwise>
-               <xsl:text>\input{../tex-inputs/latex-korrekturansicht-vorspann}
+               <xsl:text>\input{./tex-inputs/latex-korrekturansicht-vorspann}
 </xsl:text>
                <xsl:apply-templates select="text/back" mode="tex"/>
                <xsl:text>&#10;\section[</xsl:text>
@@ -1161,7 +1161,7 @@
             </xsl:otherwise>
          </xsl:choose>
       </root>
-      <xsl:text>\input{../tex-inputs/latex-korrekturansicht-abspann}
+      <xsl:text>\input{./tex-inputs/latex-korrekturansicht-abspann}
       </xsl:text>
    </xsl:template>
    <xsl:template match="teiHeader">
@@ -5512,7 +5512,7 @@
          </xsl:otherwise>
       </xsl:choose>
       <xsl:text>{</xsl:text>
-      <xsl:value-of select="concat('../tex-inputs/img/', replace(@url, '../resources/img', 'images'), '.jpg')"/>
+      <xsl:value-of select="concat('./tex-inputs/img/', replace(@url, './resources/img', 'images'), '.jpg')"/>
       <xsl:text>}</xsl:text>
    </xsl:template>
    <xsl:template match="list">
@@ -5704,10 +5704,10 @@
       <xsl:variable name="target-path" as="xs:string">
          <xsl:choose>
             <xsl:when test="ends-with(@target, '.xml')">
-               <xsl:value-of select="concat('../editions/', @target)"/>
+               <xsl:value-of select="concat('./editions/', @target)"/>
             </xsl:when>
             <xsl:otherwise>
-               <xsl:value-of select="concat('../editions/', @target, '.xml')"/>
+               <xsl:value-of select="concat('./editions/', @target, '.xml')"/>
             </xsl:otherwise>
          </xsl:choose>
       </xsl:variable>
