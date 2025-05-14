@@ -43,6 +43,13 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y texlive-lang-all texlive-fonts-extra texlive-science
           
+      - name: Install reledmac manually
+        run: |
+          mkdir -p ~/texmf/tex/latex/reledmac
+          curl -L https://mirrors.ctan.org/macros/latex/contrib/reledmac.zip -o reledmac.zip
+          unzip reledmac.zip -d ~/texmf/tex/latex/reledmac
+          texhash ~/texmf
+
       - name: Run XSLT Remove Namespaces
         run: |
           java -cp "saxon-he.jar:xmlresolver.jar" net.sf.saxon.Transform \
