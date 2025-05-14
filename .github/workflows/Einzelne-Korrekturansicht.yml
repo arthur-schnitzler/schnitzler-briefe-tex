@@ -1,4 +1,4 @@
-name: Einzelne Korrekturansicht
+name: PDF aus XML generieren
 
 on:
   workflow_dispatch:
@@ -9,74 +9,59 @@ on:
         default: 'L00001'
 
 jobs:
-  build:
+  build-pdf:
+    name: XML zu PDF
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
+    - name: Checkout Repository
+      uses: actions/checkout@v4
 
-      - name: Validate input format
-        run: |
-          if [[ ! "${{ github.event.inputs.letter_id }}" =~ ^L[0-9]{5}$ ]]; then
-            echo "❌ Ungültiges Format: muss L gefolgt von 5 Ziffern sein (z. B. L00001)"
-            exit 1
-          fi
+    - name: Install benötigte Pakete (LaTeX, Saxon, Java)
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y \
+          texlive-xetex texlive-humanities texlive-lang-all \
+          texlive-fonts-extra texlive-science \
+          openjdk-17-jre-headless unzip curl
 
-      - name: Download XML
-        run: |
-          curl -f -o "${{ github.event.inputs.letter_id }}.xml" \
-            "https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-briefe-arbeit/main/editions/${{ github.event.inputs.letter_id }}.xml"
+    - name: Saxon HE herunterladen
+      run: |
+        curl -L -o saxon.zip https://github.com/Saxonica/SaxonHE12/releases/download/SaxonHE-12.4/SaxonHE12-4J.zip
+        unzip saxon.zip
+        mv saxon-he-12.4.jar saxon-he.jar
 
-      - name: Install dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y texlive-xetex 
-    
-      - name: Install Saxon 12 + XMLResolver
-        run: |
-          curl -L -o saxon-he.jar https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/12.4/Saxon-HE-12.4.jar
-          curl -L -o xmlresolver.jar https://repo1.maven.org/maven2/org/xmlresolver/xmlresolver/4.5.0/xmlresolver-4.5.0.jar
+    - name: Lade XML-Datei
+      run: |
+        curl -L -o ${{ github.event.inputs.letter_id }}.xml \
+        https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-briefe-arbeit/main/editions/${{ github.event.inputs.letter_id }}.xml
 
-      - name: Install missing TeX packages
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y texlive-lang-all texlive-fonts-extra texlive-science
-          
-      - name: Install reledmac manually
-        run: |
-          mkdir -p ~/texmf/tex/latex/reledmac
-          curl -L https://mirrors.ctan.org/macros/latex/contrib/reledmac.zip -o reledmac.zip
-          unzip reledmac.zip -d ~/texmf/tex/latex/reledmac
-          texhash ~/texmf
+    - name: Wende XSLT 1/2 auf XML an
+      run: |
+        java -jar saxon-he.jar -s:${{ github.event.inputs.letter_id }}.xml \
+          -xsl:./xslt/einzel-1-remove-namespaces.xsl \
+          -o:step1.xml
 
-      - name: Run XSLT Remove Namespaces
-        run: |
-          java -cp "saxon-he.jar:xmlresolver.jar" net.sf.saxon.Transform \
-          -s:${{ github.event.inputs.letter_id }}.xml \
-          -xsl:xslt/einzel-1-remove-namespaces.xsl \
-          -o:tmp-nons.xml
-
-      - name: Run XSLT Transform to TeX
-        run: |
-          java -cp "saxon-he.jar:xmlresolver.jar" net.sf.saxon.Transform \
-          -s:tmp-nons.xml \
-          -xsl:xslt/einzel-2-Korrekturansicht.xsl \
+        java -jar saxon-he.jar -s:step1.xml \
+          -xsl:./xslt/einzel-2-Korrekturansicht.xsl \
           -o:${{ github.event.inputs.letter_id }}.tex
 
-      - name: Compile LaTeX (1st run)
-        run: xelatex -interaction=nonstopmode "${{ github.event.inputs.letter_id }}.tex"
+    - name: Fonts und Symbole holen
+      uses: GuillaumeFalourd/clone-github-repo-action@v2
+      with:
+        owner: 'arthur-schnitzler'
+        repository: 'schnitzler-briefe-tex-private-files'
+        access-token: ${{ secrets.SCHNITZLER_TEX_PRIVATE }}
 
-      - name: Compile LaTeX (2nd run)
-        run: xelatex -interaction=nonstopmode "${{ github.event.inputs.letter_id }}.tex"
+    - name: Kompiliere XeLaTeX (3x)
+      run: |
+        xelatex -interaction=nonstopmode ${{ github.event.inputs.letter_id }}.tex
+        xelatex -interaction=nonstopmode ${{ github.event.inputs.letter_id }}.tex
+        xelatex -interaction=nonstopmode ${{ github.event.inputs.letter_id }}.tex
 
-      - name: Compile LaTeX (3rd run)
-        run: xelatex -interaction=nonstopmode "${{ github.event.inputs.letter_id }}.tex"
-
-      - name: Upload PDF artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ github.event.inputs.letter_id }}-pdf
-          path: ${{ github.event.inputs.letter_id }}.pdf
-          compression-level: 6
-          overwrite: true
+    - name: Lade PDF als Artifact hoch
+      uses: actions/upload-artifact@v4
+      with:
+        name: ${{ github.event.inputs.letter_id }}.pdf
+        path: ${{ github.event.inputs.letter_id }}.pdf
+        overwrite: true
