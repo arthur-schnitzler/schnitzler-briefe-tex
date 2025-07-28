@@ -1,0 +1,35 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, 85.1.4198.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 2 Seiten, 775 Zeichen \newline {}Handschrift: , lateinische Kurrent \newline {}Schnitzler: mit Bleistift datiert: »22/4 97« \endgraf %
+\footnotesize \par \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symweiteredrucke }}}\weitereDrucke {Hermann Bahr, Arthur Schnitzler: \emph {Briefwechsel, Aufzeichnungen, Dokumente (1891–1931)}. Hg. Kurt Ifkovits und Martin Anton Müller. Göttingen: \emph {Wallstein} 2018, S. 141.} \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|7|0|1|7|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{gute
+Worte}}}{\textnormal
+{siehe
+Arthur
+Schnitzler
+an
+Hermann
+Bahr,
+22. 4. 1897.}}{C}{}{L}{edtxt@5}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|11|0|1|11|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{obscurité}}}{\textnormal
+{französisch,
+sinngemäß:
+Unerkannten}}{C}{}{L}{edtxt@6}%

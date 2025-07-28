@@ -1,0 +1,32 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}DLA, A:Schnitzler, HS.2009.87.\endgraf %
+\hangpara {4em}{0}XXXX PHYSDESC FEHLER\endgraf %
+\footnotesize \par \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symweiteredrucke }}}\weitereDrucke {1) Stefan Zweig: \emph {Briefe an Freunde}. Friedenthal, Richard. Frankfurt am Main: \emph {S. Fischer} 1978, S. 175–177.} \weitereDrucke {2) Stefan Zweig: \emph {Briefwechsel mit Hermann Bahr, Sigmund Freud, Rainer Maria Rilke und Arthur Schnitzler}. Hg. Jeffrey B. Berlin, Hans-Ulrich Lindken und Donald A. Prater. Frankfurt am Main: \emph {S. Fischer} 1987, S. 432–434.} \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|1|0|1|1|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{1927}}}{\textnormal
+{Schreibirrtum
+\textcolor
+{blue}{Zweigs},
+wie
+sich
+aus
+dem
+Inhalt
+und
+dem
+Antwortschreiben
+\textcolor
+{blue}{Schnitzlers}
+vom
+{XXXX
+ref}
+ergibt.}}{C}{}{L}{edtxt@1}%

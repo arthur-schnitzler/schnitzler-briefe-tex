@@ -1,0 +1,36 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}CUL, Schnitzler, B 118.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 1 Seite, 810 Zeichen \newline {}Handschrift: blaue Tinte, lateinische Kurrent\endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{kämen
+für
+einen
+Tag}}}{\textnormal
+{\textcolor
+{blue}{Schnitzler}
+folgte
+der
+Einladung
+und
+verbrachte
+den
+4. 8. 1923
+mit
+\textcolor
+{blue}{Romain
+Rolland}
+und
+\textcolor
+{blue}{Zweig}
+in
+\textcolor
+{pink}{Salzburg}.}}{C}{}{L}{edtxt@7}%

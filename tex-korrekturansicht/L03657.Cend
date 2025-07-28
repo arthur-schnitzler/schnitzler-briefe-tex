@@ -1,0 +1,69 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}CUL, Schnitzler, B 118.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 2 Seiten, 638 Zeichen \newline {}Handschrift: schwarze Tinte, lateinische Kurrent \newline {}Schnitzler: 1) mit Bleistift »\textsc {Zweig}« 2) mit rotem Buntstift eine Unterstreichung\endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|5|0|1|5|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{zu
+Ihnen
+kommen}}}{\textnormal
+{vgl.
+A. S.:
+\emph
+{Tagebuch},
+21. 1. 1916.}}{C}{}{L}{edtxt@3}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|8|0|1|8|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{in
+Sachen
+Rilkes}}}{\textnormal
+{Beim
+Treffen
+am
+21. 1. 1916
+unterbreitete
+\textcolor
+{blue}{Zweig}{
+}\textcolor
+{blue}{Schnitzler}
+den
+Vorschlag
+einer
+Eingabe
+beim
+zuständigen
+Minister.
+Also
+Folge
+der
+Aktivitäten
+\textcolor
+{blue}{Zweigs}
+wurde
+\textcolor
+{blue}{Rilke}
+nach
+der
+Grundausbildung
+zu
+\textcolor
+{blue}{Zweig}
+ins
+\emph
+{\textcolor
+{brown}{Kriegsarchiv}}
+versetzt.
+}}{C}{}{L}{edtxt@4}%

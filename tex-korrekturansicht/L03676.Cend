@@ -1,0 +1,53 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}CUL, Schnitzler, B 118.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 1 Seite, 326 Zeichen \newline {}Handschrift: schwarze Tinte, lateinische Kurrent \newline {}Schnitzler: mit rotem Buntstift eine Unterstreichung \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|2|0|1|3|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Dozent
+…
+Literatur}}}{\textnormal
+{Diese
+Position
+hatte
+\textcolor
+{blue}{Jacob
+Isaacs}
+von
+1924
+bis
+1928
+am
+\emph
+{\textcolor
+{brown}{King’s
+College}}
+inne,
+so
+dass
+das
+vorliegende
+Schreiben
+in
+diesem
+Zeitraum
+gelaufen
+sein
+dürfte.
+\textcolor
+{blue}{Schnitzler}
+erwähnt
+kein
+Treffen
+im
+\emph
+{\textcolor
+{green}{Tagebuch}}.
+}}{C}{}{L}{edtxt@4}%

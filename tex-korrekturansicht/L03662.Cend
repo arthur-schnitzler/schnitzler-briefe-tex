@@ -1,0 +1,44 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}CUL, Schnitzler, B 118.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 4 Seiten, 2629 Zeichen \newline {}Handschrift: blaue Tinte, lateinische Kurrent \newline {}Schnitzler: 1) mit Bleistift »\textsc {Zweig}« 2) mit rotem Buntstift zwei Unterstreichungen\endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{Brief}}}{\textnormal
+{{XXXX
+ref}
+Brief
+vom
+18.8.1917
+XXXX}}{C}{}{L}{edtxt@2}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{000|000|000|000|000|000|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{in
+paar
+Tagen}}}{\textnormal
+{Zum
+3. 10. 1917
+vermerkte
+\textcolor
+{blue}{Schnitzler}
+den
+Abschluss
+der
+Lektüre
+von
+\emph
+{\textcolor
+{green}{Jeremias}}.}}{C}{}{L}{edtxt@14}%

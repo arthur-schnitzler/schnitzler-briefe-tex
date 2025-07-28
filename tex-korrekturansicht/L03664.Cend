@@ -1,0 +1,48 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}CUL, Schnitzler, B 118.\endgraf %
+\hangpara {4em}{0}Briefkarte, 1 Blatt, 1 Seite, 408 Zeichen \newline {}Handschrift: lila Tinte, lateinische Kurrent\endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|5|0|1|5|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{wohl
+für
+immer}}}{\textnormal
+{Am
+29. 4. 1919
+verlegte
+\textcolor
+{blue}{Zweig}
+seinen
+Wohnsitz
+dauerhaft
+in
+das
+\textcolor
+{pink}{Paschinger
+Schlössl}
+in
+\textcolor
+{pink}{Salzburg}.}}{C}{}{L}{edtxt@3}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|6|0|1|6|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{gesehen}}}{\textnormal
+{Das
+gewünschte
+Treffen
+fand
+am
+22. 4. 1919
+statt.}}{C}{}{L}{edtxt@4}%
