@@ -6,7 +6,7 @@
 %\usepackage[textwidth=80mm, layoutwidth=170mm, paperheight =297mm, paperwidth  =210mm, layoutvoffset= 20mm,layouthoffset= 20mm]{geometry}
 %\usepackage[paperheight =297mm, paperwidth  =210mm, layoutheight=230mm, layoutwidth=158mm, layoutvoffset= 20mm, layouthoffset= 20mm, textwidth=150mm, textheight=185mm, showcrop=false]{geometry}
 %sepackage[paperheight=230mm, paperwidth=138mm, textwidth=100mm, textheight=185mm]{geometry}
- \usepackage[usenames, dvipsnames]{xcolor}
+ \usepackage[dvipsnames]{xcolor}
 \usepackage{scrlayer-scrpage}
 \usepackage{hyphenat}
 \usepackage{fontspec}
@@ -145,7 +145,7 @@ BoldItalicFont=Hoftype_-_SinaNova-BoldItalic.otf
 \doublehyphendemerits=1000000 % das hier verhindert zu viele aufeinanderfolgende Trennstriche am Zeilenende
 
 
-\include{tikz-include}
+\input{../tex-inputs/tikz-include}
 
 \def\myloop#1#2#3{%
     #3%
@@ -209,7 +209,7 @@ BoldItalicFont=Hoftype_-_SinaNova-BoldItalic.otf
 
 % Silbentrennung
 \selectlanguage{ngerman}
-\include{hyphenation}
+\input{../tex-inputs/hyphenation}
 
 
 
@@ -421,6 +421,7 @@ BoldItalicFont=Hoftype_-_SinaNova-BoldItalic.otf
                \newcommand{\pwu}[1]{#1?}
  \newcommand{\range}[2]{{\def\pw##1{##1}#1}--#2}
 
+
 \newcommand{\buch}[1]{#1}
 
 
@@ -434,6 +435,9 @@ BoldItalicFont=Hoftype_-_SinaNova-BoldItalic.otf
 
 \newcommand\briefsenderindex[1]{\sindex[briefe-out]{#1}}
 \newcommand\briefempfaengerindex[1]{\sindex[briefe-out]{#1}}
+\renewcommand\briefempfaengerindex[1]{\sindex[briefe-out]{#1}}
+\renewcommand\briefempfaengerindex[1]{\sindex[briefe-out]{#1}}
+
 
 \newcommand\buchabdruck[1]{\sindex[buch-abdruck]{#1}}
 \renewcommand\buchabdruck[1]{}
@@ -685,22 +689,30 @@ BoldItalicFont=Hoftype_-_SinaNova-BoldItalic.otf
 \newcommand\pwindex[1]{{\sindex[pw]{#1}}}
 \newcommand\oindex[1]{{\sindex[pw]{#1}}}
 \newcommand\orgindex[1]{{\sindex[pw]{#1}}}
+\newcommand\eventindex[1]{{\sindex[pw]{#1}}}
 
+
+\renewcommand\pwindex[1]{{{\sindex[pw]{#1}}}}
 \renewcommand\oindex[1]{{{\sindex[pw]{#1}}}}
 \renewcommand\orgindex[1]{{{\sindex[pw]{#1}}}}
-
-
-
-% INDEX
-
-%\renewcommand\pwindex[1]{}
-%\renewcommand\oindex[1]{}
-%\renewcommand\orgindex[1]{}
-%\renewcommand\buchabdruck[1]{}
+\renewcommand\eventindex[1]{{{\sindex[pw]{#1}}}}
 
 
 \newcommand\url[1]{\mbox{#1}}
 \renewcommand\ngermanhyphenmins{33}
+
+% Korrektur für sichtbare Index-Einträge - mache \index unsichtbar
+\makeatletter
+\let\original@index\index
+\renewcommand{\index}[2][]{\@bsphack\original@index[#1]{#2}\@esphack}
+\makeatother
+
+% Zeilennummern statt Seitennummern für sindex anzeigen - FUNKTIONIERT NOCH NICHT
+% Rückkehr zur ursprünglichen sindex-Definition, Konfiguration erforderlich
+\makeatletter
+% Verwende die originale sindex-Definition von reledmac
+% Benötigt weitere Forschung für korrekte Zeilennummernreferenzen
+\makeatother
 
 \makeatletter
 \newcommand*{\geminationm}{$\overline{\hbox{m}}\m@th$}
@@ -745,5 +757,3 @@ BoldItalicFont=Hoftype_-_SinaNova-BoldItalic.otf
 \renewcommand*{\ledlsnotefontsetup}{\scriptsize\sffamily}% left
 \renewcommand*{\ledrsnotefontsetup}{\scriptsize\sffamily}% left
 \thispagestyle{empty} 
-
-  

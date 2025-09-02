@@ -133,3 +133,7 @@ dmypy.json
 
 
 schnitzler-briefe-tex-private-files/
+
+# Claude Code files
+CLAUDE.md
+.claude
