@@ -100,6 +100,9 @@ jobs:
             
             {
               echo "Processing $filename at $(date)"
+              echo "Source file: data-repo/$file"
+              echo "Checking if source file exists:"
+              ls -la "data-repo/$file" || echo "Source file not found!"
               echo "=========================="
               
               # Step 1: XSLT transformation
