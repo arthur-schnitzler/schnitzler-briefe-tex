@@ -171,11 +171,7 @@ jobs:
         else
           # Create commit message with summary
           SUMMARY=$(cat processing-logs/xslt-summary.log)
-          git commit -m "Auto-generate LaTeX files from XML changes
-
-$SUMMARY
-
-🤖 Generated with GitHub Actions"
+          git commit -m "Auto-generate LaTeX files from XML changes - $SUMMARY - 🤖 Generated with GitHub Actions"
           git push
         fi
 
