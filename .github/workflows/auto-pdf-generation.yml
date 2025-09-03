@@ -1,4 +1,4 @@
-name: Auto PDF Generation from XML Changes
+name: Auto LaTeX Generation from XML Changes
 
 on:
   repository_dispatch:
@@ -87,92 +87,38 @@ jobs:
         SUCCESS=0
         FAILED=0
         
-        # Process each changed file
+        # Phase 1: XSLT Transformations only
+        echo "=== Phase 1: XSLT Transformations ==="
         while IFS= read -r file; do
           if [ -n "$file" ]; then
             TOTAL=$((TOTAL + 1))
             filename=$(basename "$file" .xml)
             
-            echo "=== Processing $filename ==="
+            echo "=== Transforming $filename ==="
             
             # Create log file for this processing
             LOG_FILE="processing-logs/${filename}.log"
             
             {
-              echo "Processing $filename at $(date)"
+              echo "XSLT transformation for $filename at $(date)"
               echo "Source file: data-repo/$file"
               echo "Checking if source file exists:"
               ls -la "data-repo/$file" || echo "Source file not found!"
               echo "=========================="
               
-              # Step 1: XSLT transformation
-              echo "Step 1: XSLT transformation"
+              # XSLT transformation only
+              echo "XSLT transformation"
               if java -jar saxon-he-12.4.jar \
                 -s:"data-repo/$file" \
                 -xsl:xslt/einzel-pdfAnsicht-nach-TeX.xsl \
                 -o:"tex-leseansicht/${filename}.tex"; then
                 echo "✓ XSLT transformation successful"
+                SUCCESS=$((SUCCESS + 1))
               else
                 echo "✗ XSLT transformation failed"
                 echo "FAILED: $filename - XSLT transformation" >> processing-logs/summary.log
                 FAILED=$((FAILED + 1))
-                continue
               fi
-              
-              # Step 2: First XeLaTeX run
-              echo "Step 2: First XeLaTeX compilation"
-              cd tex-leseansicht
-              if xelatex -interaction=nonstopmode "${filename}.tex" > /dev/null 2>&1; then
-                echo "✓ First XeLaTeX run successful"
-              else
-                echo "✗ First XeLaTeX run failed"
-                cd ..
-                echo "FAILED: $filename - First XeLaTeX run" >> processing-logs/summary.log
-                FAILED=$((FAILED + 1))
-                continue
-              fi
-              
-              # Step 3: Splitindex processing
-              echo "Step 3: Splitindex processing"
-              if ls "${filename}"*.idx 1> /dev/null 2>&1; then
-                if splitindex "${filename}" > /dev/null 2>&1; then
-                  echo "✓ Splitindex processing successful"
-                else
-                  echo "✗ Splitindex processing failed"
-                  cd ..
-                  echo "FAILED: $filename - Splitindex processing" >> processing-logs/summary.log
-                  FAILED=$((FAILED + 1))
-                  continue
-                fi
-              else
-                echo "! No index files found, skipping splitindex"
-              fi
-              
-              # Step 4: Final XeLaTeX run
-              echo "Step 4: Final XeLaTeX compilation"
-              if xelatex -interaction=nonstopmode "${filename}.tex" > /dev/null 2>&1; then
-                echo "✓ Final XeLaTeX run successful"
-              else
-                echo "✗ Final XeLaTeX run failed"
-                cd ..
-                echo "FAILED: $filename - Final XeLaTeX run" >> processing-logs/summary.log
-                FAILED=$((FAILED + 1))
-                continue
-              fi
-              
-              # Step 5: Move PDF to output directory
-              if [ -f "${filename}.pdf" ]; then
-                mv "${filename}.pdf" "../pdf-leseansicht/"
-                echo "✓ PDF moved to pdf-leseansicht/"
-                echo "SUCCESS: $filename" >> ../processing-logs/summary.log
-                SUCCESS=$((SUCCESS + 1))
-              else
-                echo "✗ PDF file not found"
-                echo "FAILED: $filename - PDF not generated" >> ../processing-logs/summary.log
-                FAILED=$((FAILED + 1))
-              fi
-              
-              cd ..
               
             } >> "$LOG_FILE" 2>&1
             
@@ -181,15 +127,19 @@ jobs:
           fi
         done < changed_files.txt
         
-        # Create summary
-        echo "=== PROCESSING SUMMARY ===" > processing-logs/final-summary.log
-        echo "Total files processed: $TOTAL" >> processing-logs/final-summary.log
-        echo "Successful: $SUCCESS" >> processing-logs/final-summary.log
-        echo "Failed: $FAILED" >> processing-logs/final-summary.log
-        echo "Date: $(date)" >> processing-logs/final-summary.log
+        # Create XSLT summary
+        echo "=== XSLT TRANSFORMATION SUMMARY ===" > processing-logs/xslt-summary.log
+        echo "Total files processed: $TOTAL" >> processing-logs/xslt-summary.log
+        echo "Successful transformations: $SUCCESS" >> processing-logs/xslt-summary.log
+        echo "Failed transformations: $FAILED" >> processing-logs/xslt-summary.log
+        echo "Date: $(date)" >> processing-logs/xslt-summary.log
         
         # Show summary
-        cat processing-logs/final-summary.log
+        cat processing-logs/xslt-summary.log
+        
+        # List generated LaTeX files
+        echo "Generated LaTeX files:"
+        ls -la tex-leseansicht/*.tex | head -10
 
     - name: Clean up auxiliary files
       if: steps.changes.outputs.has_changes == 'true'
@@ -205,14 +155,13 @@ jobs:
         find tex-leseansicht -name "*.fls" -delete
         find tex-leseansicht -name "*.fdb_latexmk" -delete
 
-    - name: Commit and push results
+    - name: Commit and push LaTeX files
       if: steps.changes.outputs.has_changes == 'true'
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         
-        # Add generated files
-        git add pdf-leseansicht/
+        # Add generated LaTeX files and logs
         git add tex-leseansicht/
         git add processing-logs/
         
@@ -221,8 +170,12 @@ jobs:
           echo "No changes to commit"
         else
           # Create commit message with summary
-          SUMMARY=$(cat processing-logs/final-summary.log)
-          git commit -m "Auto-generate PDFs from XML changes - $SUMMARY - 🤖 Generated with GitHub Actions"
+          SUMMARY=$(cat processing-logs/xslt-summary.log)
+          git commit -m "Auto-generate LaTeX files from XML changes
+
+$SUMMARY
+
+🤖 Generated with GitHub Actions"
           git push
         fi
 
