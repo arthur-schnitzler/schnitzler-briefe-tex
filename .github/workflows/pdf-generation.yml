@@ -35,10 +35,23 @@ jobs:
         FAILED=0
         
         # Get list of LaTeX files
-        if [ ! -d "tex-leseansicht" ] || [ -z "$(ls -A tex-leseansicht/*.tex 2>/dev/null)" ]; then
-          echo "No LaTeX files found in tex-leseansicht/"
-          exit 0
+        echo "Checking for LaTeX files in tex-leseansicht/"
+        echo "Directory contents:"
+        ls -la tex-leseansicht/ || echo "tex-leseansicht directory not found"
+        
+        if [ ! -d "tex-leseansicht" ]; then
+          echo "❌ tex-leseansicht directory does not exist"
+          exit 1
         fi
+        
+        if [ -z "$(ls -A tex-leseansicht/*.tex 2>/dev/null)" ]; then
+          echo "❌ No LaTeX files found in tex-leseansicht/"
+          echo "Available files in tex-leseansicht/:"
+          ls -la tex-leseansicht/ || echo "Directory is empty or inaccessible"
+          exit 1
+        fi
+        
+        echo "✓ Found LaTeX files, starting processing..."
         
         # Process each LaTeX file
         for texfile in tex-leseansicht/*.tex; do
@@ -51,104 +64,85 @@ jobs:
             # Create log file for this processing
             LOG_FILE="processing-logs/${filename}-pdf.log"
             
-            # Process in a subshell to isolate failures
-            (
+            # Initialize processing status
+            PROCESS_SUCCESS=0
+            
+            # Process each file individually with full error isolation
+            echo "Starting PDF generation for $filename..." > "$LOG_FILE"
+            
+            if (
+              exec >> "$LOG_FILE" 2>&1
+              set -e  # Exit on error within this subshell only
+              
               echo "PDF generation for $filename at $(date)"
               echo "LaTeX file: $texfile"
+              echo "Working directory: $(pwd)"
               echo "=========================="
               
               # Change to tex-leseansicht directory
               cd tex-leseansicht
+              echo "Changed to: $(pwd)"
               
               # Check file exists
               if [ ! -f "${filename}.tex" ]; then
                 echo "✗ LaTeX file not found: ${filename}.tex"
-                echo "FAILED: $filename - LaTeX file missing" >> ../processing-logs/summary.log
-                exit 1
+                echo "Available files:"
+                ls -la *.tex | head -5
+                false
               fi
               
               echo "LaTeX file size: $(wc -l < ${filename}.tex) lines"
+              echo "First few lines of LaTeX file:"
+              head -5 "${filename}.tex"
               
               # Step 1: First XeLaTeX run
               echo "Step 1: First XeLaTeX compilation"
-              if timeout 300 xelatex -interaction=nonstopmode "${filename}.tex" 2>&1 | tee xelatex1.log; then
-                echo "✓ First XeLaTeX run successful"
-              else
-                echo "✗ First XeLaTeX run failed"
-                echo "XeLaTeX error output:"
-                tail -30 xelatex1.log | grep -E "(Error|error|!|Fatal)" || echo "No specific errors found"
-                echo "FAILED: $filename - First XeLaTeX run" >> ../processing-logs/summary.log
-                exit 1
-              fi
+              timeout 300 xelatex -interaction=nonstopmode "${filename}.tex"
+              echo "✓ First XeLaTeX run completed"
               
               # Step 2: Splitindex processing (if index files exist)
               echo "Step 2: Splitindex processing"
               if ls "${filename}"*.idx 1> /dev/null 2>&1; then
                 echo "Found index files, running splitindex..."
-                if timeout 60 splitindex "${filename}" 2>&1 | tee splitindex.log; then
-                  echo "✓ Splitindex processing successful"
-                else
-                  echo "✗ Splitindex processing failed"
-                  echo "Splitindex error output:"
-                  tail -10 splitindex.log
-                  echo "WARNING: $filename - Splitindex failed, continuing anyway" >> ../processing-logs/summary.log
-                fi
+                timeout 60 splitindex "${filename}" || echo "Splitindex failed, continuing..."
+                echo "✓ Splitindex processing attempted"
               else
                 echo "! No index files found, skipping splitindex"
               fi
               
-              # Step 3: Second XeLaTeX run (for references and index)
-              echo "Step 3: Second XeLaTeX compilation"
-              if timeout 300 xelatex -interaction=nonstopmode "${filename}.tex" 2>&1 | tee xelatex2.log; then
-                echo "✓ Second XeLaTeX run successful"
-              else
-                echo "✗ Second XeLaTeX run failed"
-                echo "XeLaTeX error output:"
-                tail -30 xelatex2.log | grep -E "(Error|error|!|Fatal)" || echo "No specific errors found"
-                echo "FAILED: $filename - Second XeLaTeX run" >> ../processing-logs/summary.log
-                exit 1
-              fi
+              # Step 3: Second XeLaTeX run
+              echo "Step 3: Second XeLaTeX compilation"  
+              timeout 300 xelatex -interaction=nonstopmode "${filename}.tex"
+              echo "✓ Second XeLaTeX run completed"
               
-              # Step 4: Third XeLaTeX run (for final layout)
+              # Step 4: Final XeLaTeX run
               echo "Step 4: Final XeLaTeX compilation"
-              if timeout 300 xelatex -interaction=nonstopmode "${filename}.tex" 2>&1 | tee xelatex3.log; then
-                echo "✓ Final XeLaTeX run successful"
-              else
-                echo "✗ Final XeLaTeX run failed"
-                echo "XeLaTeX error output:"
-                tail -30 xelatex3.log | grep -E "(Error|error|!|Fatal)" || echo "No specific errors found"
-                echo "FAILED: $filename - Final XeLaTeX run" >> ../processing-logs/summary.log
-                exit 1
-              fi
+              timeout 300 xelatex -interaction=nonstopmode "${filename}.tex"  
+              echo "✓ Final XeLaTeX run completed"
               
               # Step 5: Check and move PDF
               if [ -f "${filename}.pdf" ]; then
-                # Check PDF file size
-                PDF_SIZE=$(stat -c%s "${filename}.pdf" 2>/dev/null || echo "0")
+                PDF_SIZE=$(stat -c%s "${filename}.pdf" 2>/dev/null || stat -f%z "${filename}.pdf" 2>/dev/null || echo "0")
                 if [ "$PDF_SIZE" -gt 1000 ]; then
                   mv "${filename}.pdf" "../pdf-leseansicht/"
                   echo "✓ PDF created and moved (${PDF_SIZE} bytes)"
                   echo "SUCCESS: $filename" >> ../processing-logs/summary.log
                 else
                   echo "✗ PDF too small or corrupted (${PDF_SIZE} bytes)"
-                  echo "FAILED: $filename - PDF corrupted" >> ../processing-logs/summary.log
-                  exit 1
+                  false
                 fi
               else
                 echo "✗ PDF file not found"
-                echo "FAILED: $filename - PDF not generated" >> ../processing-logs/summary.log
-                exit 1
+                false
               fi
               
-            ) >> "$LOG_FILE" 2>&1
-            
-            # Check if processing succeeded
-            if [ $? -eq 0 ]; then
+            ); then
               SUCCESS=$((SUCCESS + 1))
               echo "✓ Successfully processed $filename (Success: $SUCCESS, Failed: $FAILED, Total: $TOTAL)"
             else
               FAILED=$((FAILED + 1))
               echo "✗ Failed to process $filename (Success: $SUCCESS, Failed: $FAILED, Total: $TOTAL)"
+              echo "FAILED: $filename - Check log for details" >> processing-logs/summary.log
             fi
             
             # Clean up auxiliary files for this file
@@ -177,8 +171,18 @@ jobs:
         echo "Generated PDFs:"
         ls -lah pdf-leseansicht/*.pdf 2>/dev/null | head -20 || echo "No PDFs generated"
         
-        # Even if some files failed, continue to commit successful ones
-        echo "Proceeding with commit of successful PDFs..."
+        # Show final results
+        echo ""
+        echo "=== FINAL RESULTS ==="
+        echo "Processed: $TOTAL files"
+        echo "Successful: $SUCCESS files"  
+        echo "Failed: $FAILED files"
+        
+        if [ $SUCCESS -gt 0 ]; then
+          echo "✓ Proceeding with commit of successful PDFs..."
+        else
+          echo "⚠️  No successful PDFs generated, but continuing for logs..."
+        fi
 
     - name: Commit and push PDFs
       run: |
