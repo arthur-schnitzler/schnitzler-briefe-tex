@@ -219,13 +219,8 @@ jobs:
           echo "No changes to commit"
         else
           # Create commit message with summary
-          COMMIT_MSG="Auto-generate PDFs from XML changes
-
-$(cat processing-logs/final-summary.log)
-
-🤖 Generated with GitHub Actions"
-          
-          git commit -m "$COMMIT_MSG"
+          SUMMARY=$(cat processing-logs/final-summary.log)
+          git commit -m "Auto-generate PDFs from XML changes - $SUMMARY - 🤖 Generated with GitHub Actions"
           git push
         fi
 
