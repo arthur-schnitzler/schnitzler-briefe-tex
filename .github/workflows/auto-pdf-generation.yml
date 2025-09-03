@@ -106,7 +106,7 @@ jobs:
               echo "Step 1: XSLT transformation"
               if java -jar saxon-he-12.4.jar \
                 -s:"data-repo/$file" \
-                -xsl:xslt/einzel-pdfAnsicht-nach-tex.xsl \
+                -xsl:xslt/einzel-pdfAnsicht-nach-TeX.xsl \
                 -o:"tex-leseansicht/${filename}.tex"; then
                 echo "✓ XSLT transformation successful"
               else
