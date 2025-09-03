@@ -1,0 +1,129 @@
+name: Debug PDF Generation - Single File
+
+on:
+  workflow_dispatch:
+    inputs:
+      filename:
+        description: 'LaTeX filename to test (without .tex)'
+        required: false
+        default: 'L00001'
+
+jobs:
+  debug-single-pdf:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install TeXLive
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y texlive-full
+        sudo apt-get install -y xindy
+
+    - name: Debug LaTeX file and environment
+      run: |
+        FILENAME="${{ github.event.inputs.filename || 'L00001' }}"
+        echo "=== DEBUG INFORMATION ==="
+        echo "Testing file: $FILENAME"
+        echo "Working directory: $(pwd)"
+        
+        echo ""
+        echo "=== DIRECTORY STRUCTURE ==="
+        find . -name "*.tex" -o -name "*.xsl" | head -20
+        
+        echo ""
+        echo "=== TEX-LESEANSICHT CONTENTS ==="
+        ls -la tex-leseansicht/ || echo "Directory not found"
+        
+        echo ""
+        echo "=== TEX-INPUTS CONTENTS ==="
+        ls -la tex-inputs/ || echo "Directory not found"
+        
+        if [ -f "tex-leseansicht/${FILENAME}.tex" ]; then
+          echo ""
+          echo "=== LATEX FILE ANALYSIS ==="
+          echo "File size: $(wc -l < tex-leseansicht/${FILENAME}.tex) lines"
+          echo "File encoding: $(file tex-leseansicht/${FILENAME}.tex)"
+          
+          echo ""
+          echo "=== FIRST 20 LINES ==="
+          head -20 "tex-leseansicht/${FILENAME}.tex"
+          
+          echo ""
+          echo "=== INCLUDES AND INPUTS ==="
+          grep -n "\\\\input\\|\\\\include" "tex-leseansicht/${FILENAME}.tex" || echo "No includes found"
+          
+          echo ""
+          echo "=== PACKAGE USAGE ==="
+          grep -n "\\\\usepackage" "tex-leseansicht/${FILENAME}.tex" | head -10 || echo "No packages found"
+          
+        else
+          echo "❌ LaTeX file tex-leseansicht/${FILENAME}.tex not found"
+          exit 1
+        fi
+
+    - name: Test XeLaTeX compilation with full output
+      run: |
+        FILENAME="${{ github.event.inputs.filename || 'L00001' }}"
+        cd tex-leseansicht
+        
+        echo "=== XELATEX TEST COMPILATION ==="
+        echo "Current directory: $(pwd)"
+        echo "LaTeX file: ${FILENAME}.tex"
+        
+        echo ""
+        echo "=== XELATEX VERSION ==="
+        xelatex --version
+        
+        echo ""
+        echo "=== AVAILABLE FONTS (sample) ==="
+        fc-list | head -10
+        
+        echo ""
+        echo "=== COMPILATION ATTEMPT ==="
+        echo "Running: xelatex -interaction=nonstopmode ${FILENAME}.tex"
+        
+        # Run XeLaTeX with full error output
+        if timeout 300 xelatex -interaction=nonstopmode "${FILENAME}.tex"; then
+          echo "✓ XeLaTeX compilation successful"
+          
+          if [ -f "${FILENAME}.pdf" ]; then
+            PDF_SIZE=$(stat -c%s "${FILENAME}.pdf" 2>/dev/null || stat -f%z "${FILENAME}.pdf" 2>/dev/null || echo "0")
+            echo "✓ PDF generated successfully (${PDF_SIZE} bytes)"
+            ls -la "${FILENAME}.pdf"
+          else
+            echo "❌ PDF file not found after successful compilation"
+          fi
+        else
+          echo "❌ XeLaTeX compilation failed"
+        fi
+        
+        echo ""
+        echo "=== LOG FILE ANALYSIS ==="
+        if [ -f "${FILENAME}.log" ]; then
+          echo "Log file exists ($(wc -l < ${FILENAME}.log) lines)"
+          echo ""
+          echo "=== ERRORS FROM LOG ==="
+          grep -i "error\\|fatal\\|!" "${FILENAME}.log" | head -20 || echo "No explicit errors found"
+          echo ""
+          echo "=== WARNINGS FROM LOG ==="
+          grep -i "warning" "${FILENAME}.log" | head -10 || echo "No warnings found"
+          echo ""
+          echo "=== LAST 50 LINES OF LOG ==="
+          tail -50 "${FILENAME}.log"
+        else
+          echo "No log file generated"
+        fi
+
+    - name: Upload debug artifacts
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: debug-single-pdf-${{ github.event.inputs.filename || 'L00001' }}
+        path: |
+          tex-leseansicht/*.log
+          tex-leseansicht/*.aux
+          tex-leseansicht/*.pdf
+        retention-days: 7
