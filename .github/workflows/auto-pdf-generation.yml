@@ -40,7 +40,6 @@ jobs:
         if [ ! -f saxon-he-12.4.jar ]; then
           wget https://github.com/Saxonica/Saxon-HE/releases/download/SaxonHE12-4/SaxonHE12-4J.zip
           unzip SaxonHE12-4J.zip
-          mv saxon-he-12.4.jar ./
         fi
 
     - name: Get changed files from payload
