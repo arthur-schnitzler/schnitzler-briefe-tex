@@ -1,0 +1,60 @@
+#!/bin/bash
+
+# XeLaTeX + Splitindex Engine for TexShop
+# Compiles LaTeX documents with XeLaTeX and processes split indices
+# Place this file in ~/Library/TeXShop/Engines/ and make it executable
+
+# Get the base filename without extension
+filename="$1"
+basename="${filename%.*}"
+
+# Change to the directory containing the .tex file
+cd "$(dirname "$filename")"
+
+echo "=== XeLaTeX + Splitindex Compilation ==="
+echo "Processing: $(basename "$filename")"
+echo ""
+
+# First XeLaTeX run
+echo "--- First XeLaTeX run ---"
+xelatex -interaction=nonstopmode "$(basename "$filename")"
+if [ $? -ne 0 ]; then
+    echo "ERROR: First XeLaTeX run failed"
+    exit 1
+fi
+
+# Process split indices if .idx files exist
+if ls "$(basename "$basename")"*.idx 1> /dev/null 2>&1; then
+    echo ""
+    echo "--- Processing split indices ---"
+    splitindex "$(basename "$basename")"
+    if [ $? -ne 0 ]; then
+        echo "ERROR: Splitindex processing failed"
+        exit 1
+    fi
+else
+    echo ""
+    echo "--- No index files found, skipping splitindex ---"
+fi
+
+# Second XeLaTeX run (for references and indices)
+echo ""
+echo "--- Second XeLaTeX run ---"
+xelatex -interaction=nonstopmode "$(basename "$filename")"
+if [ $? -ne 0 ]; then
+    echo "ERROR: Second XeLaTeX run failed"
+    exit 1
+fi
+
+# Third XeLaTeX run (for final layout)
+echo ""
+echo "--- Third XeLaTeX run ---"
+xelatex -interaction=nonstopmode "$(basename "$filename")"
+if [ $? -ne 0 ]; then
+    echo "ERROR: Third XeLaTeX run failed"
+    exit 1
+fi
+
+echo ""
+echo "=== Compilation completed successfully ==="
+echo "Output: $(basename "$basename").pdf"
