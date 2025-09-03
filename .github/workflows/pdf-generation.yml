@@ -17,6 +17,13 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         fetch-depth: 1
 
+    - name: Clone private repository with fonts and symbols
+      uses: GuillaumeFalourd/clone-github-repo-action@v2
+      with:
+          owner: 'arthur-schnitzler'
+          repository: 'schnitzler-briefe-tex-private-files'
+          access-token: ${{ secrets.SCHNITZLER_TEX_PRIVATE }}
+
     - name: Install TeXLive
       run: |
         sudo apt-get update
