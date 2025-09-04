@@ -278,11 +278,49 @@ jobs:
           BATCH_NUM=${{ matrix.batch }}
           if [ -f "processing-logs/pdf-summary-batch-$BATCH_NUM.log" ]; then
             SUMMARY=$(cat processing-logs/pdf-summary-batch-$BATCH_NUM.log | grep -E "(Total|Successful|Failed|Success rate)" | tr '\n' '; ')
-            git commit -m "Auto-generate PDFs - Batch $BATCH_NUM - $SUMMARY - 🤖 Generated with GitHub Actions"
+            COMMIT_MSG="Auto-generate PDFs - Batch $BATCH_NUM - $SUMMARY - 🤖 Generated with GitHub Actions"
           else
-            git commit -m "Auto-generate PDFs - Batch $BATCH_NUM completed - 🤖 Generated with GitHub Actions"
+            COMMIT_MSG="Auto-generate PDFs - Batch $BATCH_NUM completed - 🤖 Generated with GitHub Actions"
           fi
-          git push
+          
+          git commit -m "$COMMIT_MSG"
+          
+          # Push with retry logic to handle parallel commits
+          MAX_RETRIES=10
+          RETRY_COUNT=0
+          PUSH_SUCCESS=false
+          
+          while [ $RETRY_COUNT -lt $MAX_RETRIES ] && [ "$PUSH_SUCCESS" = false ]; do
+            echo "Push attempt $((RETRY_COUNT + 1)) for batch $BATCH_NUM"
+            
+            if git push; then
+              echo "✓ Successfully pushed batch $BATCH_NUM"
+              PUSH_SUCCESS=true
+            else
+              echo "Push failed for batch $BATCH_NUM, attempting pull and rebase..."
+              RETRY_COUNT=$((RETRY_COUNT + 1))
+              
+              if [ $RETRY_COUNT -lt $MAX_RETRIES ]; then
+                # Pull with rebase to handle conflicts
+                git pull --rebase origin main || {
+                  echo "Rebase failed, trying merge strategy..."
+                  git rebase --abort 2>/dev/null || true
+                  git pull origin main
+                }
+                
+                # Random delay to reduce collision probability (1-30 seconds)
+                DELAY=$((RANDOM % 30 + 1))
+                echo "Waiting ${DELAY} seconds before retry..."
+                sleep $DELAY
+              fi
+            fi
+          done
+          
+          if [ "$PUSH_SUCCESS" = false ]; then
+            echo "❌ Failed to push batch $BATCH_NUM after $MAX_RETRIES attempts"
+            echo "This may indicate a persistent conflict that needs manual resolution."
+            exit 1
+          fi
         fi
 
     - name: Upload processing logs as artifacts
