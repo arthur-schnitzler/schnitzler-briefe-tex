@@ -1,5 +1,4 @@
-name: Auto LaTeX Generation from XML Changes
-
+name: Erzeuge TeX-Dateien aus XML-Änderungen
 on:
   repository_dispatch:
     types: [xml-files-changed]

@@ -1,4 +1,4 @@
-name: PDF Generation from LaTeX Files
+name: Erzeuge PDFs mit XeLaTeX
 
 on:
   workflow_dispatch: # Allow manual trigger
@@ -7,8 +7,64 @@ on:
       - 'tex-leseansicht/*.tex'
 
 jobs:
-  generate-pdfs:
+  setup:
     runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.generate-matrix.outputs.matrix }}
+      total-batches: ${{ steps.generate-matrix.outputs.total-batches }}
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 1
+    
+    - name: Generate matrix for batch processing
+      id: generate-matrix
+      run: |
+        # Count tex files and create batch matrix
+        if [ ! -d "tex-leseansicht" ]; then
+          echo "tex-leseansicht directory not found"
+          exit 1
+        fi
+        
+        # Get sorted list of tex files
+        TEX_FILES=($(find tex-leseansicht -name "*.tex" | sort))
+        TOTAL_FILES=${#TEX_FILES[@]}
+        
+        if [ $TOTAL_FILES -eq 0 ]; then
+          echo "No tex files found"
+          exit 1
+        fi
+        
+        # Calculate number of batches (750 files per batch)
+        BATCH_SIZE=750
+        TOTAL_BATCHES=$(( (TOTAL_FILES + BATCH_SIZE - 1) / BATCH_SIZE ))
+        
+        echo "Total files: $TOTAL_FILES"
+        echo "Batch size: $BATCH_SIZE"
+        echo "Total batches: $TOTAL_BATCHES"
+        
+        # Create matrix array
+        MATRIX_JSON="["
+        for i in $(seq 0 $((TOTAL_BATCHES - 1))); do
+          if [ $i -gt 0 ]; then
+            MATRIX_JSON="${MATRIX_JSON},"
+          fi
+          MATRIX_JSON="${MATRIX_JSON}${i}"
+        done
+        MATRIX_JSON="${MATRIX_JSON}]"
+        
+        echo "matrix=${MATRIX_JSON}" >> $GITHUB_OUTPUT
+        echo "total-batches=${TOTAL_BATCHES}" >> $GITHUB_OUTPUT
+
+  generate-pdfs:
+    needs: setup
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        batch: ${{ fromJson(needs.setup.outputs.matrix) }}
+      fail-fast: false
+      max-parallel: 6
     
     steps:
     - name: Checkout repository
@@ -30,7 +86,7 @@ jobs:
         sudo apt-get install -y texlive-full
         sudo apt-get install -y xindy
 
-    - name: Process LaTeX files to PDFs
+    - name: Process LaTeX files to PDFs (Batch ${{ matrix.batch }})
       run: |
         # Create output directory
         mkdir -p pdf-leseansicht
@@ -40,28 +96,40 @@ jobs:
         TOTAL=0
         SUCCESS=0
         FAILED=0
+        BATCH_NUM=${{ matrix.batch }}
+        BATCH_SIZE=750
         
-        # Get list of LaTeX files
-        echo "Checking for LaTeX files in tex-leseansicht/"
-        echo "Directory contents:"
-        ls -la tex-leseansicht/ || echo "tex-leseansicht directory not found"
+        # Get sorted list of all LaTeX files
+        TEX_FILES=($(find tex-leseansicht -name "*.tex" | sort))
+        TOTAL_FILES=${#TEX_FILES[@]}
         
-        if [ ! -d "tex-leseansicht" ]; then
-          echo "❌ tex-leseansicht directory does not exist"
-          exit 1
-        fi
-        
-        if [ -z "$(ls -A tex-leseansicht/*.tex 2>/dev/null)" ]; then
+        if [ $TOTAL_FILES -eq 0 ]; then
           echo "❌ No LaTeX files found in tex-leseansicht/"
-          echo "Available files in tex-leseansicht/:"
-          ls -la tex-leseansicht/ || echo "Directory is empty or inaccessible"
           exit 1
         fi
         
-        echo "✓ Found LaTeX files, starting processing..."
+        # Calculate file range for this batch
+        START_IDX=$((BATCH_NUM * BATCH_SIZE))
+        END_IDX=$((START_IDX + BATCH_SIZE - 1))
         
-        # Process each LaTeX file
-        for texfile in tex-leseansicht/*.tex; do
+        if [ $START_IDX -ge $TOTAL_FILES ]; then
+          echo "❌ Batch $BATCH_NUM start index ($START_IDX) exceeds total files ($TOTAL_FILES)"
+          exit 1
+        fi
+        
+        if [ $END_IDX -ge $TOTAL_FILES ]; then
+          END_IDX=$((TOTAL_FILES - 1))
+        fi
+        
+        echo "=== BATCH $BATCH_NUM PROCESSING ==="
+        echo "Total files in repository: $TOTAL_FILES"
+        echo "Processing files $START_IDX to $END_IDX ($(($END_IDX - $START_IDX + 1)) files)"
+        echo "Batch size: $BATCH_SIZE"
+        echo "=================================="
+        
+        # Process files in this batch
+        for i in $(seq $START_IDX $END_IDX); do
+          texfile="${TEX_FILES[$i]}"
           if [ -f "$texfile" ]; then
             TOTAL=$((TOTAL + 1))
             filename=$(basename "$texfile" .tex)
@@ -162,36 +230,38 @@ jobs:
           fi
         done
         
-        # Create final summary
-        echo "=== PDF GENERATION SUMMARY ===" > processing-logs/pdf-summary.log
-        echo "Total LaTeX files processed: $TOTAL" >> processing-logs/pdf-summary.log
-        echo "Successful PDFs: $SUCCESS" >> processing-logs/pdf-summary.log
-        echo "Failed PDFs: $FAILED" >> processing-logs/pdf-summary.log
-        echo "Success rate: $([ $TOTAL -gt 0 ] && echo "scale=1; $SUCCESS * 100 / $TOTAL" | bc || echo "0")%" >> processing-logs/pdf-summary.log
-        echo "Date: $(date)" >> processing-logs/pdf-summary.log
+        # Create final summary for this batch
+        echo "=== PDF GENERATION SUMMARY - BATCH $BATCH_NUM ===" > processing-logs/pdf-summary-batch-$BATCH_NUM.log
+        echo "Batch number: $BATCH_NUM" >> processing-logs/pdf-summary-batch-$BATCH_NUM.log
+        echo "File range: $START_IDX to $END_IDX" >> processing-logs/pdf-summary-batch-$BATCH_NUM.log
+        echo "Total LaTeX files processed: $TOTAL" >> processing-logs/pdf-summary-batch-$BATCH_NUM.log
+        echo "Successful PDFs: $SUCCESS" >> processing-logs/pdf-summary-batch-$BATCH_NUM.log
+        echo "Failed PDFs: $FAILED" >> processing-logs/pdf-summary-batch-$BATCH_NUM.log
+        echo "Success rate: $([ $TOTAL -gt 0 ] && echo "scale=1; $SUCCESS * 100 / $TOTAL" | bc || echo "0")%" >> processing-logs/pdf-summary-batch-$BATCH_NUM.log
+        echo "Date: $(date)" >> processing-logs/pdf-summary-batch-$BATCH_NUM.log
         
         # Show summary
-        cat processing-logs/pdf-summary.log
+        cat processing-logs/pdf-summary-batch-$BATCH_NUM.log
         
         # List generated PDFs
         echo ""
-        echo "Generated PDFs:"
-        ls -lah pdf-leseansicht/*.pdf 2>/dev/null | head -20 || echo "No PDFs generated"
+        echo "Generated PDFs in this batch:"
+        ls -lah pdf-leseansicht/*.pdf 2>/dev/null | head -20 || echo "No PDFs generated in this batch"
         
         # Show final results
         echo ""
-        echo "=== FINAL RESULTS ==="
+        echo "=== BATCH $BATCH_NUM RESULTS ==="
         echo "Processed: $TOTAL files"
         echo "Successful: $SUCCESS files"  
         echo "Failed: $FAILED files"
         
         if [ $SUCCESS -gt 0 ]; then
-          echo "✓ Proceeding with commit of successful PDFs..."
+          echo "✓ Batch $BATCH_NUM completed with $SUCCESS successful PDFs"
         else
-          echo "⚠️  No successful PDFs generated, but continuing for logs..."
+          echo "⚠️  Batch $BATCH_NUM generated no successful PDFs"
         fi
 
-    - name: Commit and push PDFs
+    - name: Commit and push PDFs (Batch ${{ matrix.batch }})
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
@@ -202,11 +272,16 @@ jobs:
         
         # Check if there are changes to commit
         if git diff --staged --quiet; then
-          echo "No changes to commit"
+          echo "No changes to commit for batch ${{ matrix.batch }}"
         else
-          # Create commit message with summary
-          SUMMARY=$(cat processing-logs/pdf-summary.log | grep -E "(Total|Successful|Failed|Success rate)" | tr '\n' '; ')
-          git commit -m "Auto-generate PDFs from LaTeX files - $SUMMARY - 🤖 Generated with GitHub Actions"
+          # Create commit message with batch summary
+          BATCH_NUM=${{ matrix.batch }}
+          if [ -f "processing-logs/pdf-summary-batch-$BATCH_NUM.log" ]; then
+            SUMMARY=$(cat processing-logs/pdf-summary-batch-$BATCH_NUM.log | grep -E "(Total|Successful|Failed|Success rate)" | tr '\n' '; ')
+            git commit -m "Auto-generate PDFs - Batch $BATCH_NUM - $SUMMARY - 🤖 Generated with GitHub Actions"
+          else
+            git commit -m "Auto-generate PDFs - Batch $BATCH_NUM completed - 🤖 Generated with GitHub Actions"
+          fi
           git push
         fi
 
@@ -214,7 +289,7 @@ jobs:
       if: always()
       uses: actions/upload-artifact@v4
       with:
-        name: pdf-processing-logs-${{ github.run_number }}
+        name: pdf-processing-logs-batch-${{ matrix.batch }}-${{ github.run_number }}
         path: processing-logs/
         retention-days: 30
 
@@ -222,6 +297,6 @@ jobs:
       if: always()
       uses: actions/upload-artifact@v4
       with:
-        name: failed-latex-debug-${{ github.run_number }}
+        name: failed-latex-debug-batch-${{ matrix.batch }}-${{ github.run_number }}
         path: tex-leseansicht/
         retention-days: 7
