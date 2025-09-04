@@ -1,0 +1,46 @@
+\l@d@section{1}%
+\smallbreak \pagebreak [2]%
+\footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}CUL, Schnitzler, B 118.\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 3 Seiten, 2002 Zeichen \newline {}Handschrift: schwarze Tinte, lateinische Kurrent \newline {}Schnitzler: 1) mit Bleistift »\textsc {Zweig}« 2) mit rotem Buntstift eine Unterstreichung\endgraf %
+\footnotesize \par \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symweiteredrucke }}}\weitereDrucke {Stefan Zweig: \emph {Briefwechsel mit Hermann Bahr, Sigmund Freud, Rainer Maria Rilke und Arthur Schnitzler}. Frankfurt am Main: \emph {S. Fischer} 1987, S. 372–374.} \endgraf %
+\smallbreak %
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|26|0|1|26|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{drei
+Wochen}}}{\textnormal
+{\textcolor
+{blue}{Stefan
+Zweig}\pwindex
+{Zweig,
+Stefan
+28.11.1881
+–
+23.02.1942@\textsc
+{Zweig,
+Stefan}
+(28.11.1881
+–
+23.02.1942),
+\emph
+{Schriftsteller/Schriftstellerin}|pwk}
+verbrachte
+die
+Zeit
+vom
+4. 3.
+bis
+zum
+23. 4. 1913
+in
+\textcolor
+{pink}{Paris}\oindex
+{Paris@\textbf
+{Paris},
+\emph
+{P.PPLC}|pwk}.}}{C}{}{L}{edtxt@23}%

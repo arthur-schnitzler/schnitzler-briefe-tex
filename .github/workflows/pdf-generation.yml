@@ -265,6 +265,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
+        git config --local pull.rebase false  # Use merge strategy for pulls
         
         # Add generated PDFs and logs
         git add pdf-leseansicht/
@@ -286,7 +287,7 @@ jobs:
           git commit -m "$COMMIT_MSG"
           
           # Push with retry logic to handle parallel commits
-          MAX_RETRIES=10
+          MAX_RETRIES=15
           RETRY_COUNT=0
           PUSH_SUCCESS=false
           
@@ -297,19 +298,53 @@ jobs:
               echo "✓ Successfully pushed batch $BATCH_NUM"
               PUSH_SUCCESS=true
             else
-              echo "Push failed for batch $BATCH_NUM, attempting pull and rebase..."
+              echo "Push failed for batch $BATCH_NUM, attempting to resolve conflicts..."
               RETRY_COUNT=$((RETRY_COUNT + 1))
               
               if [ $RETRY_COUNT -lt $MAX_RETRIES ]; then
-                # Pull with rebase to handle conflicts
-                git pull --rebase origin main || {
-                  echo "Rebase failed, trying merge strategy..."
-                  git rebase --abort 2>/dev/null || true
-                  git pull origin main
-                }
+                # Stash any unstaged changes first
+                git stash push -m "Temporary stash for batch $BATCH_NUM retry $RETRY_COUNT" 2>/dev/null || true
                 
-                # Random delay to reduce collision probability (1-30 seconds)
-                DELAY=$((RANDOM % 30 + 1))
+                # Fetch latest changes
+                git fetch origin main
+                
+                # Try to merge with the remote changes
+                if git merge origin/main --no-edit; then
+                  echo "✓ Successfully merged remote changes"
+                  
+                  # Apply stashed changes if any
+                  git stash pop 2>/dev/null || echo "No stash to apply"
+                  
+                  # Re-add any new files that might have been created
+                  git add pdf-leseansicht/ processing-logs/ 2>/dev/null || true
+                  
+                  # If there are any new changes after merge, amend the commit
+                  if ! git diff --staged --quiet; then
+                    git commit --amend --no-edit
+                  fi
+                else
+                  echo "Merge failed, trying reset and re-apply approach..."
+                  
+                  # Reset to remote state
+                  git reset --hard origin/main
+                  
+                  # Re-add our generated files
+                  git add pdf-leseansicht/ processing-logs/
+                  
+                  # Re-commit with our changes
+                  if ! git diff --staged --quiet; then
+                    git commit -m "$COMMIT_MSG"
+                  fi
+                fi
+                
+                # Exponential backoff with jitter (2^retry + random 1-10 seconds)
+                BASE_DELAY=$((2 ** RETRY_COUNT))
+                JITTER=$((RANDOM % 10 + 1))
+                DELAY=$((BASE_DELAY + JITTER))
+                # Cap at 60 seconds
+                if [ $DELAY -gt 60 ]; then
+                  DELAY=60
+                fi
                 echo "Waiting ${DELAY} seconds before retry..."
                 sleep $DELAY
               fi

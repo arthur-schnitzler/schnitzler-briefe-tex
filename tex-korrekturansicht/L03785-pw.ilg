@@ -1,0 +1,9 @@
+This is makeindex, version 2.17 [TeX Live 2025] (kpathsea + Thai support).
+Scanning input file L03785-pw.idx....done (13 entries accepted, 0 rejected).
+Sorting entries....done (51 comparisons).
+Generating output file L03785-pw.ind....
+## Warning (input = L03785-pw.idx, line = 9; output = L03785-pw.ind, line = 30):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+done (33 lines written, 1 warning).
+Output written in L03785-pw.ind.
+Transcript written in L03785-pw.ilg.

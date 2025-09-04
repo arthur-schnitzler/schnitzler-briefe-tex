@@ -1,7 +1,7 @@
 \l@d@section{1}%
 \smallbreak \pagebreak [2]%
 \footnotesize \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symstandort }}}CUL, Schnitzler, B 118.\endgraf %
-\hangpara {4em}{0}Brief, 1 Blatt, 4 Seiten, 2461 Zeichen \newline {}Handschrift: lila Tinte, lateinische Kurrent \newline {}Schnitzler: 1) mit Bleistift »\textsc {Zweig}« 2) mit rotem Buntstift zwei Unterstreichungen\endgraf %
+\hangpara {4em}{0}Brief, 1 Blatt, 4 Seiten, 2460 Zeichen \newline {}Handschrift: lila Tinte, lateinische Kurrent \newline {}Schnitzler: 1) mit Bleistift »\textsc {Zweig}« 2) mit rotem Buntstift zwei Unterstreichungen\endgraf %
 \footnotesize \par \hangpara {4em}{1}{\makebox [4em][l]{\makebox [3.6em][r]{\symweiteredrucke }}}\weitereDrucke {1) Stefan Zweig: \emph {Briefwechsel mit Hermann Bahr, Sigmund Freud, Rainer Maria Rilke und Arthur Schnitzler}. Frankfurt am Main: \emph {S. Fischer} 1987, S. 370–372.} \weitereDrucke {2) Stefan Zweig: \emph {Briefe. Bd. I: 1897–1914}. Frankfurt am Main: \emph {S. Fischer} 1995, S. 266–267.} \endgraf %
 \smallbreak %
 \def
@@ -31,7 +31,7 @@ Meldungen}}{C}{}{L}{edtxt@4}%
 {Nostra
 …
 agitur}}}{\textnormal
-{latein:
+{lateinisch:
 Es
 geht
 um
@@ -48,7 +48,20 @@ Angelegenheit.}}{C}{}{L}{edtxt@6}%
 {\emph
 {Première}}}{\textnormal
 {Die
-Uraufführung
+\textcolor
+{violet}{Uraufführung}\eventindex
+{Kleines
+Theater@\textbf
+{Kleines
+Theater}!Urauffuehrung
+von
+Professor
+Bernhardi,
+28.11.1912@Uraufführung
+von
+Professor
+Bernhardi,
+28.11.1912|pwkv}
 von
 \emph
 {\textcolor
@@ -88,3 +101,60 @@ in
 \emph
 {P.PPLC}|pwk}
 statt.}}{C}{}{L}{edtxt@10}%
+\def
+\sw@list@inedtext
+{}%
+\parse@annot
+||%
+\Cend{1|32|0|1|32|0|TU/Hoftype_-_SinaNova-Regular.otf(0)/m/n}{\no@expands
+\textnormal
+{\emph
+{möchte
+nicht
+fehlen}}}{\textnormal
+{Er
+dürfte
+den
+Plan,
+zur
+\textcolor
+{violet}{Uraufführung}\eventindex
+{Kleines
+Theater@\textbf
+{Kleines
+Theater}!Urauffuehrung
+von
+Professor
+Bernhardi,
+28.11.1912@Uraufführung
+von
+Professor
+Bernhardi,
+28.11.1912|pwkv}
+nach
+\textcolor
+{pink}{Berlin}\oindex
+{Berlin@\textbf
+{Berlin},
+\emph
+{P.PPLC}|pwk}
+zu
+reisen,
+nicht
+umgesetzt
+haben.
+Zumindest
+erwähnt
+\textcolor
+{blue}{Schnitzler}
+im
+\emph
+{\textcolor
+{green}{Tagebuch}\pwindex
+{Tagebuch@\emph
+{Tagebuch}|pwk}}-Eintrag
+zum
+28. 11. 1912
+seine
+Anwesenheit
+nicht.}}{C}{}{L}{edtxt@12}%
