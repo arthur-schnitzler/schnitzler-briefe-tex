@@ -355,7 +355,8 @@ Seelen-
 und
 Geistesverwandtschaft
 zwischen
-den\textcolor
+den
+\textcolor
 {pink}{Leitmeritzer}\oindex
 {Litoměřice@\textbf
 {Litoměřice},
@@ -376,7 +377,8 @@ gut\textcolor
 {Oesterreich@\textbf
 {Österreich},
 \emph
-{A.PCLI}|pw}\textcolor
+{A.PCLI}|pw}{
+}\textcolor
 {brown}{Bezirkshauptmannschaft}\orgindex
 {Bezirkshauptmannschaft
 Leitmeritz@Bezirkshauptmannschaft
@@ -799,7 +801,6 @@ keine
 Folge
 gegeben.{
 /
-}{\pb
 }Wenn
 auch
 die
