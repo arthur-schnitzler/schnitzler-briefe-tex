@@ -134,6 +134,46 @@ dmypy.json
 
 schnitzler-briefe-tex-private-files/
 
+# LaTeX auxiliary files - keep only .tex and .pdf
+*.1
+*.Aend
+*.aux
+*.Bend
+*.Cend
+*.Dend
+*.Eend
+*.eledsec1
+*.idx
+*.ilg
+*.ind
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.nav
+*.snm
+*.vrb
+*.figlist
+*.makefile
+*.fmtcount
+*.lof
+*.lot
+*.thm
+*.bcf
+*.run.xml
+*.xdy
+eledmac-markup-attr.xdy
+xindy*.log
+splitindex.log
+xelatex*.log
+
+# macOS files
+.DS_Store
+
 # Claude Code files
 CLAUDE.md
 .claude
