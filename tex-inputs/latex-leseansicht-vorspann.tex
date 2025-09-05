@@ -433,17 +433,20 @@ BoldItalicFont=Hoftype_-_SinaNova-BoldItalic.otf
 
 %% MEHRERE INDIZES
 
-%\newindex[Korrespondenzpartner]{briefe-out}
-%\newindex[Gedruckte Quellen]{buch-abdruck}
+\newindex[Register]{pw}
+%\newindex[Institutionen Organisationen Periodika und Unternehmen]{org}
+%\newindex[Institutionen und Orte]{o}
+\newindex[Korrespondenzpartner]{briefe-out}
+\newindex[Gedruckte Quellen]{buch-abdruck}
 
-%\newcommand\briefsenderindex[1]{\sindex[briefe-out]{#1}}
-%\newcommand\briefempfaengerindex[1]{\sindex[briefe-out]{#1}}
+\newcommand\briefsenderindex[1]{\sindex[briefe-out]{#1}}
+\newcommand\briefempfaengerindex[1]{\sindex[briefe-out]{#1}}
+\renewcommand\briefempfaengerindex[1]{\sindex[briefe-out]{#1}}
+\renewcommand\briefempfaengerindex[1]{\sindex[briefe-out]{#1}}
 
-%\newcommand\buchabdruck[1]{\sindex[buch-abdruck]{#1}}
 
-\newcommand\briefsenderindex[1]{}
-\newcommand\briefempfaengerindex[1]{}
-\newcommand\buchabdruck[1]{}
+\newcommand\buchabdruck[1]{\sindex[buch-abdruck]{#1}}
+\renewcommand\buchabdruck[1]{}
 
 
 
@@ -683,9 +686,16 @@ BoldItalicFont=Hoftype_-_SinaNova-BoldItalic.otf
 
 \newcommand\halbtextwidth{0.9\textwidth}
 
-\newcommand\pwindex[1]{{\edindex{#1}}}
-\newcommand\oindex[1]{{\edindex{#1}}}
-\newcommand\orgindex[1]{{\edindex{#1}}}
+\newcommand\pwindex[1]{{\sindex[pw]{#1}}}
+\newcommand\oindex[1]{{\sindex[pw]{#1}}}
+\newcommand\orgindex[1]{{\sindex[pw]{#1}}}
+\newcommand\eventindex[1]{{\sindex[pw]{#1}}}
+
+
+\renewcommand\pwindex[1]{{{\sindex[pw]{#1}}}}
+\renewcommand\oindex[1]{{{\sindex[pw]{#1}}}}
+\renewcommand\orgindex[1]{{{\sindex[pw]{#1}}}}
+\renewcommand\eventindex[1]{{{\sindex[pw]{#1}}}}
 
 
 % INDEX
