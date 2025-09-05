@@ -314,10 +314,10 @@
       <xsl:if test="$kBeruf and not($kName = '??')">
          <xsl:variable name="gender" as="xs:boolean?">
             <xsl:choose>
-               <xsl:when test="$indexkey/sex/@value = 'male'">
+               <xsl:when test="$indexkey/tei:sex/@value = 'male'">
                   <xsl:value-of select="false()"/>
                </xsl:when>
-               <xsl:when test="$indexkey/sex/@value = 'female'">
+               <xsl:when test="$indexkey/tei:sex/@value = 'female'">
                   <xsl:value-of select="true()"/>
                </xsl:when>
                <xsl:otherwise/>
