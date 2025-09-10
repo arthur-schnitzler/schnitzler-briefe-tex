@@ -96,6 +96,7 @@ jobs:
         TOTAL=0
         SUCCESS=0
         FAILED=0
+        SKIPPED=0
         BATCH_NUM=${{ matrix.batch }}
         BATCH_SIZE=750
         
@@ -131,9 +132,35 @@ jobs:
         for i in $(seq $START_IDX $END_IDX); do
           texfile="${TEX_FILES[$i]}"
           if [ -f "$texfile" ]; then
-            TOTAL=$((TOTAL + 1))
             filename=$(basename "$texfile" .tex)
+            pdffile="pdf-leseansicht/${filename}.pdf"
             
+            # Check if PDF exists and is newer than TEX file
+            SKIP_FILE=false
+            if [ -f "$pdffile" ]; then
+              TEX_TIME=$(stat -c %Y "$texfile" 2>/dev/null || stat -f %m "$texfile" 2>/dev/null)
+              PDF_TIME=$(stat -c %Y "$pdffile" 2>/dev/null || stat -f %m "$pdffile" 2>/dev/null)
+              
+              if [ "$PDF_TIME" -gt "$TEX_TIME" ]; then
+                echo "⏭️  Skipping $filename - PDF is newer than TEX file"
+                echo "   TEX: $(date -d @$TEX_TIME 2>/dev/null || date -r $TEX_TIME 2>/dev/null)"
+                echo "   PDF: $(date -d @$PDF_TIME 2>/dev/null || date -r $PDF_TIME 2>/dev/null)"
+                SKIP_FILE=true
+              else
+                echo "🔄 Processing $filename - PDF is older than TEX file"
+                echo "   TEX: $(date -d @$TEX_TIME 2>/dev/null || date -r $TEX_TIME 2>/dev/null)"
+                echo "   PDF: $(date -d @$PDF_TIME 2>/dev/null || date -r $PDF_TIME 2>/dev/null)"
+              fi
+            else
+              echo "📄 Processing $filename - No PDF exists"
+            fi
+            
+            if [ "$SKIP_FILE" = true ]; then
+              SKIPPED=$((SKIPPED + 1))
+              continue
+            fi
+            
+            TOTAL=$((TOTAL + 1))
             echo "=== Processing $filename ==="
             
             # Create log file for this processing
@@ -213,10 +240,10 @@ jobs:
               
             ); then
               SUCCESS=$((SUCCESS + 1))
-              echo "✓ Successfully processed $filename (Success: $SUCCESS, Failed: $FAILED, Total: $TOTAL)"
+              echo "✓ Successfully processed $filename (Success: $SUCCESS, Failed: $FAILED, Skipped: $SKIPPED, Total: $TOTAL)"
             else
               FAILED=$((FAILED + 1))
-              echo "✗ Failed to process $filename (Success: $SUCCESS, Failed: $FAILED, Total: $TOTAL)"
+              echo "✗ Failed to process $filename (Success: $SUCCESS, Failed: $FAILED, Skipped: $SKIPPED, Total: $TOTAL)"
               echo "FAILED: $filename - Check log for details" >> processing-logs/summary.log
             fi
             
@@ -230,14 +257,20 @@ jobs:
           fi
         done
         
+        # Calculate total files examined (including skipped)
+        EXAMINED=$((TOTAL + SKIPPED))
+        
         # Create final summary for this batch
         echo "=== PDF GENERATION SUMMARY - BATCH $BATCH_NUM ===" > processing-logs/pdf-summary-batch-$BATCH_NUM.log
         echo "Batch number: $BATCH_NUM" >> processing-logs/pdf-summary-batch-$BATCH_NUM.log
         echo "File range: $START_IDX to $END_IDX" >> processing-logs/pdf-summary-batch-$BATCH_NUM.log
+        echo "Total LaTeX files examined: $EXAMINED" >> processing-logs/pdf-summary-batch-$BATCH_NUM.log
+        echo "Files skipped (PDF newer than TEX): $SKIPPED" >> processing-logs/pdf-summary-batch-$BATCH_NUM.log
         echo "Total LaTeX files processed: $TOTAL" >> processing-logs/pdf-summary-batch-$BATCH_NUM.log
         echo "Successful PDFs: $SUCCESS" >> processing-logs/pdf-summary-batch-$BATCH_NUM.log
         echo "Failed PDFs: $FAILED" >> processing-logs/pdf-summary-batch-$BATCH_NUM.log
-        echo "Success rate: $([ $TOTAL -gt 0 ] && echo "scale=1; $SUCCESS * 100 / $TOTAL" | bc || echo "0")%" >> processing-logs/pdf-summary-batch-$BATCH_NUM.log
+        echo "Success rate: $([ $TOTAL -gt 0 ] && echo "scale=1; $SUCCESS * 100 / $TOTAL" | bc || echo "N/A (no files processed)")%" >> processing-logs/pdf-summary-batch-$BATCH_NUM.log
+        echo "Efficiency: Skipped $SKIPPED files due to up-to-date PDFs" >> processing-logs/pdf-summary-batch-$BATCH_NUM.log
         echo "Date: $(date)" >> processing-logs/pdf-summary-batch-$BATCH_NUM.log
         
         # Show summary
@@ -251,12 +284,16 @@ jobs:
         # Show final results
         echo ""
         echo "=== BATCH $BATCH_NUM RESULTS ==="
+        echo "Examined: $EXAMINED files"
+        echo "Skipped: $SKIPPED files (PDFs up-to-date)"
         echo "Processed: $TOTAL files"
         echo "Successful: $SUCCESS files"  
         echo "Failed: $FAILED files"
         
         if [ $SUCCESS -gt 0 ]; then
-          echo "✓ Batch $BATCH_NUM completed with $SUCCESS successful PDFs"
+          echo "✓ Batch $BATCH_NUM completed with $SUCCESS successful PDFs ($SKIPPED files skipped)"
+        elif [ $SKIPPED -gt 0 ]; then
+          echo "⏭️ Batch $BATCH_NUM: All $SKIPPED files were up-to-date (no processing needed)"
         else
           echo "⚠️  Batch $BATCH_NUM generated no successful PDFs"
         fi
