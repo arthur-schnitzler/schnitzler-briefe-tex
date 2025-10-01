@@ -11,7 +11,7 @@
 \usepackage{hyphenat}
 \usepackage{fontspec}
 \usepackage{moresize}
-\usepackage[english, french, greek, japanese, ngerman]{babel}
+\usepackage[english, french, greek, hebrew, japanese, ngerman]{babel}
 \usepackage{ipa}  %für das Seitenwechselzeichens
 \usepackage[babel]{microtype}
 \usepackage[dash, dot]{dashundergaps}
@@ -132,11 +132,12 @@ BoldItalicFont=Hoftype_-_SinaNova-BoldItalic.otf
 % Griechische Schrift für Babel konfigurieren
 \babelfont[greek]{rm}[Path=../schnitzler-briefe-tex-private-files/]{Brill-Roman.ttf}
 \newcommand\griechisch[1]{\foreignlanguage{greek}{#1}}
+% Hebräische Schrift für Babel konfigurieren
+\babelfont[hebrew]{rm}[Path=../schnitzler-briefe-tex-private-files/]{SBL_Hbrw.ttf}
+\newcommand\hebraeisch[1]{\mbox{\foreignlanguage{hebrew}{#1}}}
 % Japanisch
 %\newfontfamily\japanesefont[Path=../schnitzler-briefe-tex-private-files/]{NotoSansCJKjp-Regular.otf}
 %\newcommand\japanese[1]{\japanesefont{}#1{}\normalfont}
-
-
 
 \PassOptionsToPackage{gray}{xcolor}
 \definecolor{gray}{gray}{0.6}
