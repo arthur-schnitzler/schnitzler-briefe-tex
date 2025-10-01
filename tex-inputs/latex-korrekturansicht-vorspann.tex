@@ -129,10 +129,9 @@ ItalicFont=Hoftype_-_SinaNova-Italic.otf,
 BoldFont=Hoftype_-_SinaNova-Bold.otf,
 BoldItalicFont=Hoftype_-_SinaNova-BoldItalic.otf
 ]{Hoftype_-_SinaNova-Regular.otf}
-% Griechisch
-\newfontfamily\greekfont[Path=../schnitzler-briefe-tex-private-files/]{AGaramondPro-Regular.otf}
-\newcommand\griechisch[1]{\greekfont{}#1{}\normalfont}
-
+% Griechische Schrift für Babel konfigurieren
+\babelfont[greek]{rm}[Path=../schnitzler-briefe-tex-private-files/]{Brill-Roman.ttf}
+\newcommand\griechisch[1]{\foreignlanguage{greek}{#1}}
 % Japanisch
 %\newfontfamily\japanesefont[Path=../schnitzler-briefe-tex-private-files/]{NotoSansCJKjp-Regular.otf}
 %\newcommand\japanese[1]{\japanesefont{}#1{}\normalfont}
