@@ -27,11 +27,25 @@ fi
 if ls "$(basename "$basename")"*.idx 1> /dev/null 2>&1; then
     echo ""
     echo "--- Processing split indices ---"
-    splitindex "$(basename "$basename")"
-    if [ $? -ne 0 ]; then
-        echo "ERROR: Splitindex processing failed"
-        exit 1
+
+    MAINIDX="$(basename "$basename").idx"
+
+    # Split the main idx file into separate indices and clean \@@number in one step
+    if [ -f "$MAINIDX" ]; then
+        # Extract [pw] entries and clean \@@number
+        grep '\\indexentry\[pw\]' "$MAINIDX" | sed 's/\\indexentry\[pw\]/\\indexentry/' | sed 's/\\@@number {\([0-9]*\)}/\1/g' > "$(basename "$basename")-pw.idx"
+        # Extract [briefe-out] entries and clean \@@number
+        grep '\\indexentry\[briefe-out\]' "$MAINIDX" | sed 's/\\indexentry\[briefe-out\]/\\indexentry/' | sed 's/\\@@number {\([0-9]*\)}/\1/g' > "$(basename "$basename")-briefe-out.idx"
+        # Extract [buch-abdruck] entries if they exist and clean \@@number
+        grep '\\indexentry\[buch-abdruck\]' "$MAINIDX" | sed 's/\\indexentry\[buch-abdruck\]/\\indexentry/' | sed 's/\\@@number {\([0-9]*\)}/\1/g' > "$(basename "$basename")-buch-abdruck.idx" 2>/dev/null || true
     fi
+
+    # Run makeindex on all split idx files
+    for idxfile in "$(basename "$basename")"-*.idx; do
+        if [ -f "$idxfile" ] && [ -s "$idxfile" ]; then
+            makeindex "$idxfile"
+        fi
+    done
 else
     echo ""
     echo "--- No index files found, skipping splitindex ---"

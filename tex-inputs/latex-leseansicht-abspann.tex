@@ -19,11 +19,22 @@
 \doendnotes{C}
 \bigskip
 
+\clearpage
+
 \footnotesize
 
-\subsubsection*{Index der erwähnten Entitäten}
+% Definiere theindex-Environment komplett neu ohne reledmac
+\makeatletter
+\renewenvironment{theindex}{%
+  \subsubsection*{Index der erwähnten Entitäten}%
+  \setlength{\parindent}{0pt}%
+  \setlength{\parskip}{0pt plus 0.3pt}%
+  \let\item\@idxitem
+}{%
+}
+\makeatother
 
-\printindex[pw]
+\IfFileExists{\jobname-pw.ind}{\input{\jobname-pw.ind}}{}
 
 
 

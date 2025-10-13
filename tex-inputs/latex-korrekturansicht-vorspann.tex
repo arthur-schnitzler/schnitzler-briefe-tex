@@ -21,7 +21,7 @@
 \usepackage[itemlayout=abshang,hangindent=0.85em, subindent=0em, subsubindent=1em, justific=RaggedRight, columns=1, columnsep=0pt, indentunit=1em, totoc=false]{idxlayout}
 \usepackage{scrhack}
 \usepackage{xpatch}
-\usepackage{reledmac}
+\usepackage[xindy]{reledmac}
 \usepackage{refcount} % Für die Seitenverweise 1–3 etc. 
 \usepackage{etoolbox}
 \usepackage{framed}
@@ -734,6 +734,10 @@ BoldItalicFont=Hoftype_-_SinaNova-BoldItalic.otf
 
 
 %\geometry{headsep=8pt} % Abstand Kopfzeile - Text
+
+% HINWEIS: reledmac schreibt \@@number {1} in .idx-Dateien
+% Dies wird durch ein Post-Processing in der Engine bereinigt
+
 %% DOKUMENT
 
 \begin{document}
