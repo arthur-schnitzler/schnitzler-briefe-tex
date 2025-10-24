@@ -152,6 +152,7 @@ schnitzler-briefe-tex-private-files/
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+*.synctex(busy)
 *.bbl
 *.blg
 *.nav
@@ -166,6 +167,20 @@ schnitzler-briefe-tex-private-files/
 *.bcf
 *.run.xml
 *.xdy
+*.backup
+
+# Split index files (from splitidx package)
+*-pw.idx
+*-pw.ind
+*-pw.ilg
+*-briefe-out.idx
+*-briefe-out.ind
+*-briefe-out.ilg
+*-buch-abdruck.idx
+*-buch-abdruck.ind
+*-buch-abdruck.ilg
+
+# Other LaTeX logs
 eledmac-markup-attr.xdy
 xindy*.log
 splitindex.log
