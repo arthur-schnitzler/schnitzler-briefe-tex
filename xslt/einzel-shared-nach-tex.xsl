@@ -192,12 +192,14 @@
                   select="fn:normalize-space($indexkey/tei:death[1]/tei:settlement[1]/tei:placeName[not(@type) or @type = 'pref'])"
                />
             </xsl:when>
-            <xsl:when test="$indexkey/tei:death[1]/tei:settlement[1]/tei:placeName[@type = 'deportation']">
+            <xsl:when
+               test="$indexkey/tei:death[1]/tei:settlement[1]/tei:placeName[@type = 'deportation']">
                <xsl:value-of
                   select="concat('deportiert ', fn:normalize-space($indexkey/tei:death[1]/tei:settlement[1]/tei:placeName))"
                />
             </xsl:when>
-            <xsl:when test="$indexkey/tei:death[1]/tei:settlement[1]/tei:placeName[@type = 'burial']">
+            <xsl:when
+               test="$indexkey/tei:death[1]/tei:settlement[1]/tei:placeName[@type = 'burial']">
                <xsl:value-of
                   select="concat('beerdigt ', fn:normalize-space($indexkey/tei:death[1]/tei:settlement[1]/tei:placeName))"
                />
@@ -1311,6 +1313,7 @@
    </xsl:function>
    <xsl:function name="foo:briefempfaengerindex">
       <xsl:param name="empfaenger-key" as="xs:string"/>
+      
       <xsl:param name="sender-key" as="xs:string"/>
       <xsl:param name="date-sort" as="xs:date?"/>
       <xsl:param name="date-n" as="xs:integer"/>
@@ -1318,22 +1321,22 @@
       <xsl:param name="vorne" as="xs:boolean"/>
       <xsl:text>\briefempfaengerindex{</xsl:text>
       <xsl:value-of
-         select="foo:index-sortiert(concat(normalize-space(key('person-lookup', ($empfaenger-key), $persons)/tei:persName/tei:surname), ', ', normalize-space(key('person-lookup', ($empfaenger-key), $persons)/tei:persName/tei:forename)), 'sc')"/>
+         select="foo:index-sortiert(concat(normalize-space(key('person-lookup', replace($empfaenger-key, '#', ''), $persons)/tei:persName/tei:surname), ', ', normalize-space(key('person-lookup', replace($empfaenger-key, '#', ''), $persons)/tei:persName/tei:forename)), 'sc')"/>
       <xsl:text>!zzz</xsl:text>
       <xsl:value-of
-         select="foo:umlaute-entfernen(concat(normalize-space(key('person-lookup', ($sender-key), $persons)/tei:persName/tei:surname), ', ', normalize-space(key('person-lookup', ($sender-key), $persons)/tei:persName/tei:forename)))"/>
+         select="foo:umlaute-entfernen(concat(normalize-space(key('person-lookup', replace($sender-key, '#', ''), $persons)/tei:persName/tei:surname), ', ', normalize-space(key('person-lookup', replace($sender-key, '#', ''), $persons)/tei:persName/tei:forename)))"/>
       <xsl:text>@\emph{von </xsl:text>
       <xsl:choose>
          <!-- Sonderregel für Hofmannsthal sen. -->
          <xsl:when
-            test="ends-with(key('person-lookup', $sender-key, $persons)/tei:persName/tei:forename, ' (sen.)')">
+            test="ends-with(key('person-lookup', replace($sender-key, '#', ''), $persons)/tei:persName/tei:forename, ' (sen.)')">
             <xsl:value-of
-               select="concat(substring-before(normalize-space(key('person-lookup', ($sender-key), $persons)/tei:persName/tei:forename), ' (sen.)'), ' ', normalize-space(key('person-lookup', ($sender-key), $persons)/tei:persName/tei:surname))"/>
+               select="concat(substring-before(normalize-space(key('person-lookup', replace($sender-key, '#', ''), $persons)/tei:persName/tei:forename), ' (sen.)'), ' ', normalize-space(key('person-lookup', replace($sender-key, '#', ''), $persons)/tei:persName/tei:surname))"/>
             <xsl:text> (sen.)</xsl:text>
          </xsl:when>
          <xsl:otherwise>
             <xsl:value-of
-               select="concat(normalize-space(key('person-lookup', ($sender-key), $persons)/tei:persName/tei:forename), ' ', normalize-space(key('person-lookup', ($sender-key), $persons)/tei:persName/tei:surname))"
+               select="concat(normalize-space(key('person-lookup', replace($sender-key, '#', ''), $persons)/tei:persName/tei:forename), ' ', normalize-space(key('person-lookup', replace($sender-key, '#', ''), $persons)/tei:persName/tei:surname))"
             />
          </xsl:otherwise>
       </xsl:choose>
@@ -1551,7 +1554,12 @@
             <xsl:apply-templates/>
          </xsl:when>
       </xsl:choose>
-      <xsl:apply-templates/>
+      <xsl:if test="tei:typeNote/tei:p">
+         <xsl:text> (</xsl:text>
+         <xsl:apply-templates select="tei:typeNote/tei:p"/>
+         <xsl:text>)</xsl:text>
+      </xsl:if>
+      
    </xsl:template>
    <xsl:template match="tei:typeDesc/tei:p">
       <xsl:apply-templates/>
@@ -1572,12 +1580,12 @@
                <xsl:variable name="corespi" select="replace(., '#', '')"/>
                <xsl:text>Handschrift: </xsl:text>
                <xsl:choose>
-                  <xsl:when test="count($handDesc-v/tei:handNote[@corresp = $corespi]) = 1">
+                  <xsl:when test="count($handDesc-v/tei:handNote[@corresp = concat('#', $corespi)]) = 1">
                      <xsl:value-of
-                        select="foo:handNote($handDesc-v/tei:handNote[@corresp = $corespi])"/>
+                        select="foo:handNote($handDesc-v/tei:handNote[@corresp = concat('#', $corespi)])"/>
                   </xsl:when>
                   <xsl:otherwise>
-                     <xsl:for-each select="$handDesc-v/tei:handNote[@corresp = $corespi]">
+                     <xsl:for-each select="$handDesc-v/tei:handNote[@corresp = concat('#', $corespi)]">
                         <xsl:variable name="poschitzon" select="position()"/>
                         <xsl:value-of select="$poschitzon"/>
                         <xsl:text>)&#160;</xsl:text>
@@ -1593,7 +1601,7 @@
          </xsl:when>
          <!-- Nur eine Handschrift, diese nicht vom Autor/der Autorin: -->
          <xsl:when test="not(child::tei:handNote[2]) and (tei:handNote/@corresp)">
-            <xsl:text>Handschrift </xsl:text>
+            <xsl:text>HandschriftX2 </xsl:text>
             <xsl:choose>
                <xsl:when test="tei:handNote/@corresp = 'schreibkraft'">
                   <xsl:text>einer Schreibkraft: </xsl:text>
@@ -1630,12 +1638,12 @@
                </xsl:choose>
                <xsl:text>: </xsl:text>
                <xsl:choose>
-                  <xsl:when test="count($handDesc-v/tei:handNote[@corresp = $corespi]) = 1">
+                  <xsl:when test="count($handDesc-v/tei:handNote[replace(@corresp, '#', '') = $corespi]) = 1">
                      <xsl:value-of
-                        select="foo:handNote($handDesc-v/tei:handNote[@corresp = $corespi])"/>
+                        select="foo:handNote($handDesc-v/tei:handNote[replace(@corresp, '#', '') = $corespi])"/>
                   </xsl:when>
                   <xsl:otherwise>
-                     <xsl:for-each select="$handDesc-v/tei:handNote[@corresp = $corespi]">
+                     <xsl:for-each select="$handDesc-v/tei:handNote[replace(@corresp, '#', '') = $corespi]">
                         <xsl:variable name="poschitzon" select="position()"/>
                         <xsl:value-of select="$poschitzon"/>
                         <xsl:text>)&#160;</xsl:text>
@@ -1705,6 +1713,7 @@
          <xsl:text>)</xsl:text>
       </xsl:if>
    </xsl:function>
+   
    <xsl:template match="tei:physDesc">
       <xsl:text>&#10;\physDesc{</xsl:text>
       <xsl:choose>
@@ -1785,8 +1794,8 @@
                      <xsl:when test="@ana = 'widmung_vorsatzblatt'">
                         <xsl:text>Widmung am Vorsatzblatt</xsl:text>
                      </xsl:when>
-                     <xsl:when test="@ana = 'widmung_titetei:lblatt'">
-                        <xsl:text>Widmung am Titetei:lblatt</xsl:text>
+                     <xsl:when test="@ana = 'widmung_titelblatt'">
+                        <xsl:text>Widmung am Titelblatt</xsl:text>
                      </xsl:when>
                      <xsl:when test="@ana = 'widmung_schmutztitel'">
                         <xsl:text>Widmung am Schmutztitel</xsl:text>
@@ -2059,8 +2068,74 @@
    <xsl:template match="tei:dateSender/tei:date"/>
    <!-- Autoren in den Index -->
    <xsl:template match="tei:author[not(ancestor::tei:biblStruct)]"/>
-   <xsl:template match="tei:correspDesc">
-      <xsl:apply-templates/>
+   <xsl:template match="tei:correspDesc" priority="1">
+      <xsl:text>&#10;\correspDesc{</xsl:text>
+      <xsl:for-each select="tei:correspAction">
+         <xsl:choose>
+            <xsl:when test="@type='sent'">
+               <xsl:text>Versand </xsl:text>
+            </xsl:when>
+            <xsl:when test="@type='transmitted'">
+               <xsl:text>Übermittlung </xsl:text>
+            </xsl:when>
+            <xsl:when test="@type='forwarded'">
+               <xsl:text>Weiterleitung </xsl:text>
+            </xsl:when>
+            <xsl:when test="@type='redirected'">
+               <xsl:text>Umleitung </xsl:text>
+            </xsl:when>
+            <xsl:when test="@type='delivered'">
+               <xsl:text>Zustellung </xsl:text>
+            </xsl:when>
+            <xsl:when test="@type='received'">
+               <xsl:text>Erhalt </xsl:text>
+            </xsl:when>
+         </xsl:choose>         
+         <xsl:if test="tei:persName">
+            <xsl:text> durch </xsl:text>
+            <xsl:for-each select="tei:persName">
+               <xsl:value-of select="foo:vorname-vor-nachname(.)"/>
+               <xsl:if test="fn:position() != last()">
+                  <xsl:text>, </xsl:text>
+               </xsl:if>
+            </xsl:for-each>
+         </xsl:if>
+         <xsl:if test="tei:date">
+            <xsl:choose>
+               <xsl:when test="tei:date/@when">
+                  <xsl:text> am </xsl:text>
+               </xsl:when>
+               <xsl:otherwise>
+                  <xsl:text> im Zeitraum </xsl:text>
+               </xsl:otherwise>
+            </xsl:choose>            
+            <xsl:for-each select="tei:date">
+               <xsl:value-of select="(.)"/>
+            </xsl:for-each>
+         </xsl:if>
+         <xsl:choose>
+            <xsl:when test="tei:placeName">
+               <xsl:text> in </xsl:text>
+               <xsl:for-each select="tei:placeName">
+                  <xsl:value-of select="."/>
+                  <xsl:if test="fn:position() != last()">
+                     <xsl:text>, </xsl:text>
+                  </xsl:if>
+               </xsl:for-each>
+            </xsl:when>
+            <xsl:otherwise>
+               <xsl:text> \textbf{Ort fehlend} </xsl:text>
+            </xsl:otherwise>
+         </xsl:choose>
+         
+         
+         
+         <xsl:if test="fn:position() != last()">
+            <xsl:text>&#10;\newline{}</xsl:text>
+         </xsl:if>
+      </xsl:for-each>
+      
+      <xsl:text>}</xsl:text>
    </xsl:template>
    <xsl:template match="tei:listWit">
       <xsl:apply-templates/>
@@ -2462,43 +2537,23 @@
              </xsl:choose>-->
       <xsl:if test="$monogr/tei:editor[1]">
          <xsl:text>. </xsl:text>
-         <xsl:choose>
-            <xsl:when test="$monogr/tei:editor[2]">
-               <xsl:text>Herausgegeben von</xsl:text>
-               <xsl:for-each select="$monogr/tei:editor">
-                  <xsl:text> </xsl:text>
-                  <xsl:value-of select="foo:vorname-vor-nachname(.)"/>
-                  <xsl:choose>
-                     <xsl:when test="position() &lt; last() -1">
-                        <xsl:text>, </xsl:text>
-                     </xsl:when>
-                     <xsl:when test="position() = last() -1">
-                        <xsl:text> und </xsl:text>
-                     </xsl:when>
-                     <xsl:otherwise/>
-                     
-                  </xsl:choose>
-               </xsl:for-each>
-            </xsl:when>
-            <xsl:when test="$monogr/tei:editor[1]">
-               <xsl:choose>
-                  <xsl:when test="contains($monogr/tei:editor[1], 'Hrsg') or contains($monogr/tei:editor[1], 'Herausge') or contains($monogr/tei:editor[1], 'herausgeg') or contains($monogr/tei:editor[1], 'Hg.')">
-                     <xsl:text> </xsl:text>
-                     <xsl:value-of select="$monogr/tei:editor[1]"/>
-                  </xsl:when>
-                  <xsl:otherwise>
-                     <xsl:text> Herausgegeben von </xsl:text>
-                     <xsl:value-of select="foo:vorname-vor-nachname($monogr/tei:editor[1])"/>
-                  </xsl:otherwise>
-               </xsl:choose>
-            </xsl:when>
-         </xsl:choose>
-         <xsl:if test="count($monogr/tei:editor/tei:persName/@ref) &gt; 0">
-            <xsl:for-each select="$monogr/tei:editor/tei:persName/@ref">
+         <xsl:value-of select="foo:herausgeber-ordnen($monogr/tei:editor)"/>
+         <xsl:if test="count($monogr/tei:editor/@ref) &gt; 0">
+            <xsl:for-each select="$monogr/tei:editor/@ref">
                <xsl:value-of
-                  select="foo:person-in-index($monogr/tei:editor/tei:persName/@ref, '|pwk}', true())"/>
+                  select="foo:person-in-index($monogr/tei:editor/tei:persName/@ref, '|pwk}', true())"
+               />
             </xsl:for-each>
          </xsl:if>
+      </xsl:if>
+      <xsl:if test="$monogr/tei:respStmt">
+         <xsl:text>. </xsl:text>
+         <xsl:for-each select="$monogr/tei:respStmt">
+            <xsl:value-of select="foo:respStmt(.)"/>
+            <xsl:if test="not(fn:position() = last())">
+               <xsl:text> </xsl:text>
+            </xsl:if>
+         </xsl:for-each>
       </xsl:if>
       <xsl:if test="$monogr/tei:edition">
          <xsl:text>. </xsl:text>
@@ -2522,11 +2577,11 @@
          </xsl:otherwise>
       </xsl:choose>
       <xsl:choose>
-         <xsl:when test="$monogr/tei:ref[@type='URL' or @type='DOI']">
-            <xsl:for-each select="$monogr/tei:ref[@type='URL' or @type='DOI']">
-            <xsl:text> \url{</xsl:text>
+         <xsl:when test="$monogr/tei:ref[@type = 'URL' or @type = 'DOI']">
+            <xsl:for-each select="$monogr/tei:ref[@type = 'URL' or @type = 'DOI']">
+               <xsl:text> \url{</xsl:text>
                <xsl:value-of select="@target"/>
-            <xsl:text>}</xsl:text>
+               <xsl:text>}</xsl:text>
                <xsl:if test="fn:position() != last()">
                   <xsl:text>, </xsl:text>
                </xsl:if>
@@ -2593,10 +2648,39 @@
          />
       </xsl:if>
    </xsl:function>
-   <xsl:function name="foo:herausgeber-nach-dem-titel">
-      <xsl:param name="monogr" as="node()"/>
-      <xsl:if test="$monogr/tei:editor != '' and $monogr/tei:author != ''">
-         <xsl:value-of select="$monogr/tei:editor"/>
+   <xsl:function name="foo:herausgeber-ordnen">
+      <xsl:param name="editors" as="node()*"/>
+      <xsl:choose>
+         <xsl:when test="count($editors) = 1">
+            <xsl:text>Herausgegeben von </xsl:text>
+            <xsl:value-of select="foo:vorname-vor-nachname($editors)"/>
+         </xsl:when>
+         <xsl:otherwise>
+            <xsl:text>Herausgegeben von </xsl:text>
+            <xsl:value-of select="foo:namensliste-mit-komma-und-und-getrennt($editors)"/>
+         </xsl:otherwise>
+      </xsl:choose>
+   </xsl:function>
+   <xsl:function name="foo:namensliste-mit-komma-und-und-getrennt">
+      <xsl:param name="namensliste" as="node()*"/>
+      <xsl:for-each select="$namensliste">
+         <xsl:value-of select="foo:vorname-vor-nachname(.)"/>
+         <xsl:choose>
+            <xsl:when test="position() = last() - 1">
+               <xsl:text> und </xsl:text>
+            </xsl:when>
+            <xsl:when test="not(fn:position() = last())">
+               <xsl:text>, </xsl:text>
+            </xsl:when>
+         </xsl:choose>
+      </xsl:for-each>
+   </xsl:function>
+   <xsl:function name="foo:respStmt">
+      <xsl:param name="respStmt" as="node()"/>
+      <xsl:value-of select="$respStmt/tei:resp"/>
+      <xsl:if test="$respStmt/tei:persName">
+         <xsl:text> </xsl:text>
+         <xsl:value-of select="foo:namensliste-mit-komma-und-und-getrennt($respStmt/tei:persName)"/>
       </xsl:if>
    </xsl:function>
    <xsl:function name="foo:analytic-angabe">
@@ -2638,43 +2722,19 @@
             </xsl:choose>
          </xsl:otherwise>
       </xsl:choose>
-      <xsl:choose>
-         <xsl:when test="$analytic/tei:editor[2]">
-            <xsl:text>Herausgegeben von</xsl:text>
-            <xsl:for-each select="$analytic/tei:editor">
+      <xsl:if test="$analytic/tei:editor">
+         <xsl:value-of select="foo:herausgeber-ordnen($analytic/tei:editor)"/>
+      </xsl:if>
+      <xsl:if test="$analytic/tei:respStmt">
+         <xsl:text>. </xsl:text>
+         <xsl:for-each select="$analytic/tei:respStmt">
+            <xsl:value-of select="foo:respStmt(.)"/>
+            <xsl:if test="not(fn:position() = last())">
                <xsl:text> </xsl:text>
-               <xsl:value-of select="foo:vorname-vor-nachname(.)"/>
-               <xsl:choose>
-                  <xsl:when test="position() &lt; last() -1">
-                     <xsl:text>, </xsl:text>
-                  </xsl:when>
-                  <xsl:when test="position() = last() -1">
-                     <xsl:text> und </xsl:text>
-                  </xsl:when>
-                  <xsl:otherwise/>
-                     
-                  
-               </xsl:choose>
-            </xsl:for-each>
-         </xsl:when>
-         <xsl:when test="$analytic/tei:editor[1]">
-            <xsl:choose>
-               <xsl:when test="contains($analytic/tei:editor[1], 'Hrsg') or contains($analytic/tei:editor[1], 'Herausge') or contains($analytic/tei:editor[1], 'herausgeg') or contains($analytic/tei:editor[1], 'Hg.')">
-                  <xsl:text> </xsl:text>
-                  <xsl:value-of select="$analytic/tei:editor[1]"/>
-               </xsl:when>
-               <xsl:otherwise>
-                  <xsl:text> Herausgegeben von </xsl:text>
-                  <xsl:value-of select="foo:vorname-vor-nachname($analytic/tei:editor[1])"/>
-               </xsl:otherwise>
-            </xsl:choose>
-            <xsl:text>.</xsl:text>
-         </xsl:when>
-      </xsl:choose>
-      
+            </xsl:if>
+         </xsl:for-each>
+      </xsl:if>
    </xsl:function>
-   
-  
    <xsl:function name="foo:nach-dem-rufezeichen">
       <xsl:param name="titel" as="xs:string"/>
       <xsl:param name="gedruckte-quellen" as="node()"/>
@@ -2952,9 +3012,22 @@
          <xsl:text>, Sp.&#8239;</xsl:text>
          <xsl:value-of select="$biblstruct/tei:monogr//tei:biblScope[@unit = 'col']"/>
       </xsl:if>
-      <xsl:if test="not(empty($biblstruct/series))">
+      <xsl:if test="not(empty($biblstruct/tei:series))">
          <xsl:text> (</xsl:text>
-         <xsl:value-of select="$biblstruct/series/tei:title"/>
+         <xsl:value-of select="$biblstruct/tei:series/tei:title"/>
+         <xsl:if test="$biblstruct/tei:series/tei:editor">
+            <xsl:text>. </xsl:text>
+            <xsl:value-of select="foo:herausgeber-ordnen($biblstruct/tei:series/tei:editor)"/>
+         </xsl:if>
+         <xsl:if test="$biblstruct/tei:series//tei:respStmt">
+            <xsl:text>. </xsl:text>
+            <xsl:for-each select="$biblstruct/tei:series//tei:respStmt">
+               <xsl:value-of select="foo:respStmt(.)"/>
+               <xsl:if test="not(fn:position() = last())">
+                  <xsl:text> </xsl:text>
+               </xsl:if>
+            </xsl:for-each>
+         </xsl:if>
          <xsl:if test="$biblstruct/tei:series/tei:biblScope">
             <xsl:text>, </xsl:text>
             <xsl:value-of select="$biblstruct/tei:series/tei:biblScope"/>
@@ -3197,12 +3270,21 @@
       <xsl:text>\nopagebreak}</xsl:text>-->
       <xsl:variable name="quellen" as="node()"
          select="ancestor::tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc"/>
+      <xsl:variable name="correspDesc" as="node()"
+         select="ancestor::tei:TEI/tei:teiHeader/tei:profileDesc/tei:correspDesc"/>
       <!-- Wenn es Adressen gibt, diese in die Endnote -->
       <!--<xsl:text>\datumImAnhang{</xsl:text>
       <xsl:value-of select="foo:monatUndJahrInKopfzeile(ancestor::tei:TEI/@when)"/>
       <xsl:text>}</xsl:text>-->
+      
+      <xsl:apply-templates select="$correspDesc"></xsl:apply-templates>
+      <xsl:text>\toendnotes[C]{\smallbreak}</xsl:text>
+      <xsl:text>&#10;</xsl:text>
+      
       <!--       Zuerst mal die Archivsignaturen  
 -->
+      
+      
       <xsl:if test="ancestor::tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:listWit">
          <xsl:choose>
             <xsl:when test="count($quellen/tei:listWit/tei:witness) = 1">
@@ -3247,6 +3329,7 @@
             <xsl:text>\toendnotes[C]{\smallbreak}</xsl:text>
          </xsl:when>
       </xsl:choose>
+      
       <xsl:apply-templates select="child::tei:div | child::tei:image"/>
       <xsl:text>\endnumbering</xsl:text>
       <xsl:if
@@ -4203,7 +4286,7 @@
          <xsl:text>\centering{}</xsl:text>
       </xsl:if>
       <xsl:apply-templates/>
-      <xsl:if test="following-sibling::l">
+      <xsl:if test="following-sibling::tei:l">
          <xsl:text>\newverse{}</xsl:text>
       </xsl:if>
    </xsl:template>
@@ -4349,7 +4432,8 @@
          <xsl:value-of select="foo:gapigap($gapchars - 1)"/>
       </xsl:if>
    </xsl:function>
-   <xsl:template match="tei:gap[@unit = 'chars' and (@reason = 'illegible' or @reason = 'textualLoss')]">
+   <xsl:template
+      match="tei:gap[@unit = 'chars' and (@reason = 'illegible' or @reason = 'textualLoss')]">
       <xsl:value-of select="foo:gapigap(@quantity)"/>
    </xsl:template>
    <xsl:template match="tei:gap[@unit = 'lines' and @reason = 'illegible']">
@@ -4799,17 +4883,20 @@
    <xsl:template match="text()" mode="lemma">
       <xsl:value-of select="."/>
    </xsl:template>
-   <xsl:template match="tei:foreign[starts-with(@lang, 'el') or starts-with(@xml:lang, 'el')]" mode="lemma">
+   <xsl:template match="tei:foreign[starts-with(@lang, 'el') or starts-with(@xml:lang, 'el')]"
+      mode="lemma">
       <xsl:text>\griechisch{</xsl:text>
       <xsl:apply-templates mode="lemma"/>
       <xsl:text>}</xsl:text>
    </xsl:template>
-   <xsl:template match="tei:foreign[starts-with(@lang, 'he') or starts-with(@xml:lang, 'he')]" mode="lemma">
+   <xsl:template match="tei:foreign[starts-with(@lang, 'he') or starts-with(@xml:lang, 'he')]"
+      mode="lemma">
       <xsl:text>\hebraeisch{</xsl:text>
       <xsl:apply-templates mode="lemma"/>
       <xsl:text>}</xsl:text>
    </xsl:template>
-   <xsl:template match="tei:foreign[starts-with(@lang, 'ja') or starts-with(@xml:lang, 'ja')]" mode="lemma">
+   <xsl:template match="tei:foreign[starts-with(@lang, 'ja') or starts-with(@xml:lang, 'ja')]"
+      mode="lemma">
       <xsl:text>\japanese{</xsl:text>
       <xsl:apply-templates/>
       <xsl:text>}</xsl:text>
@@ -5232,29 +5319,21 @@
          </xsl:when>
          <xsl:otherwise>
             <xsl:text>\oindex{</xsl:text>
-            
-               <xsl:variable name="zu-beruecksichtigen" as="node()">
-                  <list>
-                     <xsl:for-each select="$place/tei:location[@type='located_in_place']">
+            <xsl:variable name="zu-beruecksichtigen" as="node()">
+               <list>
+                  <xsl:for-each select="$place/tei:location[@type = 'located_in_place']">
                      <xsl:choose>
-                        <xsl:when test="key('placeType-lookup', tei:placeName[1]/@ref, $placeTypes)"></xsl:when>
+                        <xsl:when test="key('placeType-lookup', tei:placeName[1]/@ref, $placeTypes)"/>
                         <xsl:otherwise>
                            <item>
                               <xsl:copy-of select="*"/>
-                              
                            </item>
                         </xsl:otherwise>
                      </xsl:choose>
-                        
-                     
-                     </xsl:for-each>
-                  </list>
-               </xsl:variable>
-               
-               
+                  </xsl:for-each>
+               </list>
+            </xsl:variable>
             <!--<xsl:value-of select="foo:place-in-index($place/tei:placeName/@ref, '', false())"/>-->
-               
-            
             <xsl:value-of select="foo:place-for-index(replace($first, '#', ''))"/>
             <xsl:if test="$endung-setzen">
                <xsl:value-of select="$endung"/>
@@ -5603,6 +5682,44 @@
       <xsl:value-of
          select="normalize-space(document(concat('https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-interviews-data/main/data/editions/', replace(@target, '.html', ''), '.xml'))/descendant::tei:titleStmt/tei:title[@level = 'a'][1])"
       />
+   </xsl:template>
+   <xsl:template match="tei:ref[@type = 'schnitzler-mikrofilme']">
+         <xsl:choose>
+            <xsl:when test="@subtype = 'see'">
+               <xsl:text>siehe </xsl:text>
+            </xsl:when>
+            <xsl:when test="@subtype = 'cf'">
+               <xsl:text>vgl. </xsl:text>
+            </xsl:when>
+            <xsl:when test="@subtype = 'See'">
+               <xsl:text>Siehe </xsl:text>
+            </xsl:when>
+            <xsl:when test="@subtype = 'Cf'">
+               <xsl:text>Vgl. </xsl:text>
+            </xsl:when>
+         </xsl:choose>
+         <xsl:text>Arthur Schnitzler: \emph{Mikrofilme}, \url{https://schnitzler\_mikrofilme.acdh.oeaw.ac.at/</xsl:text>
+      <xsl:value-of select="replace(@target, '_', '\\_')"/>
+      <xsl:text>}.</xsl:text>
+   </xsl:template>
+   <xsl:template match="tei:ref[@type = 'schnitzler-zeitungen']">
+      <xsl:choose>
+         <xsl:when test="@subtype = 'see'">
+            <xsl:text>siehe </xsl:text>
+         </xsl:when>
+         <xsl:when test="@subtype = 'cf'">
+            <xsl:text>vgl. </xsl:text>
+         </xsl:when>
+         <xsl:when test="@subtype = 'See'">
+            <xsl:text>Siehe </xsl:text>
+         </xsl:when>
+         <xsl:when test="@subtype = 'Cf'">
+            <xsl:text>Vgl. </xsl:text>
+         </xsl:when>
+      </xsl:choose>
+      <xsl:text>Arthur Schnitzler: \emph{Archiv der Zeitungsausschnitte}, \url{https://schnitzler\_zeitungen.acdh.oeaw.ac.at/</xsl:text>
+      <xsl:value-of select="replace(@target, '_', '\\_')"/>
+      <xsl:text>}.</xsl:text>
    </xsl:template>
    <xsl:template match="tei:ref[@type = 'schnitzler-bahr']">
       <xsl:if test="not(@subtype = 'date-only')">
