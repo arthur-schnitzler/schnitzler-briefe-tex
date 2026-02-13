@@ -80,6 +80,11 @@ jobs:
         mkdir -p pdf-leseansicht
         mkdir -p tex-leseansicht
         mkdir -p processing-logs
+
+        # Make indices available where XSLT expects them
+        # The XSLT uses document('../indices/utils/placeTypes.xml') relative to xslt/,
+        # which resolves to indices/ at the repo root
+        ln -sfn "$(pwd)/data-repo/data/indices" indices
         
         # Initialize counters
         TOTAL=0
