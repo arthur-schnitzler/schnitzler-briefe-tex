@@ -1,27 +1,5 @@
-\normalsize
+%% latex-korrekturansicht-abspann.tex
+%% Abspann für die Korrekturansicht.
+%% Der Schalter \ifkorrekturansicht ist bereits durch den Vorspann gesetzt.
 
-\doendnotes{C}
-\bigskip
-\vfill
-
-\clearpage
-
-\footnotesize
-
-\lohead{\textsc{register}}
-
-% Definiere theindex-Environment komplett neu ohne reledmac
-\makeatletter
-\renewenvironment{theindex}{%
-  \section*{\indexname}%
-  \setlength{\parindent}{0pt}%
-  \setlength{\parskip}{0pt plus 0.3pt}%
-  \let\item\@idxitem
-}{%
-  \clearpage
-}
-\makeatother
-
-\IfFileExists{\jobname-pw.ind}{\input{\jobname-pw.ind}}{}
-
-\end{document}
+\input{../tex-inputs/latex-abspann}

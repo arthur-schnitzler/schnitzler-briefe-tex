@@ -1,0 +1,73 @@
+%% latex-abspann.tex
+%% Gemeinsamer Abspann für Korrekturansicht und Leseansicht.
+%% Setzt den Schalter \ifkorrekturansicht voraus (gesetzt in den
+%% einbindenden Dateien latex-korrekturansicht-abspann.tex bzw.
+%% latex-leseansicht-abspann.tex).
+%% ---------------------------------------------------------------
+
+\normalsize
+
+% Das esempio-Environment wird nur in der Leseansicht benötigt
+\ifkorrekturansicht\else
+\newenvironment{esempio}[3]%
+{
+    \vspace{1.5ex}
+    \rlap{\underline{#1}}
+    \par
+    \setlength{\parindent}{0cm}
+    \nopagebreak
+    \leftskip=#2cm
+    \rightskip=#3cm
+}
+{
+    \par
+}
+\fi
+
+\doendnotes{C}
+\bigskip
+\vfill
+
+\clearpage
+
+\footnotesize
+
+\ifkorrekturansicht
+  \lohead{\textsc{register}}
+\fi
+
+% theindex-Environment neu definieren ohne reledmac
+\makeatletter
+\renewenvironment{theindex}{%
+  \ifkorrekturansicht
+    \section*{\indexname}%
+  \else
+    \subsubsection*{Index der erwähnten Entitäten}%
+  \fi
+  \setlength{\parindent}{0pt}%
+  \setlength{\parskip}{0pt plus 0.3pt}%
+  \let\item\@idxitem
+}{%
+  \ifkorrekturansicht\clearpage\fi
+}
+\makeatother
+
+\IfFileExists{\jobname-pw.ind}{\input{\jobname-pw.ind}}{}
+
+% Quellenangabe nur in der Leseansicht
+\ifkorrekturansicht\else
+% Fallback-Definitionen, falls die .tex-Datei \titel etc. nicht gesetzt hat
+\providecommand{\titel}{}
+\providecommand{\editorInnen}{}
+\providecommand{\dateiname}{\jobname}
+
+\vspace{3cm}
+
+\vfill
+
+\footnotesize
+\textsc{Quelle}: \titel. Herausgegeben von {\editorInnen}. In: \emph{Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren}.
+ Digitale Edition, https://schnitzler-briefe.acdh.oeaw.ac.at/{\dateiname}.html (Stand \today)
+\fi
+
+\end{document}

@@ -1,50 +1,5 @@
-\bigskip
+%% latex-leseansicht-abspann.tex
+%% Abspann für die Leseansicht.
+%% Der Schalter \ifkorrekturansicht ist bereits durch den Vorspann gesetzt.
 
-\normalsize
-
-\newenvironment{esempio}[3]%
-{
-    \vspace{1.5ex}
-    \rlap{\underline{#1}}
-    \par
-    \setlength{\parindent}{0cm}
-    \nopagebreak
-    \leftskip=#2cm
-    \rightskip=#3cm
-}
-{
-    \par
-}
-
-\doendnotes{C}
-\bigskip
-
-\clearpage
-
-\footnotesize
-
-% Definiere theindex-Environment komplett neu ohne reledmac
-\makeatletter
-\renewenvironment{theindex}{%
-  \subsubsection*{Index der erwähnten Entitäten}%
-  \setlength{\parindent}{0pt}%
-  \setlength{\parskip}{0pt plus 0.3pt}%
-  \let\item\@idxitem
-}{%
-}
-\makeatother
-
-\IfFileExists{\jobname-pw.ind}{\input{\jobname-pw.ind}}{}
-
-
-
-\vspace{3cm}
-
-\vfill
-
-\footnotesize
-\textsc{Quelle}: \titel. Herausgegeben von {\editorInnen}. In: \emph{Arthur Schnitzler: Briefwechsel mit Autorinnen und Autoren}.
- Digitale Edition, https://schnitzler-briefe.acdh.oeaw.ac.at/{\dateiname}.html (Stand \today)
- 
-
-\end{document}
+\input{../tex-inputs/latex-abspann}
