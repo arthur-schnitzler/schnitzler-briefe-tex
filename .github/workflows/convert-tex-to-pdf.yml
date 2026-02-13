@@ -2,7 +2,16 @@ name: Erzeuge TeX-Dateien aus XML-Änderungen
 on:
   repository_dispatch:
     types: [xml-files-changed]
-  workflow_dispatch: # Allow manual trigger
+  workflow_dispatch:
+    inputs:
+      force_all:
+        description: 'Alle XML-Dateien neu verarbeiten (nicht nur geänderte)'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
 
 jobs:
   check-and-process:
@@ -44,7 +53,13 @@ jobs:
     - name: Get changed files from payload
       id: changes
       run: |
-        if [ "${{ github.event_name }}" = "repository_dispatch" ]; then
+        if [ "${{ github.event.inputs.force_all }}" = "true" ]; then
+          # Process all XML files in the data repository
+          echo "force_all=true: processing all XML files"
+          find data-repo/data/editions -name "*.xml" | sed 's|^data-repo/||' | sort > changed_files.txt
+          echo "Total files: $(wc -l < changed_files.txt)"
+          echo "has_changes=true" >> $GITHUB_OUTPUT
+        elif [ "${{ github.event_name }}" = "repository_dispatch" ]; then
           # Get changed files from repository_dispatch payload
           CHANGED_FILES='${{ github.event.client_payload.changed_files }}'
           if [ "$CHANGED_FILES" != "null" ] && [ -n "$CHANGED_FILES" ]; then
@@ -61,7 +76,7 @@ jobs:
           # Fallback: check for recent changes in data repo
           cd data-repo
           CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD -- data/editions/*.xml | head -20)
-          
+
           if [ -z "$CHANGED_FILES" ]; then
             echo "No XML files changed"
             echo "has_changes=false" >> $GITHUB_OUTPUT
