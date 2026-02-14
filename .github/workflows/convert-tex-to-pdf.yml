@@ -1,4 +1,4 @@
-name: Erzeuge PDFs mit XeLaTeX
+name: Erzeuge PDFs aus TeX-Dateien
 
 on:
   workflow_dispatch: # Allow manual trigger
@@ -12,6 +12,7 @@ jobs:
     outputs:
       matrix: ${{ steps.generate-matrix.outputs.matrix }}
       total-batches: ${{ steps.generate-matrix.outputs.total-batches }}
+      batch-size: ${{ steps.generate-matrix.outputs.batch-size }}
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -26,24 +27,33 @@ jobs:
           echo "tex-leseansicht directory not found"
           exit 1
         fi
-        
+
         # Get sorted list of tex files
         TEX_FILES=($(find tex-leseansicht -name "*.tex" | sort))
         TOTAL_FILES=${#TEX_FILES[@]}
-        
+
         if [ $TOTAL_FILES -eq 0 ]; then
           echo "No tex files found"
           exit 1
         fi
-        
-        # Calculate number of batches (750 files per batch)
-        BATCH_SIZE=750
+
+        # Dynamic batch size: target 20 parallel jobs (GitHub Free limit),
+        # but cap at 256 total batches (GitHub Actions matrix limit).
+        # Minimum batch size is 1.
+        MAX_PARALLEL=20
+        MAX_BATCHES=256
+        BATCH_SIZE=$(( (TOTAL_FILES + MAX_PARALLEL - 1) / MAX_PARALLEL ))
         TOTAL_BATCHES=$(( (TOTAL_FILES + BATCH_SIZE - 1) / BATCH_SIZE ))
-        
+        # Safety cap: if somehow we still exceed 256, increase batch size
+        if [ $TOTAL_BATCHES -gt $MAX_BATCHES ]; then
+          BATCH_SIZE=$(( (TOTAL_FILES + MAX_BATCHES - 1) / MAX_BATCHES ))
+          TOTAL_BATCHES=$(( (TOTAL_FILES + BATCH_SIZE - 1) / BATCH_SIZE ))
+        fi
+
         echo "Total files: $TOTAL_FILES"
         echo "Batch size: $BATCH_SIZE"
         echo "Total batches: $TOTAL_BATCHES"
-        
+
         # Create matrix array
         MATRIX_JSON="["
         for i in $(seq 0 $((TOTAL_BATCHES - 1))); do
@@ -53,9 +63,10 @@ jobs:
           MATRIX_JSON="${MATRIX_JSON}${i}"
         done
         MATRIX_JSON="${MATRIX_JSON}]"
-        
+
         echo "matrix=${MATRIX_JSON}" >> $GITHUB_OUTPUT
         echo "total-batches=${TOTAL_BATCHES}" >> $GITHUB_OUTPUT
+        echo "batch-size=${BATCH_SIZE}" >> $GITHUB_OUTPUT
 
   generate-pdfs:
     needs: setup
@@ -64,7 +75,7 @@ jobs:
       matrix:
         batch: ${{ fromJson(needs.setup.outputs.matrix) }}
       fail-fast: false
-      max-parallel: 6
+      max-parallel: 20
     
     steps:
     - name: Checkout repository
@@ -98,7 +109,7 @@ jobs:
         FAILED=0
         SKIPPED=0
         BATCH_NUM=${{ matrix.batch }}
-        BATCH_SIZE=750
+        BATCH_SIZE=${{ needs.setup.outputs.batch-size }}
         
         # Get sorted list of all LaTeX files
         TEX_FILES=($(find tex-leseansicht -name "*.tex" | sort))

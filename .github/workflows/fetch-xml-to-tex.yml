@@ -1,4 +1,4 @@
-name: Erzeuge TeX-Dateien aus XML-Änderungen
+name: Erzeuge TeX-Dateien aus XML-Quellen
 on:
   repository_dispatch:
     types: [xml-files-changed]
@@ -36,12 +36,6 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: '11'
-
-    - name: Install TeXLive
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y texlive-full
-        sudo apt-get install -y xindy
 
     - name: Download Saxon if needed
       run: |
