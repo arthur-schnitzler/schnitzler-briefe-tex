@@ -213,14 +213,43 @@ jobs:
               timeout 300 xelatex -interaction=nonstopmode "${filename}.tex"
               echo "✓ First XeLaTeX run completed"
               
-              # Step 2: Splitindex processing (if index files exist)
-              echo "Step 2: Splitindex processing"
-              if ls "${filename}"*.idx 1> /dev/null 2>&1; then
-                echo "Found index files, running splitindex..."
-                timeout 60 splitindex "${filename}" || echo "Splitindex failed, continuing..."
-                echo "✓ Splitindex processing attempted"
+              # Step 2: Split index processing (if main .idx file exists)
+              echo "Step 2: Split index processing"
+              MAINIDX="${filename}.idx"
+              if [ -f "$MAINIDX" ]; then
+                echo "Found $MAINIDX, splitting and processing indices..."
+
+                # Extract [pw] entries and clean \@@number
+                grep '\\indexentry\[pw\]' "$MAINIDX" \
+                  | sed 's/\\indexentry\[pw\]/\\indexentry/' \
+                  | sed 's/\\@@number {\([0-9]*\)}/\1/g' \
+                  > "${filename}-pw.idx"
+
+                # Extract [briefe-out] entries and clean \@@number
+                grep '\\indexentry\[briefe-out\]' "$MAINIDX" \
+                  | sed 's/\\indexentry\[briefe-out\]/\\indexentry/' \
+                  | sed 's/\\@@number {\([0-9]*\)}/\1/g' \
+                  > "${filename}-briefe-out.idx"
+
+                # Extract [buch-abdruck] entries and clean \@@number (optional)
+                grep '\\indexentry\[buch-abdruck\]' "$MAINIDX" \
+                  | sed 's/\\indexentry\[buch-abdruck\]/\\indexentry/' \
+                  | sed 's/\\@@number {\([0-9]*\)}/\1/g' \
+                  > "${filename}-buch-abdruck.idx" 2>/dev/null || true
+
+                # Run makeindex on each non-empty split idx file
+                for idxfile in "${filename}"-pw.idx "${filename}"-briefe-out.idx "${filename}"-buch-abdruck.idx; do
+                  if [ -f "$idxfile" ] && [ -s "$idxfile" ]; then
+                    echo "Running makeindex on $idxfile..."
+                    timeout 60 makeindex "$idxfile" || echo "makeindex failed for $idxfile, continuing..."
+                  else
+                    echo "Skipping empty or missing $idxfile"
+                  fi
+                done
+
+                echo "✓ Split index processing completed"
               else
-                echo "! No index files found, skipping splitindex"
+                echo "! No main index file found, skipping split index processing"
               fi
               
               # Step 3: Second XeLaTeX run
@@ -260,9 +289,12 @@ jobs:
             
             # Clean up auxiliary files for this file
             cd tex-leseansicht
-            rm -f "${filename}".aux "${filename}".log "${filename}".idx "${filename}".ilg 
-            rm -f "${filename}".ind "${filename}".out "${filename}".toc "${filename}".fls 
+            rm -f "${filename}".aux "${filename}".log "${filename}".idx "${filename}".ilg
+            rm -f "${filename}".ind "${filename}".out "${filename}".toc "${filename}".fls
             rm -f "${filename}".fdb_latexmk xelatex*.log splitindex.log
+            rm -f "${filename}"-pw.idx "${filename}"-pw.ind "${filename}"-pw.ilg
+            rm -f "${filename}"-briefe-out.idx "${filename}"-briefe-out.ind "${filename}"-briefe-out.ilg
+            rm -f "${filename}"-buch-abdruck.idx "${filename}"-buch-abdruck.ind "${filename}"-buch-abdruck.ilg
             cd ..
             
           fi
