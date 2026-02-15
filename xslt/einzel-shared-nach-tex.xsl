@@ -12,8 +12,8 @@
    <xsl:param name="works" as="node()" select="descendant::tei:back/tei:listBibl"/>
    <xsl:param name="orgs" select="descendant::tei:back/tei:listOrg"/>
    <xsl:param name="places" select="descendant::tei:back/tei:listPlace" as="node()"/>
-   <xsl:param name="placeTypes" select="document('../indices/utils/placeTypes.xml')" as="node()"/>
-   <xsl:param name="partOf" select="document('./indices/utils/partOf.xml')" as="node()"/>
+   <xsl:param name="placeTypes" select="document('https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-briefe-data/refs/heads/main/data/indices/utils/placeTypes.xml')" as="node()"/>
+   <xsl:param name="partOf" select="document('https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-briefe-data/refs/heads/main/data/indices/utils/partOf.xml')" as="node()"/>
    <xsl:param name="events" select="//tei:back/tei:listEvent"/>
    <!--<xsl:param name="sigle" select="document('../indices/siglen.xml')"/>-->
    <xsl:param name="leseansicht" as="xs:string" select="'false'"/>
