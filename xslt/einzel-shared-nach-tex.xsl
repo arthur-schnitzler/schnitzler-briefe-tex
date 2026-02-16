@@ -1042,7 +1042,7 @@
          select="normalize-space(substring-before(normalize-space($titel), $datum))"/>
       <xsl:value-of select="replace(replace($titelminusdatum, '\[', '{[}'), '\]', '{]}')"/>
       <xsl:text> </xsl:text>
-      <xsl:value-of select="foo:date-translate($datum)"/>
+      <xsl:value-of select="replace(replace(foo:date-translate($datum), '\[', '{[}'), '\]', '{]}')"/>
    </xsl:function>
    <!-- HAUPT -->
    <xsl:template match="tei:root">
