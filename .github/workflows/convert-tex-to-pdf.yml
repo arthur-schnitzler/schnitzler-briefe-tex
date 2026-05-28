@@ -6,6 +6,9 @@ on:
     paths:
       - 'tex-leseansicht/*.tex'
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
 jobs:
   setup:
     runs-on: ubuntu-latest
