@@ -46,6 +46,8 @@ jobs:
 
     - name: Get changed files from payload
       id: changes
+      env:
+        CHANGED_FILES_JSON: ${{ toJson(github.event.client_payload.changed_files) }}
       run: |
         if [ "${{ github.event.inputs.force_all }}" = "true" ]; then
           # Process all XML files in the data repository
@@ -55,13 +57,12 @@ jobs:
           echo "has_changes=true" >> $GITHUB_OUTPUT
         elif [ "${{ github.event_name }}" = "repository_dispatch" ]; then
           # Get changed files from repository_dispatch payload
-          CHANGED_FILES='${{ github.event.client_payload.changed_files }}'
-          if [ "$CHANGED_FILES" != "null" ] && [ -n "$CHANGED_FILES" ]; then
+          if [ "$CHANGED_FILES_JSON" != "null" ] && [ -n "$CHANGED_FILES_JSON" ]; then
             echo "Changed files from payload:"
-            echo "$CHANGED_FILES" | jq -r '.[]'
+            echo "$CHANGED_FILES_JSON" | jq -r '.[]'
             echo "has_changes=true" >> $GITHUB_OUTPUT
             # Save changed files for next step
-            echo "$CHANGED_FILES" | jq -r '.[]' > changed_files.txt
+            echo "$CHANGED_FILES_JSON" | jq -r '.[]' > changed_files.txt
           else
             echo "No files in payload"
             echo "has_changes=false" >> $GITHUB_OUTPUT
