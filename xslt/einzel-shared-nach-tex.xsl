@@ -12,8 +12,8 @@
    <xsl:param name="works" as="node()" select="descendant::tei:back/tei:listBibl"/>
    <xsl:param name="orgs" select="descendant::tei:back/tei:listOrg"/>
    <xsl:param name="places" select="descendant::tei:back/tei:listPlace" as="node()"/>
-   <xsl:param name="placeTypes" select="document('https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-briefe-data/refs/heads/main/data/indices/utils/placeTypes.xml')" as="node()"/>
-   <xsl:param name="partOf" select="document('https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-briefe-data/refs/heads/main/data/indices/utils/partOf.xml')" as="node()"/>
+   <xsl:param name="placeTypes" select="document('../indices/utils/placeTypes.xml')" as="node()"/>
+   <xsl:param name="partOf" select="document('./indices/utils/partOf.xml')" as="node()"/>
    <xsl:param name="events" select="//tei:back/tei:listEvent"/>
    <!--<xsl:param name="sigle" select="document('../indices/siglen.xml')"/>-->
    <xsl:param name="leseansicht" as="xs:string" select="'false'"/>
@@ -1042,7 +1042,7 @@
          select="normalize-space(substring-before(normalize-space($titel), $datum))"/>
       <xsl:value-of select="replace(replace($titelminusdatum, '\[', '{[}'), '\]', '{]}')"/>
       <xsl:text> </xsl:text>
-      <xsl:value-of select="replace(replace(foo:date-translate($datum), '\[', '{[}'), '\]', '{]}')"/>
+      <xsl:value-of select="foo:date-translate($datum)"/>
    </xsl:function>
    <!-- HAUPT -->
    <xsl:template match="tei:root">
@@ -3982,7 +3982,7 @@
          <xsl:if test="position() eq 1">
             <xsl:apply-templates select="current-group()[position() != last()]" mode="lemma"/>
             <xsl:text>}\,{]} </xsl:text>
-            <xsl:apply-templates select="current-group()[position() = last()]" mode="text"/>
+            <xsl:apply-templates select="current-group()[position() = last()]/node()"/>
             <xsl:text>\end{minipage}\par}</xsl:text>
          </xsl:if>
       </xsl:for-each-group>
@@ -4682,7 +4682,15 @@
          </xsl:when>
          <!-- hier könnte man noch Verwendung von Initialen einbauen -->
          <xsl:otherwise>
-            <xsl:value-of select="$scribe-nachname"/>
+            <xsl:choose>
+               <xsl:when test="string-length($scribe-vorname) &gt; 0 and string-length($scribe-nachname) = 0">
+                  <xsl:value-of select="$scribe-vorname"/>
+               </xsl:when>
+               <xsl:otherwise>
+                  <xsl:value-of select="$scribe-nachname"/>
+               </xsl:otherwise>
+            </xsl:choose>
+            
          </xsl:otherwise>
       </xsl:choose>
       <xsl:text>:{]} </xsl:text>
@@ -6144,5 +6152,10 @@
             </xsl:choose>
          </xsl:otherwise>
       </xsl:choose>
+   </xsl:template>
+   <xsl:template match="tei:ref[@type='DOI' or @type='URL' and not(ancestor::tei:biblStruct)]">
+      <xsl:text>\url{</xsl:text>
+      <xsl:value-of select="@target"/>
+      <xsl:text>}</xsl:text>
    </xsl:template>
 </xsl:stylesheet>
