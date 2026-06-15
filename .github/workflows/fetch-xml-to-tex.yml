@@ -58,13 +58,30 @@ jobs:
           echo "Total files: $(wc -l < changed_files.txt)"
           echo "has_changes=true" >> $GITHUB_OUTPUT
         elif [ "${{ github.event_name }}" = "repository_dispatch" ]; then
-          # Get changed files from repository_dispatch payload
+          # Get changed files from repository_dispatch payload.
+          # changed_files may arrive as a JSON array, as a JSON-encoded string
+          # containing an array, or as a plain string with one or more paths
+          # separated by whitespace/commas. Normalise all of these to one path
+          # per line.
           if [ "$CHANGED_FILES_JSON" != "null" ] && [ -n "$CHANGED_FILES_JSON" ]; then
-            echo "Changed files from payload:"
-            echo "$CHANGED_FILES_JSON" | jq -r '.[]'
-            echo "has_changes=true" >> $GITHUB_OUTPUT
-            # Save changed files for next step
-            echo "$CHANGED_FILES_JSON" | jq -r '.[]' > changed_files.txt
+            echo "$CHANGED_FILES_JSON" | jq -r '
+              def emit:
+                if type == "array" then .[]
+                elif type == "string" then
+                  (. as $s | try ($s | fromjson | emit)
+                   catch ($s | splits("[,[:space:]]+")))
+                else empty end;
+              emit
+            ' | sed '/^[[:space:]]*$/d' > changed_files.txt
+
+            if [ -s changed_files.txt ]; then
+              echo "Changed files from payload:"
+              cat changed_files.txt
+              echo "has_changes=true" >> $GITHUB_OUTPUT
+            else
+              echo "No files in payload"
+              echo "has_changes=false" >> $GITHUB_OUTPUT
+            fi
           else
             echo "No files in payload"
             echo "has_changes=false" >> $GITHUB_OUTPUT
