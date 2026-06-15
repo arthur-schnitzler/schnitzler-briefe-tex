@@ -46,6 +46,41 @@ jobs:
           unzip SaxonHE12-4J.zip
         fi
 
+    - name: Update XSLT files from schnitzler-briefe-arbeit
+      run: |
+        # Always pull the latest version of the shared XSLT stylesheets from the
+        # schnitzler-briefe-arbeit repository and commit them here if they changed,
+        # so the transformation below always uses the current version.
+        BASE_URL="https://raw.githubusercontent.com/arthur-schnitzler/schnitzler-briefe-arbeit/refs/heads/main/xslts"
+
+        changed=false
+        for f in einzel-shared-nach-tex.xsl tex_date-format.xsl; do
+          echo "Fetching $f ..."
+          if curl -fsSL "$BASE_URL/$f" -o "xslt/$f.new"; then
+            if [ ! -f "xslt/$f" ] || ! cmp -s "xslt/$f.new" "xslt/$f"; then
+              mv "xslt/$f.new" "xslt/$f"
+              echo "✓ $f updated"
+              changed=true
+            else
+              rm -f "xslt/$f.new"
+              echo "= $f unchanged"
+            fi
+          else
+            rm -f "xslt/$f.new"
+            echo "✗ Could not fetch $f - keeping existing version"
+          fi
+        done
+
+        if [ "$changed" = "true" ]; then
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add xslt/einzel-shared-nach-tex.xsl xslt/tex_date-format.xsl
+          if ! git diff --staged --quiet; then
+            git commit -m "Update shared XSLT files from schnitzler-briefe-arbeit - 🤖 Generated with GitHub Actions"
+            git push
+          fi
+        fi
+
     - name: Get changed files from payload
       id: changes
       env:
