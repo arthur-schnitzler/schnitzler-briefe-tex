@@ -443,7 +443,7 @@ jobs:
 
     - name: Upload processing logs as artifacts
       if: always()
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       with:
         name: pdf-processing-logs-batch-${{ matrix.batch }}-${{ github.run_number }}
         path: processing-logs/
@@ -451,7 +451,7 @@ jobs:
 
     - name: Upload failed LaTeX files for debugging
       if: always()
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       with:
         name: failed-latex-debug-batch-${{ matrix.batch }}-${{ github.run_number }}
         path: tex-leseansicht/
