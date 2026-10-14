@@ -2751,12 +2751,16 @@
          </xsl:otherwise>
       </xsl:choose>
       <xsl:if test="$analytic/tei:editor">
+         <xsl:text> </xsl:text>
          <xsl:value-of select="foo:herausgeber-ordnen($analytic/tei:editor)"/>
+         <xsl:text>.</xsl:text>
       </xsl:if>
       <xsl:if test="$analytic/tei:respStmt">
-         <xsl:text>. </xsl:text>
+         <!-- Der Titel schließt bereits mit Punkt (oder !/?) ab -->
+         <xsl:text> </xsl:text>
          <xsl:for-each select="$analytic/tei:respStmt">
             <xsl:value-of select="foo:respStmt(.)"/>
+            <xsl:text>.</xsl:text>
             <xsl:if test="not(fn:position() = last())">
                <xsl:text> </xsl:text>
             </xsl:if>
